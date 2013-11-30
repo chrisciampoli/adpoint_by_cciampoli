@@ -1,7 +1,13 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-?>
+class Home extends User_Controller {
+    
+    function __constructor() {
+        parent::_constructor();
+    }
+    
+    function index() {
+        echo "Welcome User";
+    }
+    
+}

@@ -31,8 +31,10 @@ class User_Controller extends CI_Controller {
     public function __construct() {
 
         parent::__construct();
+        
+        $data = new stdClass();
 
-        if($this->ion_auth->in_group('user')) {
+        if($this->ion_auth->in_group('members')) {
             $this->the_user = $this->ion_auth
                 ->user()
                 ->row();
@@ -53,6 +55,8 @@ class Common_Auth_Controller extends CI_Controller {
     public function __construct() {
 
         parent::__construct();
+        
+        $data = new stdClass();
 
         if($this->ion_auth->logged_in()) {
             $this->the_user = $this->ion_auth

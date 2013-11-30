@@ -91,13 +91,17 @@ class Auth extends CI_Controller {
 				'id' => 'identity',
 				'type' => 'text',
 				'value' => $this->form_validation->set_value('identity'),
+                'class' => 'form_control',
+                'placeholder' => 'Email'
 			);
 			$this->data['password'] = array('name' => 'password',
 				'id' => 'password',
 				'type' => 'password',
+                'class' => 'form_control',
+                'placeholder' => 'password'
 			);
 
-			$this->_render_page('auth/login', $this->data);
+			$this->_render_page('public/index', $this->data);
 		}
 	}
 
