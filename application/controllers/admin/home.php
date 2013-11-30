@@ -7,7 +7,7 @@ class Home extends Admin_Controller {
     }
     
     function index() {
-        echo "You made it!";
+        $this->load->view('admin/index.php');
     }
     
 }
