@@ -7,6 +7,8 @@ class Admin_Controller extends CI_Controller {
     public function __construct() {
 
         parent::__construct();
+        
+        $data = new stdClass();
 
         if($this->ion_auth->is_admin()) {
             $this->the_user = $this->ion_auth
