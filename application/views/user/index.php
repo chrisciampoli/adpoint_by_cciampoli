@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,10 +8,10 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-    <title>Sticky Footer Navbar Template for Bootstrap</title>
+    <title>AdPoint 2013</title>
 
     <!-- Bootstrap core CSS -->
-     <link href="<?php echo base_url('public/css/bootstrap.css')?>" rel="stylesheet">
+    <link href="<?php echo base_url('public/css/bootstrap.css');?>" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="sticky-footer-navbar.css" rel="stylesheet">
@@ -46,9 +45,20 @@
           </div>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="<?php echo site_url('admin/home/index');?>">Dashboard</a></li>
-              <li><a href="<?php echo site_url('auth/index');?>">Users/Groups</a></li>
-              <li><a href="<?php echo site_url('auth/logout');?>">Logout</a></li>
+              <li><a href="<?php echo site_url('user/home/about');?>">About</a></li>
+              <li><a href="<?php echo site_url('user/home/contact');?>">Contact</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Campaign Management<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="<?php echo site_url('locations/index');?>">Locations</a></li>
+                  <li><a href="<?php echo site_url('media/index');?>">Media</a></li>
+                  <li><a href="<?php echo site_url('advertising/get_ads');?>">Ads</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Schedules</li>
+                  <li><a href="<?php echo site_url('schedules/available');?>">Available</a></li>
+                  <li><a href="<?php echo site_url('schedules/edit_current');?>">Edit Current Schedule</a></li>
+                </ul>
+              </li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -75,6 +85,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="<?php echo base_url('public/js/bootstrap.js')?>"></script>
+    <script src="<?php echo base_url('public/js/bootstrap.min.js');?>"></script>
   </body>
 </html>

@@ -7,7 +7,15 @@ class Home extends User_Controller {
     }
     
     function index() {
-        echo "Welcome User";
+        $this->load->view('user/index.php');
+    }
+    
+    function about() {
+        
+    }
+    
+    function contact() {
+        
     }
     
 }
