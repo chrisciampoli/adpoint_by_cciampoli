@@ -1,80 +1,56 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
-
-    <title>Sticky Footer Navbar Template for Bootstrap</title>
-
-    <!-- Bootstrap core CSS -->
-     <link href="<?php echo base_url('public/css/bootstrap.css')?>" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="sticky-footer-navbar.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-  <body>
-
-    <!-- Wrap all page content here -->
-    <div id="wrap">
-
-      <!-- Fixed navbar -->
-      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">AdPoint 2013</a>
-          </div>
-          <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="<?php echo site_url('admin/home/index');?>">Dashboard</a></li>
-              <li><a href="<?php echo site_url('auth/index');?>">Users/Groups</a></li>
-              <li><a href="<?php echo site_url('auth/logout');?>">Logout</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+        <title>Swift Schedules</title>
+    </head>
+    <body>
+        <div data-role="page" id="page1">
+            <div data-role="header" style="background-color:#ADFCC0">
+                <h1>Swift Schedules</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <div data-role="tabs" style="border:2px solid black;">
+                    <div id="fragment-1">
+                        <div height="100%" id="container">
+                            <div id="employee_name" width="100%"><h2 class="ui-bar"><?=  ucwords($name);?></h2></div>
+                            <div id="current_date" width="100%" style="background-color:#C5FAF4"><h2 class="ui-bar"><?php echo date('l F jS Y'); ?></h2></div>
+                            <div id="assigned_work_area" width="100%" style="background-color:#F3FF89"><h2 class="ui-bar">Section Working</h2></div>
+                            <div id="shift_info" width="100%" style="border:2px solid black;">
+                                <div id="shift_sub_info1" width="100%" class="ui-bar">Shift Time</div>
+                                <div class="ui-btn ui-input-btn ui-shadow">
+                                    Swift Give-up
+                                    <input type="button" data-corners="false" data-enhanced="true" value="The Button"></input>
+                                </div>
+                                <div class="ui-btn ui-input-btn ui-shadow">
+                                    Busy or Not
+                                    <input type="button" data-corners="false" data-enhanced="true" value="The Button"></input>
+                                </div>
+                            </div>
+                            <div class="ui-btn ui-input-btn ui-shadow">
+                                <?php echo form_open("public/auth/logout");?>
+                                <?php echo form_submit('logout_submit', 'Logout');?>
+                                <?php echo form_close();?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="<?php echo site_url("admin/home"); ?>" class="ui-btn-active">Today</a></li>
+                        <li><a href="<?php echo site_url("admin/home/week"); ?>">This Week</a></li>
+                        <li><a href="<?php echo site_url("admin/home/month"); ?>">This Month</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <!-- Begin page content -->
-      <div class="container">
-        <div class="page-header">
-          <h1>Sticky footer with fixed navbar</h1>
-        </div>
-        <p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added within <code>#wrap</code> with <code>padding-top: 60px;</code> on the <code>.container</code>.</p>
-        <p>Back to <a href="../sticky-footer">the default sticky footer</a> minus the navbar.</p>
-      </div>
-    </div>
-
-    <div id="footer">
-      <div class="container">
-        <p class="text-muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>
-      </div>
-    </div>
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="<?php echo base_url('public/js/bootstrap.js')?>"></script>
-  </body>
+    </body>
 </html>

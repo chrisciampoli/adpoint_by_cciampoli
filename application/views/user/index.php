@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-    <title>AdPoint 2013</title>
+    <title>Swift Schedules</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url('public/css/bootstrap.css');?>" rel="stylesheet">
@@ -41,7 +41,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">AdPoint 2013</a>
+            <a class="navbar-brand" href="#">Swift Schedules</a>
           </div>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">

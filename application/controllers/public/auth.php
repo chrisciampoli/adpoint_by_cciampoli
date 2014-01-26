@@ -31,7 +31,13 @@ class Auth extends CI_Controller {
                 $user = $this->ion_auth_model->user()->row();
                 echo "<pre>" . print_r($user,true) . "</pre>";
                 $user_groups = $this->ion_auth->get_users_groups($user->id)->result();
-                $user->group = $user_groups[0]->name;
+               
+                if($user_groups[1]) {
+                    $user->group = $user_groups[1]->name;
+                } else {
+                    $user->group = $user_groups[0]->name;    
+                }
+                
                 if($user->group == "members") $user->group = 'user';
                 redirect($user->group.'/home');
 

@@ -9,13 +9,15 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-    <title>AdPoint 2013</title>
+    <title>Swift Schedules</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="<?php echo base_url('public/css/bootstrap.css')?>" rel="stylesheet">
-
+    <!--<link href="<?php //echo base_url('public/css/bootstrap.css')?>" rel="stylesheet">-->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
     <!-- Custom styles for this template -->
-    <link href="jumbotron.css" rel="stylesheet">
+    <!--<link href="jumbotron.css" rel="stylesheet">-->
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -30,18 +32,19 @@
   <body>
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
+      <div class="container" style="background-color:#ADFCC0">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">AdPoint 2013</a>
         </div>
-        <div class="navbar-collapse collapse">
-           <?php $attributes = array('class' => 'navbar-form navbar-right', 'id' => 'signin_form');?>
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Swift Schedules</h1>
+      <div data-role="collapsible" data-content-theme="b">
+          <h3>Login</h3>
+       <?php $attributes = array('class' => 'navbar-form navbar-right', 'id' => 'signin_form');?>
            <?php echo form_open("public/auth/login",$attributes);?>
            <?php unset($attributes);?>
             <div class="form-group">
@@ -53,21 +56,25 @@
               <?php $attributes = array('name'=>'submit','id'=>'submit_btn','class'=>'form_submit');?>
               <?php echo form_submit($attributes, lang('login_submit_btn'));?>
           <?php echo form_close();?>
-        </div><!--/.navbar-collapse -->
       </div>
-    </div>
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>AdPoint</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+      <div data-role="collapsible" data-content-theme="b">
+          <h3>Clock In</h3>
+       <?php $attributes = array('class' => 'navbar-form navbar-right', 'id' => 'signin_form');?>
+           <?php echo form_open("public/auth/login",$attributes);?>
+           <?php unset($attributes);?>
+            <div class="form-group">
+                <label for="pin">Pin</label>
+               <?php echo form_input($identity);?>
+            </div>
+              <?php $attributes = array('name'=>'submit','id'=>'submit_btn','class'=>'form_submit');?>
+              <?php echo form_submit($attributes, lang('login_submit_btn'));?>
+          <?php echo form_close();?>
+      </div>
       </div>
     </div>
       <hr>
       <footer>
-        <p>&copy; Company 2013</p>
+        <p>&copy; By Quick and Co</p>
       </footer>
     </div> <!-- /container -->
 
