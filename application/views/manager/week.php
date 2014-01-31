@@ -32,13 +32,7 @@
                         </div>
                     </div>
                 </div>
-                <div data-role="navbar">
-                    <ul>
-                        <li><a href="<?php echo site_url("admin/home"); ?>">Today</a></li>
-                        <li><a href="<?php echo site_url("admin/home/week"); ?>" class="ui-btn-active">This Week</a></li>
-                        <li><a href="<?php echo site_url("admin/home/month"); ?>">This Month</a></li>
-                    </ul>
-                </div>
+                <?php $this->load->view('manager/navigation/nav');?>
             </div>
         </div>
     </body>
