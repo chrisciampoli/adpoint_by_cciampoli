@@ -9,15 +9,15 @@ class Home extends Manager_Controller {
     
     function index() {
         $data['name'] = $this->session->userdata('username');
-        $this->load->view('admin/index.php', $data);
+        $this->load->view('manager/index.php', $data);
     }
     
     function week() {
-        $this->load->view('admin/week.php');
+        $this->load->view('manager/week.php');
     }
     
     function month() {
-        $this->load->view('admin/month.php');
+        $this->load->view('manager/month.php');
     }
     
 }
