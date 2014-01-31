@@ -43,7 +43,7 @@
                         </div>
                     </div>
                 </div>
-                <?php $this->load->view('footer');?>
+                <?php $this->load->view('manager/navigation/nav');?>
             </div>
         </div>
     </body>
