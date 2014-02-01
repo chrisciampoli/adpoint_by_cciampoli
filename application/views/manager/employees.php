@@ -35,7 +35,7 @@
                                         </thead>
                                     </table>
                                 </fieldset>
-                               <button data-corners="false" data-enhanced="true" value="logout">Logout</button> 
+                              <input type="submit" value="Logout">
                             </div>
                         </div>
                     </div>
