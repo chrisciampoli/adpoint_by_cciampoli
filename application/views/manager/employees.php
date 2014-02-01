@@ -29,12 +29,20 @@
                                 <table>
                                     <thead>
                                     <th>Type</th>
+                                    <th>Name</th>
                                     <th>Position</th>
+                                    <th>Phone</th>
+                                    <th>Email</th>
+                                    <th>Availability</th>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>Manager</td>
+                                            <td>Bob</td>
                                             <td>Floor</td>
+                                            <td>619-999-3453</td>
+                                            <td>test@test.com</td>
+                                            <td>open</td>
                                         </tr>
                                     </tbody>
                                 </table>
