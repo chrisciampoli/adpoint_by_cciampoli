@@ -12,6 +12,10 @@ class Home extends Manager_Controller {
         $this->load->view('manager/index.php', $data);
     }
     
+    function employees() {
+        $this->load->view('manager/employees');
+    }
+    
     function week() {
         $this->load->view('manager/week.php');
     }
