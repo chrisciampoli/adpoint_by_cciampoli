@@ -26,15 +26,18 @@
                             <div id="assigned_work_area" width="100%" style="background-color:#F3FF89"><h2 class="ui-bar">Section Working</h2></div>
                             
                             <div class="ui-btn ui-input-btn ui-shadow">
-                                <fieldset>
-                                    <legend>Employees</legend>
-                                    <table>
-                                        <thead>
-                                        <th>Type</th>
-                                        <th>Position</th>
-                                        </thead>
-                                    </table>
-                                </fieldset>
+                                <table>
+                                    <thead>
+                                    <th>Type</th>
+                                    <th>Position</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Manager</td>
+                                            <td>Floor</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                               <input type="submit" value="Logout">
                             </div>
                         </div>
