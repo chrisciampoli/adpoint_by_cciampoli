@@ -12,7 +12,7 @@
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
         <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
-        <script src="../public/js/main.js"></script>
+        <script src="<?php echo base_url('public/js/main.js');?>"></script>
         <title>Swift Schedules</title>
         
     </head>
