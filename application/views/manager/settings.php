@@ -11,7 +11,7 @@
                         <div id="current_date" width="100%" style="background-color:#C5FAF4"><h2 class="ui-bar"><?php echo date('l F jS Y'); ?></h2></div>
                         <div id="assigned_work_area" width="100%" style="background-color:#F3FF89"><h2 class="ui-bar">Section Working</h2></div>
                         <div id="employee_table">
-                            <table data-role="table" id="my-table" data-mode="reflow">
+                            <table data-role="table" id="my-table" data-mode="columntoggle">
                                 <thead>
                                     <tr>
                                         <th>Rank</th>
