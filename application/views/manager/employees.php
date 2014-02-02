@@ -11,27 +11,27 @@
                             <div id="current_date" width="100%" style="background-color:#C5FAF4"><h2 class="ui-bar"><?php echo date('l F jS Y'); ?></h2></div>
                             <div id="assigned_work_area" width="100%" style="background-color:#F3FF89"><h2 class="ui-bar">Section Working</h2></div>
                             <div id="employee_table">
-                               <table>
-                                    <thead>
-                                    <th>Type</th>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Phone</th>
-                                    <th>Email</th>
-                                    <th>Availability</th>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Manager</td>
-                                            <td>Bob</td>
-                                            <td>Floor</td>
-                                            <td>619-999-3453</td>
-                                            <td>test@test.com</td>
-                                            <td>open</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                              <input type="submit" value="Logout">
+                            <table data-role="table" id="my-table" data-mode="columntoggle">
+                                <thead>
+                                    <tr>
+                                        <th>Type</th>
+                                        <th>Name</th>
+                                        <th>Position</th>
+                                        <th><abbr title="Rotten Tomato Rating">Phone</abbr></th>
+                                        <th>Email</th>
+                                        <th>Availability</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>1</th>
+                                        <td><a href="foo.com" data-rel="external">Citizen Kane</a></td>
+                                        <td>1941</td>
+                                        <td>100%</td>
+                                        <td>74</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                             </div>
                         </div>
                     </div>
