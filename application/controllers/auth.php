@@ -108,13 +108,13 @@ class Auth extends CI_Controller {
 	//log the user out
 	function logout()
 	{
-		$this->data['title'] = "Logout";
+		//$this->data['title'] = "Logout";
 
 		//log the user out
-		$logout = $this->ion_auth->logout();
+		//$logout = $this->ion_auth->logout();
 
 		//redirect them to the login page
-		$this->session->set_flashdata('message', $this->ion_auth->messages());
+		//$this->session->set_flashdata('message', $this->ion_auth->messages());
 		//redirect('auth/login', 'refresh');
                 redirect('welcome','refresh');
 	}
