@@ -11,7 +11,7 @@
                             <div id="current_date" width="100%" style="background-color:#C5FAF4"><h2 class="ui-bar"><?php echo date('l F jS Y'); ?></h2></div>
                             <div id="assigned_work_area" width="100%" style="background-color:#F3FF89"><h2 class="ui-bar">Section Working</h2></div>
                             <div id="employee_table">
-                               <table>
+                               <table width="100%">
                                     <thead>
                                     <th>Type</th>
                                     <th>Name</th>
