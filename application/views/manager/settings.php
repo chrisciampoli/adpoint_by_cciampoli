@@ -14,11 +14,12 @@
                             <table data-role="table" id="my-table" data-mode="columntoggle">
                                 <thead>
                                     <tr>
-                                        <th>Rank</th>
-                                        <th>Movie Title</th>
-                                        <th>Year</th>
-                                        <th><abbr title="Rotten Tomato Rating">Rating</abbr></th>
-                                        <th>Reviews</th>
+                                        <th>Type</th>
+                                        <th>Name</th>
+                                        <th>Position</th>
+                                        <th><abbr title="Rotten Tomato Rating">Phone</abbr></th>
+                                        <th>Email</th>
+                                        <th>Availability</th>
                                     </tr>
                                 </thead>
                                 <tbody>
