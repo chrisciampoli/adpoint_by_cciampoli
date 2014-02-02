@@ -20,6 +20,7 @@
                                         <th><abbr title="Rotten Tomato Rating">Phone</abbr></th>
                                         <th>Email</th>
                                         <th>Availability</th>
+                                        <th>Controls</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -29,6 +30,8 @@
                                         <td>1941</td>
                                         <td>100%</td>
                                         <td>74</td>
+                                        <td>Afternoon..</td>
+                                        <td>Edit</td>
                                     </tr>
                                 </tbody>
                             </table>
