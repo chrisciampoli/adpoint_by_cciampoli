@@ -8,7 +8,9 @@
         <meta name="author" content="">
         <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" />
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
         <title>Swift Schedules</title>
     </head>
@@ -24,9 +26,8 @@
                             <div id="employee_name" width="100%"><h2 class="ui-bar">Employee Name</h2></div>
                             <div id="current_date" width="100%" style="background-color:#C5FAF4"><h2 class="ui-bar"><?php echo date('l F jS Y'); ?></h2></div>
                             <div id="assigned_work_area" width="100%" style="background-color:#F3FF89"><h2 class="ui-bar">Section Working</h2></div>
-                            
-                            <div class="ui-btn ui-input-btn ui-shadow">
-                                <table>
+                            <div id="employee_table">
+                               <table>
                                     <thead>
                                     <th>Type</th>
                                     <th>Name</th>
