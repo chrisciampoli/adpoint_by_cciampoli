@@ -1,6 +1,7 @@
 $(function(){
    $('body').on('click','input#logout_btn',function(e){
       e.preventDefault();
-      $.post('auth/logout');
+      var url = "<?php base_url('auth/logout');?>";
+      $.post(url);
    });
 });
