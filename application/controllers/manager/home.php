@@ -11,21 +11,19 @@ class Home extends Manager_Controller {
         $data['name'] = $this->session->userdata('username');
         $this->load->view('manager/head');
         $this->load->view('manager/index', $data);
+        $this->load->view('footer');
     }
     
     function employees() {
         $this->load->view('manager/head');
         $this->load->view('manager/employees');
+        $this->load->view('footer');
     }
     
-    function week() {
+    function settings() {
         $this->load->view('manager/head');
-        $this->load->view('manager/week.php');
-    }
-    
-    function month() {
-        $this->load->view('manager/head');
-        $this->load->view('manager/month.php');
+        $this->load->view('manager/settings');
+        $this->load->view('footer');
     }
     
 }
