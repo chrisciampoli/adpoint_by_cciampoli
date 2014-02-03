@@ -7,9 +7,7 @@
                 <div data-role="tabs" style="border:2px solid black;">
                     <div id="fragment-1">
                         <div height="100%" id="container">
-                            <div id="employee_name" width="100%"><h2 class="ui-bar">Employee Name</h2></div>
-                            <div id="current_date" width="100%" style="background-color:#C5FAF4"><h2 class="ui-bar"><?php echo date('l F jS Y'); ?></h2></div>
-                            <div id="assigned_work_area" width="100%" style="background-color:#F3FF89"><h2 class="ui-bar">Section Working</h2></div>
+                          <?php $this->load->view('employee_info'); ?>                       
                             <div id="employee_table">
                             <table data-role="table" id="my-table" data-mode="columntoggle">
                                 <thead>
