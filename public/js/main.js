@@ -5,6 +5,10 @@ $(function() {
                 + '<div>'
                         + '<div><label for="first_name">First Name</label><input type="text" name="first_name" id="first_name" /></div>'
                         + '<div><label for="last_name">Last Name</label><input type="text" name="last_name" id="last_name" /></div>'
+                        + '<div><label for="position">Position</label><input type="text" name="position" id="position" /></div>'
+                        + '<div><label for="phone">Phone</label><input type="text" name="phone" id="phone" /></div>'
+                        + '<div><label for="email">Last Name</label><input type="text" name="email" id="email" /></div>'
+                        + '<div><label for="availability">Availability</label><input type="text" name="availability" id="availability" /></div>'
                 + '</div>'
             + '</section>';
     
