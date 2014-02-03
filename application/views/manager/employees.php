@@ -10,7 +10,7 @@
                           <?php $this->load->view('employee_info'); ?>                       
                             <div id="employee_table">
                             <table  class="f">
-                                <thead>
+                                <thead id="table_header">
                                     <tr>
                                         <th>Type</th>
                                         <th>Name</th>
