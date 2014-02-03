@@ -1,12 +1,12 @@
 $(function() {
     
     var add_employee = String()
-				+ '<section>'
-					+ '<div id="redactor_tabs">'
-						+ '<a href="#" class="redactor_tabs_act">upload</a>'
-						+ '<a href="#">chose</a>'
-						+ '<a href="#">link</a>'
-					+ '</div>';
+            + '<section>'
+                + '<div>'
+                        + '<div><label for="first_name">First Name</label><input type="text" name="first_name" id="first_name" /></div>'
+                        + '<div><label for="last_name">Last Name</label><input type="text" name="last_name" id="last_name" /></div>'
+                + '</div>'
+            + '</section>';
     
     
     $('#table_header').prepend('<input id="add_employee_btn" type="button" value="Add Employee" />');
@@ -14,7 +14,7 @@ $(function() {
         var add_dialog = String()
                 +'<div id="add_dialog"><div><label for="first_name">First Name</label></div>'
                 +'<div><input type="text" name="first_name" id="first_name" /></div>';
-                +'<div><label for="last_name">Last Name</label></div>'
+                +'<div><label for="last_name">Last Name</label>'
                 +'<div><input type="text" name="last_name" id="last_name" /></div></div>';
         $(add_employee).dialog({
             title: "Add Employee"
