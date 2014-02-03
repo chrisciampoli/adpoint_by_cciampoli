@@ -7,7 +7,6 @@ class Home extends Manager_Controller {
     function __construct() {
         parent::__construct();
         $this->load->library('session');
-        $this->styles[] = 'home';
     }
     
     function index() {
