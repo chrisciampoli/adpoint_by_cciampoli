@@ -8,8 +8,8 @@
                     <div id="fragment-1">
                         <div height="100%" id="container">
                           <?php $this->load->view('employee_info'); ?>                       
-                            <div id="employee_table" class="f">
-                            <table>
+                            <div id="employee_table">
+                            <table  class="f">
                                 <thead>
                                     <tr>
                                         <th>Type</th>
