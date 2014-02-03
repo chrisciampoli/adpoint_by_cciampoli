@@ -15,6 +15,7 @@
             table{
                 border: 0px solid black;
                 border-spacing: 0px;
+                width: 100%;
             }
 
             table thead tr{
