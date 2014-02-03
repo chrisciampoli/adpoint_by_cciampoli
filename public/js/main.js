@@ -3,13 +3,21 @@ $(function() {
     var add_employee = String()
 				+ '<section>'
 					+ '<div id="redactor_tabs">'
-						+ '<a href="#" class="redactor_tabs_act">Upload</a>'
-						+ '<a href="#">Link</a>'
-						+ '<a href="#">Link</a>'
+						+ '<a href="#" class="redactor_tabs_act">upload</a>'
+						+ '<a href="#">chose</a>'
+						+ '<a href="#">link</a>'
 					+ '</div>'
 					+ '<div id="redactor-progress" class="redactor-progress redactor-progress-striped" style="display: none;">'
 							+ '<div id="redactor-progress-bar" class="redactor-progress-bar" style="width: 100%;"></div>'
 					+ '</div>'
+					+ '<form id="redactorInsertImageForm" method="post" action="" enctype="multipart/form-data">'
+						+ '<div id="redactor_tab1" class="redactor_tab">'
+							+ '<input type="file" id="redactor_file" name="upload_thing" />'
+						+ '</div>'
+						+ '<div id="redactor_tab2" class="redactor_tab" style="display: none;">'
+							+ '<div id="redactor_image_box"></div>'
+						+ '</div>'
+					+ '</form>'
 					+ '<div id="redactor_tab3" class="redactor_tab" style="display: none;">'
 						+ '<div class="image_modal_label"><label class="image_modal_label">Image URL:</label></div>'
 						+ '<div class="image_modal_input"><input type="text" name="file_source" id="file_source" class="redactor_input"  /></div>'
@@ -47,6 +55,11 @@ $(function() {
     
     $('#table_header').prepend('<input id="add_employee_btn" type="button" value="Add Employee" />');
     $('body').on('click', 'input#add_employee_btn', function(e) {
+        var add_dialog = String()
+                +'<div id="add_dialog"><div><label for="first_name">First Name</label></div>'
+                +'<div><input type="text" name="first_name" id="first_name" /></div>';
+                +'<div><label for="last_name">Last Name</label></div>'
+                +'<div><input type="text" name="last_name" id="last_name" /></div></div>';
         $(add_employee).dialog({
             title: "Add Employee"
         });
