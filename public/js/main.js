@@ -5,7 +5,7 @@ $(function() {
                 +'<div id="add_dialog"><div><label for="first_name">First Name</label></div>'
                 +'<div><input type="text" name="first_name" id="first_name" /></div>';
                 +'<div><label for="last_name">Last Name</label></div>'
-                +'<div><input type="text" name="last_name" id="last_name" /></div>';
+                +'<div><input type="text" name="last_name" id="last_name" /></div></div>';
         $(add_dialog).dialog({
             title: "Add Employee"
         });
