@@ -9,7 +9,7 @@
                         <div height="100%" id="container">
                           <?php $this->load->view('employee_info'); ?>                       
                             <div id="employee_table">
-                            <table data-role="table" id="my-table" data-mode="columntoggle">
+                            <table>
                                 <thead>
                                     <tr>
                                         <th>Type</th>
