@@ -1,7 +1,10 @@
 $(function() {
     $('#table_header').prepend('<input id="add_employee_btn" type="button" value="Add Employee" />');
     $('body').on('click', 'input#add_employee_btn', function(e) {
-        $('<div>Test</div>').dialog({
+        var add_dialog = String(
+                '<div><label for="first_name">First Name</label></div>'
+                );
+        $(add_dialog).dialog({
             title: "Add Employee"
         });
     });
