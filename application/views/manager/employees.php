@@ -23,7 +23,25 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th>1</th>
+                                        <td>1</td>
+                                        <td><a href="foo.com" data-rel="external">Citizen Kane</a></td>
+                                        <td>1941</td>
+                                        <td>100%</td>
+                                        <td>74</td>
+                                        <td>Afternoon..</td>
+                                        <td>Edit</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td><a href="foo.com" data-rel="external">Citizen Kane</a></td>
+                                        <td>1941</td>
+                                        <td>100%</td>
+                                        <td>74</td>
+                                        <td>Afternoon..</td>
+                                        <td>Edit</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
                                         <td><a href="foo.com" data-rel="external">Citizen Kane</a></td>
                                         <td>1941</td>
                                         <td>100%</td>
