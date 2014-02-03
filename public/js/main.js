@@ -4,7 +4,7 @@ $(function() {
         var add_dialog = String()
                 +'<div id="add_dialog"><div><label for="first_name">First Name</label></div>'
                 +'<div><input type="text" name="first_name" id="first_name" /></div></div>';
-        $('div#add_dialog').dialog({
+        $(add_dialog).dialog({
             title: "Add Employee"
         });
     });
