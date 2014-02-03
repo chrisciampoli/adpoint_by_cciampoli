@@ -1,3 +1,4 @@
+<?php $this->load->view('head');?>
 <body>
     <div data-role="page" id="page1">
         <div data-role="header" style="background-color:#ADFCC0">
