@@ -25,11 +25,11 @@ $(function(){
  * Pull list of employees from db and returns json
  */
 function getEmployees() {
-    data = {};
-    ajaxData('ajaxGetEmployees', data, getEmployeesSuccess, getEmployeesFailure);
+    request = {};
+    ajaxData('ajaxGetEmployees', request, getEmployeesSuccess, getEmployeesFailure);
 }
 
-function getEmployeesSuccess() {
+function getEmployeesSuccess(data) {
     console.log(data);
 }
 
@@ -87,9 +87,7 @@ function ajaxData(url, data, success, failure) {
         url: url,
         data: data,
         dataType: "json",
-        success: function(data){
-            success(data);
-        },
+        success: success(data),
         failure: failure(data)
     });
 }
