@@ -86,7 +86,7 @@ function ajaxData(url, data, success, failure) {
     $.ajax({
         url: url,
         data: data,
-        dataType: json,
+        dataType: "json",
         success: success,
         failure: failure
     });
