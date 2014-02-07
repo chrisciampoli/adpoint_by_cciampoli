@@ -26,10 +26,10 @@ $(function(){
  */
 function getEmployees() {
     request = {};
-    ajaxData('ajaxGetEmployees', request, getEmployeesSuccess, getEmployeesFailure);
+    ajaxData('ajaxGetEmployees', request, getEmployeesSuccess);
 }
 
-function getEmployeesSuccess(data) {
+function getEmployeesSuccess() {
     console.log(data);
 }
 
@@ -82,12 +82,13 @@ function renderDialog() {
     
 }
 
-function ajaxData(url, data, success, failure) {
+function ajaxData(url, data, success) {
     $.ajax({
         url: url,
         data: data,
         dataType: "json",
-        success: success(data),
-        failure: failure(data)
+        success: function(data) {
+            success(data);    
+        }
     });
 }
