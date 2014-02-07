@@ -26,7 +26,7 @@ $(function(){
  */
 function getEmployees() {
     var data = {
-        url: "<?php echo base_url('manager/home/ajaxGetEmployees');?>"
+        url: $('body').data('baseurl')
     };
     
     ajaxData(data.url, data, getEmployeesSuccess, getEmployeesFailure);

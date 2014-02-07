@@ -1,4 +1,4 @@
-    <body>
+    <body data-baseurl="<?=base_url();?>">
         <div data-role="page" id="page1">
             <div data-role="header" style="background-color:#ADFCC0">
                 <h1>Swift Schedules</h1>
