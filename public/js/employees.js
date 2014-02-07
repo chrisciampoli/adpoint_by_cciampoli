@@ -26,11 +26,11 @@ $(function(){
  */
 function getEmployees() {
     data = {};
-    ajaxData('ajaxGetEmployees', data, getEmployeesSuccess(), getEmployeesFailure());
+    ajaxData('ajaxGetEmployees', data, getEmployeesSuccess(data));
 }
 
-function getEmployeesSuccess() {
-    console.log('Bingo!');
+function getEmployeesSuccess(data) {
+    console.log($.parseJSON(data));
 }
 
 function getEmployeesFailure() {
