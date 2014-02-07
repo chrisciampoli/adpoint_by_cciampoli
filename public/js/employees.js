@@ -25,11 +25,8 @@ $(function(){
  * Pull list of employees from db and returns json
  */
 function getEmployees() {
-    var data = {
-        url: $('body').data('baseurl')
-    };
-    
-    ajaxData(data.url, data, getEmployeesSuccess, getEmployeesFailure);
+    data = {};
+    ajaxData('manager/home/ajaxGetEmployees', data, getEmployeesSuccess, getEmployeesFailure);
 }
 
 function getEmployeesSuccess() {
