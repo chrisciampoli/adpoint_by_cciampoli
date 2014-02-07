@@ -1,4 +1,5 @@
 $(function(){ 
+   getEmployees(); 
    var add_employee = String()
             + '<section>'
                 + '<div>'
@@ -24,19 +25,20 @@ $(function(){
  * Pull list of employees from db and returns json
  */
 function getEmployees() {
-    ajaxData();
+    data = {};
+    ajaxData('/manager/home/ajaxGetEmployees', data, getEmployeesSuccess, getEmployeesFailure);
 }
 
 function getEmployeesSuccess() {
-    
+    console.log('Bingo!');
 }
 
 function getEmployeesFailure() {
-    
+    console.log('Wakka wakka');
 }
 
 function saveEmployee() {
-    
+    ajaxData(url, data, saveEmployeeSuccess, saveEmployeeFailure);
 }
 
 function saveEmployeeSuccess() {
@@ -48,7 +50,7 @@ function saveEmployeeFailure() {
 }
 
 function removeEmployee() {
-    
+    ajaxData(url, data, removeEmployeeSuccess, removeEmployeeFailure);
 }
 
 function removeEmployeeSuccess() {
@@ -61,7 +63,7 @@ function removeEmployeeFailure() {
 }
 
 function updateEmployee() {
-    
+    ajaxData(url, data, updateEmployeeSuccess, updateEmployeeFailure);
 }
 
 function updateEmployeeSuccess() {
@@ -80,6 +82,12 @@ function renderDialog() {
     
 }
 
-function ajaxData() {
-    $.ajax({});
+function ajaxData(url, data, success, failure) {
+    $.ajax({
+        url: url,
+        data: data,
+        dataType: json,
+        success: success,
+        failure: failure
+    });
 }
