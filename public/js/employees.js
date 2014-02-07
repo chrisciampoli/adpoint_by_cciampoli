@@ -29,7 +29,7 @@ function getEmployees() {
     ajaxData('ajaxGetEmployees', data, getEmployeesSuccess, getEmployeesFailure);
 }
 
-function getEmployeesSuccess(data) {
+function getEmployeesSuccess() {
     console.log(data);
 }
 
@@ -87,7 +87,9 @@ function ajaxData(url, data, success, failure) {
         url: url,
         data: data,
         dataType: "json",
-        success: success(data),
+        success: function(data){
+            success(data);
+        },
         failure: failure(data)
     });
 }
