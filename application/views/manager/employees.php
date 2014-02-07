@@ -59,5 +59,5 @@
             </div>
         </div>
     </body>
-    <?=$script;?>
+    <script src="<?=$script;?>"></script>
 </html>
