@@ -26,7 +26,7 @@ $(function(){
  */
 function getEmployees() {
     request = {};
-    postData('ajaxGetEmployees', 'GET', 'json', request, getEmployeesBeforeSend, getEmployeesSuccess)
+    postData('http://ec2-54-193-89-75.us-west-1.compute.amazonaws.com/swift_schedules/index.php/manager/home/ajaxGetEmployees', 'GET', 'json', request, getEmployeesBeforeSend, getEmployeesSuccess)
 }
 
 function getEmployeesBeforeSend() {
