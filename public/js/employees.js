@@ -26,7 +26,7 @@ $(function(){
  */
 function getEmployees() {
     data = {};
-    ajaxData('/manager/home/ajaxGetEmployees', data, getEmployeesSuccess, getEmployeesFailure);
+    ajaxData('swift_schedules/index.php/manager/home/ajaxGetEmployees', data, getEmployeesSuccess, getEmployeesFailure);
 }
 
 function getEmployeesSuccess() {

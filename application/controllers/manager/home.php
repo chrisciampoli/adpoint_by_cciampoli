@@ -24,4 +24,11 @@ class Home extends Manager_Controller {
         $this->load->view('manager/settings', $data);
     }
     
+    /*
+     * Ajax Functions
+     */
+    public function ajaxGetEmployees() {
+        echo json_encode(array('Response'=>'Success'));
+    }
+    
 }
