@@ -88,7 +88,7 @@ function ajaxData(url, data, success) {
         data: data,
         dataType: "json",
         success: function(data) {
-            success(data);    
+            console.log(data);    
         }
     });
 }
