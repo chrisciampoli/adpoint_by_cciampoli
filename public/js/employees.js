@@ -26,7 +26,7 @@ $(function(){
  */
 function getEmployees() {
     data = {};
-    ajaxData('ajaxGetEmployees', data, getEmployeesSuccess);
+    ajaxData('ajaxGetEmployees', data, getEmployeesSuccess, getEmployeesFailure);
 }
 
 function getEmployeesSuccess(data) {
