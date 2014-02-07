@@ -30,7 +30,7 @@ function getEmployees() {
 }
 
 function getEmployeesSuccess(data) {
-    console.log($.parseJSON(data));
+    console.log(data);
 }
 
 function getEmployeesFailure() {
