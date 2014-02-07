@@ -25,8 +25,11 @@ $(function(){
  * Pull list of employees from db and returns json
  */
 function getEmployees() {
-    data = {};
-    ajaxData('swift_schedules/index.php/manager/home/ajaxGetEmployees', data, getEmployeesSuccess, getEmployeesFailure);
+    var data = {
+        url: "<?php echo base_url('manager/home/ajaxGetEmployees');?>"
+    };
+    
+    ajaxData(data.url, data, getEmployeesSuccess, getEmployeesFailure);
 }
 
 function getEmployeesSuccess() {
