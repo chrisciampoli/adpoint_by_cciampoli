@@ -26,7 +26,7 @@ $(function(){
  */
 function getEmployees() {
     data = {};
-    ajaxData('ajaxGetEmployees', data, getEmployeesSuccess(data));
+    ajaxData('ajaxGetEmployees', data, getEmployeesSuccess);
 }
 
 function getEmployeesSuccess(data) {
@@ -87,7 +87,7 @@ function ajaxData(url, data, success, failure) {
         url: url,
         data: data,
         dataType: "json",
-        success: success,
-        failure: failure
+        success: success(data),
+        failure: failure(data)
     });
 }
