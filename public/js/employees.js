@@ -26,7 +26,11 @@ $(function(){
  */
 function getEmployees() {
     request = {};
-    ajaxData('ajaxGetEmployees', request, getEmployeesSuccess);
+    postData('ajaxGetEmployees', 'GET', 'json', data, getEmployeesBeforeSend, getEmployeesSuccess)
+}
+
+function getEmployeesBeforeSend() {
+    console.log('getting em');
 }
 
 function getEmployeesSuccess() {
@@ -38,7 +42,7 @@ function getEmployeesFailure() {
 }
 
 function saveEmployee() {
-    ajaxData(url, data, saveEmployeeSuccess, saveEmployeeFailure);
+   // ajaxData(url, data, saveEmployeeSuccess, saveEmployeeFailure);
 }
 
 function saveEmployeeSuccess() {
@@ -50,7 +54,7 @@ function saveEmployeeFailure() {
 }
 
 function removeEmployee() {
-    ajaxData(url, data, removeEmployeeSuccess, removeEmployeeFailure);
+    //ajaxData(url, data, removeEmployeeSuccess, removeEmployeeFailure);
 }
 
 function removeEmployeeSuccess() {
@@ -63,7 +67,7 @@ function removeEmployeeFailure() {
 }
 
 function updateEmployee() {
-    ajaxData(url, data, updateEmployeeSuccess, updateEmployeeFailure);
+    //ajaxData(url, data, updateEmployeeSuccess, updateEmployeeFailure);
 }
 
 function updateEmployeeSuccess() {
@@ -82,13 +86,18 @@ function renderDialog() {
     
 }
 
-function ajaxData(url, data, success) {
+// Universal Ajax Method
+function postData(url, type, dataType, data, beforeSend, success) {
     $.ajax({
         url: url,
+        type: type,
+        dataType: dataType,
         data: data,
-        dataType: "json",
+        beforeSend: function(data) {
+            beforeSend(data);
+        },
         success: function(data) {
-            console.log(data);    
+            success(data);
         }
     });
 }
