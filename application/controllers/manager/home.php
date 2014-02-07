@@ -29,6 +29,7 @@ class Home extends Manager_Controller {
      */
     public function ajaxGetEmployees() {
         echo json_encode(array('Response'=>'Success'));
+        return true;
     }
     
 }
