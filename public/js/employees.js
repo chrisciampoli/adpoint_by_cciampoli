@@ -26,7 +26,7 @@ $(function(){
  */
 function getEmployees() {
     request = {};
-    postData('ajaxGetEmployees', 'GET', 'json', data, getEmployeesBeforeSend, getEmployeesSuccess)
+    postData('ajaxGetEmployees', 'GET', 'json', request, getEmployeesBeforeSend, getEmployeesSuccess)
 }
 
 function getEmployeesBeforeSend() {
