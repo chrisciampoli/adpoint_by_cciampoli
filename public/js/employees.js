@@ -2,10 +2,8 @@ $(function() {
     
     console.log(base_url);
     
-    var test_url = base_url + 'index.php/manager/home/ajaxGetEmployees';
-    
     $.ajax({
-       url: test_url,
+       url: 'manager/home/ajaxGetEmployees',
        dataType: "json",
        success: function(data) {
            console.log(data);
