@@ -1,5 +1,7 @@
 $(function() {
     
+    window.test = "<?php echo base_url();?>";
+    
     $.ajax({
        url: 'ajaxGetEmployees',
        dataType: "json",
