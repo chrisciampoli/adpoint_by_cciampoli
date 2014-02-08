@@ -3,7 +3,7 @@ $(function() {
     console.log(base_url);
     
     $.ajax({
-       url: 'manager/home/ajaxGetEmployees',
+       url: 'ajaxGetEmployees',
        dataType: "json",
        success: function(data) {
            console.log(data);
