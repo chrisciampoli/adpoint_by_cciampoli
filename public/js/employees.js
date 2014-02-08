@@ -1,4 +1,12 @@
 $(function() {
+    
+    $.ajax({
+       url: 'ajaxGetEmployees',
+       success: function(data) {
+           console.log(data);
+       }
+    });
+    
     getEmployees();
     var add_employee = String()
             + '<section>'
