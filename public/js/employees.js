@@ -2,6 +2,7 @@ $(function() {
     
     $.ajax({
        url: 'ajaxGetEmployees',
+       dataType: "json",
        success: function(data) {
            console.log(data);
        }
