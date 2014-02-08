@@ -1,7 +1,6 @@
 $(function() {
     
-    window.test = "<?= $base_url ?>";
-    
+    console.log(base_url);
     
     $.ajax({
        url: 'ajaxGetEmployees',
