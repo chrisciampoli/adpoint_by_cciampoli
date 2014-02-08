@@ -14,7 +14,6 @@ class Home extends Manager_Controller {
     }
     
     function employees() {
-        $data['base_url'] = base_url();
         $data['script'] = base_url('public/js/employees.js');
         $data['name'] = $this->session->userdata('username');
         $this->load->view('manager/employees', $data);
@@ -30,6 +29,22 @@ class Home extends Manager_Controller {
      */
     public function ajaxGetEmployees() {
         $response['status'] = 'Success';
+        $response['message'] = $this->input->get();
+        echo json_encode($response);
+        exit();
+    }
+    
+    public function ajaxCreateEmployee() {
+        echo json_encode($response);
+        exit();
+    }
+    
+    public function ajaxRemoveEmployee() {
+        echo json_encode($response);
+        exit();
+    }
+    
+    public function ajaxUpdateEmployee() {
         echo json_encode($response);
         exit();
     }

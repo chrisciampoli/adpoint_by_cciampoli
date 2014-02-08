@@ -28,7 +28,9 @@ $(function(){
  * Pull list of employees from db and returns json
  */
 function getEmployees() {
-    request = {};
+    request = {
+        'ajaxRequest': true
+    };
     postData('ajaxGetEmployees', 'GET', 'json', request, getEmployeesBeforeSend, getEmployeesSuccess);
 }
 
