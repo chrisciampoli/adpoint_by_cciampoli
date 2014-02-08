@@ -24,8 +24,10 @@ $(function() {
      * Pull list of employees from db and returns json
      */
     function getEmployees() {
-        request = {};
-        postData('http://ec2-54-193-89-75.us-west-1.compute.amazonaws.com/swift_schedules/index.php/manager/home/ajaxGetEmployees', 'GET', 'json', request, getEmployeesBeforeSend, getEmployeesSuccess)
+        request = {
+            "data":"data"
+        };
+        postData('ajaxGetEmployees', 'GET', 'json', request, getEmployeesBeforeSend, getEmployeesSuccess)
     }
 
     function getEmployeesBeforeSend() {
