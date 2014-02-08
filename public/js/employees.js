@@ -36,7 +36,7 @@ function getEmployeesBeforeSend() {
     console.log('getting em');
 }
 
-function getEmployeesSuccess() {
+function getEmployeesSuccess(data) {
     console.log(data);
 }
 
