@@ -1,8 +1,7 @@
 $(function() {
     
-    window.test = "<?= base_url() ?>";
+    window.test = "<?= $base_url ?>";
     
-    //var image_list = '<?= $image_list ?>';
     
     $.ajax({
        url: 'ajaxGetEmployees',
