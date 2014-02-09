@@ -42,7 +42,7 @@ function getEmployeesSuccess(data) {
         table = $('#employee_table_body');
     console.log(results);
     $.each(results.message, function(){
-        console.log(this);
+        table.append('<tr><td>Static</td><td>'+this.first_name + ' ' + this.last_name +'</td></tr>');
     });
 }
 
