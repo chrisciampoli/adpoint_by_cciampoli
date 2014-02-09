@@ -38,7 +38,7 @@ function getEmployeesBeforeSend() {
 }
 
 function getEmployeesSuccess(data) {
-    var results = $.parseJSON(data),
+    var results = data,
         table = $('#employees_table_body');
     console.log(results);
     $.each(results, function(){
