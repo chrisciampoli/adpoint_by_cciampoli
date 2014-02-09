@@ -30,12 +30,13 @@ class Home extends Manager_Controller {
      */
     public function ajaxGetEmployees() {
         
+        $results = array();
         $query = $this->db->get('users');
         foreach($query->result_array() as $row) {
-            $results['first_name'][] = $row['first_name'];
-            $results['last_name'][]  = $row['last_name'];
-            $results['email'][]      = $row['email'];
-            $results['phone'][]      = $row['phone'];
+            $results['first_name'] = $row['first_name'];
+            $results['last_name']  = $row['last_name'];
+            $results['email']    = $row['email'];
+            $results['phone']      = $row['phone'];
         }
         
         $response['status'] = 'Success';
