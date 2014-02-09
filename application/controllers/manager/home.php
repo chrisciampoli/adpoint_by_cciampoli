@@ -29,8 +29,14 @@ class Home extends Manager_Controller {
      * Ajax Functions
      */
     public function ajaxGetEmployees() {
+        $results = array();
+        $query = $this->db->get('users');
+        foreach($query->result_array() as $row) {
+            $results[] = $row;
+        }
+        
         $response['status'] = 'Success';
-        $response['message'] = $this->db->get('users');
+        $response['message'] = $results;
         echo json_encode($response);
         exit();
     }
