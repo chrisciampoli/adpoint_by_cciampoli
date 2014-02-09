@@ -42,7 +42,7 @@ function getEmployeesSuccess(data) {
         table = $('#employees_table_body');
     console.log(results);
     $.each(results.message, function(){
-       console.log(this);
+       console.log(this.email);
     });
 }
 
