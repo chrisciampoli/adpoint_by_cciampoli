@@ -1,5 +1,4 @@
 $(function(){ 
-   
     getEmployees(); 
    
     var add_employee = String()

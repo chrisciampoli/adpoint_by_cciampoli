@@ -6,6 +6,7 @@ class Home extends Manager_Controller {
         parent::__construct();
         $this->load->library('session');
         $this->load->view('manager/head');
+        $this->load->library('database');
     }
     
     function index() {
@@ -29,7 +30,7 @@ class Home extends Manager_Controller {
      */
     public function ajaxGetEmployees() {
         $response['status'] = 'Success';
-        $response['message'] = $this->input->get();
+        $response['message'] = $this->db->get('users');
         echo json_encode($response);
         exit();
     }
