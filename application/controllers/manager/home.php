@@ -6,7 +6,7 @@ class Home extends Manager_Controller {
         parent::__construct();
         $this->load->library('session');
         $this->load->view('manager/head');
-        $this->load->library('database');
+        $this->load->database();
     }
     
     function index() {
