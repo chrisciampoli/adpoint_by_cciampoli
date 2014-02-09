@@ -12,9 +12,9 @@
                             <table  class="f">
                                 <thead id="table_header">
                                     <tr>
-                                        <th>Type</th>
-                                        <th>Name</th>
                                         <th>Position</th>
+                                        <th>Name</th>
+                                        <th>Phone</th>
                                         <th>Email</th>
                                         <th>Availability</th>
                                         <th>Controls</th>
