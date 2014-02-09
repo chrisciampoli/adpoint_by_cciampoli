@@ -31,7 +31,7 @@ class Home extends Manager_Controller {
     public function ajaxGetEmployees() {
         
         $results = array();
-        $this->db->select('first_name','last_name','email','phone');
+        $this->db->select('first_name, last_name, email, phone');
         $query = $this->db->get('users');
         foreach($query->result_array() as $row) {
             $results[] = $row;
