@@ -39,7 +39,7 @@ function getEmployeesBeforeSend() {
 
 function getEmployeesSuccess(data) {
     var results = data,
-        table = $('#employees_table_body');
+        table = $('#employee_table_body');
     console.log(results);
     $.each(results.message, function(key, value){
         $(table).append('<tr><td>'+key+'</td></tr>');
