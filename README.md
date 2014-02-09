@@ -1,7 +1,9 @@
-adpoint_by_cciampoli
+Swift Schedules
 ====================
 
-Adpoint
+Swift Schedules by Quick and Co 
+
+software design by Christopher Ciampoli
 
 
-A software platform that will connect Advertisers with local business owners for pinpoint marketing.
+A software platform for faster employee time management
