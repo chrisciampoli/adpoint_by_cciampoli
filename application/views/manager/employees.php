@@ -15,40 +15,13 @@
                                         <th>Type</th>
                                         <th>Name</th>
                                         <th>Position</th>
-                                        <th><abbr title="Rotten Tomato Rating">Phone</abbr></th>
                                         <th>Email</th>
                                         <th>Availability</th>
                                         <th>Controls</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td><a href="foo.com" data-rel="external">Citizen Kane</a></td>
-                                        <td>1941</td>
-                                        <td>100%</td>
-                                        <td>74</td>
-                                        <td>Afternoon..</td>
-                                        <td>Edit</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td><a href="foo.com" data-rel="external">Citizen Kane</a></td>
-                                        <td>1941</td>
-                                        <td>100%</td>
-                                        <td>74</td>
-                                        <td>Afternoon..</td>
-                                        <td>Edit</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td><a href="foo.com" data-rel="external">Citizen Kane</a></td>
-                                        <td>1941</td>
-                                        <td>100%</td>
-                                        <td>74</td>
-                                        <td>Afternoon..</td>
-                                        <td>Edit</td>
-                                    </tr>
+                                <tbody id="employee_table_body">
+                                    
                                 </tbody>
                             </table>
                         </div>

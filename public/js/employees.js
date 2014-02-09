@@ -38,7 +38,12 @@ function getEmployeesBeforeSend() {
 }
 
 function getEmployeesSuccess(data) {
-    console.log(data);
+    var results = $.parseJSON(data),
+        table = $('#employees_table_body');
+    console.log(results);
+    $.each(results, function(){
+       table.append('<tr><td>This is just a test</td></tr>'); 
+    });
 }
 
 function getEmployeesFailure() {

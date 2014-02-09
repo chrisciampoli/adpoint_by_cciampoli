@@ -35,6 +35,7 @@ class Home extends Manager_Controller {
             $results['first_name'][] = $row['first_name'];
             $results['last_name'][]  = $row['last_name'];
             $results['email'][]      = $row['email'];
+            $results['phone'][]      = $row['phone'];
         }
         
         $response['status'] = 'Success';
