@@ -35,6 +35,8 @@ class Home extends Manager_Controller {
             $results[] = $row;
         }
         
+        $results = mb_check_encoding($results, 'UTF-8') ? $value : utf8_encode($results);
+        
         $response['status'] = 'Success';
         $response['message'] = $results;
         echo json_encode($response);
