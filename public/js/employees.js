@@ -41,8 +41,8 @@ function getEmployeesSuccess(data) {
     var results = data,
         table = $('#employee_table_body');
     console.log(results);
-    $.each(results.message, function(key, value){
-        $(table).append('<tr><td>'+value+'</td></tr>');
+    $.each(results.message, function(){
+        console.log(this);
     });
 }
 
