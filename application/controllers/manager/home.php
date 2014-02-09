@@ -33,6 +33,8 @@ class Home extends Manager_Controller {
         $query = $this->db->get('users');
         foreach($query->result_array() as $row) {
             $results['first_name'][] = $row['first_name'];
+            $results['last_name'][]  = $row['last_name'];
+            $results['email'][]      = $row['email'];
         }
         
         $response['status'] = 'Success';
