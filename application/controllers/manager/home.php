@@ -29,13 +29,11 @@ class Home extends Manager_Controller {
      * Ajax Functions
      */
     public function ajaxGetEmployees() {
-        $results = array();
+        
         $query = $this->db->get('users');
         foreach($query->result_array() as $row) {
-            $results[] = $row;
+            $results['first_name'][] = $row['first_name'];
         }
-        
-        $results = mb_check_encoding($results, 'UTF-8') ? $value : utf8_encode($results);
         
         $response['status'] = 'Success';
         $response['message'] = $results;
