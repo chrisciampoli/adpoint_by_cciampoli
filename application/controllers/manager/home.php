@@ -17,7 +17,7 @@ class Home extends Manager_Controller {
     function employees() {
         $data['script'] = base_url('public/js/employees.js');
         $data['name'] = $this->session->userdata('username');
-        $this->load->view('manager/employees', $data);
+        $this->load->view('manager/employees2', $data);
     }
     
     function settings() {
