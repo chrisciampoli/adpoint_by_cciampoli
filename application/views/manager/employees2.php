@@ -140,7 +140,7 @@
                   <td>showits@starbucks.com</td>
                   <td>
                       <button type="button" rel="4" class="check_avail btn btn-primary btn-sm">
-                          <div class="datepicker" id="datepicker_4"></div>
+                          <input type="hidden" class="datepicker" id="datepicker_4" />
                           <span class="glyphicon glyphicon-calendar"></span> Check
                       </button>
                   </td>
