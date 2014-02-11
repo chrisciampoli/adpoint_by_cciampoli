@@ -168,7 +168,7 @@
          $(function(){
             $( ".check_avail" ).on('click',function(e){
                 e.preventDefault();
-                $( "#datepicker" ).datepicker();
+                $("<div style='width:100px;'></div>").datepicker();
             }); 
          });
     </script>
