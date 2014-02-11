@@ -77,7 +77,11 @@
                   <td>Lorem</td>
                   <td>ipsum</td>
                   <td>dolor</td>
-                  <td><span class="glyphicon glyphicon-calendar"></span></td>
+                  <td>
+                      <button type="button" class="btn btn-primary btn-sm">
+                          <span class="glyphicon glyphicon-pencil"></span> Edit
+                      </button>
+                  </td>
                   <td>
                       <button type="button" class="btn btn-primary btn-sm">
                           <span class="glyphicon glyphicon-pencil"></span> Edit
