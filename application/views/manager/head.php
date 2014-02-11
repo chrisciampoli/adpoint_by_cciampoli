@@ -9,6 +9,7 @@
         <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
         <!-- Bootstrap core CSS -->
         <link href="<?php echo base_url('public/css/bootstrap.min.css');?>" rel="stylesheet">
+        <link href="<?php echo base_url('public/css/responsive.css');?>" rel="stylesheet">
         <!--<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" />-->
         <link rel="stylesheet" href="<?php echo base_url('public/css/main.css');?>" />
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
