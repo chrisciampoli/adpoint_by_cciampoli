@@ -169,18 +169,6 @@
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="<?php echo base_url('public/js/docs.js');?>"></script>
-    <script>
-         $(function(){
-            $( ".check_avail" ).on('click',function(e){
-                e.preventDefault();
-                var rel = $(this).attr('rel');
-                $("#datepicker_"+rel).datepicker('dialog',"",dateSelect());
-            }); 
-            
-            function dateSelect() {
-                $('<div>Location</div>').dialog();
-            }
-         });
-    </script>
+    <script src="<?php echo base_url('public/js/main.js');?>"></script>
   </body>
 </html>

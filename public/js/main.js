@@ -1,8 +1,18 @@
 $(function() {
-    $('#container').on('click', 'input#logout_btn', function(e) {
+    $(".check_avail").on('click', function(e) {
         e.preventDefault();
-        $.post('http://54.193.89.75/swift_schedules/index.php/auth/logout').always(function() {
-            window.location.replace("http://54.193.89.75/swift_schedules/index.php/auth/login");
+        var rel = $(this).attr('rel');
+        $('<div>Availability</div>').dialog({
+            open: function() {
+                $("#datepicker_" + rel).datepicker({
+                    onSelect: function() {
+                        $('<div>Location</div>').dialog();
+                    }
+                });
+            },
+            close: function() {
+                $('#datepicker_' + rel).datepicker('destroy');
+            }
         });
     });
 });
