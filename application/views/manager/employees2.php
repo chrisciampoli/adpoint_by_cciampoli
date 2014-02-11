@@ -79,11 +79,11 @@
                   <td>dolor</td>
                   <td>testing</td>
                   <td>
-                      <button type="button" class="btn btn-default btn-sm">
+                      <button type="button" class="btn btn-primary btn-sm">
                           <span class="glyphicon glyphicon-pencil"></span> Edit
                       </button>
-                      <button type="button" class="btn btn-default btn-sm">
-                          <span class="glyphicon glyphicon-pencil"></span> Edit
+                      <button type="button" class="btn btn-danger btn-sm">
+                          <span class="glyphicon glyphicon-remove"></span> Remove
                       </button>
                   </td>
                 </tr>
