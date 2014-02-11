@@ -170,7 +170,7 @@
          $(function(){
             $( ".check_avail" ).on('click',function(e){
                 e.preventDefault();
-                $("<div style='width:100px;'></div>").datepicker();
+                $("#datepicker").datepicker();
             }); 
          });
     </script>
