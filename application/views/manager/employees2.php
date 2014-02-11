@@ -79,7 +79,7 @@
                   <td>dolor</td>
                   <td>
                       <button type="button" class="btn btn-primary btn-sm">
-                          <span class="glyphicon glyphicon-pencil"></span> Edit
+                          <span class="glyphicon glyphicon-calendar"></span> Check
                       </button>
                   </td>
                   <td>
