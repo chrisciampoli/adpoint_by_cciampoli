@@ -1,58 +1,28 @@
-<?php $this->load->view('manager/head');?>
+<?php $this->load->view('manager/head'); ?>
 <body>
-
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container" style="background-color:#ADFCC0">
-        <div class="navbar-header">
-        </div>
-      </div>
-    </div>
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
+    <div class="container">
         <h1>Swift Schedules</h1>
-      <div data-role="collapsible" data-content-theme="b">
-          <h3>Login</h3>
-       <?php $attributes = array('class' => 'navbar-form navbar-right', 'id' => 'signin_form');?>
-           <?php echo form_open("public/auth/login",$attributes);?>
-           <?php unset($attributes);?>
+        <div>
+            <h3>Login</h3>
+            <?php $attributes = array('class' => 'navbar-form navbar-right', 'id' => 'signin_form'); ?>
+            <?php echo form_open("public/auth/login", $attributes); ?>
+            <?php unset($attributes); ?>
             <div class="form-group">
-              <?php echo form_input($identity);?>
+                <?php echo form_input($identity); ?>
             </div>
             <div class="form-group">
-              <?php echo form_input($password);?>
+                <?php echo form_input($password); ?>
             </div>
-              <?php $attributes = array('name'=>'submit','id'=>'submit_btn','class'=>'form_submit');?>
-              <?php echo form_submit($attributes, lang('login_submit_btn'));?>
-          <?php echo form_close();?>
-      </div>
-      <div data-role="collapsible" data-content-theme="b">
-          <h3>Clock In</h3>
-       <?php $attributes = array('class' => 'navbar-form navbar-right', 'id' => 'signin_form');?>
-           <?php echo form_open("public/auth/login",$attributes);?>
-           <?php unset($attributes);?>
-            <div class="form-group">
-                <label for="pin">Pin</label>
-               <?php echo form_input($identity);?>
-            </div>
-              <?php $attributes = array('name'=>'submit','id'=>'submit_btn','class'=>'form_submit');?>
-              <?php echo form_submit($attributes, lang('login_submit_btn'));?>
-          <?php echo form_close();?>
-      </div>
-      </div>
+            <?php $attributes = array('name' => 'submit', 'id' => 'submit_btn', 'class' => 'form_submit'); ?>
+            <?php echo form_submit($attributes, lang('login_submit_btn')); ?>
+            <?php echo form_close(); ?>
+        </div>
     </div>
-      <hr>
-      <footer>
-        <p>&copy; By Quick and Co</p>
-      </footer>
-    </div> <!-- /container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="<?php echo base_url('public/js/bootstrap.js')?>"></script>
-  </body>
+</div>
+<hr>
+<footer>
+    <p>&copy; By Quick and Co</p>
+</footer>
+</div> <!-- /container -->
+</body>
 </html>
