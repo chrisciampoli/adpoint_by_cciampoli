@@ -8,8 +8,8 @@
                 <div id="fragment-1">
                     <div height="100%" id="container">
                         <?php $this->load->view('employee_info'); ?>                       
-                        <div id="employee_table">
-                            <table  class="f">
+                        <div id="employee_table" class='table-responsive'>
+                            <table  class="table table-hover">
                                 <thead id="table_header">
                                     <tr>
                                         <th>Position</th>
