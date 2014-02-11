@@ -77,7 +77,7 @@
                   <td>Lorem</td>
                   <td>ipsum</td>
                   <td>dolor</td>
-                  <td>testing</td>
+                  <td><span class="glyphicon glyphicon-calendar"></span></td>
                   <td>
                       <button type="button" class="btn btn-primary btn-sm">
                           <span class="glyphicon glyphicon-pencil"></span> Edit
