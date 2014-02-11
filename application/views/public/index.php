@@ -41,6 +41,7 @@
                     <a class="navbar-brand" href="#">Project name</a>
                 </div>
                 <div class="navbar-collapse collapse">
+                    <?php $attributes = array('class' => 'navbar-form navbar-right', 'id' => 'signin_form'); ?>
                     <?php echo form_open("public/auth/login", $attributes); ?>
                     <?php unset($attributes); ?>
                     <div class="form-group">
