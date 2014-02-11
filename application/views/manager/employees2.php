@@ -39,7 +39,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">Swift Schedules</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -58,7 +58,7 @@
     </div>
 
     <div class="container-fluid">
-          <h2 class="sub-header">Employees</h2>
+        <div><h2 class="sub-header" style="display: inline">Employees</h2><input type="button" value="Add employee" style="display: inline-block"/></div>
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
