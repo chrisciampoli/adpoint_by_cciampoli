@@ -4,6 +4,7 @@ $(function() {
         var rel = $(this).attr('rel');
         $("#datepicker_" + rel).datepicker({
             showButtonPanel: true,
+            buttonText: "Done",
             onSelect: function() {
                 $('<div>Location</div>').dialog();
             }
