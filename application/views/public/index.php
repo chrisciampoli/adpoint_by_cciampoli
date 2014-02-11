@@ -41,15 +41,17 @@
                     <a class="navbar-brand" href="#">Project name</a>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <form class="navbar-form navbar-right" role="form" action="<?php echo base_url('public/auth/login');?>">
-                        <div class="form-group">
-                            <input type="text" placeholder="Email" name="identity" id="identity" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" placeholder="Password" name="password" id="password" class="form-control">
-                        </div>
-                        <button type="submit" class="btn btn-success">Sign in</button>
-                    </form>
+                    <?php echo form_open("public/auth/login", $attributes); ?>
+                    <?php unset($attributes); ?>
+                    <div class="form-group">
+                        <?php echo form_input($identity); ?>
+                    </div>
+                    <div class="form-group">
+                        <?php echo form_input($password); ?>
+                    </div>
+                    <?php $attributes = array('name' => 'submit', 'id' => 'submit_btn', 'class' => 'form_submit'); ?>
+                    <?php echo form_submit($attributes, lang('login_submit_btn')); ?>
+                    <?php echo form_close(); ?>
                 </div><!--/.navbar-collapse -->
             </div>
         </div>
