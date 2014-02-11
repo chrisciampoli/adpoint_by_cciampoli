@@ -79,8 +79,8 @@
                   <td>(619) 403-2134</td>
                   <td>chrisciampoli@gmail.com</td>
                   <td>
-                      <button type="button" class="check_avail btn btn-primary btn-sm">
-                          <div class="datepicker"></div>
+                      <button type="button" rel="1" class="check_avail btn btn-primary btn-sm">
+                          <div class="datepicker" id="datepicker_1" rel="1"></div>
                           <span class="glyphicon glyphicon-calendar"></span> Check
                       </button>
                   </td>
@@ -99,8 +99,8 @@
                   <td>(423) 234-2321</td>
                   <td>eburdeno@quicknco.com</td>
                   <td>
-                      <button type="button" class="check_avail btn btn-primary btn-sm">
-                          <div class="datepicker"></div>
+                      <button type="button"  rel="2" class="check_avail btn btn-primary btn-sm">
+                          <div class="datepicker" id="datepicker_2"></div>
                           <span class="glyphicon glyphicon-calendar"></span> Check
                       </button>
                   </td>
@@ -119,8 +119,8 @@
                   <td>(342) 443-3211</td>
                   <td>kevans@starbucks.com</td>
                   <td>
-                      <button type="button" class="check_avail btn btn-primary btn-sm">
-                          <div class="datepicker"></div>
+                      <button type="button" rel="3" class="check_avail btn btn-primary btn-sm">
+                          <div class="datepicker" id="datepicker_3"></div>
                           <span class="glyphicon glyphicon-calendar"></span> Check
                       </button>
                   </td>
@@ -139,8 +139,8 @@
                   <td>(342) 445-3551</td>
                   <td>showits@starbucks.com</td>
                   <td>
-                      <button type="button" class="check_avail btn btn-primary btn-sm">
-                          <div class="datepicker"></div>
+                      <button type="button" rel="4" class="check_avail btn btn-primary btn-sm">
+                          <div class="datepicker" id="datepicker_4"></div>
                           <span class="glyphicon glyphicon-calendar"></span> Check
                       </button>
                   </td>
@@ -173,7 +173,8 @@
          $(function(){
             $( ".check_avail" ).on('click',function(e){
                 e.preventDefault();
-                $(".datepicker").datepicker();
+                var rel = $(this).attr('rel');
+                $("#datepicker_"+rel).datepicker();
             }); 
          });
     </script>
