@@ -78,7 +78,7 @@
                   <td>(619) 403-2134</td>
                   <td>chrisciampoli@gmail.com</td>
                   <td>
-                      <button type="button" class="btn btn-primary btn-sm">
+                      <button type="button" class="check_avail btn btn-primary btn-sm">
                           <span class="glyphicon glyphicon-calendar"></span> Check
                       </button>
                   </td>
@@ -97,7 +97,7 @@
                   <td>(423) 234-2321</td>
                   <td>eburdeno@quicknco.com</td>
                   <td>
-                      <button type="button" class="btn btn-primary btn-sm">
+                      <button type="button" class="check_avail btn btn-primary btn-sm">
                           <span class="glyphicon glyphicon-calendar"></span> Check
                       </button>
                   </td>
@@ -116,7 +116,7 @@
                   <td>(342) 443-3211</td>
                   <td>kevans@starbucks.com</td>
                   <td>
-                      <button type="button" class="btn btn-primary btn-sm">
+                      <button type="button" class="check_avail btn btn-primary btn-sm">
                           <span class="glyphicon glyphicon-calendar"></span> Check
                       </button>
                   </td>
@@ -135,7 +135,8 @@
                   <td>(342) 445-3551</td>
                   <td>showits@starbucks.com</td>
                   <td>
-                      <button type="button" class="btn btn-primary btn-sm">
+                      <button type="button" class="check_avail btn btn-primary btn-sm">
+                          <div id="datepicker"></div>
                           <span class="glyphicon glyphicon-calendar"></span> Check
                       </button>
                   </td>
@@ -163,5 +164,13 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <script src="<?php echo base_url('public/js/docs.js');?>"></script>
+    <script>
+         $(function(){
+            $( ".check_avail" ).on('click',function(e){
+                e.preventDefault();
+                $( "#datepicker" ).datepicker();
+            }); 
+         });
+    </script>
   </body>
 </html>
