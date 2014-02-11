@@ -43,10 +43,12 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Help</a></li>
+            <li><a href="<?=site_url('manager/home/index');?>">Dashboard</a></li>
+            <li><a href="<?=site_url('manager/home/quick_pickup');?>">Quick Pickup</a></li>
+            <li><a href="<?=site_url('manager/home/busy_or_not');?>">Busy or Not</a></li>
+            <li><a href="<?=site_url('manager/home/employees');?>">Employees</a></li>
+            <li><a href="<?=site_url('manager/home/settings');?>">Settings</a></li>
+            <li><a href="<?=site_url('auth/logout');?>">Logout</a></li>
           </ul>
           <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
