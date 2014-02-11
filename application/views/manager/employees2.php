@@ -176,7 +176,7 @@
                 var rel = $(this).attr('rel');
                 $("#datepicker_"+rel).datepicker({
                     onSelect: function(){
-                        console.log($(this));
+                       $('<div>Location</div>').dialog();
                     }
                 });
             }); 
