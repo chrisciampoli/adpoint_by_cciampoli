@@ -13,7 +13,8 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    
 
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url('public/css/dashboard.css')?>" rel="stylesheet">
@@ -163,6 +164,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="<?php echo base_url('public/js/docs.js');?>"></script>
     <script>
          $(function(){
