@@ -50,7 +50,7 @@
                     <div class="form-group">
                         <?php echo form_input($password); ?>
                     </div>
-                    <?php $attributes = array('name' => 'submit', 'id' => 'submit_btn', 'class' => 'form-submit'); ?>
+                    <?php $attributes = array('name' => 'submit', 'id' => 'submit_btn', 'class' => 'btn btn-success'); ?>
                     <?php echo form_submit($attributes, lang('login_submit_btn')); ?>
                     <?php echo form_close(); ?>
                 </div><!--/.navbar-collapse -->
