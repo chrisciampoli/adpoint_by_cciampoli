@@ -80,6 +80,7 @@
                   <td>chrisciampoli@gmail.com</td>
                   <td>
                       <button type="button" class="check_avail btn btn-primary btn-sm">
+                          <div class="datepicker"></div>
                           <span class="glyphicon glyphicon-calendar"></span> Check
                       </button>
                   </td>
@@ -99,6 +100,7 @@
                   <td>eburdeno@quicknco.com</td>
                   <td>
                       <button type="button" class="check_avail btn btn-primary btn-sm">
+                          <div class="datepicker"></div>
                           <span class="glyphicon glyphicon-calendar"></span> Check
                       </button>
                   </td>
@@ -118,6 +120,7 @@
                   <td>kevans@starbucks.com</td>
                   <td>
                       <button type="button" class="check_avail btn btn-primary btn-sm">
+                          <div class="datepicker"></div>
                           <span class="glyphicon glyphicon-calendar"></span> Check
                       </button>
                   </td>
@@ -137,7 +140,7 @@
                   <td>showits@starbucks.com</td>
                   <td>
                       <button type="button" class="check_avail btn btn-primary btn-sm">
-                          <div id="datepicker"></div>
+                          <div class="datepicker"></div>
                           <span class="glyphicon glyphicon-calendar"></span> Check
                       </button>
                   </td>
@@ -170,7 +173,7 @@
          $(function(){
             $( ".check_avail" ).on('click',function(e){
                 e.preventDefault();
-                $("#datepicker").datepicker();
+                $(".datepicker").datepicker();
             }); 
          });
     </script>
