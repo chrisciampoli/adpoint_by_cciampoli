@@ -96,7 +96,11 @@
                   <td>Lorem</td>
                   <td>ipsum</td>
                   <td>dolor</td>
-                  <td>testing</td>
+                  <td>
+                      <button type="button" class="btn btn-primary btn-sm">
+                          <span class="glyphicon glyphicon-calendar"></span> Check
+                      </button>
+                  </td>
                   <td>
                       <button type="button" class="btn btn-primary btn-sm">
                           <span class="glyphicon glyphicon-pencil"></span> Edit
@@ -111,7 +115,11 @@
                   <td>Lorem</td>
                   <td>ipsum</td>
                   <td>dolor</td>
-                  <td>testing</td>
+                  <td>
+                      <button type="button" class="btn btn-primary btn-sm">
+                          <span class="glyphicon glyphicon-calendar"></span> Check
+                      </button>
+                  </td>
                   <td>
                       <button type="button" class="btn btn-primary btn-sm">
                           <span class="glyphicon glyphicon-pencil"></span> Edit
@@ -126,7 +134,11 @@
                   <td>Lorem</td>
                   <td>ipsum</td>
                   <td>dolor</td>
-                  <td>testing</td>
+                  <td>
+                      <button type="button" class="btn btn-primary btn-sm">
+                          <span class="glyphicon glyphicon-calendar"></span> Check
+                      </button>
+                  </td>
                   <td>
                       <button type="button" class="btn btn-primary btn-sm">
                           <span class="glyphicon glyphicon-pencil"></span> Edit
