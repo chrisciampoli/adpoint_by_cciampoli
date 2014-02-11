@@ -58,7 +58,7 @@
     </div>
 
     <div class="container-fluid">
-        <div><h2 class="sub-header" style="display: inline">Employees</h2><input type="button" value="Add employee" style="display: inline-block"/></div>
+        <div><h2 class="sub-header" style="display: inline">Employees</h2><input type="button" value="Add employee" style="display: inline-block;float: right;"/></div>
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
