@@ -77,7 +77,11 @@
                   <td>Lorem</td>
                   <td>ipsum</td>
                   <td>dolor</td>
-                  <td>sit</td>
+                  <td>
+                      <button type="button" class="btn btn-default btn-sm">
+                          <span class="glyphicon glyphicon-pencil"></span> Edit
+                      </button>
+                  </td>
                 </tr>
                 <tr>
                   <td>1,002</td>
