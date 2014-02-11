@@ -73,10 +73,10 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>1,001</td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
+                  <td>Manager</td>
+                  <td>Christopher Ciampoli</td>
+                  <td>(619) 403-2134</td>
+                  <td>chrisciampoli@gmail.com</td>
                   <td>
                       <button type="button" class="btn btn-primary btn-sm">
                           <span class="glyphicon glyphicon-calendar"></span> Check
@@ -92,10 +92,10 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>1,001</td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
+                  <td>Shift Manager</td>
+                  <td>Edward Burdeno</td>
+                  <td>(423) 234-2321</td>
+                  <td>eburdeno@quicknco.com</td>
                   <td>
                       <button type="button" class="btn btn-primary btn-sm">
                           <span class="glyphicon glyphicon-calendar"></span> Check
@@ -111,10 +111,10 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>1,001</td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
+                  <td>Barista</td>
+                  <td>Kim Evans</td>
+                  <td>(342) 443-3211</td>
+                  <td>kevans@starbucks.com</td>
                   <td>
                       <button type="button" class="btn btn-primary btn-sm">
                           <span class="glyphicon glyphicon-calendar"></span> Check
@@ -130,10 +130,10 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>1,001</td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
+                  <td>Cashier</td>
+                  <td>Steve Howits</td>
+                  <td>(342) 445-3551</td>
+                  <td>showits@starbucks.com</td>
                   <td>
                       <button type="button" class="btn btn-primary btn-sm">
                           <span class="glyphicon glyphicon-calendar"></span> Check
