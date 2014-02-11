@@ -58,7 +58,7 @@
     </div>
 
     <div class="container-fluid">
-        <div><h2 class="sub-header" style="display: inline">Employees</h2><input type="button" value="Add employee" style="display: inline-block;float: right;padding: 5px;margin-top:5px;"/></div>
+        <div><h2 class="sub-header" style="display: inline">Employees</h2><input type="button" value="Add employee" class="btn btn-success" style="display: inline-block;float: right;padding: 5px;margin-top:5px;"/></div>
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
@@ -189,7 +189,9 @@
         </div>
       </div>
     </div>
-
+    <div id="create_employee_dialig">
+        
+    </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
