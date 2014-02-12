@@ -10,8 +10,15 @@ class Home extends Manager_Controller {
     }
     
     function index() {
+        $data['scripts'][] = 'https://code.jquery.com/jquery-1.10.2.min.js';
+        $data['scripts'][] = 'http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js';
+        $data['scripts'][] = 'http://code.jquery.com/ui/1.10.4/jquery-ui.js';
         $data['scripts'][] = base_url('public/js/main.js');
+        $data['scripts'][] = base_url('public/js/docs.js');
+        
         $data['styles'][] =  base_url('public/css/dashboard.css');
+        $data['styles'][] = 'http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css';
+        $data['styles'][] = 'http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css';
         $data['title'] = 'Dashboard';
         $data['head'] = $this->load->view('manager/head', $data, true);
         $data['nav'] = $this->load->view('manager/navigation/nav','',true);
