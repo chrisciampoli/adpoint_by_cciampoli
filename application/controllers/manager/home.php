@@ -31,6 +31,9 @@ class Home extends Manager_Controller {
         $data['scripts'][] = base_url('public/js/employees.js');
         $data['scripts'][] = base_url('public/js/docs.js');
         
+        $data['styles'][] =  base_url('public/css/dashboard.css');
+        
+        
         $data['nav'] = $this->load->view('manager/navigation/nav','',true);
         $data['content'] = $this->load->view('manager/employees2',$data,true);
         $data['script_loader'] = $this->load->view('manager/scripts',$data,true);
