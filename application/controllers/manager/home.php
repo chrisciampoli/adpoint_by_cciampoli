@@ -5,11 +5,11 @@ class Home extends Manager_Controller {
     function __construct() {
         parent::__construct();
         $this->load->library('session');
-        $this->load->view('manager/head');
         $this->load->database();
     }
     
     function index() {
+        $this->load->view('manager/head');
         $data['name'] = $this->session->userdata('username');
         $this->load->view('manager/index', $data);
     }
@@ -24,6 +24,7 @@ class Home extends Manager_Controller {
     }
     
     function settings() {
+        $this->load->view('manager/head');
         $data['name'] = $this->session->userdata('username');
         $this->load->view('manager/settings', $data);
     }
