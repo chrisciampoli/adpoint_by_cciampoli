@@ -2,20 +2,12 @@
 
 class Home extends Manager_Controller {
     
+    public $title = '';
+    
     function __construct() {
         parent::__construct();
         $this->load->library('session');
         $this->load->database();
-        $this->load->view('manager/head');
-    }
-    
-    function index() {
-        $data['name'] = $this->session->userdata('username');
-        $this->load->view('manager/index', $data);
-    }
-    
-    function employees() {
-        
         $data['styles'][] = 'http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css';
         $data['styles'][] = 'http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css';
         $data['styles'][] =  base_url('public/css/dashboard.css');
@@ -26,14 +18,24 @@ class Home extends Manager_Controller {
         $data['scripts'][] = base_url('public/js/employees.js');
         $data['scripts'][] = base_url('public/js/docs.js');
         
-        $data['title'] = 'Employees';
-        $data['head'] = $this->load->view('manager/head', $data);
+        $data['title'] = $this->title;
+        $this->load->view('manager/head');
+    }
+    
+    function index() {
+        $data['name'] = $this->session->userdata('username');
+        $this->load->view('manager/index', $data);
+    }
+    
+    function employees() {
+        
+        $this->title = 'Employees';
+        
         $data['nav'] = $this->load->view('manager/navigation/nav', $data);
         $data['content'][] = $this->load->view('manager/employees2');
         $data['script_loader'] = $this->load->view('manager/scripts',$data);
         
         $data['name'] = $this->session->userdata('username');
-        
         
         $this->load->view('manager/wrapper', $data);
         
