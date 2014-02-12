@@ -1,6 +1,8 @@
-<body>
-    <?=$nav;?>
-    <?=$content;?>
-    <?=$script_loader;?>
-</body>
+<html>
+    <head>
+        <title>test</title>
+    </head>
+    <body>
+        <p>tesfasdfsadf</p>
+    </body>
 </html>
