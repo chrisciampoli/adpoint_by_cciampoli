@@ -39,7 +39,6 @@ class Home extends Manager_Controller {
         
         $this->load->view('manager/wrapper', $data);
         
-        //$this->load->view('manager/employees2', $data);
     }
     
     function settings() {

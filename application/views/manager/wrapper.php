@@ -3,3 +3,4 @@
     <?=$content;?>
     <?=$script_loader;?>
 </body>
+</html>
