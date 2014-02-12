@@ -10,15 +10,8 @@
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
     <title>Dashboard Template for Bootstrap</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-    
-
-    <!-- Custom styles for this template -->
-    <link href="<?php echo base_url('public/css/dashboard.css')?>" rel="stylesheet">
-
+    <?php $this->load->view('manager/styles');?>
+   
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -140,7 +133,7 @@
                   <td>showits@starbucks.com</td>
                   <td>
                       <button type="button" rel="4" class="check_avail btn btn-primary btn-sm">
-                          <input type="hidden" class="datepicker" id="datepicker_4" />
+                          <div class="datepicker" id="datepicker_4"></div>
                           <span class="glyphicon glyphicon-calendar"></span> Check
                       </button>
                   </td>
