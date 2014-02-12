@@ -15,7 +15,7 @@ class Home extends Manager_Controller {
         $data['title'] = 'Dashboard';
         $data['head'] = $this->load->view('manager/head', $data, true);
         $data['nav'] = $this->load->view('manager/navigation/nav','',true);
-        $data['content'] = $this->load->view('manager/index',$data,true);
+        $data['content'] = $this->load->view('manager/pages/index',$data,true);
         $data['script_loader'] = $this->load->view('manager/scripts',$data,true);
         $data['name'] = $this->session->userdata('username');
         $this->load->view('manager/wrapper', $data);
@@ -37,7 +37,7 @@ class Home extends Manager_Controller {
        
         $data['head'] = $this->load->view('manager/head', $data, true);
         $data['nav'] = $this->load->view('manager/navigation/nav','',true);
-        $data['content'] = $this->load->view('manager/employees2',$data,true);
+        $data['content'] = $this->load->view('manager/pages/employees2',$data,true);
         $data['script_loader'] = $this->load->view('manager/scripts',$data,true);
         
         $data['name'] = $this->session->userdata('username');
