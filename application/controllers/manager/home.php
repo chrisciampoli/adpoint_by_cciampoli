@@ -12,14 +12,8 @@ class Home extends Manager_Controller {
         $data['styles'][] = 'http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css';
         $data['styles'][] =  base_url('public/css/dashboard.css');
         
-        $data['scripts'][] = 'https://code.jquery.com/jquery-1.10.2.min.js';
-        $data['scripts'][] = 'http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js';
-        $data['scripts'][] = 'http://code.jquery.com/ui/1.10.4/jquery-ui.js';
-        $data['scripts'][] = base_url('public/js/employees.js');
-        $data['scripts'][] = base_url('public/js/docs.js');
-        
         $data['title'] = $this->title;
-        $this->load->view('manager/head');
+        $this->load->view('manager/head', $data);
     }
     
     function index() {
@@ -31,7 +25,13 @@ class Home extends Manager_Controller {
         
         $this->title = 'Employees';
         
-        $data['nav'] = $this->load->view('manager/navigation/nav', $data);
+        $data['scripts'][] = 'https://code.jquery.com/jquery-1.10.2.min.js';
+        $data['scripts'][] = 'http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js';
+        $data['scripts'][] = 'http://code.jquery.com/ui/1.10.4/jquery-ui.js';
+        $data['scripts'][] = base_url('public/js/employees.js');
+        $data['scripts'][] = base_url('public/js/docs.js');
+        
+        $data['nav'] = $this->load->view('manager/navigation/nav');
         $data['content'][] = $this->load->view('manager/employees2');
         $data['script_loader'] = $this->load->view('manager/scripts',$data);
         
