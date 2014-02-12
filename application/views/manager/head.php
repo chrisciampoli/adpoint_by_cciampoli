@@ -9,6 +9,9 @@
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
     <title><?=$title;?></title>
+    
+    <?php echo "<pre>" . print_r($styles, true) . "</pre>"; die(); ?>
+    
     <?php $this->load->view('manager/styles', $styles);?>
    
     <!-- Just for debugging purposes. Don't actually copy this line! -->
