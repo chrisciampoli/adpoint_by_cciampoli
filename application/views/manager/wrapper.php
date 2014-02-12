@@ -1,5 +1,5 @@
 <body>
-    <?php $this->load->view($nav);?>
+    <?=$nav;?>
     <?php $this->load->view($content);?>
     <?=$script_loader;?>
 </body>
