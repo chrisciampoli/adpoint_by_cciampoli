@@ -10,7 +10,7 @@
 
     <title><?=$title;?></title>
     
-    <?php echo "<pre>" . print_r($styles, true) . "</pre>"; die(); ?>
+    <?php echo "<pre>" . print_r($data, true) . "</pre>"; die(); ?>
     
     <?php $this->load->view('manager/styles', $styles);?>
    
