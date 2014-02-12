@@ -6,10 +6,10 @@ class Home extends Manager_Controller {
         parent::__construct();
         $this->load->library('session');
         $this->load->database();
+        $this->load->view('manager/head');
     }
     
     function index() {
-        $this->load->view('manager/head');
         $data['name'] = $this->session->userdata('username');
         $this->load->view('manager/index', $data);
     }
@@ -25,10 +25,14 @@ class Home extends Manager_Controller {
         $data['scripts'][] = 'http://code.jquery.com/ui/1.10.4/jquery-ui.js';
         $data['scripts'][] = base_url('public/js/employees.js');
         $data['scripts'][] = base_url('public/js/docs.js');
+        $data['content'][] = $this->load->view('manager/employees2');
         
         $data['name'] = $this->session->userdata('username');
         
-        $this->load->view('manager/employees2', $data);
+        
+        $this->load->view('manager/wrapper', $data);
+        
+        //$this->load->view('manager/employees2', $data);
     }
     
     function settings() {
