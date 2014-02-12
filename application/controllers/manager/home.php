@@ -25,7 +25,12 @@ class Home extends Manager_Controller {
         $data['scripts'][] = 'http://code.jquery.com/ui/1.10.4/jquery-ui.js';
         $data['scripts'][] = base_url('public/js/employees.js');
         $data['scripts'][] = base_url('public/js/docs.js');
+        
+        $data['title'] = 'Employees';
+        $data['head'] = $this->load->view('manager/head', $data);
+        $data['nav'] = $this->load->view('manager/navigation/nav', $data);
         $data['content'][] = $this->load->view('manager/employees2');
+        $data['script_loader'] = $this->load->view('manager/scripts',$data);
         
         $data['name'] = $this->session->userdata('username');
         
