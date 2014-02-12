@@ -1,0 +1,104 @@
+<div class="container-fluid">
+        <div><h2 class="sub-header" style="display: inline">Employees</h2><input type="button" value="Add employee" class="btn btn-success" style="display: inline-block;float: right;padding: 5px;margin-top:5px;"/></div>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Position</th>
+                  <th>Name</th>
+                  <th>Phone</th>
+                  <th>Email</th>
+                  <th>Availability</th>
+                  <th>Controls</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Manager</td>
+                  <td>Christopher Ciampoli</td>
+                  <td>(619) 403-2134</td>
+                  <td>chrisciampoli@gmail.com</td>
+                  <td>
+                      <button type="button" rel="1" class="check_avail btn btn-primary btn-sm">
+                          <div class="datepicker" id="datepicker_1" rel="1"></div>
+                          <span class="glyphicon glyphicon-calendar"></span> Check
+                      </button>
+                  </td>
+                  <td>
+                      <button type="button" class="btn btn-primary btn-sm">
+                          <span class="glyphicon glyphicon-pencil"></span> Edit
+                      </button>
+                      <button type="button" class="btn btn-danger btn-sm">
+                          <span class="glyphicon glyphicon-remove"></span> Remove
+                      </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Shift Manager</td>
+                  <td>Edward Burdeno</td>
+                  <td>(423) 234-2321</td>
+                  <td>eburdeno@quicknco.com</td>
+                  <td>
+                      <button type="button"  rel="2" class="check_avail btn btn-primary btn-sm">
+                          <div class="datepicker" id="datepicker_2"></div>
+                          <span class="glyphicon glyphicon-calendar"></span> Check
+                      </button>
+                  </td>
+                  <td>
+                      <button type="button" class="btn btn-primary btn-sm">
+                          <span class="glyphicon glyphicon-pencil"></span> Edit
+                      </button>
+                      <button type="button" class="btn btn-danger btn-sm">
+                          <span class="glyphicon glyphicon-remove"></span> Remove
+                      </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Barista</td>
+                  <td>Kim Evans</td>
+                  <td>(342) 443-3211</td>
+                  <td>kevans@starbucks.com</td>
+                  <td>
+                      <button type="button" rel="3" class="check_avail btn btn-primary btn-sm">
+                          <div class="datepicker" id="datepicker_3"></div>
+                          <span class="glyphicon glyphicon-calendar"></span> Check
+                      </button>
+                  </td>
+                  <td>
+                      <button type="button" class="btn btn-primary btn-sm">
+                          <span class="glyphicon glyphicon-pencil"></span> Edit
+                      </button>
+                      <button type="button" class="btn btn-danger btn-sm">
+                          <span class="glyphicon glyphicon-remove"></span> Remove
+                      </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Cashier</td>
+                  <td>Steve Howits</td>
+                  <td>(342) 445-3551</td>
+                  <td>showits@starbucks.com</td>
+                  <td>
+                      <button type="button" rel="4" class="check_avail btn btn-primary btn-sm">
+                          <div class="datepicker" id="datepicker_4"></div>
+                          <span class="glyphicon glyphicon-calendar"></span> Check
+                      </button>
+                  </td>
+                  <td>
+                      <button type="button" class="btn btn-primary btn-sm">
+                          <span class="glyphicon glyphicon-pencil"></span> Edit
+                      </button>
+                      <button type="button" class="btn btn-danger btn-sm">
+                          <span class="glyphicon glyphicon-remove"></span> Remove
+                      </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="create_employee_dialig">
+        
+    </div>
