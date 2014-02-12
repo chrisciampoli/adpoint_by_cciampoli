@@ -10,13 +10,13 @@ class Home extends Manager_Controller {
         $this->load->database();
         $data['styles'][] = 'http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css';
         $data['styles'][] = 'http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css';
-        $data['styles'][] =  base_url('public/css/dashboard.css');
         
         $data['title'] = $this->title;
         $this->load->view('manager/head', $data);
     }
     
     function index() {
+        $data['styles'][] =  base_url('public/css/dashboard.css');
         $data['name'] = $this->session->userdata('username');
         $this->load->view('manager/index', $data);
     }
