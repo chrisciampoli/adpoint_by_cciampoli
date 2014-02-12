@@ -1,6 +1,18 @@
 $(function(){ 
     getEmployees(); 
    
+    $(".check_avail").on('click', function(e) {
+        e.preventDefault();
+        var rel = $(this).attr('rel');
+        $("#datepicker_" + rel).datepicker({
+            showButtonPanel: true,
+            buttonText: "Done",
+            onSelect: function() {
+                $('<div>Location</div>').dialog();
+            }
+        });
+    });
+    
     var add_employee = String()
             + '<section>'
                 + '<div>'
@@ -12,9 +24,7 @@ $(function(){
                         + '<div><label for="availability">Availability</label><input type="text" name="availability" id="availability" /></div>'
                 + '</div>'
             + '</section>';
-    
-    $('#table_header').prepend('<input id="add_employee_btn" type="button" value="Add Employee" />');
-    
+       
     $('body').on('click', 'input#add_employee_btn', function(e) {
         $(add_employee).dialog({
             title: "Add Employee"
