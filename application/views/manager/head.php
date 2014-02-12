@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
     <title><?=$title;?></title>
-    <?php $this->load->view('manager/styles');?>
+    <?php $this->load->view('manager/styles', $styles);?>
    
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -20,4 +20,3 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-    <?php $this->load->view('manager/nav');?>
