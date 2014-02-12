@@ -10,11 +10,15 @@ class Home extends Manager_Controller {
     }
     
     function index() {
+        $data['scripts'][] = base_url('public/js/main.js');
         $data['styles'][] =  base_url('public/css/dashboard.css');
-        $data['title'] = $this->title;
+        $data['title'] = 'Dashboard';
         $data['head'] = $this->load->view('manager/head', $data, true);
+        $data['nav'] = $this->load->view('manager/navigation/nav','',true);
+        $data['content'] = $this->load->view('manager/index',$data,true);
+        $data['script_loader'] = $this->load->view('manager/scripts',$data,true);
         $data['name'] = $this->session->userdata('username');
-        $this->load->view('manager/index', $data);
+        $this->load->view('manager/wrapper', $data);
     }
     
     function employees() {
