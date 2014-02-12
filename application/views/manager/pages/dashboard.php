@@ -6,23 +6,23 @@
           <div class="row placeholders">
             <div class="col-xs-6 col-sm-3 placeholder">
                 <a href='<?php echo site_url('manager/home/swift_pickup');?>'><img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail"></a>
-              <h4>Swift Pickup</h4>
-              <span class="text-muted">Manage Swift Pickups</span>
+              <h4>Requested Time Off</h4>
+              <span class="text-muted">Manage time off requests</span>
             </div>
             <div class="col-xs-6 col-sm-3 placeholder">
                 <a href='<?php echo site_url('manager/home/busy_or_not');?>'><img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail"></a>
-              <h4>Busy or Not</h4>
-              <span class="text-muted">Approve Busy or Not Requests</span>
+              <h4>Swift Give Ups/Pickups</h4>
+              <span class="text-muted">Manage Swift Pickups/Giveup requests</span>
             </div>
             <div class="col-xs-6 col-sm-3 placeholder">
                 <a href='<?php echo site_url('manager/home/employees');?>'><img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail"></a>
-              <h4>Employees</h4>
-              <span class="text-muted">Manage Employees</span>
+              <h4>Busy or Nots</h4>
+              <span class="text-muted">Manage Employee Busy or Not requests</span>
             </div>
             <div class="col-xs-6 col-sm-3 placeholder">
                 <a href='<?php echo site_url('manager/home/settings');?>'><img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail"></a>
-              <h4>Settings</h4>
-              <span class="text-muted">Account Settings</span>
+              <h4>Current Labor</h4>
+              <span class="text-muted">Current Labor</span>
             </div>
           </div>
         </div>
