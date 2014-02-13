@@ -34,7 +34,10 @@
                   </td>
                 </tr>
                 <tr id="avail_1" style="display:none;" class="alert alert-info">
-                    <td style="height: 171px;width: 180px;border:1px solid black;">Monday</td>
+                    <td style="height: 171px;width: 180px;border:1px solid black;">
+                        <div style="text-align:center;">Monday</div>
+                        <div style="text-align: center;">Open</div>
+                    </td>
                     <td style="height: 171px;width: 180px;border:1px solid black;">Tuesday</td>
                     <td style="height: 171px;width: 180px;border:1px solid black;">Wednesday</td>
                     <td style="height: 171px;width: 180px;border:1px solid black;">Thursday</td>
