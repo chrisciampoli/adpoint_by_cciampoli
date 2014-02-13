@@ -39,7 +39,8 @@
                     <td style="height: 171px;width: 180px;border:1px solid black;">Wednesday</td>
                     <td style="height: 171px;width: 180px;border:1px solid black;">Thursday</td>
                     <td style="height: 171px;width: 180px;border:1px solid black;">Friday</td>
-                    <td style="height: 171px;width: 180px;border:1px solid black;">Saturday | Sunday</td>    
+                    <td style="height: 171px;width: 180px;border:1px solid black;">Saturday</td>    
+                    <td style="height: 171px;width: 180px;border:1px solid black;">Sunday</td>  
                 </tr>
                 <tr>
                   <td>Shift Manager</td>
