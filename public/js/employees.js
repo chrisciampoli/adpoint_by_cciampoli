@@ -14,7 +14,7 @@ $(function(){
         });
         */
         var rel = $(this).attr('rel');
-        $('#avail_'+rel).toggle().fadeIn();
+        $('#avail_'+rel).fadeToggle();
     });
     
     var add_employee = String()
