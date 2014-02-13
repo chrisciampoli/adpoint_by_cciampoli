@@ -37,8 +37,8 @@
                     <td>
                         <div class="row">
                             <div class="col-xs-6 col-md-3">
-                                <a href="#" class="thumbnail">
-                                    <img alt="100%x180" data-src="holder.js/100%x180" style="height: 180px; width: 100%; display: block;" src="data:image/png;base64,iVBORw0K…Pc53zu9+xgsAAAAABJRU5ErkJggg==" />
+                                <a href="#">
+                                    <img alt="Monday" data-src="holder.js/100%x75" style="height: 75px; width: 100%; display: block;" src="data:image/png;base64,iVBORw0K…Pc53zu9+xgsAAAAABJRU5ErkJggg==" />
                                 </a>
                             </div>
                         </div>
@@ -64,6 +64,17 @@
                       </button>
                   </td>
                 </tr>
+                <tr id="avail_2" style="display:none;" class="alert alert-info">
+                    <td>
+                        <div class="row">
+                            <div class="col-xs-6 col-md-3">
+                                <a href="#">
+                                    <img alt="Monday" data-src="holder.js/100%x75" style="height: 75px; width: 100%; display: block;" src="data:image/png;base64,iVBORw0K…Pc53zu9+xgsAAAAABJRU5ErkJggg==" />
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
                 <tr>
                   <td>Barista</td>
                   <td>Kim Evans</td>
@@ -84,6 +95,17 @@
                       </button>
                   </td>
                 </tr>
+                <tr id="avail_3" style="display:none;" class="alert alert-info">
+                    <td>
+                        <div class="row">
+                            <div class="col-xs-6 col-md-3">
+                                <a href="#">
+                                    <img alt="Monday" data-src="holder.js/100%x75" style="height: 75px; width: 100%; display: block;" src="data:image/png;base64,iVBORw0K…Pc53zu9+xgsAAAAABJRU5ErkJggg==" />
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
                 <tr>
                   <td>Cashier</td>
                   <td>Steve Howits</td>
@@ -103,6 +125,17 @@
                           <span class="glyphicon glyphicon-remove"></span> Remove
                       </button>
                   </td>
+                </tr>
+                <tr id="avail_1" style="display:none;" class="alert alert-info">
+                    <td>
+                        <div class="row">
+                            <div class="col-xs-6 col-md-3">
+                                <a href="#">
+                                    <img alt="Monday" data-src="holder.js/100%x75" style="height: 75px; width: 100%; display: block;" src="data:image/png;base64,iVBORw0K…Pc53zu9+xgsAAAAABJRU5ErkJggg==" />
+                                </a>
+                            </div>
+                        </div>
+                    </td>
                 </tr>
               </tbody>
             </table>
