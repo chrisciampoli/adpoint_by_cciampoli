@@ -65,7 +65,7 @@
                         <div class="row">
                             <div class="col-xs-6 col-md-3">
                                 <a href="#">
-                                    <img alt="Thursday" data-src="holder.js/100%x75" style="height: 75px; width: 100%; display: block;" src="data:image/png;base64,iVBORw0K…Pc53zu9+xgsAAAAABJRU5ErkJggg==" />
+                                    <img alt="Thursday" data-src="holder.js/100%x75" style="height: 75px; width: 100%; display: block;" src="<?php echo site_url('public/images/box.png');?>" />
                                 </a>
                             </div>
                         </div>
