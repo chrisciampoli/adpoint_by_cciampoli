@@ -3,7 +3,8 @@ $(function(){
    
     $(".check_avail").on('click', function(e) {
         e.preventDefault();
-        var rel = $(this).attr('rel');
+        /*
+       
         $("#datepicker_" + rel).datepicker({
             showButtonPanel: true,
             buttonText: "Done",
@@ -11,6 +12,9 @@ $(function(){
                 $('<div>Location</div>').dialog();
             }
         });
+        */
+        var rel = $(this).attr('rel');
+        $('#avail_'+rel).toggle();
     });
     
     var add_employee = String()
