@@ -33,7 +33,7 @@
                       </button>
                   </td>
                 </tr>
-                <tr id="avail_1" display="none;">
+                <tr id="avail_1" style="display:none;">
                     <td>Monday</td><td>Tuesday</td><td>Wednesday</td><td>Thursday</td><td>Friday</td>
                 </tr>
                 <tr>
