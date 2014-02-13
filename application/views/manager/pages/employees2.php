@@ -38,12 +38,30 @@
                         <div style="text-align:center;">Monday</div>
                         <div style="text-align: center;">Open</div>
                     </td>
-                    <td style="height: 171px;width: 180px;border:1px solid black;">Tuesday</td>
-                    <td style="height: 171px;width: 180px;border:1px solid black;">Wednesday</td>
-                    <td style="height: 171px;width: 180px;border:1px solid black;">Thursday</td>
-                    <td style="height: 171px;width: 180px;border:1px solid black;">Friday</td>
-                    <td style="height: 171px;width: 180px;border:1px solid black;">Saturday</td>    
-                    <td style="height: 171px;width: 180px;border:1px solid black;">Sunday</td>  
+                    <td style="height: 171px;width: 180px;border:1px solid black;">
+                        <div style="text-align:center;">Tuesday</div>
+                        <div style="text-align: center;">N/A</div>
+                    </td>
+                    <td style="height: 171px;width: 180px;border:1px solid black;">
+                        <div style="text-align:center;">Wednesday</div>
+                        <div style="text-align: center;">Open</div>
+                    </td>
+                    <td style="height: 171px;width: 180px;border:1px solid black;">
+                        <div style="text-align:center;">Thursday</div>
+                        <div style="text-align: center;">N/A</div>
+                    </td>
+                    <td style="height: 171px;width: 180px;border:1px solid black;">
+                        <div style="text-align:center;">Friday</div>
+                        <div style="text-align: center;">Open</div>
+                    </td>
+                    <td style="height: 171px;width: 180px;border:1px solid black;">
+                        <div style="text-align:center;">Saturday</div>
+                        <div style="text-align: center;">Open</div>
+                    </td>    
+                    <td style="height: 171px;width: 180px;border:1px solid black;">
+                        <div style="text-align:center;">Sunday</div>
+                        <div style="text-align: center;">10AM - 4PM</div>
+                    </td>  
                 </tr>
                 <tr>
                   <td>Shift Manager</td>
