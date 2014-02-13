@@ -43,6 +43,60 @@
                             </div>
                         </div>
                     </td>
+                    <td>
+                        <div class="row">
+                            <div class="col-xs-6 col-md-3">
+                                <a href="#">
+                                    <img alt="Tuesday" data-src="holder.js/100%x75" style="height: 75px; width: 100%; display: block;" src="data:image/png;base64,iVBORw0K…Pc53zu9+xgsAAAAABJRU5ErkJggg==" />
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="row">
+                            <div class="col-xs-6 col-md-3">
+                                <a href="#">
+                                    <img alt="Wednesday" data-src="holder.js/100%x75" style="height: 75px; width: 100%; display: block;" src="data:image/png;base64,iVBORw0K…Pc53zu9+xgsAAAAABJRU5ErkJggg==" />
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="row">
+                            <div class="col-xs-6 col-md-3">
+                                <a href="#">
+                                    <img alt="Thursday" data-src="holder.js/100%x75" style="height: 75px; width: 100%; display: block;" src="data:image/png;base64,iVBORw0K…Pc53zu9+xgsAAAAABJRU5ErkJggg==" />
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="row">
+                            <div class="col-xs-6 col-md-3">
+                                <a href="#">
+                                    <img alt="Friday" data-src="holder.js/100%x75" style="height: 75px; width: 100%; display: block;" src="data:image/png;base64,iVBORw0K…Pc53zu9+xgsAAAAABJRU5ErkJggg==" />
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="row">
+                            <div class="col-xs-6 col-md-3">
+                                <a href="#">
+                                    <img alt="Saturday" data-src="holder.js/100%x75" style="height: 75px; width: 100%; display: block;" src="data:image/png;base64,iVBORw0K…Pc53zu9+xgsAAAAABJRU5ErkJggg==" />
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="row">
+                            <div class="col-xs-6 col-md-3">
+                                <a href="#">
+                                    <img alt="Sunday" data-src="holder.js/100%x75" style="height: 75px; width: 100%; display: block;" src="data:image/png;base64,iVBORw0K…Pc53zu9+xgsAAAAABJRU5ErkJggg==" />
+                                </a>
+                            </div>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                   <td>Shift Manager</td>
@@ -126,7 +180,7 @@
                       </button>
                   </td>
                 </tr>
-                <tr id="avail_1" style="display:none;" class="alert alert-info">
+                <tr id="avail_4" style="display:none;" class="alert alert-info">
                     <td>
                         <div class="row">
                             <div class="col-xs-6 col-md-3">
