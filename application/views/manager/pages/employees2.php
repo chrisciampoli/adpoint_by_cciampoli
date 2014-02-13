@@ -62,7 +62,7 @@
                     </td>    
                     <td style="height: 10%;width: 14%;border:1px solid black;">
                         <div style="text-align:center;"><h4>Sunday</h4></div>
-                        <div style="text-align: center;">10AM - 4PM</div>
+                        <div style="text-align: center;"><span class="label label-danger">10AM - 4PM</span></div>
                     </td>  
                 </tr>
               </tbody>
