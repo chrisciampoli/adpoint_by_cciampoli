@@ -34,12 +34,12 @@
                   </td>
                 </tr>
                 <tr id="avail_1" style="display:none;" class="alert alert-info row">
-                    <td><div class="span2">Monday</div></td>
-                    <td class="span2">Tuesday</td>
-                    <td class="span2">Wednesday</td>
-                    <td class="span2">Thursday</td>
-                    <td class="span2">Friday</td>
-                    <td class="span2">Saturday | Sunday</td>    
+                    <td>Monday</td>
+                    <td>Tuesday</td>
+                    <td>Wednesday</td>
+                    <td>Thursday</td>
+                    <td>Friday</td>
+                    <td>Saturday | Sunday</td>    
                 </tr>
                 <tr>
                   <td>Shift Manager</td>
