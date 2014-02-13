@@ -38,7 +38,7 @@
                         <div class="row">
                             <div class="col-xs-6 col-md-3">
                                 <a href="#" class="thumbnail">
-                                    <img data-src="<?php site_url('public/images/box.png');?>" alt="...">
+                                    <img alt="100%x180" data-src="holder.js/100%x180" style="height: 180px; width: 100%; display: block;" src="data:image/png;base64,iVBORw0K…Pc53zu9+xgsAAAAABJRU5ErkJggg==" />
                                 </a>
                             </div>
                         </div>
