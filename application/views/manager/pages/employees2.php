@@ -34,7 +34,7 @@
                   </td>
                 </tr>
                 <tr id="avail_1" style="display:none;" class="alert alert-info row">
-                    <td class="span2">Monday</td>
+                    <td><div class="span2">Monday</div></td>
                     <td class="span2">Tuesday</td>
                     <td class="span2">Wednesday</td>
                     <td class="span2">Thursday</td>
