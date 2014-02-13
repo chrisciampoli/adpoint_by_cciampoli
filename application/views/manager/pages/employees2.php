@@ -35,15 +35,15 @@
                 </tr>
                 <tr id="avail_1" style="display:none;" class="alert alert-info">
                     <td style="height: 171px;width: 180px;border:1px solid black;">
-                        <div style="text-align:center;">Monday</div>
+                        <div style="text-align:center;"><h4>Monday</h4></div>
                         <div style="text-align: center;">Open</div>
                     </td>
                     <td style="height: 171px;width: 180px;border:1px solid black;">
-                        <div style="text-align:center;">Tuesday</div>
+                        <div style="text-align:center;"><h4>Tuesday</h4></div>
                         <div style="text-align: center;">N/A</div>
                     </td>
                     <td style="height: 171px;width: 180px;border:1px solid black;">
-                        <div style="text-align:center;">Wednesday</div>
+                        <div style="text-align:center;"><h4>Wednesday</h4></div>
                         <div style="text-align: center;">Open</div>
                     </td>
                     <td style="height: 171px;width: 180px;border:1px solid black;">
