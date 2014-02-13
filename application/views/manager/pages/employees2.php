@@ -33,17 +33,14 @@
                       </button>
                   </td>
                 </tr>
-                <tr id="avail_1" style="display:none;" class="alert alert-info">
-                    <td>
-                        <div class="row">
-                            <div class="span2">Monday</div>
-                            <div class="span2">Tuesday</div>
-                            <div class="span2">Wednesday</div>
-                            <div class="span2">Thursday</div>
-                            <div class="span2">Friday</div>
-                            <div class="span2">Saturday | Sunday</div>  
-                        </div>
-                    </td>
+                <tr id="avail_1" style="display:none;" class="alert alert-info row">
+                    <td class="span2"></td>
+                    <td class="span2">Monday</td>
+                    <td class="span2">Tuesday</td>
+                    <td class="span2">Wednesday</td>
+                    <td class="span2">Thursday</td>
+                    <td class="span2">Friday</td>
+                    <td class="span2">Saturday | Sunday</td>    
                 </tr>
                 <tr>
                   <td>Shift Manager</td>
