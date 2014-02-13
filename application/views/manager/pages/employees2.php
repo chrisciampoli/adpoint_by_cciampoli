@@ -34,7 +34,15 @@
                   </td>
                 </tr>
                 <tr id="avail_1" style="display:none;" class="alert alert-info">
-                    <td>Monday</td><td>Tuesday</td><td>Wednesday</td><td>Thursday</td><td>Friday</td>
+                    <td>
+                        <div class="row">
+                            <div class="col-xs-6 col-md-3">
+                                <a href="#" class="thumbnail">
+                                    <img data-src="<?php site_url('public/images/box.png');?>" alt="...">
+                                </a>
+                            </div>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                   <td>Shift Manager</td>
