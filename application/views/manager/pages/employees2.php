@@ -10,6 +10,7 @@
                   <th>Email</th>
                   <th>Availability</th>
                   <th>Controls</th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
