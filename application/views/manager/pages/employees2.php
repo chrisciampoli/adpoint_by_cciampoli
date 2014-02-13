@@ -9,8 +9,8 @@
                   <th>Phone</th>
                   <th>Email</th>
                   <th>Availability</th>
-                  <th>Controls</th>
                   <th></th>
+                  <th>Controls</th>
                 </tr>
               </thead>
               <tbody>
@@ -25,6 +25,7 @@
                           <span class="glyphicon glyphicon-calendar"></span> Check
                       </button>
                   </td>
+                  <td></td>
                   <td>
                       <button type="button" class="btn btn-primary btn-sm">
                           <span class="glyphicon glyphicon-pencil"></span> Edit
