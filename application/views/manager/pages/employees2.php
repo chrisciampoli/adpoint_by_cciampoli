@@ -33,32 +33,32 @@
                       </button>
                   </td>
                 </tr>
-                <tr id="avail_1" style="display:none;" class="alert alert-info">
-                    <td style="height: 171px;width: 180px;border:1px solid black;">
+                <tr id="avail_1" style="display:none; width:100%;" class="alert alert-info">
+                    <td style="height: 10%;width: 14%;border:1px solid black;">
                         <div style="text-align:center;"><h4>Monday</h4></div>
                         <div style="text-align: center;">Open</div>
                     </td>
-                    <td style="height: 171px;width: 180px;border:1px solid black;">
+                    <td style="height: 10%;width: 14%;border:1px solid black;">
                         <div style="text-align:center;"><h4>Tuesday</h4></div>
                         <div style="text-align: center;">N/A</div>
                     </td>
-                    <td style="height: 171px;width: 180px;border:1px solid black;">
+                    <td style="height: 10%;width: 14%;border:1px solid black;">
                         <div style="text-align:center;"><h4>Wednesday</h4></div>
                         <div style="text-align: center;">Open</div>
                     </td>
-                    <td style="height: 171px;width: 180px;border:1px solid black;">
+                    <td style="height: 10%;width: 14%;border:1px solid black;">
                         <div style="text-align:center;"><h4>Thursday</h4></div>
                         <div style="text-align: center;">N/A</div>
                     </td>
-                    <td style="height: 171px;width: 180px;border:1px solid black;">
+                    <td style="height: 10%;width: 14%;border:1px solid black;">
                         <div style="text-align:center;"><h4>Friday</h4></div>
                         <div style="text-align: center;">Open</div>
                     </td>
-                    <td style="height: 171px;width: 180px;border:1px solid black;">
+                    <td style="height: 10%;width: 14%;border:1px solid black;">
                         <div style="text-align:center;"><h4>Saturday</h4></div>
                         <div style="text-align: center;">Open</div>
                     </td>    
-                    <td style="height: 171px;width: 180px;border:1px solid black;">
+                    <td style="height: 10%;width: 14%;border:1px solid black;">
                         <div style="text-align:center;"><h4>Sunday</h4></div>
                         <div style="text-align: center;">10AM - 4PM</div>
                     </td>  
