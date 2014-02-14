@@ -61,7 +61,7 @@
         <div class="jumbotron">
             <div class="container">
                 <h1>Manage your time better!</h1>
-                <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+                <p>Swift Schedules is a software platform that aims to become the industry standard for providing a simple and intuitive application for managing schedules.</p>
                 <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
             </div>
         </div>
@@ -70,18 +70,29 @@
             <!-- Example row of columns -->
             <div class="row">
                 <div class="col-md-4">
-                    <h2>Heading</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <h2>Benefits the Employee</h2>
+                    <ul>
+                        <li>Providing 24/7 online access to their schedules via computer or smartphone</li>
+                        <li>Empowering employees to pick up a shift if they do not work that day (Swift Pick-Up)</li>
+                        <li>Introducing 'Busy or Not'.  Employees press 'Busy or Not' and if not, do not have to work that shift.</li>
+                    </ul>
                     <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
                 </div>
                 <div class="col-md-4">
-                    <h2>Heading</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <h2>Saves Employers Money</h2>
+                    <ul>
+                        <li>Saving managers' time and pay from creating, adjusting, managing all employee schedules</li>
+                        <li>Keeping managers on the sales floor with customers instead of on the phone or computer for scheduling</li>
+                        <li>Allowing same chain storefronts to communicate and analyze daily, weekly, and monthly labor figures</li>
+                    </ul>
                     <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
                 </div>
                 <div class="col-md-4">
-                    <h2>Heading</h2>
-                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                    <h2>Why Us?</h2>
+                    <ul>
+                        <li>Priced lower then the standard competition</li>
+                        <li>Our system allows for access anywhere, at anytime</li>
+                    </ul>
                     <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
                 </div>
             </div>
@@ -89,7 +100,7 @@
             <hr>
 
             <footer>
-                <p>&copy; Company 2014</p>
+                <p>&copy; Swift'n'Co 2014</p>
             </footer>
         </div> <!-- /container -->
 
