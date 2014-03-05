@@ -2,7 +2,6 @@ $(function(){
    
     // Handler for navigating to the next page
     function navnext( next ) {
-        console.log('navnext hit');
         $( ":mobile-pagecontainer" ).pagecontainer( "change", next + ".html", {
             transition: "slide"
         });
@@ -24,6 +23,7 @@ $(function(){
         // swipes may also happen when the user highlights text, so ignore those.
         // We're only interested in swipes on the page.
         if ( next && ( event.target === $( this )[ 0 ] ) ) {
+            console.log('asdfads');
             navnext( next );
         }
     });
