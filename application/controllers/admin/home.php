@@ -14,7 +14,7 @@ class Home extends Admin_Controller {
     
     function week() {
         $data['name'] = $this->session->userdata('username');
-        $this->load->view('admin/week.php');
+        $this->load->view('admin/week.php', $data);
     }
     
     function month() {
