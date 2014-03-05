@@ -9,12 +9,13 @@
         <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
         <link rel="stylesheet" href="<?=site_url('public/css/employees/index.css');?>" />
+        <link href='http://fonts.googleapis.com/css?family=Condiment' rel='stylesheet' type='text/css'>
         <title>Swift Schedules</title>
     </head>
     <body>
         <div data-role="page" id="page1" style="background-color: #0D0D0D;" data-dom-cache="true" data-theme="b" data-next="<?=site_url('admin/home/week');?>" data-url="home">
             <div data-role="header" style="background-color:#BFBA73;color: black;">
-                <p style="font-size: 30px;margin-left:auto;margin-right:auto;width:6em;">Swift Schedules</p>
+                <h2 style="font-family: 'Condiment', cursive;">Swift Schedules</h2>
             </div>
             <div role="main" class="ui-content">
                 <div data-role="tabs" style="border:2px solid #590E0E;">
