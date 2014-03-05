@@ -23,7 +23,6 @@ $(function(){
         // swipes may also happen when the user highlights text, so ignore those.
         // We're only interested in swipes on the page.
         if ( next ) {
-            console.log('asdfads');
             navnext( next );
         }
     });
