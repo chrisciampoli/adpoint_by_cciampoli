@@ -9,7 +9,7 @@ class Home extends Admin_Controller {
     
     function index() {
         $data['name'] = $this->session->userdata('username');
-        $this->load->view('admin/index.php', $data);
+        $this->load->view('admin/index2.php', $data);
     }
     
     function week() {
