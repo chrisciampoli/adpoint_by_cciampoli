@@ -22,6 +22,7 @@
                         <div height="100%" id="container">
                             <div id="employee_name" width="100%" class="info_box"><h2 class="ui-bar"><?=  ucwords($name);?> - Cashier</h2></div>
                             <div id="current_date" width="100%" class="info_box"><h2 class="ui-bar"><?php echo date('l F jS Y'); ?></h2></div>
+                            <div id="month_calendar"></div>
                             <div class="ui-btn ui-input-btn ui-shadow">
                                 <?php echo form_open("public/auth/logout");?>
                                 <?php echo form_submit('logout_submit', 'Logout');?>

@@ -1,5 +1,5 @@
 $(function(){
-   
+    $('#month_calendar').datepicker();
     // Handler for navigating to the next page
     function navnext( next ) {
         $( ":mobile-pagecontainer" ).pagecontainer( "change", next, {
