@@ -13,9 +13,9 @@
         <title>Swift Schedules</title>
     </head>
     <body>
-        <div data-role="page" id="page1" style="background-color: black;">
-            <div data-role="header" style="background-color:#DEB887;">
-                <h1 style="color:white;">Swift Schedules</h1>
+        <div data-role="page" id="page1" style="background-color: #0D0D0D;">
+            <div data-role="header" style="background-color:#BFBA73;color: white;">
+                <h1>Swift Schedules</h1>
             </div>
             <div role="main" class="ui-content">
                 <div data-role="tabs" style="border:2px solid black;">
