@@ -12,7 +12,7 @@
         <title>Swift Schedules</title>
     </head>
     <body>
-        <div data-role="page" id="page3" style="background-color: #0D0D0D;" data-dom-cache="true" data-theme="b" data-prev="<?=site_url('admin/home/week');?>" data-next="<?=site_url('admin/home/month');?>"data-url="month">
+        <div data-role="page" id="page3" style="background-color: #0D0D0D;" data-dom-cache="true" data-theme="b" data-prev="<?=site_url('admin/home/week');?>" data-url="month">
             <div data-role="header" style="background-color:#BFBA73;color: black;">
                 <h1>Swift Schedules</h1>
             </div>
