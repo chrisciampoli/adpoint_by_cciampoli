@@ -23,7 +23,6 @@ $(function(){
         // swipes may also happen when the user highlights text, so ignore those.
         // We're only interested in swipes on the page.
         if ( next ) {
-            console.log('asdfads');
             navnext( next );
         }
     });
@@ -31,7 +30,7 @@ $(function(){
     // The same for the navigating to the previous page
     $( document ).on( "swiperight", ".ui-page", function( event ) {
         var prev = $( this ).jqmData( "prev" );
-        if ( prev && ( event.target === $( this )[ 0 ] ) ) {
+        if ( prev ) {
             navprev( prev );
         }
     });
