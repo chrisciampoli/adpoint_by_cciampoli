@@ -12,7 +12,7 @@
         <title>Swift Schedules</title>
     </head>
     <body>
-        <div data-role="page" id="page1" style="background-color: #0D0D0D;">
+        <div data-role="page" id="page1" class="demo-page" style="background-color: #0D0D0D;">
             <div data-role="header" style="background-color:#BFBA73;color: black;">
                 <h1>Swift Schedules</h1>
             </div>
