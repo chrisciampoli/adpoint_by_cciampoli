@@ -12,11 +12,12 @@
         <title>Swift Schedules</title>
     </head>
     <body>
-        <div data-role="page" class="index-page" data-dom-cache="true" data-theme="b" data-prev="prevCity" data-next="nextCity" data-url="city">
+        <div data-role="page" id="city" class="demo-page" data-dom-cache="true" data-theme="b" data-prev="prevCity" data-next="nextCity" data-url="city">
             <div role="main" class="ui-content">
-                <div class="ui-content" data-role="page" data-position-to="window" data-tolerance="50,30,30,30" data-theme="a">
+                <div id="trivia-city" class="trivia ui-content" data-role="page" data-theme="a">
+                    <a href="#" data-rel="back" class="ui-btn ui-btn-right ui-btn-b ui-btn-icon-notext ui-icon-delete ui-corner-all">Close</a>
                     <p>Here some text.</p>
-                </div><!-- /page -->
+                </div><!-- /popup -->
             </div><!-- /content -->
         </div>
     </body>
