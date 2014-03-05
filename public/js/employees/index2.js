@@ -6,7 +6,7 @@ $( document ).one( "pagecreate", ".demo-page", function() {
     $( "#footer" ).toolbar({ theme: "b" });
     // Handler for navigating to the next page
     function navnext( next ) {
-        $( ":mobile-pagecontainer" ).pagecontainer( "change", next + ".html", {
+        $( ":mobile-pagecontainer" ).pagecontainer( "change", next, {
             transition: "slide"
         });
     }
