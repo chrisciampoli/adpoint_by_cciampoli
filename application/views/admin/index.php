@@ -14,17 +14,17 @@
     </head>
     <body>
         <div data-role="page" id="page1" style="background-color: black;">
-            <div data-role="header" style="background-color:#ADFCC0">
-                <h1>Swift Schedules</h1>
+            <div data-role="header" style="background-color:#DEB887;">
+                <h1 style="color:white;">Swift Schedules</h1>
             </div>
             <div role="main" class="ui-content">
                 <div data-role="tabs" style="border:2px solid black;">
                     <div id="fragment-1">
                         <div height="100%" id="container">
-                            <div id="employee_name" width="100%" style="background-color: #DEB887;"><h2 class="ui-bar"><?=  ucwords($name);?></h2></div>
-                            <div id="current_date" width="100%" style="background-color:#DEB887"><h2 class="ui-bar"><?php echo date('l F jS Y'); ?></h2></div>
-                            <div id="assigned_work_area" width="100%" style="background-color:#DEB887"><h2 class="ui-bar">Section Working</h2></div>
-                            <div id="shift_info" width="100%" style="border:2px solid black;">
+                            <div id="employee_name" width="100%" style="background-color: #DEB887;color:white;"><h2 class="ui-bar"><?=  ucwords($name);?></h2></div>
+                            <div id="current_date" width="100%" style="background-color:#DEB887;color:white;"><h2 class="ui-bar"><?php echo date('l F jS Y'); ?></h2></div>
+                            <div id="assigned_work_area" width="100%" style="background-color:#DEB887;color:white;"><h2 class="ui-bar">Section Working</h2></div>
+                            <div id="shift_info" width="100%" style="border:2px solid black;color:white;">
                                 <div id="shift_sub_info1" width="100%" class="ui-bar">Shift Time 4:30 - 9:30 PM</div>
                                 <div class="ui-btn ui-input-btn ui-shadow">
                                     Swift Give-up
