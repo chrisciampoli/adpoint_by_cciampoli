@@ -32,8 +32,8 @@
                 </div>
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="<?php echo site_url("admin/home"); ?>" class="ui-btn-active">Today</a></li>
-                        <li><a href="<?php echo site_url("admin/home/week"); ?>">This Week</a></li>
+                        <li><a href="<?php echo site_url("admin/home"); ?>" >Today</a></li>
+                        <li><a href="<?php echo site_url("admin/home/week"); ?>" class="ui-btn-active">This Week</a></li>
                         <li><a href="<?php echo site_url("admin/home/month"); ?>">This Month</a></li>
                     </ul>
                 </div>

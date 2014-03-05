@@ -18,7 +18,8 @@ class Home extends Admin_Controller {
     }
     
     function month() {
-        $this->load->view('admin/month.php');
+        $data['name'] = $this->session->userdata('username');
+        $this->load->view('admin/month.php', $data);
     }
     
 }

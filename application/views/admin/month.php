@@ -8,26 +8,24 @@
         <meta name="author" content="">
         <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
-        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-        <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+        <link rel="stylesheet" href="<?=site_url('public/css/employees/index.css');?>" />
         <title>Swift Schedules</title>
     </head>
     <body>
-        <div data-role="page" id="page1">
-            <div data-role="header" style="background-color:#ADFCC0">
+        <div data-role="page" id="page1" style="background-color: #0D0D0D;" data-dom-cache="true" data-theme="b" data-prev="<?=site_url('admin/home');?>" data-next="<?=site_url('admin/home/month');?>" data-url="city">
+            <div data-role="header" style="background-color:#BFBA73;color: black;">
                 <h1>Swift Schedules</h1>
             </div>
             <div role="main" class="ui-content">
-                <div data-role="tabs" style="border:2px solid black;">
+                <div data-role="tabs" style="border:2px solid #590E0E;">
                     <div id="fragment-1">
                         <div height="100%" id="container">
-                            <div id="employee_name" width="100%"><h2 class="ui-bar">Employee Name</h2></div>
-                            <div id="current_date" width="100%" style="background-color:#C5FAF4"><h2 class="ui-bar"><?php echo date('l F jS Y'); ?></h2></div>
-                            <div id="assigned_work_area" width="100%" style="background-color:#F3FF89"><h2 class="ui-bar">Section Working</h2></div>
-                            
+                            <div id="employee_name" width="100%" class="info_box"><h2 class="ui-bar"><?=  ucwords($name);?> - Cashier</h2></div>
+                            <div id="current_date" width="100%" class="info_box"><h2 class="ui-bar"><?php echo date('l F jS Y'); ?></h2></div>
                             <div class="ui-btn ui-input-btn ui-shadow">
-                                Logout
-                                <input type="button" data-corners="false" data-enhanced="true" value="logout"></input>
+                                <?php echo form_open("public/auth/logout");?>
+                                <?php echo form_submit('logout_submit', 'Logout');?>
+                                <?php echo form_close();?>
                             </div>
                         </div>
                     </div>
@@ -42,4 +40,7 @@
             </div>
         </div>
     </body>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+    <script src="<?php echo site_url('public/js/employees/index.js');?>"></script>
 </html>
