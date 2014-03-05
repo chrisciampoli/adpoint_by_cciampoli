@@ -18,7 +18,7 @@
                 <h1>Swift Schedules</h1>
             </div>
             <div role="main" class="ui-content">
-                <div data-role="tabs" style="border:2px solid black;">
+                <div data-role="tabs" style="border:2px solid #590E0E;">
                     <div id="fragment-1">
                         <div height="100%" id="container">
                             <div id="employee_name" width="100%" style="background-color: #DEB887;color:white;"><h2 class="ui-bar"><?=  ucwords($name);?></h2></div>
