@@ -16,6 +16,7 @@ $(function(){
    
     // Navigate to the next page on swipeleft
     $( document ).on( "swipeleft", ".ui-page", function( event ) {
+        console.log('got swiped');
         // Get the filename of the next page. We stored that in the data-next
         // attribute in the original markup.
         var next = $( this ).jqmData( "next" );
