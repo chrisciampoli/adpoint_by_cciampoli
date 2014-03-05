@@ -20,8 +20,8 @@
                 <div data-role="tabs" style="border:2px solid #590E0E;">
                     <div id="fragment-1">
                         <div height="100%" id="container">
-                            <div id="employee_name" width="100%" class="info_box"><h2 class="ui-bar"><?=  ucwords($name);?> - Cashier</h2></div>
-                            <div id="current_date" width="100%" class="info_box"><h2 class="ui-bar"><?php echo date('l F jS Y'); ?></h2></div>
+                            <div id="employee_name" width="100%" class="info_box ui-bar"><p><?=  ucwords($name);?> - Cashier</p></div>
+                            <div id="current_date" width="100%" class="info_box ui-bar"><p><?php echo date('l F jS Y'); ?></p></div>
                             <div class="ui-btn ui-input-btn ui-shadow">
                                 <?php echo form_open("public/auth/logout");?>
                                 <?php echo form_submit('logout_submit', 'Logout');?>
