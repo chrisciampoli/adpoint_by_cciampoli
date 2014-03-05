@@ -12,7 +12,7 @@
         <title>Swift Schedules</title>
     </head>
     <body>
-        <div data-role="page" id="page1" style="background-color: #0D0D0D;" data-dom-cache="true" data-theme="b" data-prev="<?=site_url('admin/home/week');?>" data-url="city">
+        <div data-role="page" id="page1" style="background-color: #0D0D0D;" data-dom-cache="true" data-theme="b" data-prev="<?=site_url('admin/home/week');?>" data-next="<?=site_url('admin/home/month');?>"data-url="city">
             <div data-role="header" style="background-color:#BFBA73;color: black;">
                 <h1>Swift Schedules</h1>
             </div>
@@ -22,7 +22,6 @@
                         <div height="100%" id="container">
                             <div id="employee_name" width="100%" class="info_box"><h2 class="ui-bar"><?=  ucwords($name);?> - Cashier</h2></div>
                             <div id="current_date" width="100%" class="info_box"><h2 class="ui-bar"><?php echo date('l F jS Y'); ?></h2></div>
-                            <div id="month_calendar"></div>
                             <div class="ui-btn ui-input-btn ui-shadow">
                                 <?php echo form_open("public/auth/logout");?>
                                 <?php echo form_submit('logout_submit', 'Logout');?>
