@@ -2,6 +2,7 @@ $(function(){
    
     // Handler for navigating to the next page
     function navnext( next ) {
+        console.log('navnext hit');
         $( ":mobile-pagecontainer" ).pagecontainer( "change", next + ".html", {
             transition: "slide"
         });
@@ -19,7 +20,6 @@ $(function(){
         // Get the filename of the next page. We stored that in the data-next
         // attribute in the original markup.
         var next = $( this ).jqmData( "next" );
-        console.log(next);
         // Check if there is a next page and
         // swipes may also happen when the user highlights text, so ignore those.
         // We're only interested in swipes on the page.
