@@ -12,7 +12,7 @@
         <title>Swift Schedules</title>
     </head>
     <body>
-        <div data-role="page" id="city" class="demo-page" data-dom-cache="true" data-theme="b" data-prev="<?=site_url('admin/home');?>" data-next="<?=site_url('admin/home/week');?>" data-url="city">
+        <div data-role="page" id="city" class="demo-page" data-dom-cache="true" data-theme="b" data-prev="<?=site_url('admin/home');?>" data-next="<?=site_url('admin/home/week');?>">
             <div role="main" class="ui-content">
                 <div id="trivia-city" class="trivia ui-content" data-role="page" data-position-to="window" data-tolerance="50,30,30,30" data-theme="a">
                     <li><h1>Testing</h1></li>
