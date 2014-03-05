@@ -16,6 +16,7 @@
             <div role="main" class="ui-content">
                 <div id="trivia-city" class="trivia ui-content" data-role="popup" data-position-to="window" data-tolerance="50,30,30,30" data-theme="a">
                     <div data-role="tabs" style="border:2px solid #590E0E;">
+                        <div id="fragment-1">
                         <div height="100%" id="container">
                             <div id="employee_name" width="100%" class="info_box"><h2 class="ui-bar"><?=  ucwords($name);?> - Cashier</h2></div>
                             <div id="current_date" width="100%" class="info_box"><h2 class="ui-bar"><?php echo date('l F jS Y'); ?></h2></div>
@@ -37,7 +38,9 @@
                                 <?php echo form_close();?>
                             </div>
                         </div>
-                        <div data-role="navbar">
+                    </div>
+                </div>
+                <div data-role="navbar">
                     <ul>
                         <li><a href="<?php echo site_url("admin/home"); ?>" class="ui-btn-active">Today</a></li>
                         <li><a href="<?php echo site_url("admin/home/week"); ?>">This Week</a></li>
