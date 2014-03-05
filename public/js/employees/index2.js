@@ -12,7 +12,7 @@ $( document ).one( "pagecreate", ".demo-page", function() {
     }
     // Handler for navigating to the previous page
     function navprev( prev ) {
-        $( ":mobile-pagecontainer" ).pagecontainer( "change", prev + ".html", {
+        $( ":mobile-pagecontainer" ).pagecontainer( "change", prev, {
             transition: "slide",
             reverse: true
         });
@@ -65,7 +65,7 @@ $( document ).on( "pageshow", ".demo-page", function() {
     // We added data-dom-cache="true" to the page so it won't be deleted
     // so there is no need to prefetch it
     if ( next ) {
-        $( ":mobile-pagecontainer" ).pagecontainer( "load", next + ".html" );
+        $( ":mobile-pagecontainer" ).pagecontainer( "load", next);
     }
     // We disable the next or previous buttons in the footer
     // if there is no next or previous page
