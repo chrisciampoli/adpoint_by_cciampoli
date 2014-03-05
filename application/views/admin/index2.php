@@ -18,7 +18,7 @@
             </div>
             <div role="main" class="ui-content">
                 <div data-role="tabs" style="border:2px solid #590E0E;">
-                    <div id="fragment-1">
+                    <div id="fragment-1" class="ui-content">
                         <div height="100%" id="container">
                             <div id="employee_name" width="100%" class="info_box"><h2 class="ui-bar"><?=  ucwords($name);?> - Cashier</h2></div>
                             <div id="current_date" width="100%" class="info_box"><h2 class="ui-bar"><?php echo date('l F jS Y'); ?></h2></div>
