@@ -25,7 +25,7 @@
                             <div id="current_date" width="100%" class="info_box ui-bar"><p><?php echo date('l F jS Y'); ?></p></div>
                             <div id="assigned_work_area" width="100%" class="info_box ui-bar"><p>Section Working - Counter</p></div>
                             <div id="shift_info" width="100%" style="border:2px solid black;color:white;">
-                                <div id="shift_sub_info1" width="100%" class="ui-bar"><h1>Shift Time 4:30 - 9:30 PM</h1></div>
+                                <div id="shift_sub_info1" width="100%" class="ui-bar" style="text-align: center;"><h1>Shift Time 4:30 - 9:30 PM</h1></div>
                                 <div class="ui-btn ui-input-btn ui-shadow">
                                     Swift Pick up
                                     <input type="button" data-corners="false" data-enhanced="true" value="The Button"></input>
