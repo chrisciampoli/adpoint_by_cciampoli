@@ -13,9 +13,6 @@
     </head>
     <body>
         <div data-role="page" id="city" class="demo-page" data-dom-cache="true" data-theme="b" data-prev="<?=site_url('admin/home');?>" data-next="<?=site_url('admin/home/week');?>" data-url="city">
-            <div data-role="header" style="background-color:#BFBA73;color: black;">
-                <h1>Swift Schedules</h1>
-            </div>
             <div role="main" class="ui-content">
                 <div data-role="tabs" style="border:2px solid #590E0E;">
                     <div id="fragment-1">
@@ -49,7 +46,8 @@
                         <li><a href="<?php echo site_url("admin/home/month"); ?>">This Month</a></li>
                     </ul>
                 </div>
-            </div>
+       
+            </div><!-- /content -->
         </div>
     </body>
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
