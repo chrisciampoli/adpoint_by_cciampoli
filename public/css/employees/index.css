@@ -8,6 +8,7 @@
 
 .ui-header .ui-title, .ui-footer .ui-title {
     font-size: 3em;
+    color: white;
     min-height: 1.1em;
     text-align: center;
     display: block;
