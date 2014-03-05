@@ -14,7 +14,7 @@
     <body>
         <div data-role="page" id="page1" style="background-color: #0D0D0D;" data-dom-cache="true" data-theme="b" data-next="<?=site_url('admin/home/week');?>" data-url="home">
             <div data-role="header" style="background-color:#BFBA73;color: black;">
-                <p style="font-size: 15px;">Swift Schedules</p>
+                <p style="font-size: 30px;margin-left:auto;margin-right:auto;width:6em;">Swift Schedules</p>
             </div>
             <div role="main" class="ui-content">
                 <div data-role="tabs" style="border:2px solid #590E0E;">
