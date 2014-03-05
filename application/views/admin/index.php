@@ -12,8 +12,8 @@
         <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
         <title>Swift Schedules</title>
     </head>
-    <body style="background-color: black;">
-        <div data-role="page" id="page1">
+    <body>
+        <div data-role="page" id="page1" style="background-color: black;">
             <div data-role="header" style="background-color:#ADFCC0">
                 <h1>Swift Schedules</h1>
             </div>
