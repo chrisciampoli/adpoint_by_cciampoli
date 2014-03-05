@@ -22,7 +22,7 @@ $(function(){
         // Check if there is a next page and
         // swipes may also happen when the user highlights text, so ignore those.
         // We're only interested in swipes on the page.
-        if ( next && ( event.target === $( this )[ 0 ] ) ) {
+        if ( next ) {
             console.log('asdfads');
             navnext( next );
         }
