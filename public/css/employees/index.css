@@ -7,7 +7,7 @@
 }
 
 .ui-header .ui-title, .ui-footer .ui-title {
-    font-size: 1.7em;
+    font-size: 1.35em;
     color: white;
     min-height: 1.1em;
     text-align: center;
@@ -18,4 +18,5 @@
     overflow: hidden;
     white-space: nowrap;
     outline: 0!important;
+    font-family: 'Arizonia', cursive;
 }
