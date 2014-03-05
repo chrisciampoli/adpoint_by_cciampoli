@@ -2,13 +2,13 @@ $(function(){
    
     // Handler for navigating to the next page
     function navnext( next ) {
-        $( ":mobile-pagecontainer" ).pagecontainer( "change", next + ".html", {
+        $( ":mobile-pagecontainer" ).pagecontainer( "change", next, {
             transition: "slide"
         });
     }
     // Handler for navigating to the previous page
     function navprev( prev ) {
-        $( ":mobile-pagecontainer" ).pagecontainer( "change", prev + ".html", {
+        $( ":mobile-pagecontainer" ).pagecontainer( "change", prev, {
             transition: "slide",
             reverse: true
         });
