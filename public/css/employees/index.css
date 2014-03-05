@@ -4,6 +4,7 @@
     border: 5px solid white;
     padding-top:3px;
     margin-top:3px;
+    height: 40px;
 }
 
 .ui-header .ui-title, .ui-footer .ui-title {
