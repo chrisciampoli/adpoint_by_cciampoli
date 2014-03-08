@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://ec2-54-193-89-75.us-west-1.compute.amazonaws.com/swift_schedules/';
+$config['base_url']	= 'http://swiftnco.com/swift_schedules/';
 
 /*
 |--------------------------------------------------------------------------

@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+        <link rel="stylesheet" href="<?=site_url('public/css/bootstrap.css');?>" />
         <link rel="stylesheet" href="<?=site_url('public/css/employees/index.css');?>" />
         <link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'>
         <title>Swift Schedules</title>
@@ -53,7 +53,5 @@
             </div>
         </div>
     </body>
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
     <script src="<?php echo site_url('public/js/employees/index.js');?>"></script>
 </html>
