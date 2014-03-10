@@ -58,7 +58,7 @@
                     </div>
                     <div class="row"></div>
                     <div class="row">
-                        <button type="button" class="btn btn-primary col-xs-12">Logout</button>
+                        <button type="button" class="btn btn-primary col-xs-12" id="logout_btn">Logout</button>
                     </div>
                 </div>
                 <div class="tab-pane" id="week">
