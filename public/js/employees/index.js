@@ -2,7 +2,7 @@ $(function() {
     $('#logout_btn').on('click',function(e){
        e.preventDefault();
        $.ajax({
-          url: '/auth/logout',
+          url: "<?php echo base_url('auth/logout');?>",
           data: {},
           success: function(data) {
               
