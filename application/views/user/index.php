@@ -38,11 +38,44 @@
             <div class="tab-content">
                 <div class="tab-pane active" id="daily">
                     <div class="row">
+                        <div class="col-md-12">Employee Name</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">Date</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">Section Working</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">Shift Time</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"><button type="button" class="btn btn-primary">Swift Giveup</button></div>
+                        <div class="col-md-6"><button type="button" class="btn btn-primary">Busy or Not</button></div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="week">
+                    <div class="row">
+                        <div class="col-md-12">.col-md-6</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">.col-md-6</div>
+                    </div>
+                    <div class="row">
                         <div class="col-md-12">.col-md-6</div>
                     </div>
                 </div>
-                <div class="tab-pane" id="week">...</div>
-                <div class="tab-pane" id="month">...</div>
+                <div class="tab-pane" id="month">
+                    <div class="row">
+                        <div class="col-md-12">.col-md-6</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">.col-md-6</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">.col-md-6</div>
+                    </div>
+                </div>
             </div>
         </div>
         <div>
