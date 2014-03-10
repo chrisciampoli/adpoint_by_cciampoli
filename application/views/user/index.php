@@ -31,10 +31,15 @@
         <!-- Wrap all page content here -->
         <div id="wrap">
             <ul class="nav nav-tabs">
-                <li id="home_tab" class="active"><a href="#">Home</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Messages</a></li>
+                <li id="daily_tab" class="active"><a href="index.php" data-toggle="tab">Daily</a></li>
+                <li><a href="#week" data-toggle="tab">Week</a></li>
+                <li><a href="#month" data-toggle="tab">Month</a></li>
             </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="daily">Daily</div>
+                <div class="tab-pane" id="week">...</div>
+                <div class="tab-pane" id="month">...</div>
+            </div>
         </div>
         <div>
             
@@ -44,17 +49,6 @@
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="<?php echo base_url('public/js/bootstrap.min.js'); ?>"></script>
+        <script src="<?php echo base_url('public/js/employees/index.js'); ?>"></script>
     </body>
-    <script>
-        $(function() {
-            
-            $('#home_tab').tab('show');
-            
-            $('#home_tab a').click(function(e) {
-                e.preventDefault()
-                $(this).tab('show')
-            })
-            
-        });
-    </script>
 </html>
