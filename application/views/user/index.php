@@ -53,8 +53,9 @@
                         <button type="button" class="btn btn-primary col-xs-6">Swift Giveup</button>
                         <button type="button" class="btn btn-primary col-xs-6">Busy or Not</button>
                     </div>
+                    <div class="row"></div>
                     <div class="row">
-                        <button type="button" class="btn btn-primary col-xs-6">Logout</button>
+                        <button type="button" class="btn btn-primary col-xs-12">Logout</button>
                     </div>
                 </div>
                 <div class="tab-pane" id="week">
