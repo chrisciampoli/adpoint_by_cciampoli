@@ -50,8 +50,8 @@
                         <div class="col-md-12">Shift Time</div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6"><button type="button" class="btn btn-primary">Swift Giveup</button></div>
-                        <div class="col-md-6"><button type="button" class="btn btn-primary">Busy or Not</button></div>
+                        <div class="col-xs-6"><button type="button" class="btn btn-primary">Swift Giveup</button></div>
+                        <div class="col-xs-6"><button type="button" class="btn btn-primary">Busy or Not</button></div>
                     </div>
                 </div>
                 <div class="tab-pane" id="week">
