@@ -31,23 +31,23 @@
         <!-- Wrap all page content here -->
         <div id="wrap">
             <ul class="nav nav-tabs">
-                <li id="daily_tab" class="active"><a href="index.php" data-toggle="tab">Daily</a></li>
+                <li id="daily_tab" class="active"><a href="#daily" data-toggle="tab">Daily</a></li>
                 <li><a href="#week" data-toggle="tab">Week</a></li>
                 <li><a href="#month" data-toggle="tab">Month</a></li>
             </ul>
             <div class="tab-content">
                 <div class="tab-pane active" id="daily">
                     <div class="row">
-                        <div class="col-md-12">Employee Name</div>
+                        <div class="col-xs-12">Employee Name</div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12">Date</div>
+                        <div class="col-xs-12">Date</div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12">Section Working</div>
+                        <div class="col-xs-12">Section Working</div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12">Shift Time</div>
+                        <div class="col-xs-12">Shift Time</div>
                     </div>
                     <div class="row">
                         <div class="col-xs-6"><button type="button" class="btn btn-primary">Swift Giveup</button></div>
@@ -56,13 +56,13 @@
                 </div>
                 <div class="tab-pane" id="week">
                     <div class="row">
-                        <div class="col-md-12">.col-md-6</div>
+                        <div class="col-xs-12">.col-md-6</div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12">.col-md-6</div>
+                        <div class="col-xs-12">.col-md-6</div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12">.col-md-6</div>
+                        <div class="col-xs-12">.col-md-6</div>
                     </div>
                 </div>
                 <div class="tab-pane" id="month">
