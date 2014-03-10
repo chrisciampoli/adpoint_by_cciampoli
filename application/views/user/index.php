@@ -36,7 +36,11 @@
                 <li><a href="#month" data-toggle="tab">Month</a></li>
             </ul>
             <div class="tab-content">
-                <div class="tab-pane active" id="daily">Daily</div>
+                <div class="tab-pane active" id="daily">
+                    <div class="row">
+                        <div class="col-md-12">.col-md-6</div>
+                    </div>
+                </div>
                 <div class="tab-pane" id="week">...</div>
                 <div class="tab-pane" id="month">...</div>
             </div>
