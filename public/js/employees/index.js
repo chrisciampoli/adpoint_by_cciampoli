@@ -8,10 +8,10 @@ $(function() {
           url: logout_url,
           data: {},
           success: function(data) {
-              
+              window.location.href = config.base;
           },
           failure: function(data) {
-              
+              alert('Issue with logging you out.  Please refresh the page!');
           }
        });
     });
