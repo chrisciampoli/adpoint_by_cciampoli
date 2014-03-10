@@ -1,6 +1,6 @@
 $(function() {
     
-    var logout_url = config.base . "auth/logout";
+    var logout_url = config.base + "auth/logout";
     
     $('#logout_btn').on('click',function(e){
        e.preventDefault();
