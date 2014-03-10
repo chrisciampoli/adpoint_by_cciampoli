@@ -41,7 +41,7 @@
         <li data-target="#carousel-example-captions" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner">
-        <div class="item active" style="background-color:black;height:500px;width:900px;">
+        <div class="item active" style="background-color:black;height:100%;width:100%;">
           <div class="carousel-caption">
             <h3>First slide label</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
