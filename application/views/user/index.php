@@ -35,7 +35,7 @@
     <body>
 
         <!-- Wrap all page content here -->
-        <div id="wrap">
+        <div id="container">
             <ul class="nav nav-tabs">
                 <li id="daily_tab" class="active"><a href="#daily" data-toggle="tab">Daily</a></li>
                 <li><a href="#week" data-toggle="tab">Week</a></li>
