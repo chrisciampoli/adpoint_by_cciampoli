@@ -37,7 +37,7 @@
             </ul>
             <div class="tab-content">
                 <div class="tab-pane active" id="daily">
-                    <table class="table table-striped">
+                    <table class="table table-striped table-hover">
                         <tr>
                             <td>Employee Name</td>
                         </tr>
