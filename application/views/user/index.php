@@ -43,8 +43,8 @@
       <div class="carousel-inner">
         <div class="item active" style="background-color:black;width:100%;height:500px;">
           <div class="carousel-caption">
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <div class="row col-xs-12"><h2>Employee Name</h2></div>
+            <h3>Daily</h3>
           </div>
         </div>
         <div class="item">
