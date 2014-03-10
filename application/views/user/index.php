@@ -38,18 +38,18 @@
             <div class="tab-content">
                 <div class="tab-pane active" id="daily">
                     <table class="table table-striped">
-                        <div class="row">
-                            <div class="col-xs-12">Employee Name</div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">Date</div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">Section Working</div>
-                        </div>
-                        <div class="row" rowspan="2">
-                            <div class="col-xs-12">Shift Time</div>
-                        </div>    
+                        <tr>
+                            <td>Employee Name</td>
+                        </tr>
+                        <tr>
+                            <td>Date</td>
+                        </tr>
+                        <tr>
+                            <td>Title - Area</td>
+                        </tr>
+                        <tr>
+                            <td>Shift Hours</td>
+                        </tr>
                     </table>
                     
                     <div class="row">
