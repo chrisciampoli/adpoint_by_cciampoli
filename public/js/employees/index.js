@@ -2,7 +2,7 @@ $(function() {
     $('#logout_btn').on('click',function(e){
        e.preventDefault();
        $.ajax({
-          url: config.base . "auth/logout",
+          url: config.base,
           data: {},
           success: function(data) {
               

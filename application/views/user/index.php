@@ -26,7 +26,7 @@
         <![endif]-->
         <script>
             var config = {
-              base: <?php echo base_url(); ?>",
+              base: "<?php echo base_url(); ?>",
               notes: 4
             };
         </script>
