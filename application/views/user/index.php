@@ -45,16 +45,16 @@
                 <div class="tab-pane active" id="daily">
                     <table class="table table-striped table-hover">
                         <tr>
-                            <td>Employee Name</td>
+                            <td><h2>Employee Name</h2></td>
                         </tr>
                         <tr>
-                            <td>Date</td>
+                            <td><h3>Date</h3></td>
                         </tr>
                         <tr>
-                            <td>Title - Area</td>
+                            <td><h3>Title - Area</h3></td>
                         </tr>
                         <tr>
-                            <td>Shift Hours</td>
+                            <td><h3>Shift Hours</h3></td>
                         </tr>
                     </table>
                     
