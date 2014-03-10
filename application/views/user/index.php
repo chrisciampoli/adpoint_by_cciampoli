@@ -26,73 +26,39 @@
         <![endif]-->
         <script>
             var config = {
-              base: "<?php echo base_url(); ?>",
-              notes: 4
+                base: "<?php echo base_url(); ?>",
+                notes: 4
             };
         </script>
     </head>
 
     <body>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
 
-        <!-- Wrap all page content here -->
-        <div id="container">
-            <ul class="nav nav-tabs">
-                <li id="daily_tab" class="active"><a href="#daily" data-toggle="tab">Daily</a></li>
-                <li><a href="#week" data-toggle="tab">Week</a></li>
-                <li><a href="#month" data-toggle="tab">Month</a></li>
-            </ul>
-            <div class="tab-content">
-                <div class="tab-pane active" id="daily">
-                    <table class="table table-striped table-hover">
-                        <tr>
-                            <td class="well"><h2>Employee Name</h2></td>
-                        </tr>
-                        <tr>
-                            <td class="well"><h3>Date</h3></td>
-                        </tr>
-                        <tr>
-                            <td class="well"><h3>Title - Area</h3></td>
-                        </tr>
-                        <tr>
-                            <td><h3>Shift Hours</h3></td>
-                        </tr>
-                    </table>
-                    
-                    <div class="row">
-                        <button type="button" class="btn btn-primary col-xs-6">Swift Giveup</button>
-                        <button type="button" class="btn btn-primary col-xs-6">Busy or Not</button>
-                    </div>
-                    <div class="row"></div>
-                    <div class="row">
-                        <button type="button" class="btn btn-primary col-xs-12" id="logout_btn">Logout</button>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="..." alt="...">
+                    <div class="carousel-caption">
+                        ...
                     </div>
                 </div>
-                <div class="tab-pane" id="week">
-                    <div class="row">
-                        <div class="col-xs-12">.col-md-6</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12">.col-md-6</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12">.col-md-6</div>
-                    </div>
-                </div>
-                <div class="tab-pane" id="month">
-                    <div class="row">
-                        <div class="col-md-12">.col-md-6</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">.col-md-6</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">.col-md-6</div>
-                    </div>
-                </div>
+                ...
             </div>
-        </div>
-        <div>
-            
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
         </div>
         <!-- Bootstrap core JavaScript
         ================================================== -->
