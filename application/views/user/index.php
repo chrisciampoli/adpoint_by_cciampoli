@@ -100,7 +100,9 @@
                         <tr>
                             <td class="well"><h3>Title - Area</h3></td>
                         </tr>
-                        <div id="calendar"></div>
+                        <tr>
+                            <td><div id="calendar"></div></td>
+                        </tr>
                     </table>
                     <div class="row">
                         <button type="button" class="btn btn-primary col-xs-12" id="logout_btn">Logout</button>
