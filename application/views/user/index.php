@@ -120,5 +120,6 @@
         <script src="<?php echo base_url('public/js/bootstrap.min.js'); ?>"></script>
         <script src="<?php echo base_url('public/js/employees/index.js'); ?>"></script>
         <script src="<?php echo base_url('public/js/bic_calendar.js'); ?>"></script>
+        <script src="https://rawgithub.com/moment/moment/develop/min/moment-with-langs.min.js"></script>
     </body>
 </html>
