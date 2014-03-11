@@ -68,25 +68,41 @@
                     </div>
                 </div>
                 <div class="tab-pane" id="week">
+                    <table class="table table-striped table-hover">
+                        <tr>
+                            <td class="well"><h2>Employee Name</h2></td>
+                        </tr>
+                        <tr>
+                            <td class="well"><h3>Date</h3></td>
+                        </tr>
+                        <tr>
+                            <td class="well"><h3>Title - Area</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Calendar with Week View</h3></td>
+                        </tr>
+                    </table>
                     <div class="row">
-                        <div class="col-xs-12">.col-md-6</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12">.col-md-6</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12">.col-md-6</div>
+                        <button type="button" class="btn btn-primary col-xs-12" id="logout_btn">Logout</button>
                     </div>
                 </div>
                 <div class="tab-pane" id="month">
+                    <table class="table table-striped table-hover">
+                        <tr>
+                            <td class="well"><h2>Employee Name</h2></td>
+                        </tr>
+                        <tr>
+                            <td class="well"><h3>Date</h3></td>
+                        </tr>
+                        <tr>
+                            <td class="well"><h3>Title - Area</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Month view of employees schedule</h3></td>
+                        </tr>
+                    </table>
                     <div class="row">
-                        <div class="col-md-12">.col-md-6</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">.col-md-6</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">.col-md-6</div>
+                        <button type="button" class="btn btn-primary col-xs-12" id="logout_btn">Logout</button>
                     </div>
                 </div>
             </div>
