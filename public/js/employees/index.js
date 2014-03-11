@@ -8,7 +8,7 @@ $(function() {
 
     $('#calendar').bic_calendar({
         //enable select
-        enableSelect: false,
+        enableSelect: true,
         //set day names
         dayNames: dayNames,
         //set month names
