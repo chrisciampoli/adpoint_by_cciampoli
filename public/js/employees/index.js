@@ -4,11 +4,12 @@ $(function() {
     
     var events = [{
        date: "11/3/2014",
-       title: "Test",
-       color: "#333"
+       title: "Work",
+       color: "#333",
+       content: 'Starbucks College'
     }];
     
-    var monthNames = ["January", "February", "May", "June", "March", "April", "July", "August", "September", "October", "November", "December"];
+    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
     var dayNames = ["S", "M", "T", "W", "T", "F", "S"];
 
