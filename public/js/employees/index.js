@@ -28,6 +28,15 @@ $(function() {
         }
     });
     
+    document.addEventListener('bicCalendarSelect', function(e) {
+        moment.lang('en'); // default the language to English
+        var dateFirst = new moment(e.detail.dateFirst);
+        var dateLast = new moment(e.detail.dateLast);
+
+        $('#from-day').val(dateFirst.format('LL'));
+        $('#to-day').val(dateLast.format('LL'));
+    });
+    
     $('#logout_btn').on('click',function(e){
        e.preventDefault();
        $.ajax({
