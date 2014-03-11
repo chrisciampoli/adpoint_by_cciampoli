@@ -13,6 +13,9 @@
         <!-- Bootstrap core CSS -->
         <link href="<?php echo base_url('public/css/bootstrap.css'); ?>" rel="stylesheet">
 
+        <!-- Calendar CSS -->
+        <link href="<?php echo base_url('public/css/bic_calendar.css'); ?>" rel="stylesheet">
+        
         <!-- Custom styles for this template -->
         <link href="sticky-footer-navbar.css" rel="stylesheet">
 
@@ -97,9 +100,7 @@
                         <tr>
                             <td class="well"><h3>Title - Area</h3></td>
                         </tr>
-                        <tr>
-                            <td><h3>Month view of employees schedule</h3></td>
-                        </tr>
+                        <div id="calendari_lateral1"></div>
                     </table>
                     <div class="row">
                         <button type="button" class="btn btn-primary col-xs-12" id="logout_btn">Logout</button>
@@ -116,5 +117,31 @@
         <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="<?php echo base_url('public/js/bootstrap.min.js'); ?>"></script>
         <script src="<?php echo base_url('public/js/employees/index.js'); ?>"></script>
+        <script src="<?php echo base_url('public/js/bic_calendar.js'); ?>"></script>
+        <script>
+            $('#calendari_lateral1').bic_calendar({
+                                //list of events in array
+                                events: events,
+                                //enable select
+                                enableSelect: true,
+                                //enable multi-select
+                                multiSelect: true,
+                                //set day names
+                                dayNames: dayNames,
+                                //set month names
+                                monthNames: monthNames,
+                                //show dayNames
+                                showDays: true,
+                                //show month controller
+                                displayMonthController: true,
+                                //show year controller
+                                displayYearController: true,                                
+                                //set ajax call
+                                reqAjax: {
+                                    type: 'get',
+                                    url: 'http://bic.cat/bic_calendar/index.php'
+                                }
+                            });
+        `</script>
     </body>
 </html>
