@@ -2,11 +2,18 @@ $(function() {
     
     var logout_url = config.base + "auth/logout";
     
+    var events = [{
+       date: "11/3/2014",
+       title: "Test",
+       color: "#333"
+    }];
+    
     var monthNames = ["January", "February", "May", "June", "March", "April", "July", "August", "September", "October", "November", "December"];
 
     var dayNames = ["S", "M", "T", "W", "T", "F", "S"];
 
     $('#calendar').bic_calendar({
+        events: events,
         //enable select
         enableSelect: true,
         //set day names
@@ -28,14 +35,7 @@ $(function() {
         }
     });
     
-    document.addEventListener('bicCalendarSelect', function(e) {
-        moment.lang('en'); // default the language to English
-        var dateFirst = new moment(e.detail.dateFirst);
-        var dateLast = new moment(e.detail.dateLast);
-
-        $('#from-day').val(dateFirst.format('LL'));
-        $('#to-day').val(dateLast.format('LL'));
-    });
+    
     
     $('#logout_btn').on('click',function(e){
        e.preventDefault();
