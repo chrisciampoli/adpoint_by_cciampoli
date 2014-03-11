@@ -2,6 +2,8 @@ $(function() {
     
     var logout_url = config.base + "auth/logout";
     
+    $('#calendar').bic_calendar({});
+    
     $('#logout_btn').on('click',function(e){
        e.preventDefault();
        $.ajax({

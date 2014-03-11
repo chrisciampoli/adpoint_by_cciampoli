@@ -100,7 +100,7 @@
                         <tr>
                             <td class="well"><h3>Title - Area</h3></td>
                         </tr>
-                        <div id="calendari_lateral1"></div>
+                        <div id="calendar"></div>
                     </table>
                     <div class="row">
                         <button type="button" class="btn btn-primary col-xs-12" id="logout_btn">Logout</button>
@@ -118,30 +118,5 @@
         <script src="<?php echo base_url('public/js/bootstrap.min.js'); ?>"></script>
         <script src="<?php echo base_url('public/js/employees/index.js'); ?>"></script>
         <script src="<?php echo base_url('public/js/bic_calendar.js'); ?>"></script>
-        <script>
-            $('#calendari_lateral1').bic_calendar({
-                                //list of events in array
-                                events: events,
-                                //enable select
-                                enableSelect: true,
-                                //enable multi-select
-                                multiSelect: true,
-                                //set day names
-                                dayNames: dayNames,
-                                //set month names
-                                monthNames: monthNames,
-                                //show dayNames
-                                showDays: true,
-                                //show month controller
-                                displayMonthController: true,
-                                //show year controller
-                                displayYearController: true,                                
-                                //set ajax call
-                                reqAjax: {
-                                    type: 'get',
-                                    url: 'http://bic.cat/bic_calendar/index.php'
-                                }
-                            });
-        `</script>
     </body>
 </html>
