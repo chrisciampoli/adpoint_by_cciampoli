@@ -67,8 +67,7 @@ $(function() {
     });
     
     $('body').on('click','#pickup_btn',function(e){
-       e.preventDefault();
-       $('#myModal').modal();  
+       e.preventDefault();  
     });
     
 });
