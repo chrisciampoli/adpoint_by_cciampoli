@@ -15,10 +15,10 @@
 
         <!-- Calendar CSS -->
         <link href="<?php echo base_url('public/css/bic_calendar.css'); ?>" rel="stylesheet">
-        
+
         <!-- jQuery UI CSS -->
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
-        
+
         <!-- Custom styles for this template -->
         <!--<link href="sticky-footer-navbar.css" rel="stylesheet">-->
 
@@ -32,8 +32,8 @@
         <![endif]-->
         <script>
             var config = {
-              base: "<?php echo base_url(); ?>",
-              notes: 4
+                base: "<?php echo base_url(); ?>",
+                notes: 4
             };
         </script>
     </head>
@@ -63,7 +63,7 @@
                             <td><h3>Shift Hours</h3></td>
                         </tr>
                     </table>
-                    
+
                     <div class="row">
                         <a href="#myModal" role="button" class="btn" data-toggle="modal">Swift Pick up</a>
                         <button type="button" id="busy_btn" class="btn btn-primary col-xs-6">Busy or Not</button>
@@ -113,18 +113,27 @@
                 </div>
             </div>
         </div>
+        <!-- Button trigger modal -->
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+            Launch demo modal
+        </button>
+
         <!-- Modal -->
-        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="myModalLabel">Modal header</h3>
-            </div>
-            <div class="modal-body">
-                <p>One fine body…</p>
-            </div>
-            <div class="modal-footer">
-                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-                <button class="btn btn-primary">Save changes</button>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Bootstrap core JavaScript
