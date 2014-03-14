@@ -67,9 +67,6 @@
                     <div class="row">
                         <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pickup_modal">Swift Pick up</button>
                         <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#busy_modal">Busy or Not</button>
-                    </div>
-                    <div class="row"></div>
-                    <div class="row">
                         <button class="btn btn-primary btn-lg" id="logout_btn">Logout</button>
                     </div>
                 </div>
