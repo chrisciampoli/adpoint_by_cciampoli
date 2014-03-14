@@ -16,8 +16,11 @@
         <!-- Calendar CSS -->
         <link href="<?php echo base_url('public/css/bic_calendar.css'); ?>" rel="stylesheet">
         
+        <!-- jQuery UI CSS -->
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+        
         <!-- Custom styles for this template -->
-        <link href="sticky-footer-navbar.css" rel="stylesheet">
+        <!--<link href="sticky-footer-navbar.css" rel="stylesheet">-->
 
         <!-- Just for debugging purposes. Don't actually copy this line! -->
         <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -117,6 +120,7 @@
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
         <script src="<?php echo base_url('public/js/bootstrap.min.js'); ?>"></script>
         <script src="<?php echo base_url('public/js/employees/index.js'); ?>"></script>
         <script src="<?php echo base_url('public/js/bic_calendar.js'); ?>"></script>
