@@ -52,7 +52,7 @@ $(function() {
     
     
     
-    $('#logout_btn').on('click',function(e){
+    $('body').on('click','#logout_btn',function(e){
        e.preventDefault();
        $.ajax({
           url: logout_url,
