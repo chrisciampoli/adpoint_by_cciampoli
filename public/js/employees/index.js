@@ -68,7 +68,7 @@ $(function() {
     
     $('body').on('click','#pickup_btn',function(e){
        e.preventDefault();
-       $('#swift_dialog').dialog("open");  
+       $('#swift_dialog').dialog();  
     });
     
 });
