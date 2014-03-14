@@ -62,8 +62,8 @@
                     </table>
                     
                     <div class="row">
-                        <button type="button" class="btn btn-primary col-xs-6">Swift Giveup</button>
-                        <button type="button" class="btn btn-primary col-xs-6">Busy or Not</button>
+                        <button type="button" id="pickup_btn" class="btn btn-primary col-xs-6">Swift Pick up</button>
+                        <button type="button" id="busy_btn" class="btn btn-primary col-xs-6">Busy or Not</button>
                     </div>
                     <div class="row"></div>
                     <div class="row">

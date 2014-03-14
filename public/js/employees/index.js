@@ -65,4 +65,12 @@ $(function() {
           }
        });
     });
+    
+    $('body').on('click','#pickup_btn',function(e){
+       e.preventDefault();
+       $('<div></div>').dialog({
+           title: 'Swift Pick up'
+       });  
+    });
+    
 });
