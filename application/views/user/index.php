@@ -110,7 +110,7 @@
                 </div>
             </div>
         </div>
-        <div>
+        <div id="swift_dialog">
             
         </div>
         <!-- Bootstrap core JavaScript
