@@ -65,7 +65,7 @@
                     </table>
 
                     <div class="row">
-                        <a href="#myModal" role="button" class="btn" data-toggle="modal">Swift Pick up</a>
+                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Swift Pick up</button>
                         <button type="button" id="busy_btn" class="btn btn-primary col-xs-6">Busy or Not</button>
                     </div>
                     <div class="row"></div>
@@ -113,12 +113,7 @@
                 </div>
             </div>
         </div>
-        <!-- Button trigger modal -->
-        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-            Launch demo modal
-        </button>
-
-        <!-- Modal -->
+        <!-- Swift Pick up Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
