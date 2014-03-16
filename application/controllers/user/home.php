@@ -23,6 +23,8 @@ class Home extends User_Controller {
         
         $username = $this->session->userdata('username');
         
+        $this->load->model('mdl_schedules');
+        
         if($username == null) {
             return false;
         }
