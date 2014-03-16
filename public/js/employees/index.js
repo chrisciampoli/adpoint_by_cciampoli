@@ -55,7 +55,7 @@ CREATE TABLE `schedules` (
     var dayNames = ["S", "M", "T", "W", "T", "F", "S"];
 
     $('#calendar').bic_calendar({
-        events: events,
+        events: window.test,
         //enable select
         enableSelect: true,
         //set day names
