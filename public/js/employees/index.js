@@ -2,6 +2,19 @@ $(function() {
     
     var logout_url = config.base + "auth/logout";
     
+    // Gonna need to do a query to a schedules table
+    // Using the username from php.  We will grab the data
+    // in json, and the build the events variable based on that.
+    /*
+CREATE TABLE `schedules` (
+  `id` int(11) NOT NULL auto_increment,
+  `user` varchar(255) NOT NULL,
+  `schedule` TEXT NOT NULL,
+  `updated`  TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+     */
+    
     var events = [
         {
             date: "11/3/2014",

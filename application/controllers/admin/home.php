@@ -22,4 +22,14 @@ class Home extends Admin_Controller {
         $this->load->view('admin/month.php', $data);
     }
     
+    function insert() {
+        $data = array(
+           'user'=>$this->session->userdata('username'),
+           'schedule'=>json_encode(array('monday'=>'4pm-6pm','tuesday'=>'6pm-7pm'))
+        ); 
+    if($this->db->insert('schedules',$data)){
+        echo "Insert successful";
+    }
+    }
+    
 }
