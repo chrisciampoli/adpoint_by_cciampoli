@@ -8,8 +8,9 @@ class Mdl_schedule extends CI_Model {
     
     function getSchedule($username) {
         $query = $this->db->get('schedules');
-        if($query) {
-            return $query;
+        $result = $query->result_array();
+        if($result) {
+            return $result;
         } else {
             return false;
         }
