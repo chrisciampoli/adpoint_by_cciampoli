@@ -1,6 +1,7 @@
 $(function() {
     
-    var logout_url = config.base + "auth/logout";
+    var logout_url = config.base + "auth/logout",
+        schedule_url = config.base + "user/home/getSchedule";
     
     // Gonna need to do a query to a schedules table
     // Using the username from php.  We will grab the data
@@ -14,6 +15,17 @@ CREATE TABLE `schedules` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
      */
+    
+    $.ajax({
+          url: schedule_url,
+          data: {},
+          success: function(data) {
+              window.test = data;
+          },
+          failure: function(data) {
+              alert('Issue with pulling schedule!  Please refresh the page');
+          }
+       });
     
     var events = [
         {
