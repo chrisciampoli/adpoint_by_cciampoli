@@ -23,10 +23,53 @@ class Home extends Admin_Controller {
     }
     
     public function insert() {
+        
+        /*
+         * 
+         * 
+        {
+            date: "11/3/2014",
+            title: "Starbucks: College",
+            color: "#333",
+            content: '4:30PM - 10:30PM'
+        },
+        {
+            date: "12/3/2014",
+            title: "Starbucks: College",
+            color: "#333",
+            content: '6:30PM - 10:30PM'
+        },
+        {
+            date: "13/3/2014",
+            title: "Starbucks: College",
+            color: "#333",
+            content: '5:30PM - 10:30PM'
+        }
+         */
         $data = array(
-           'user'=>$this->session->userdata('username'),
-           'schedule'=>json_encode(array('monday'=>'4pm-6pm','tuesday'=>'6pm-7pm'))
-        ); 
+          'user'=>$this->session->userdata('username'),
+          'schedule'=>json_encode(array(
+              array(
+                  "date"=>"11/3/2014",
+                  "title"=>"Starbucks: College",
+                  "color"=>"#333",
+                  "content"=>"4:30PM - 10:30PM"
+              ),
+              array(
+                  "date"=>"11/3/2014",
+                  "title"=>"Starbucks: College",
+                  "color"=>"#333",
+                  "content"=>"4:30PM - 10:30PM"
+              ),
+              array(
+                  "date"=>"11/3/2014",
+                  "title"=>"Starbucks: College",
+                  "color"=>"#333",
+                  "content"=>"4:30PM - 10:30PM"
+              )
+          ))
+        );
+    
         if($this->db->insert('schedules',$data)){
             echo "Insert successful";
         }
