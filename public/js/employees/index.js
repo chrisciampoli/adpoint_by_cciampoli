@@ -1,7 +1,8 @@
 $(function() {
     
     var logout_url = config.base + "auth/logout",
-        schedule_url = config.base + "user/home/getSchedule";
+        schedule_url = config.base + "user/home/getSchedule",
+        events;
     
     // Gonna need to do a query to a schedules table
     // Using the username from php.  We will grab the data
@@ -21,12 +22,13 @@ CREATE TABLE `schedules` (
           data: {},
           success: function(data) {
               window.test = data;
+              events = data;
           },
           failure: function(data) {
               alert('Issue with pulling schedule!  Please refresh the page');
           }
        });
-    
+    /*
     var events = [
         {
             date: "11/3/2014",
@@ -47,7 +49,7 @@ CREATE TABLE `schedules` (
             content: '5:30PM - 10:30PM'
         }
     ];
-    
+    */
     var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
     var dayNames = ["S", "M", "T", "W", "T", "F", "S"];
