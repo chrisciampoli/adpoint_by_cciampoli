@@ -22,7 +22,7 @@ CREATE TABLE `schedules` (
           data: {},
           success: function(data) {
               window.test = data;
-              events = data;
+              events = $.parseJSON(data);
           },
           failure: function(data) {
               alert('Issue with pulling schedule!  Please refresh the page');
