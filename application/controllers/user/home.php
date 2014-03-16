@@ -30,9 +30,15 @@ class Home extends User_Controller {
         }
         $schedule = $this->mdl_schedule->getSchedule($username);
         if(!$schedule) {
-            
+            return json_encode(array(
+               'Status'=>'Failure',
+               'Message'=>'Could not fetch schedule, make sure this employee has one!'
+            ));
         } else {
-            
+            return json_encode(array(
+               'Status'=>'Success',
+               'Message'=>$schedule
+            ));
         }
     }
     
