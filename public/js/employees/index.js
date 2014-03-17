@@ -24,11 +24,14 @@ $(function() {
             var today = new Date();
             var month = today.getMonth()+1;
             var myDate = today.getDate() + '/' + month + '/' + today.getFullYear();
+            var working = false;
             $.each(events, function(i, e){
                if(myDate === e.date) {
-                  console.log(e);
+                    working = true;
+                    console.log(e);
                }
             });
+            console.log(working);
             console.log(events);
             var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
