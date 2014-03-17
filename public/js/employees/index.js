@@ -3,7 +3,14 @@ $(function() {
     var logout_url = config.base + "auth/logout",
         schedule_url = config.base + "user/home/getSchedule";
 
-    var events = [];
+    var schedule = [
+        {
+            date: "11/3/2014",
+            title: "Starbucks: College",
+            color: "#333",
+            content: '4:30PM - 10:30PM'
+        }
+    ];
 
     // Gonna need to do a query to a schedules table
     // Using the username from php.  We will grab the data
@@ -55,9 +62,9 @@ $(function() {
     var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
     var dayNames = ["S", "M", "T", "W", "T", "F", "S"];
-    console.log('Events above bic: ' + events);
+    
     $('#calendar').bic_calendar({
-        events: events,
+        events: schedule,
         //enable select
         enableSelect: true,
         //set day names
