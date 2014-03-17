@@ -51,7 +51,7 @@
                 <div class="tab-pane active" id="daily">
                     <table class="table table-striped table-hover">
                         <tr>
-                            <td class="well"><h2><?php echo $username;?></h2></td>
+                            <td class="well"><h2><?php echo ucfirst($username);?></h2></td>
                         </tr>
                         <tr>
                             <td class="well"><h3>Date</h3></td>
