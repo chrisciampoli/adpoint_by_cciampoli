@@ -26,7 +26,7 @@ CREATE TABLE `schedules` (
               $.each(parsed, function(index, element){
                  events.push(element.schedule); 
               });
-              
+              console.log('Events: '+events);
           },
           failure: function(data) {
               alert('Issue with pulling schedule!  Please refresh the page');
