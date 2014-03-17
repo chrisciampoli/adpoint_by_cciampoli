@@ -5,7 +5,6 @@ class Home extends User_Controller {
     function __constructor() {
         parent::_constructor();
         $this->load->library('session');
-        $this->load->model('mdl_schedule');
     }
     
     function index() {
@@ -23,6 +22,7 @@ class Home extends User_Controller {
     function getSchedule($username = null) {
         
         $username = $this->session->userdata('username');
+        $this->load->model('mdl_schedule');
         
         if($username == null) {
             return false;
