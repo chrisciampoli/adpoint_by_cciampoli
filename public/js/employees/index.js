@@ -27,6 +27,7 @@ $(function() {
                 var day = $.parseJSON(element.schedule);
                 events.push(day);
             });
+            window.events = events;
             console.log('Events: ' + events);
         },
         failure: function(data) {
