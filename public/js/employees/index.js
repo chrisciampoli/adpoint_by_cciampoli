@@ -23,9 +23,7 @@ $(function() {
         success: function(data) {
             window.test = data;
             var parsed = $.parseJSON(window.test);
-            $.each(parsed, function(index, element) {
-                events.push(element.schedule);
-            });
+            events = $.parseJSON(parsed[0].schedule);
             window.events = events;
             console.log('Typeof: ' + typeof events);
             console.log('Events: ' + events);
@@ -60,7 +58,7 @@ $(function() {
     var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
     var dayNames = ["S", "M", "T", "W", "T", "F", "S"];
-
+    console.log('Events above bic: ' + events);
     $('#calendar').bic_calendar({
         events: events,
         //enable select
