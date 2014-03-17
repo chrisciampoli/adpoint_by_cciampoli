@@ -24,7 +24,7 @@ $(function() {
             $.each(events, function(i, e){
                var today = new Date();
                var myDate = today.getDate() + '/' + today.getMonth() + '/' + today.getFullYear();
-               consol.log(myDate);
+               console.log(myDate);
                console.log(e.date);
                if(myDate === e.date) {
                    console.log('Found one for today boss! ' + e);
