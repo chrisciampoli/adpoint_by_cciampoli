@@ -62,7 +62,7 @@ $(function() {
     var dayNames = ["S", "M", "T", "W", "T", "F", "S"];
 
     $('#calendar').bic_calendar({
-        events: window.test,
+        events: events,
         //enable select
         enableSelect: true,
         //set day names
