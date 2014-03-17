@@ -12,14 +12,6 @@ class Home extends User_Controller {
         $this->load->view('user/index.php',$data);
     }
     
-    function about() {
-        
-    }
-    
-    function contact() {
-        
-    }
-    
     function getSchedule($username = null) {
         
         $username = $this->session->userdata('username');

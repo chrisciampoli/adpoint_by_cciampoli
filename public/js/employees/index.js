@@ -6,7 +6,7 @@ $(function() {
     var schedule = [
         {
             date: "11/3/2014",
-            title: "Starbucks: College",
+            title: "Starbucks: College - Server",
             color: "#333",
             content: '4:30PM - 10:30PM'
         }
