@@ -18,4 +18,16 @@ class Mdl_schedule extends CI_Model {
         }
     }
     
+    function postSchedule($username, $schedule) {
+        $data = array(
+          'user'=>$username,
+          'schedule'=>$schedule
+        );
+        if($this->db->insert('schedules',$data)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
 }

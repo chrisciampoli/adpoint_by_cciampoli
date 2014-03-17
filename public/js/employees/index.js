@@ -2,7 +2,7 @@ $(function() {
     
     var logout_url = config.base + "auth/logout",
         schedule_url = config.base + "user/home/getSchedule",
-        events;
+        events = [];
     
     // Gonna need to do a query to a schedules table
     // Using the username from php.  We will grab the data
@@ -22,7 +22,11 @@ CREATE TABLE `schedules` (
           data: {},
           success: function(data) {
               window.test = data;
-              events = $.parseJSON(data);
+              var parsed = $.parseJSON(data);
+              $.each(parsed, function(index, element){
+                 events.push(element.schedule); 
+              });
+              
           },
           failure: function(data) {
               alert('Issue with pulling schedule!  Please refresh the page');
