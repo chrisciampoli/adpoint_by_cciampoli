@@ -22,7 +22,12 @@ $(function() {
              * hours section to reflect that.
              */
             $.each(events, function(i, e){
-               console.log(e.date); 
+               var today = new Date();
+               var myDate = today.getDate() + '/' + today.getMonth() + '/' + today.getFullYear();
+               console.log(e.date);
+               if(myDate === e.date) {
+                   console.log('Found one for today boss! ' + e);
+               }
             });
             console.log(events);
             var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
