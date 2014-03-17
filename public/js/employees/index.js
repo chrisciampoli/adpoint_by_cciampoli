@@ -29,7 +29,7 @@ $(function() {
         url: schedule_url,
         data: {},
         success: function(data) {
-            var parsed = $.parseJSON(window.test);
+            var parsed = $.parseJSON(data);
             events = $.parseJSON(parsed[0].schedule);
         },
         failure: function(data) {
