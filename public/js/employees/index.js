@@ -21,10 +21,11 @@ $(function() {
              * If they DO have a schedule for today, then we need to update the working and
              * hours section to reflect that.
              */
+            var today = new Date();
             var month = today.getMonth()+1;
             var myDate = today.getDate() + '/' + month + '/' + today.getFullYear();
             $.each(events, function(i, e){
-               var today = new Date();
+               
                console.log(myDate);
                console.log(e.date);
                if(myDate === e.date) {
