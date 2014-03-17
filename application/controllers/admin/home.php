@@ -56,13 +56,13 @@ class Home extends Admin_Controller {
                   "content"=>"4:30PM - 10:30PM"
               ),
               array(
-                  "date"=>"11/3/2014",
+                  "date"=>"12/3/2014",
                   "title"=>"Starbucks: College",
                   "color"=>"#333",
                   "content"=>"4:30PM - 10:30PM"
               ),
               array(
-                  "date"=>"11/3/2014",
+                  "date"=>"13/3/2014",
                   "title"=>"Starbucks: College",
                   "color"=>"#333",
                   "content"=>"4:30PM - 10:30PM"
