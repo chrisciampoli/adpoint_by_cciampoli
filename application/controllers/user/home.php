@@ -22,7 +22,7 @@ class Home extends User_Controller {
         }
         
         $schedule = $this->mdl_schedule->getSchedule($username);
-        echo "<pre>" . print_r(json_decode($schdeule),true) . "</pre>";
+        echo "<pre>" . print_r(json_decode($schedule),true) . "</pre>";
         echo json_encode($schedule);
         
         return;
