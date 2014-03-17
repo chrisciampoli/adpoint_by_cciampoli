@@ -30,7 +30,33 @@ $(function() {
         data: {},
         success: function(data) {
             var parsed = $.parseJSON(data);
-            events = $.parseJSON(parsed[0].schedule);
+            var events = $.parseJSON(parsed[0].schedule);
+            var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+            var dayNames = ["S", "M", "T", "W", "T", "F", "S"];
+
+            $('#calendar').bic_calendar({
+                events: events,
+                //enable select
+                enableSelect: true,
+                //set day names
+                dayNames: dayNames,
+                //set month names
+                monthNames: monthNames,
+                //show dayNames
+                showDays: true,
+                //show month controller
+                displayMonthController: true,
+                //show year controller
+                displayYearController: true,
+                //change calendar to english format
+                startWeekDay: 1,
+                //set ajax call
+                reqAjax: {
+                    type: 'get',
+                    url: 'http://bic.cat/bic_calendar/index.php'
+                }
+            });
         },
         failure: function(data) {
             alert('Issue with pulling schedule!  Please refresh the page');
@@ -58,35 +84,6 @@ $(function() {
      }
      ];
      */
-
-    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-    var dayNames = ["S", "M", "T", "W", "T", "F", "S"];
-    
-    $('#calendar').bic_calendar({
-        events: events,
-        //enable select
-        enableSelect: true,
-        //set day names
-        dayNames: dayNames,
-        //set month names
-        monthNames: monthNames,
-        //show dayNames
-        showDays: true,
-        //show month controller
-        displayMonthController: true,
-        //show year controller
-        displayYearController: true,
-        //change calendar to english format
-        startWeekDay: 1,
-        //set ajax call
-        reqAjax: {
-            type: 'get',
-            url: 'http://bic.cat/bic_calendar/index.php'
-        }
-    });
-
-
 
     $('body').on('click', '#logout_btn', function(e) {
         e.preventDefault();
