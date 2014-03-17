@@ -31,6 +31,7 @@ $(function() {
         success: function(data) {
             var parsed = $.parseJSON(data);
             var events = $.parseJSON(parsed[0].schedule);
+            console.log(events);
             var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
             var dayNames = ["S", "M", "T", "W", "T", "F", "S"];
