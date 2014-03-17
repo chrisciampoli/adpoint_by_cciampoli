@@ -22,13 +22,15 @@ class Home extends User_Controller {
         }
         
         $schedule = $this->mdl_schedule->getSchedule($username);
-        //echo print_r(json_decode($schedule[0]["schedule"], true), true);
+       /* 
+       //echo print_r(json_decode($schedule[0]["schedule"], true), true);
         foreach(json_decode($schedule[0]["schedule"], true) as $day){
             echo $day['date'] . "<br/>";
         }
+        */
         echo json_encode($schedule);
         
-        return;
+        return $schedule;
         
     }
     
@@ -50,12 +52,9 @@ class Home extends User_Controller {
     }
     
     function updateSchedule($username = null, $schedule = null) {
-        $this->db->select('user, schedule');
-        $this->db->where('user',$username);
-        $query = $this->db->get('schedules');
-        foreach($query->result_array as $row) {
-            $schedule[] = json_decode($row['schedule']);
-        }
+        $username = $this->session->userdata('username');
+        $schedule = $this->getSchedule($username);
+        // json decode the schedule element to edit see getSchedule commented out code
         
     }
     
