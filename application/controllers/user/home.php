@@ -48,4 +48,32 @@ class Home extends User_Controller {
         }
     }
     
+    function insert() {
+        $username = $this->session->userdata('username');
+        $data = array(
+            'user'=>$username,
+            'schedule'=>array(
+                array(
+                    "date"=>"11/3/2014",
+                    "title"=>"Starbucks: College",
+                    "color"=>"#333",
+                    "content"=>"4:30PM - 10:30PM"
+                ),
+                array(
+                    "date"=>"12/3/2014",
+                    "title"=>"Starbucks: College",
+                    "color"=>"#333",
+                    "content"=>"4:30PM - 10:30PM"
+                ),
+                array(
+                    "date"=>"13/3/2014",
+                    "title"=>"Starbucks: College",
+                    "color"=>"#333",
+                    "content"=>"4:30PM - 10:30PM"
+                )
+            )
+        );
+        $this->db->insert('schedules',$data);
+    }
+    
 }
