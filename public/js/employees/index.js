@@ -1,7 +1,9 @@
 $(function() {
 
     var logout_url = config.base + "auth/logout",
-            schedule_url = config.base + "user/home/getSchedule";
+        schedule_url = config.base + "user/home/getSchedule";
+
+    var events = [];
 
     // Gonna need to do a query to a schedules table
     // Using the username from php.  We will grab the data
@@ -20,12 +22,8 @@ $(function() {
         url: schedule_url,
         data: {},
         success: function(data) {
-            window.test = data;
             var parsed = $.parseJSON(window.test);
             events = $.parseJSON(parsed[0].schedule);
-            window.events = events;
-            console.log('Typeof: ' + typeof window.events);
-            console.log('Events: ' + window.events);
         },
         failure: function(data) {
             alert('Issue with pulling schedule!  Please refresh the page');
@@ -57,9 +55,9 @@ $(function() {
     var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
     var dayNames = ["S", "M", "T", "W", "T", "F", "S"];
-    console.log('Events above bic: ' + window.events);
+    console.log('Events above bic: ' + events);
     $('#calendar').bic_calendar({
-        events: window.events,
+        events: events,
         //enable select
         enableSelect: true,
         //set day names
