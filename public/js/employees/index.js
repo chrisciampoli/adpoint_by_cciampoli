@@ -3,34 +3,27 @@ $(function() {
     var logout_url = config.base + "auth/logout",
         schedule_url = config.base + "user/home/getSchedule";
 
-    var schedule = [
-        {
-            date: "11/3/2014",
-            title: "Starbucks: College - Server",
-            color: "#333",
-            content: '4:30PM - 10:30PM'
-        }
-    ];
-
-    // Gonna need to do a query to a schedules table
-    // Using the username from php.  We will grab the data
-    // in json, and the build the events variable based on that.
-    /*
-     CREATE TABLE `schedules` (
-     `id` int(11) NOT NULL auto_increment,
-     `user` varchar(255) NOT NULL,
-     `schedule` TEXT NOT NULL,
-     `updated`  TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
-     PRIMARY KEY (`id`)
-     ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-     */
-
     $.ajax({
         url: schedule_url,
         data: {},
         success: function(data) {
             var parsed = $.parseJSON(data);
             var events = $.parseJSON(parsed[0].schedule);
+            
+            // We need to do a few things here with the data before
+            // using it to populate the calendar.
+            
+            /*
+             * First we need to get todays date, then check for todays date
+             * within the schedule to see if the user is working today. If not
+             * then we need to change the working and hours sections to "Not Scheduled"
+             * 
+             * If they DO have a schedule for today, then we need to update the working and
+             * hours section to reflect that.
+             */
+            $.each(events, function(i, e){
+               console.log(e.date); 
+            });
             console.log(events);
             var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 

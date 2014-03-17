@@ -57,7 +57,7 @@
                             <td class="well"><h3><?php echo date('l F jS Y'); ?></h3></td>
                         </tr>
                         <tr>
-                            <td class="well"><h3>Title - Area</h3></td>
+                            <td class="well"><h3 id="working">Title - Area</h3></td>
                         </tr>
                         <tr>
                             <td><h3>Shift Hours</h3></td>
@@ -79,7 +79,7 @@
                             <td class="well"><h3><?php echo date('l F jS Y'); ?></h3></td>
                         </tr>
                         <tr>
-                            <td class="well"><h3>Title - Area</h3></td>
+                            <td class="well"><h3 id="working">Title - Area</h3></td>
                         </tr>
                         <tr>
                             <td><h3>Calendar with Week View</h3></td>
@@ -98,7 +98,7 @@
                             <td class="well"><h3><?php echo date('l F jS Y'); ?></h3></td>
                         </tr>
                         <tr>
-                            <td class="well"><h3>Title - Area</h3></td>
+                            <td class="well"><h3 id="working">Title - Area</h3></td>
                         </tr>
                         <tr>
                             <td><div id="calendar"></div></td>
