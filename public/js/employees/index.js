@@ -25,16 +25,20 @@ $(function() {
             var month = today.getMonth()+1;
             var myDate = today.getDate() + '/' + month + '/' + today.getFullYear();
             var working = false;
+            var hours;
+            
             $.each(events, function(i, e){
                if(myDate === e.date) {
                     working = true;
                     console.log(e);
+                    hours = e.content;
                }
             });
             console.log(working);
             console.log(events);
             if(working === true) {
                 $('#working').html('WORKING WOKRING');
+                $('#hours').html(hours);
             }
             var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 

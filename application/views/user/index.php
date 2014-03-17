@@ -60,7 +60,7 @@
                             <td class="well"><h3 id="working">Title - Area</h3></td>
                         </tr>
                         <tr>
-                            <td><h3>Shift Hours</h3></td>
+                            <td><h3 id="hours">Shift Hours</h3></td>
                         </tr>
                     </table>
 
