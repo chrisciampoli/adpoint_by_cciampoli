@@ -51,7 +51,7 @@
                 <div class="tab-pane active" id="daily">
                     <table class="table table-striped table-hover">
                         <tr>
-                            <td class="well"><h2><?php echo ucfirst($username);?></h2></td>
+                            <td class="well"><h2><?php echo ucwords($username);?></h2></td>
                         </tr>
                         <tr>
                             <td class="well"><h3>Date</h3></td>
@@ -73,7 +73,7 @@
                 <div class="tab-pane" id="week">
                     <table class="table table-striped table-hover">
                         <tr>
-                            <td class="well"><h2>Employee Name</h2></td>
+                            <td class="well"><h2><?php echo ucwords($username);?></h2></td>
                         </tr>
                         <tr>
                             <td class="well"><h3>Date</h3></td>
@@ -92,7 +92,7 @@
                 <div class="tab-pane" id="month">
                     <table class="table table-striped table-hover">
                         <tr>
-                            <td class="well"><h2>Employee Name</h2></td>
+                            <td class="well"><h2><?php echo ucwords($username);?></h2></td>
                         </tr>
                         <tr>
                             <td class="well"><h3>Date</h3></td>
