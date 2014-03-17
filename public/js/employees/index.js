@@ -33,6 +33,9 @@ $(function() {
             });
             console.log(working);
             console.log(events);
+            if(working === true) {
+                $('#working').html('WORKING WOKRING');
+            }
             var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
             var dayNames = ["S", "M", "T", "W", "T", "F", "S"];
