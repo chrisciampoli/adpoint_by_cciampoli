@@ -24,10 +24,10 @@ $(function() {
             window.test = data;
             var parsed = $.parseJSON(window.test);
             $.each(parsed, function(index, element) {
-                var day = $.parseJSON(element.schedule);
-                events.push(day);
+                events.push(element.schedule);
             });
             window.events = events;
+            console.log('Typeof: ' + typeof events);
             console.log('Events: ' + events);
         },
         failure: function(data) {
