@@ -73,7 +73,7 @@ class Home extends User_Controller {
                 )
             )
         );
-        $this->db->insert('schedules',$data);
+        $this->db->insert('schedules',json_encode($data));
     }
     
 }
