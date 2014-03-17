@@ -41,6 +41,9 @@ $(function() {
             if(working === true) {
                 $('#working').html(title);
                 $('#hours').html(hours);
+            } else if(working === false) {
+                $('#working').html('Not scheduled for today');
+                $('#hours').html('*-*');
             }
             var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
