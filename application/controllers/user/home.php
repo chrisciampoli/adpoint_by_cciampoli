@@ -23,9 +23,36 @@ class Home extends User_Controller {
         
         $schedule = $this->mdl_schedule->getSchedule($username);
         
-        echo json_encode($schedule);
+        echo $schedule;
         
         return;
+        
+    }
+    
+    function postRequest($username = null) {
+        
+        $username = $this->session->userdata('username');
+        
+        if(is_null($username)){
+            return false;
+        }
+        
+        $this->load->model('mdl_schedule');
+        
+        if($this->mdl_schedule->postRequest($username, $schedule)){
+            
+        } else {
+            
+        }
+    }
+    
+    function updateSchedule($username = null, $schedule = null) {
+        $this->db->select('user, schedule');
+        $this->db->where('user',$username);
+        $query = $this->db->get('schedules');
+        foreach($query->result_array as $row) {
+            $schedule[] = json_decode($row['schedule']);
+        }
         
     }
     
