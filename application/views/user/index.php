@@ -50,11 +50,6 @@
             <div class="tab-content">
                 <div class="tab-pane active" id="daily">
                     <?php $this->load->view('user/day');?>
-                    <div class="row">
-                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pickup_modal">Swift Pick up</button>
-                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#busy_modal">Busy or Not</button>
-                        <button class="btn btn-primary btn-lg" id="logout_btn">Logout</button>
-                    </div>
                 </div>
                 <div class="tab-pane" id="week">
                     <table class="table table-striped table-hover">
