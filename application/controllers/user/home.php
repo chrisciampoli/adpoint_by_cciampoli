@@ -9,6 +9,7 @@ class Home extends User_Controller {
     
     function index() {
         $data['username'] = $this->session->userdata('username');
+        $data['employee_info'] = $this->load->view('user/partials/info');
         $this->load->view('user/index.php',$data);
     }
     

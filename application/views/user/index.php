@@ -49,21 +49,7 @@
             </ul>
             <div class="tab-content">
                 <div class="tab-pane active" id="daily">
-                    <table class="table table-striped table-hover">
-                        <tr>
-                            <td class="well"><h2><?php echo ucwords($username);?></h2></td>
-                        </tr>
-                        <tr>
-                            <td class="well"><h3 id="date"></h3></td>
-                        </tr>
-                        <tr>
-                            <td class="well"><h3 id="working">Title - Area</h3></td>
-                        </tr>
-                        <tr>
-                            <td><h3 id="hours">Shift Hours</h3></td>
-                        </tr>
-                    </table>
-
+                    <?php echo $employee_info; ?>
                     <div class="row">
                         <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pickup_modal">Swift Pick up</button>
                         <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#busy_modal">Busy or Not</button>
@@ -71,39 +57,13 @@
                     </div>
                 </div>
                 <div class="tab-pane" id="week">
-                    <table class="table table-striped table-hover">
-                        <tr>
-                            <td class="well"><h2><?php echo ucwords($username);?></h2></td>
-                        </tr>
-                        <tr>
-                            <td class="well"><h3><?php echo date('l F jS Y'); ?></h3></td>
-                        </tr>
-                        <tr>
-                            <td class="well"><h3 id="working">Title - Area</h3></td>
-                        </tr>
-                        <tr>
-                            <td><h3>Calendar with Week View</h3></td>
-                        </tr>
-                    </table>
+                    <?php echo $employee_info; ?>
                     <div class="row">
                         <button type="button" class="btn btn-primary col-xs-12" id="logout_btn">Logout</button>
                     </div>
                 </div>
                 <div class="tab-pane" id="month">
-                    <table class="table table-striped table-hover">
-                        <tr>
-                            <td class="well"><h2><?php echo ucwords($username);?></h2></td>
-                        </tr>
-                        <tr>
-                            <td class="well"><h3><?php echo date('l F jS Y'); ?></h3></td>
-                        </tr>
-                        <tr>
-                            <td class="well"><h3 id="working">Title - Area</h3></td>
-                        </tr>
-                        <tr>
-                            <td><div id="calendar"></div></td>
-                        </tr>
-                    </table>
+                    <?php echo $employee_info; ?>
                     <div class="row">
                         <button type="button" class="btn btn-primary col-xs-12" id="logout_btn">Logout</button>
                     </div>
