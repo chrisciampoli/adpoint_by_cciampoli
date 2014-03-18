@@ -79,6 +79,9 @@
                             </tr>
                         </tbody>
                     </table>
+                    <div class="row">
+                        <button class="btn btn-primary btn-lg" id="logout_btn">Logout</button>
+                    </div>
                 </div>
             </div>
         </div>
