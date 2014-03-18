@@ -69,7 +69,7 @@
                     </div>
                     <div class="modal-body">
                         <h4>Who would you like to Swift Give Up to?</h4>
-                      <?php foreach($employees as $employee) {?> 
+                      <?php foreach($employees as $employee) { if($employee['username'] == $this->session->userdata('username')) continue;?> 
                         <div class="checkbox">
                             <label>
                                 <input type="checkbox"> <?php echo ucwords($employee['username']);?>
