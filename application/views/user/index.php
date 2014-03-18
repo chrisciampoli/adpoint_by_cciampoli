@@ -61,21 +61,22 @@
                 <div class="tab-pane" id="pending">
                     <table class="table table-hover table-responsive">
                         <thead>
-                        <th>Employee</th>
-                        <th>Date</th>
-                        <th>Location</th>
-                        <th>Shift</th>
-                        <th>Status</th>
+                            <th>Employee</th>
+                            <th>Date</th>
+                            <th>Location</th>
+                            <th>Shift</th>
+                            <th>Status</th>
+                            <th>Controls</th>
                         </thead>
                         <tbody>
                             <tr class="warning">
-                                <td>Christopher</td><td>3/18/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Pending</td>
+                                <td>Christopher</td><td>3/18/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Pending</td><td><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#confirmation_modal">Accept</button><button class="btn btn-primary btn-lg">Decline</button></td>
                             </tr>
                             <tr class="success">
-                                <td>Christopher</td><td>3/18/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Accepted</td>
+                                <td>Christopher</td><td>3/19/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Accepted</td>
                             </tr>
                             <tr class="danger">
-                                <td>Christopher</td><td>3/18/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Denied</td>
+                                <td>Christopher</td><td>3/20/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Denied</td>
                             </tr>
                         </tbody>
                     </table>
@@ -109,6 +110,24 @@
         </div>
         <!-- Busy or Not Modal -->
         <div class="modal fade" id="busy_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">Busy or Not</h4>
+                    </div>
+                    <div class="modal-body">
+                        Would you like to give up your shift for the day?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Submit Request</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Busy or Not Modal -->
+        <div class="modal fade" id="confirmation_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
