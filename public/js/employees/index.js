@@ -7,7 +7,8 @@ $(function() {
         myDate = today.getDate() + '/' + month + '/' + today.getFullYear(),
         working = false,
         title,
-        hours;
+        hours,
+        selected;
         
     $('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
         console.log(e.target); // activated tab
@@ -20,7 +21,16 @@ $(function() {
         e.preventDefault();
         console.log(this.className);
         console.log($(this).attr('rel'));
+        
+        selected = $(this);
+        
         $('#confirmation_modal').modal('show');
+    });
+    
+    $('body').on('click','#accept_btn',function(){
+        $(selected).removeClass('warning pending-row');
+        $(selected).addClass('success accepted-row');
+        selected = '';
     });
    
     $.ajax({
