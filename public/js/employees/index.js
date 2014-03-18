@@ -23,7 +23,7 @@ $(function() {
              */
             var today = new Date();
             var month = today.getMonth()+1;
-            var myDate = today.getDate() + '/' + month + '/' + today.getFullYear();
+            var myDate = today.getDate()-1 + '/' + month + '/' + today.getFullYear();
             var working = false;
             var title;
             var hours;
