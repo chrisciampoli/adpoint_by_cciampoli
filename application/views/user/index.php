@@ -69,7 +69,7 @@
                     </div>
                     <div class="modal-body">
                       <?php
-                          print_r($employees,true);
+                          echo "<pre>" . print_r($employees,true) . "</pre>";
                       ?>
                     </div>
                     <div class="modal-footer">
