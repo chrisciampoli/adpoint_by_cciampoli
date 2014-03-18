@@ -14,7 +14,7 @@ $(function() {
             // using it to populate the calendar.
             
             /*
-             * First we need to get todays date, then check for todays date
+             * First we need to get to days date, then check for todays date
              * within the schedule to see if the user is working today. If not
              * then we need to change the working and hours sections to "Not Scheduled"
              * 
@@ -26,11 +26,20 @@ $(function() {
                 myDate = today.getDate() + '/' + month + '/' + today.getFullYear(),
                 working = false,
                 title,
-                hours,
-                weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday"],
-                dayOfWeek = weekday[today.getDate()];
+                hours;
+            
+            var weekday = new Array(7);
+            weekday[0] = "Sunday";
+            weekday[1] = "Monday";
+            weekday[2] = "Tuesday";
+            weekday[3] = "Wednesday";
+            weekday[4] = "Thursday";
+            weekday[5] = "Friday";
+            weekday[6] = "Saturday";
+            
+            var dayOfWeek = weekday[today.getDate()];
            
-            $('#date').html(dayOfWeek + ', ' + month + '/' + today.getFullYear());
+            $('#date').html(dayOfWeek);
             
             $.each(events, function(i, e){
                if(myDate === e.date) {
