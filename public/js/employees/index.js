@@ -37,6 +37,16 @@ $(function() {
                 .addClass('label-success')
                 .html('Accepted');
     });
+    
+    $('body').on('click','#decline_btn',function(){
+       $(selected).removeClass('warning pending-row').addClass('danger denied-row');
+       var id = $(selected).attr('rel');
+       $('.status#'+id)
+                .children()
+                .removeClass('label-warning')
+                .addClass('label-danger')
+                .html('Denied');
+    });
    
     $.ajax({
         url: schedule_url,
