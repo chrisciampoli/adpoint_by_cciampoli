@@ -26,9 +26,11 @@ $(function() {
                 myDate = today.getDate() + '/' + month + '/' + today.getFullYear(),
                 working = false,
                 title,
-                hours;
+                hours,
+                weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday"],
+                dayOfWeek = weekday[today.getDate()];
            
-            $('#date').html(today);
+            $('#date').html(dayOfWeek + ', ' + month + '/' + today.getFullYear());
             
             $.each(events, function(i, e){
                if(myDate === e.date) {
