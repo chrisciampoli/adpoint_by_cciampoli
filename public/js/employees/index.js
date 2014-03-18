@@ -52,6 +52,7 @@ $(function() {
                     $('#working').html(title);
                     $('#hours').html(hours);
                     $('div#week #working').html(title);
+                    $('div#month #working').html(title);
                 } else if (working === false) {
                     $('#working').html('Not scheduled for today');
                     $('#hours').html('*-*');
