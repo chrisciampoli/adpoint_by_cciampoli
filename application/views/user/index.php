@@ -46,6 +46,7 @@
                 <li id="daily_tab" class="active"><a href="#daily" data-toggle="tab">Daily</a></li>
                 <li><a href="#week" data-toggle="tab">Week</a></li>
                 <li><a href="#month" data-toggle="tab">Month</a></li>
+                <li><a href="#pending" data-toggle="tab">Pending</a></li>
             </ul>
             <div class="tab-content">
                 <div class="tab-pane active" id="daily">
