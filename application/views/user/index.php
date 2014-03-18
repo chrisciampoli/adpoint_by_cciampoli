@@ -65,10 +65,10 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="myModalLabel">Swift Pick up</h4>
+                        <h4 class="modal-title" id="myModalLabel">Swift Give up</h4>
                     </div>
                     <div class="modal-body">
-                        Would you like to pick up a shift for today?
+                        Would you like to give up your shift for today?
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
