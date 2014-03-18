@@ -8,10 +8,11 @@ $(function() {
         working = false,
         title,
         hours;
+        
     $('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
         console.log(e.target); // activated tab
         e.relatedTarget // previous tab
-        $('#date').html(today.toDateString());
+        $('div#week #date').html(today.toDateString());
     });
    
     $.ajax({
