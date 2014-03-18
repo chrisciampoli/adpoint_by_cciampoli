@@ -15,7 +15,10 @@ $(function() {
                 title,
                 hours;
 
-            $('#date').html(today.toDateString());
+             $('#date').html(today.toDateString());
+             $('#working').html('No schedule found!  Please contact your manager.');
+             $('#hours').html('*-*');
+            
             
             if (data !== 'false') {
                 var parsed = $.parseJSON(data);
