@@ -11,8 +11,6 @@ $(function() {
         selected;
         
     $('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
-        console.log(e.target); // activated tab
-        e.relatedTarget // previous tab
         $('div#week #date').html(today.toDateString());
         $('div#month #date').html(today.toDateString());
     });
@@ -28,8 +26,7 @@ $(function() {
     });
     
     $('body').on('click','#accept_btn',function(){
-        $(selected).removeClass('warning pending-row');
-        $(selected).addClass('success accepted-row');
+        $(selected).removeClass('warning pending-row').addClass('success accepted-row');
         var id = $(selected).attr('rel');
         $('.status#'+id)
                 .children()
@@ -90,6 +87,8 @@ $(function() {
                     $('div#week #working').html('Not scheduled for today');
                     $('div#month #working').html('Not scheduled for today');
                     $('#hours').html('*-*');
+                    $('#swift_btn').addClass('disabled');
+                    $('#busy_btn').addClass('disabled');
                 }
                 var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
