@@ -8,8 +8,14 @@ class Home extends User_Controller {
     }
     
     function index() {
-        $this->load->model('ion_auth_model', 'auth');
-        $data['employees'] = $this->auth->users(2);
+        //$this->load->model('ion_auth_model', 'auth');
+        $this->db->select('users.username, groups.name');
+        $this->db->from('users');
+        $this->db->join('groups');
+        $this->db->join('user_groups', 'users.id = user_grounds.user_id');
+        $query = $this->db->query();      
+                
+        $data['employees'] = $query->result_array();
         $data['username'] = $this->session->userdata('username');
         $this->load->view('user/index.php',$data);
     }
