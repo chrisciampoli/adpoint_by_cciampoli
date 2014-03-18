@@ -69,7 +69,7 @@
                         </thead>
                         <tbody>
                             <tr class="warning pending-row" rel="1">
-                                <td>Edward</td><td>3/18/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Pending</td>
+                                <td>Edward</td><td>3/18/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td><span class="label label-warning">Pending</span></td>
                             </tr>
                             <tr class="success accepted-row" rel="2">
                                 <td>Jeff</td><td>3/19/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Accepted</td>
