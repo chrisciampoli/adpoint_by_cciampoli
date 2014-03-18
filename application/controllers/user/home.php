@@ -11,7 +11,7 @@ class Home extends User_Controller {
         //$this->load->model('ion_auth_model', 'auth');
         $this->db->select('*');
         $this->db->from('users');
-        $this->db->join('users_groups','users.id = users_groups.user_id')
+        $this->db->join('users_groups','users.id = users_groups.user_id');
         $query = $this->db->get();
         $data['employees'] = $query->result_array();
         $data['username'] = $this->session->userdata('username');
