@@ -54,6 +54,7 @@
                 <div class="tab-pane" id="week">
                     <?php $this->load->view('user/week');?>
                 </div>
+                <div class="tab-pane" id="month">
                     <?php $this->load->view('user/month');?>
                 </div>
             </div>
