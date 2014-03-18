@@ -20,10 +20,7 @@ $(function() {
         data: {},
         success: function(data) {            
              $('#date').html(today.toDateString());
-             $('#working').html('No schedule found!  Please contact your manager.');
-             $('#hours').html('*-*');
-             $('#calendar').html('No schedule found! Please contact your manager.');
-            
+                         
             if (data !== 'false') {
                 var parsed = $.parseJSON(data);
                 var events = $.parseJSON(parsed[0].schedule);
@@ -83,6 +80,10 @@ $(function() {
                         url: 'http://bic.cat/bic_calendar/index.php'
                     }
                 });
+            } else {
+                $('#working').html('No schedule found!  Please contact your manager.');
+                $('#hours').html('*-*');
+                $('#calendar').html('No schedule found! Please contact your manager.');
             }
 
         },
