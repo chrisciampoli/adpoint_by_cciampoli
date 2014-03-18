@@ -68,6 +68,7 @@
                         <h4 class="modal-title" id="myModalLabel">Swift Give up</h4>
                     </div>
                     <div class="modal-body">
+                        <h2>Who would you like to Swift Give Up to?</h2>
                       <?php foreach($employees as $employee) {?> 
                         <div class="checkbox">
                             <label>
