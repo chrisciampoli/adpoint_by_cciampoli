@@ -1,7 +1,7 @@
 $(function() {
 
     var logout_url = config.base + "auth/logout",
-        schedule_url = config.base + "user/home/getSchedule";
+        schedule_url = config.base + "user/home/getSchedule",
         today = new Date(),
         month = today.getMonth() + 1,
         myDate = today.getDate() + '/' + month + '/' + today.getFullYear(),
