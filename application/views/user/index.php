@@ -68,13 +68,9 @@
                         <h4 class="modal-title" id="myModalLabel">Swift Give up</h4>
                     </div>
                     <div class="modal-body">
-                      <?php foreach($employees as $employee) {?> 
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox"> <?php echo $employee;?>
-                            </label>
-                        </div>
-                      <?php } ?>
+                      <?php 
+                          print_r($employees, true);
+                      ?>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
