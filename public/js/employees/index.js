@@ -21,15 +21,15 @@ $(function() {
              * If they DO have a schedule for today, then we need to update the working and
              * hours section to reflect that.
              */
-            var today = new Date();
-            var month = today.getMonth()+1;
-            var myDate = today.getDate() + '/' + month + '/' + today.getFullYear();
-            var working = false;
-            var title;
-            var hours;
+            var today = new Date(),
+                month = today.getMonth()+1,
+                myDate = today.getDate() + '/' + month + '/' + today.getFullYear(),
+                working = false,
+                title,
+                hours;
+           
+            $('#date').html(today);
             
-            console.log(myDate);
-            $('#date').html(myDate);
             $.each(events, function(i, e){
                if(myDate === e.date) {
                     working = true;
@@ -38,8 +38,8 @@ $(function() {
                     hours = e.content;
                }
             });
-            console.log(working);
-            console.log(events);
+            
+            
             if(working === true) {
                 $('#working').html(title);
                 $('#hours').html(hours);
