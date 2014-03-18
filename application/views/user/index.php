@@ -48,26 +48,9 @@
                 <li><a href="#month" data-toggle="tab">Month</a></li>
             </ul>
             <div class="tab-content">
-                <div class="tab-pane active" id="daily">
-                    <?php echo $employee_info; ?>
-                    <div class="row">
-                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pickup_modal">Swift Pick up</button>
-                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#busy_modal">Busy or Not</button>
-                        <button class="btn btn-primary btn-lg" id="logout_btn">Logout</button>
-                    </div>
-                </div>
-                <div class="tab-pane" id="week">
-                    <?php echo $employee_info; ?>
-                    <div class="row">
-                        <button type="button" class="btn btn-primary col-xs-12" id="logout_btn">Logout</button>
-                    </div>
-                </div>
-                <div class="tab-pane" id="month">
-                    <?php echo $employee_info; ?>
-                    <div class="row">
-                        <button type="button" class="btn btn-primary col-xs-12" id="logout_btn">Logout</button>
-                    </div>
-                </div>
+                <?php echo $day;?>
+                <?php echo $week;?>
+                <?php echo $month;?>
             </div>
         </div>
         <!-- Swift Pick up Modal -->
