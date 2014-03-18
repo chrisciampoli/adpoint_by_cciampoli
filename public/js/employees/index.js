@@ -30,7 +30,12 @@ $(function() {
     $('body').on('click','#accept_btn',function(){
         $(selected).removeClass('warning pending-row');
         $(selected).addClass('success accepted-row');
-        selected = '';
+        var id = $(selected).attr('rel');
+        $('.status#'+id)
+                .children()
+                .removeClass('label-warning')
+                .addClass('label-success')
+                .html('Accepted');
     });
    
     $.ajax({
