@@ -9,9 +9,10 @@ class Home extends User_Controller {
     
     function index() {
         //$this->load->model('ion_auth_model', 'auth');
-        $this->db->select('*');
+        $this->db->select('users.username, groups.name');
         $this->db->from('users');
         $this->db->join('users_groups','users.id = users_groups.user_id');
+        $this->db->join('groups','users_groups.group_id = groups.id');
         $query = $this->db->get();
         $data['employees'] = $query->result_array();
         $data['username'] = $this->session->userdata('username');
