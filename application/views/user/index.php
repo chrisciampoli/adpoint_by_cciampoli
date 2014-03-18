@@ -125,20 +125,20 @@
                 </div>
             </div>
         </div>
-        <!-- Busy or Not Modal -->
+        <!-- Request Modal -->
         <div class="modal fade" id="confirmation_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="myModalLabel">Busy or Not</h4>
+                        <h4 class="modal-title" id="myModalLabel">Swift Confirmation</h4>
                     </div>
                     <div class="modal-body">
-                        Would you like to give up your shift for the day?
+                        Would you like to accept or decline this shift?
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Submit Request</button>
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Accept</button>
+                        <button type="button" class="btn btn-danger">Decline</button>
                     </div>
                 </div>
             </div>
