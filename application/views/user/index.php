@@ -68,7 +68,11 @@
                         <h4 class="modal-title" id="myModalLabel">Swift Give up</h4>
                     </div>
                     <div class="modal-body">
-                        Would you like to give up your shift for today?
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Check me out
+                            </label>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -87,14 +91,6 @@
                     </div>
                     <div class="modal-body">
                         Would you like to give up your shift for the day?
-                        <div class="col-lg-6">
-                            <div class="input-group">
-                                <span class="input-group-addon">
-                                    <input type="checkbox">
-                                </span>
-                                <input type="text" class="form-control">
-                            </div><!-- /input-group -->
-                        </div><!-- /.col-lg-6 -->
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
