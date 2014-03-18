@@ -13,6 +13,7 @@ $(function() {
         console.log(e.target); // activated tab
         e.relatedTarget // previous tab
         $('div#week #date').html(today.toDateString());
+        $('div#month #date').html(today.toDateString());
     });
    
     $.ajax({
