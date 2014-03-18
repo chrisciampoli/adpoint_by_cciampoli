@@ -8,20 +8,13 @@ $(function() {
         working = false,
         title,
         hours;
-        
-   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-      e.target // activated tab
-      e.relatedTarget // previous tab
-      $('#date').html(today.toDateString());
-   });
-   
    
    
     $.ajax({
         url: schedule_url,
         data: {},
-        success: function(data) {
-            
+        success: function(data) {            
+             $('#date').html(today.toDateString());
              $('#working').html('No schedule found!  Please contact your manager.');
              $('#hours').html('*-*');
              $('#calendar').html('No schedule found! Please contact your manager.');
