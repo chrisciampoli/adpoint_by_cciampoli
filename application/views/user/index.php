@@ -66,16 +66,15 @@
                             <th>Location</th>
                             <th>Shift</th>
                             <th>Status</th>
-                            <th>Controls</th>
                         </thead>
                         <tbody>
-                            <tr class="warning" data-toggle="modal" data-target="confirmation_modal">
-                                <td>Christopher</td><td>3/18/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Pending</td><td>
+                            <tr class="warning pending-row">
+                                <td>Christopher</td><td>3/18/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Pending</td>
                             </tr>
-                            <tr class="success">
+                            <tr class="success pending-row">
                                 <td>Christopher</td><td>3/19/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Accepted</td>
                             </tr>
-                            <tr class="danger">
+                            <tr class="danger pending-row">
                                 <td>Christopher</td><td>3/20/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Denied</td>
                             </tr>
                         </tbody>

@@ -16,6 +16,10 @@ $(function() {
         $('div#month #date').html(today.toDateString());
     });
    
+    $('body').on('click','.pending-row', function(e){
+        $('#confirmation_modal').modal('show');
+    });
+   
     $.ajax({
         url: schedule_url,
         data: {},
