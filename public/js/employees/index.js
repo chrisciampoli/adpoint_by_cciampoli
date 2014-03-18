@@ -8,7 +8,11 @@ $(function() {
         working = false,
         title,
         hours;
-   
+    $('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
+        e.target // activated tab
+        e.relatedTarget // previous tab
+        $('#date').html(today.toDateString());
+    });
    
     $.ajax({
         url: schedule_url,
