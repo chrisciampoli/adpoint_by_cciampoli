@@ -71,7 +71,7 @@
                       <?php foreach($employees as $employee) {?> 
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox"> <?php echo $employee;?>
+                                <input type="checkbox"> <?php echo $employee['username'];?>
                             </label>
                         </div>
                       <?php } ?>
