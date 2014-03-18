@@ -72,10 +72,10 @@
                                 <td>Edward</td><td>3/18/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td><span class="label label-warning">Pending</span></td>
                             </tr>
                             <tr class="success accepted-row" rel="2">
-                                <td>Jeff</td><td>3/19/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Accepted</td>
+                                <td>Jeff</td><td>3/19/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td><span class="label label-success">Accepted</span></td>
                             </tr>
                             <tr class="danger denied-row" rel="3">
-                                <td>Ian</td><td>3/20/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Denied</td>
+                                <td>Ian</td><td>3/20/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td><span class="label label-danger">Denied</span></td>
                             </tr>
                         </tbody>
                     </table>
