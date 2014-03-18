@@ -68,13 +68,13 @@
                             <th>Status</th>
                         </thead>
                         <tbody>
-                            <tr class="warning pending-row">
+                            <tr class="warning pending-row" rel="1">
                                 <td>Edward</td><td>3/18/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Pending</td>
                             </tr>
-                            <tr class="success accepted-row">
+                            <tr class="success accepted-row" rel="2">
                                 <td>Jeff</td><td>3/19/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Accepted</td>
                             </tr>
-                            <tr class="danger denied-row">
+                            <tr class="danger denied-row" rel="3">
                                 <td>Ian</td><td>3/20/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Denied</td>
                             </tr>
                         </tbody>
@@ -137,8 +137,8 @@
                         Would you like to accept or decline this shift?
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-success" data-dismiss="modal">Accept</button>
-                        <button type="button" class="btn btn-danger">Decline</button>
+                        <button type="button" class="btn btn-success" id="accept_btn" data-dismiss="modal">Accept</button>
+                        <button type="button" class="btn btn-danger" id="decline_btn" data-dismiss="modal">Decline</button>
                     </div>
                 </div>
             </div>

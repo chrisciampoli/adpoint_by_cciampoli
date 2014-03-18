@@ -19,6 +19,7 @@ $(function() {
     $('body').on('click','.pending-row', function(e){
         e.preventDefault();
         console.log(this.className);
+        console.log($(this).attr('rel'));
         $('#confirmation_modal').modal('show');
     });
    
