@@ -29,7 +29,7 @@ $(function() {
             var hours;
             
             console.log(myDate);
-            
+            $('#date').html(myDate);
             $.each(events, function(i, e){
                if(myDate === e.date) {
                     working = true;

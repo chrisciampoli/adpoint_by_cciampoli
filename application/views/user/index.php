@@ -54,7 +54,7 @@
                             <td class="well"><h2><?php echo ucwords($username);?></h2></td>
                         </tr>
                         <tr>
-                            <td class="well"><h3><?php echo date('l F jS Y'); ?></h3></td>
+                            <td class="well"><h3 id="date"></h3></td>
                         </tr>
                         <tr>
                             <td class="well"><h3 id="working">Title - Area</h3></td>
