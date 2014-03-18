@@ -72,7 +72,7 @@
                       <?php foreach($employees as $employee) {?> 
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox"> <?php echo $employee['username'];?>
+                                <input type="checkbox"> <?php echo ucword($employee['username']);?>
                             </label>
                         </div>
                       <?php } ?>
