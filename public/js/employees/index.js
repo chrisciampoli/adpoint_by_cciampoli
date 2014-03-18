@@ -54,7 +54,9 @@ $(function() {
                     $('div#week #working').html(title);
                     $('div#month #working').html(title);
                 } else if (working === false) {
-                    $('div#working').html('Not scheduled for today');
+                    $('#working').html('Not scheduled for today');
+                    $('div#week #working').html('Not scheduled for today');
+                    $('div#month #working').html('Not scheduled for today');
                     $('#hours').html('*-*');
                 }
                 var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
