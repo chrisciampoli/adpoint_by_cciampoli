@@ -49,13 +49,13 @@
             </ul>
             <div class="tab-content">
                 <div class="tab-pane active" id="daily">
-                    <?php $this->load->view('user/day');?>
+                    <?php $this->load->view('user/day'); ?>
                 </div>
                 <div class="tab-pane" id="week">
-                    <?php $this->load->view('user/week');?>
+                    <?php $this->load->view('user/week'); ?>
                 </div>
                 <div class="tab-pane" id="month">
-                    <?php $this->load->view('user/month');?>
+                    <?php $this->load->view('user/month'); ?>
                 </div>
             </div>
         </div>
@@ -87,6 +87,14 @@
                     </div>
                     <div class="modal-body">
                         Would you like to give up your shift for the day?
+                        <div class="col-lg-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <input type="checkbox">
+                                </span>
+                                <input type="text" class="form-control">
+                            </div><!-- /input-group -->
+                        </div><!-- /.col-lg-6 -->
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
