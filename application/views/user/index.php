@@ -68,14 +68,14 @@
                             <th>Status</th>
                         </thead>
                         <tbody>
-                            <tr class="warning pending-row">
-                                <td>Christopher</td><td>3/18/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Pending</td>
+                            <tr class="pending warning pending-row">
+                                <td>Edward</td><td>3/18/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Pending</td>
                             </tr>
-                            <tr class="success pending-row">
-                                <td>Christopher</td><td>3/19/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Accepted</td>
+                            <tr class="accepted success pending-row">
+                                <td>Jeff</td><td>3/19/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Accepted</td>
                             </tr>
-                            <tr class="danger pending-row">
-                                <td>Christopher</td><td>3/20/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Denied</td>
+                            <tr class="denied danger pending-row">
+                                <td>Ian</td><td>3/20/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Denied</td>
                             </tr>
                         </tbody>
                     </table>
