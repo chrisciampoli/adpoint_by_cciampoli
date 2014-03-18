@@ -7,7 +7,16 @@ $(function() {
         url: schedule_url,
         data: {},
         success: function(data) {
-            console.log('DATA: ' + data);
+            
+            var today = new Date(),
+                month = today.getMonth() + 1,
+                myDate = today.getDate() + '/' + month + '/' + today.getFullYear(),
+                working = false,
+                title,
+                hours;
+
+            $('#date').html(today.toDateString());
+            
             if (data !== 'false') {
                 var parsed = $.parseJSON(data);
                 var events = $.parseJSON(parsed[0].schedule);
@@ -23,15 +32,7 @@ $(function() {
                  * If they DO have a schedule for today, then we need to update the working and
                  * hours section to reflect that.
                  */
-                var today = new Date(),
-                        month = today.getMonth() + 1,
-                        myDate = today.getDate() + '/' + month + '/' + today.getFullYear(),
-                        working = false,
-                        title,
-                        hours;
-
-                $('#date').html(today.toDateString());
-
+                
                 $.each(events, function(i, e) {
                     if (myDate === e.date) {
                         working = true;
