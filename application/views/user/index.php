@@ -46,7 +46,7 @@
                 <li id="daily_tab" class="active"><a href="#daily" data-toggle="tab">Daily</a></li>
                 <li><a href="#week" data-toggle="tab">Week</a></li>
                 <li><a href="#month" data-toggle="tab">Month</a></li>
-                <li><a href="#pending" data-toggle="tab">Pending</a></li>
+                <li><a href="#requests" data-toggle="tab">Requests</a></li>
             </ul>
             <div class="tab-content">
                 <div class="tab-pane active" id="daily">
@@ -58,7 +58,7 @@
                 <div class="tab-pane" id="month">
                     <?php $this->load->view('user/month'); ?>
                 </div>
-                <div class="tab-pane" id="pending">
+                <div class="tab-pane" id="requests">
                     <table class="table table-hover table-responsive">
                         <thead>
                             <th>Employee</th>
