@@ -69,8 +69,8 @@
                             <th>Controls</th>
                         </thead>
                         <tbody>
-                            <tr class="warning">
-                                <td>Christopher</td><td>3/18/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Pending</td><td><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#confirmation_modal">Accept</button><button class="btn btn-primary btn-lg">Decline</button></td>
+                            <tr class="warning" data-toggle="modal" data-target="confirmation_modal">
+                                <td>Christopher</td><td>3/18/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Pending</td><td>
                             </tr>
                             <tr class="success">
                                 <td>Christopher</td><td>3/19/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Accepted</td>
