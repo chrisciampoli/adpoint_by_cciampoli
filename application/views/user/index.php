@@ -44,7 +44,7 @@
         <div id="container">
             <ul class="nav nav-tabs">
                 <li id="daily_tab" class="active"><a href="#daily" data-toggle="tab">Daily</a></li>
-                <li class="disabled"><a href="#week" data-toggle="tab">Week</a></li>
+                <li><a href="#week" data-toggle="tab">Week</a></li>
                 <li><a href="#month" data-toggle="tab">Month</a></li>
                 <li><a href="#pending" data-toggle="tab">Pending</a></li>
             </ul>
@@ -59,7 +59,19 @@
                     <?php $this->load->view('user/month'); ?>
                 </div>
                 <div class="tab-pane" id="pending">
-                    Coming Soon
+                    <table class="table table-hover table-responsive">
+                        <thead>
+                        <th>Employee</th>
+                        <th>Location</th>
+                        <th>Shift</th>
+                        <th>Status</th>
+                        </thead>
+                        <tbody>
+                            <tr class="warning">
+                                <td>Christopher</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Pending</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
