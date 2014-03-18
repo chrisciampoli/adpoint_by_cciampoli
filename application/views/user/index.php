@@ -57,6 +57,9 @@
                 <div class="tab-pane" id="month">
                     <?php $this->load->view('user/month'); ?>
                 </div>
+                <div class="tab-pane" id="pending">
+                    Coming Soon
+                </div>
             </div>
         </div>
         <!-- Swift Giveup up Modal -->
