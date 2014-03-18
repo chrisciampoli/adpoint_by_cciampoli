@@ -59,8 +59,8 @@
                 </div>
             </div>
         </div>
-        <!-- Swift Pick up Modal -->
-        <div class="modal fade" id="pickup_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <!-- Swift Giveup up Modal -->
+        <div class="modal fade" id="giveup_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -77,7 +77,7 @@
                 </div>
             </div>
         </div>
-        <!-- Swift Pick up Modal -->
+        <!-- Busy or Not Modal -->
         <div class="modal fade" id="busy_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
