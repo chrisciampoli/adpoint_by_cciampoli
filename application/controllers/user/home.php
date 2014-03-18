@@ -22,15 +22,18 @@ class Home extends User_Controller {
         }
         
         $schedule = $this->mdl_schedule->getSchedule($username);
+        if(!$schedule) {
+            return false;
+        } else {
+            echo json_encode($schedule);
+            retrun $schedule;
+        }
        /* 
        //echo print_r(json_decode($schedule[0]["schedule"], true), true);
         foreach(json_decode($schedule[0]["schedule"], true) as $day){
             echo $day['date'] . "<br/>";
         }
         */
-        echo json_encode($schedule);
-        
-        return $schedule;
         
     }
     
