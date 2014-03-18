@@ -62,13 +62,20 @@
                     <table class="table table-hover table-responsive">
                         <thead>
                         <th>Employee</th>
+                        <th>Date</th>
                         <th>Location</th>
                         <th>Shift</th>
                         <th>Status</th>
                         </thead>
                         <tbody>
                             <tr class="warning">
-                                <td>Christopher</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Pending</td>
+                                <td>Christopher</td><td>3/18/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Pending</td>
+                            </tr>
+                            <tr class="success">
+                                <td>Christopher</td><td>3/18/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Accepted</td>
+                            </tr>
+                            <tr class="danger">
+                                <td>Christopher</td><td>3/18/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td>Denied</td>
                             </tr>
                         </tbody>
                     </table>
