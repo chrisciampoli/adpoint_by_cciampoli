@@ -28,7 +28,7 @@ $(function() {
                 title,
                 hours;
            
-            $('#date').html(today);
+            $('#date').html(today.toDateString());
             
             $.each(events, function(i, e){
                if(myDate === e.date) {
