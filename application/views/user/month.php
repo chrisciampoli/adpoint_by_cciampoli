@@ -1,4 +1,4 @@
-<div class="tab-pane" id="month">
+
     <table class="table table-striped table-hover">
         <tr>
             <td class="well"><h2><?php echo ucwords($username); ?></h2></td>
@@ -16,4 +16,3 @@
     <div class="row">
         <button type="button" class="btn btn-primary col-xs-12" id="logout_btn">Logout</button>
     </div>
-</div>

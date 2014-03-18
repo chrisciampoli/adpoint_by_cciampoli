@@ -1,4 +1,3 @@
-<div class="tab-pane active" id="daily">
     <table class="table table-striped table-hover">
         <tr>
             <td class="well"><h2><?php echo ucwords($username); ?></h2></td>
@@ -19,4 +18,3 @@
         <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#busy_modal">Busy or Not</button>
         <button class="btn btn-primary btn-lg" id="logout_btn">Logout</button>
     </div>
-</div>

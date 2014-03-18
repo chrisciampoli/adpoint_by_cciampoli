@@ -48,9 +48,9 @@
                 <li><a href="#month" data-toggle="tab">Month</a></li>
             </ul>
             <div class="tab-content">
-                <?php echo $day;?>
-                <?php echo $week;?>
-                <?php echo $month;?>
+                <div class="tab-pane active" id="daily"><?php echo $day;?></div>
+                <div class="tab-pane" id="week"><?php echo $week;?></div>
+                <div class="tab-pane" id="month"><?php echo $month;?></div>
             </div>
         </div>
         <!-- Swift Pick up Modal -->
