@@ -28,9 +28,14 @@ class Home extends User_Controller {
             echo $day['date'] . "<br/>";
         }
         */
-        echo json_encode($schedule);
-        
-        return $schedule;
+        if(!$schedule) {
+            return false;    
+        } else {
+            echo json_encode($schedule);
+            return $schedule;
+        }
+       
+        return;
         
     }
     
