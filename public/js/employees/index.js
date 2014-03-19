@@ -162,7 +162,7 @@ $(function() {
     $('body').on('click','#giveup_btn', function(e){
        e.preventDefault();
        console.log('Title: ' + title);
-       console.log('Hours: ' + hours);
+       console.log('Shift: ' + hours);
        console.log('Date: ' + today.toDateString());
     });
 

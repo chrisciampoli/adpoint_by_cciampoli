@@ -98,7 +98,7 @@
                       <?php foreach($employees as $employee) { if($employee['username'] == $this->session->userdata('username')) continue;?> 
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox"> <?php echo ucwords($employee['username']);?>
+                                <input type="checkbox" value="<?php echo $employee['id'];?>"> <?php echo ucwords($employee['username']);?>
                             </label>
                         </div>
                       <?php } ?>
