@@ -161,6 +161,16 @@ $(function() {
     
     $('body').on('click','#giveup_btn', function(e){
        e.preventDefault();
+       var targets = [],
+           checked;
+       
+       checked = $(':checked');
+       $.each(checked, function(){
+          targets.push(this.value); 
+       });
+       
+       console.log('Targets: ' + targets);
+       
        console.log('Title: ' + title);
        console.log('Shift: ' + hours);
        console.log('Date: ' + today.toDateString());

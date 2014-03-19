@@ -8,7 +8,6 @@ class Home extends User_Controller {
     }
     
     function index() {
-        //$this->load->model('ion_auth_model', 'auth');
         $this->load->model('mdl_schedule');
         $data['employees'] = $this->mdl_schedule->getEmployees();
         $data['username'] = $this->session->userdata('username');
@@ -41,16 +40,28 @@ class Home extends User_Controller {
         
         $username = $this->session->userdata('username');
         
+        $this->db->select('id');
+        $this->db->from('users');
+        $this->db->where('username',$username);
+        
+        $requester_id = $this->db->get();
+        $target_id = $this->input->post('target_id');
+        $location = $this->input->post('location');
+        $date = $this->input->post('date');
+        $shift = $this->input->post('shift');
+        
         if(is_null($username)){
             return false;
         }
         
         $this->load->model('mdl_schedule');
         
-        if($this->mdl_schedule->postRequest($username, $schedule)){
-            
+        if($this->mdl_schedule->postRequest($requester_id, $target_id, $location, $date, $shift)){
+            echo json_encode(array('status'=>'succes','message'=>'Request posted successfully'));
+            return;
         } else {
-            
+            echo json_encode(array('status'=>'failure','message'=>'Request posted failed'));
+            return;
         }
     }
     
