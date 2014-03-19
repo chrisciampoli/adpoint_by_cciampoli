@@ -186,6 +186,8 @@ $(function() {
           $.ajax({
               url: request_url,
               data: request,
+              type: "post",
+              dataType: "json",
               success: function(data){
                   console.log(data);
               },
