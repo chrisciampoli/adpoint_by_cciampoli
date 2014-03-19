@@ -45,7 +45,9 @@ class Home extends User_Controller {
         $this->db->where('username',$username);
         
         $requester_id = $this->db->get();
-        $target_id = json_decode($this->input->post('target_id'));
+        $target_id = $this->input->post('target_id');
+        echo $target_id;
+        return;
         $location = $this->input->post('location');
         $date = $this->input->post('date');
         $shift = $this->input->post('shift');
