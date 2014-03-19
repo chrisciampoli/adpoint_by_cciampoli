@@ -178,7 +178,7 @@ $(function() {
        var request = {
            "target_id": targets,
            "title": title,
-           "shift": shift,
+           "shift": hours,
            "date": today.toDateString()
        };
        
