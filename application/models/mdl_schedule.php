@@ -36,6 +36,8 @@ class Mdl_schedule extends CI_Model {
             'date'=>$date,
             'shift'=>$shift
         );
+        
+        return $data;
         if($this->db->insert('requests',$data)) {
             return true;
         } else {

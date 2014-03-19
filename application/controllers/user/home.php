@@ -56,8 +56,10 @@ class Home extends User_Controller {
         
         $this->load->model('mdl_schedule');
         
-        if($this->mdl_schedule->postRequest($requester_id, $target_id, $location, $date, $shift)){
-            echo json_encode(array('status'=>'succes','message'=>'Request posted successfully'));
+        $message = $this->mdl_schedule->postRequest($requester_id, $target_id, $location, $date, $shift);
+        
+        if($message){
+            echo json_encode(array('status'=>'succes','message'=>$message));
             return;
         } else {
             echo json_encode(array('status'=>'failure','message'=>'Request posted failed'));
