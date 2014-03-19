@@ -45,7 +45,7 @@ class Home extends User_Controller {
         $this->db->where('username',$username);
         
         $requester_id = $this->db->get();
-        $target_id = $this->input->post('target_id');
+        $target_id = json_decode($this->input->post('target_id'));
         $location = $this->input->post('location');
         $date = $this->input->post('date');
         $shift = $this->input->post('shift');
@@ -59,7 +59,7 @@ class Home extends User_Controller {
         $message = $this->mdl_schedule->postRequest($requester_id, $target_id, $location, $date, $shift);
         
         if($message){
-            echo json_encode(array('status'=>'succes','message'=>$message));
+            echo json_encode(array('status'=>'succes','message'=>'Success'));
             return;
         } else {
             echo json_encode(array('status'=>'failure','message'=>'Request posted failed'));
