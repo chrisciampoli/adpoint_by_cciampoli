@@ -52,21 +52,11 @@ $(function() {
              $('#date').html(today.toDateString());
                          
             if (data !== 'false') {
-                var parsed = $.parseJSON(data);
-                var events = $.parseJSON(parsed[0].schedule);
-
-                // We need to do a few things here with the data before
-                // using it to populate the calendar.
-
-                /*
-                 * First we need to get todays date, then check for todays date
-                 * within the schedule to see if the user is working today. If not
-                 * then we need to change the working and hours sections to "Not Scheduled"
-                 * 
-                 * If they DO have a schedule for today, then we need to update the working and
-                 * hours section to reflect that.
-                 */
-                
+                var parsed = $.parseJSON(data),
+                    events = $.parseJSON(parsed[0].schedule),
+                    monthNames = [],
+                    dayNames = [];
+            
                 $.each(events, function(i, e) {
                     if (myDate === e.date) {
                         working = true;
@@ -90,9 +80,10 @@ $(function() {
                     $('#swift_btn').addClass('disabled');
                     $('#busy_btn').addClass('disabled');
                 }
-                var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                
+                monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-                var dayNames = ["S", "M", "T", "W", "T", "F", "S"];
+                dayNames = ["S", "M", "T", "W", "T", "F", "S"];
 
                 $('#calendar').bic_calendar({
                     events: events,
@@ -166,6 +157,13 @@ $(function() {
 
     $('body').on('click', '#pickup_btn', function(e) {
         e.preventDefault();
+    });
+    
+    $('body').on('click','#giveup_btn', function(e){
+       e.preventDefault();
+       console.log('Title: ' + title);
+       console.log('Hours: ' + hours);
+       console.log('Date: ' + today.toDateString());
     });
 
 });
