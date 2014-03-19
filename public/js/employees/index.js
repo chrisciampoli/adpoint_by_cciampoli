@@ -2,6 +2,7 @@ $(function() {
 
     var logout_url = config.base + "auth/logout",
         schedule_url = config.base + "user/home/getSchedule",
+        request_url = config.base + "user/home/postRequest",
         today = new Date(),
         month = today.getMonth() + 1,
         myDate = today.getDate() + '/' + month + '/' + today.getFullYear(),
@@ -170,10 +171,32 @@ $(function() {
        });
        
        console.log('Targets: ' + targets);
-       
        console.log('Title: ' + title);
        console.log('Shift: ' + hours);
        console.log('Date: ' + today.toDateString());
+       
+       var request = {
+           "target_id": targets,
+           "title": title,
+           "shift": shift,
+           "date": today.toDateString()
+       };
+       
+      try {
+          $.ajax({
+              url: request_url,
+              data: request,
+              success: function(data){
+                  console.log(data);
+              },
+              failure: function(data){
+                  alert('Could not post request!');
+              }
+          });
+      } catch(e) {
+          alert('Sorry we could not complete your request');
+      }
+       
     });
 
 });
