@@ -85,7 +85,7 @@ class Home extends User_Controller {
         foreach($results as $request) {
             $targets = explode(',',$request['target_id']);
         }
-        print_r($targets, true);
+        echo "<pre>" . print_r($targets, true) . "</pre>";
     }
     
     public function insert() {
