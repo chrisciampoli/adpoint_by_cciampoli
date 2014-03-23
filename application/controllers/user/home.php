@@ -83,7 +83,7 @@ class Home extends User_Controller {
         $this->load->model('mdl_schedule');
         $results = $this->mdl_schedule->getRequests();
         foreach($results as $request) {
-            $targets = explode(',',$request['target_id']);
+            $targets[] = explode(',',$request['target_id']);
         }
         foreach($targets as $target) {
             echo $target . "<br/>";
