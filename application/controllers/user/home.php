@@ -83,9 +83,11 @@ class Home extends User_Controller {
         $this->load->model('mdl_schedule');
         $results = $this->mdl_schedule->getRequests();
         foreach($results as $request) {
-            $targets = explode(',',$request['target_id']);
+            foreach(explode(',',$request['target_id']) as $var) {
+                echo $var . "<br/>";
+            }
         }
-        echo "<pre>" . print_r($targets, true) . "</pre>";
+       
     }
     
     public function insert() {
