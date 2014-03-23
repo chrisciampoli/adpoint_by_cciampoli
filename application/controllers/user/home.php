@@ -88,7 +88,8 @@ class Home extends User_Controller {
                 $this->db->from('users');
                 $this->db->where('id',$var);
                 $query = $this->db->get();
-                echo $query->row();
+                $result = $query->row();
+                echo $result->username . "<br/>";
             }
         }
        
