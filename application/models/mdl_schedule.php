@@ -28,6 +28,15 @@ class Mdl_schedule extends CI_Model {
         }
     }
     
+    function getRequests() {
+        // first select all from requests
+        $query = $this->db->get('requests');
+        $requests = $query->result_array();
+        
+        return $requests;
+        
+    }
+    
     function postRequest($requester_id, $target_id, $location, $date, $shift) {
         $data = array(
             'requester_id'=>$requester_id,
