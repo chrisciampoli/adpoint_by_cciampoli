@@ -84,7 +84,11 @@ class Home extends User_Controller {
         $results = $this->mdl_schedule->getRequests();
         foreach($results as $request) {
             foreach(explode(',',$request['target_id']) as $var) {
-                echo $var . "<br/>";
+                $this->db->select('username');
+                $this->db->from('users');
+                $this->db->where('id',$var);
+                $query = $this->db->get();
+                echo $query->row();
             }
         }
        
