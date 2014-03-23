@@ -44,11 +44,11 @@ class Home extends User_Controller {
         $this->db->from('users');
         $this->db->where('username',$username);
         $query = $this->db->get();
-       
         
-        $requester_id = $query->row();
-        
-        echo $requester_id; return;
+        if($query->num_rows() > 0) {
+            $row = $query->row();
+            $requester_id = $row->id;
+        }
         
         $target_id = implode(',',$this->input->post('target_id'));
         $location = $this->input->post('location');
