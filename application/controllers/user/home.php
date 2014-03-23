@@ -81,7 +81,7 @@ class Home extends User_Controller {
     
     public function getRequests() {
         $this->load->model('mdl_schedule');
-        print_r($this->mdl_schedule->getRequests, true);
+        print_r($this->mdl_schedule->getRequests(), true);
     }
     
     public function insert() {
