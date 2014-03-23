@@ -44,8 +44,12 @@ class Home extends User_Controller {
         $this->db->from('users');
         $this->db->where('username',$username);
         $query = $this->db->get();
+       
         
         $requester_id = $query->row();
+        
+        echo $requester_id; return;
+        
         $target_id = implode(',',$this->input->post('target_id'));
         $location = $this->input->post('location');
         $date = $this->input->post('date');
