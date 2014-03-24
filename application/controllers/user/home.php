@@ -10,6 +10,7 @@ class Home extends User_Controller {
     function index() {
         $this->load->model('mdl_schedule');
         $data['employees'] = $this->mdl_schedule->getEmployees();
+        $data['requests'] = $this->getRequests();
         $data['username'] = $this->session->userdata('username');
         $this->load->view('user/index.php',$data);
     }
@@ -121,8 +122,8 @@ class Home extends User_Controller {
             }
             
         }
-        echo "<pre>" . print_r($cleaned, true) . "</pre>";
-       
+        
+       return $cleaned;
     }
     
     public function insert() {

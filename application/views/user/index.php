@@ -59,6 +59,11 @@
                     <?php $this->load->view('user/month'); ?>
                 </div>
                 <div class="tab-pane" id="requests">
+                    <?php 
+                        foreach($requests as $request) {
+                            echo $request;
+                        }
+                    ?>
                     <table class="table table-hover table-responsive">
                         <thead>
                             <th>Employee</th>
