@@ -89,7 +89,7 @@ class Home extends User_Controller {
                 $this->db->where('id',$var);
                 $query = $this->db->get();
                 $result = $query->row();
-                echo "ID: " . $request['id'];
+                echo "ID: " . $request['id'] . "<br/>";
                 echo "Target: " . $result->username . "<br/>";
                 $this->db->select('username');
                 $this->db->from('users');
@@ -97,9 +97,9 @@ class Home extends User_Controller {
                 $query = $this->db->get();
                 $result = $query->row();
                 echo "Requester: " . $result->username . "<br/>";
-                echo "Date: " . $request['date'];
-                echo "Shift: " . $request['shift'];
-                echo "Status: " . $request['status'];
+                echo "Date: " . $request['date'] . "<br/>";
+                echo "Shift: " . $request['shift'] . "<br/>";
+                echo "Status: " . $request['status'] . "<br/>";
                 echo "<hr>";
             }
             
