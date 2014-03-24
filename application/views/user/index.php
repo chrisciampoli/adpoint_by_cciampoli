@@ -59,11 +59,6 @@
                     <?php $this->load->view('user/month'); ?>
                 </div>
                 <div class="tab-pane" id="requests">
-                    <?php 
-                        foreach($requests as $request) {
-                            echo $request;
-                        }
-                    ?>
                     <table class="table table-hover table-responsive">
                         <thead>
                             <th>Employee</th>
@@ -73,15 +68,13 @@
                             <th>Status</th>
                         </thead>
                         <tbody>
+                            <?php foreach($requests as $request) { ?>
+                                <?php if($request['status'] == 'pending') { ?>
                             <tr class="warning pending-row" rel="1">
-                                <td>Edward</td><td>3/18/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td class="status" id="1"><span class="label label-warning">Pending</span></td>
+                                <td><?=$request['requester'];?></td><td><?=$request['date'];?></td><td>Mission Valley</td><td><?= $request['shift'];?></td><td class="status" id="<?=$request['id'];?>"><span class="label label-warning"><?=$request['status'];?></span></td>
                             </tr>
-                            <tr class="success accepted-row" rel="2">
-                                <td>Jeff</td><td>3/19/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td class="status" id="2"><span class="label label-info">Accepted and Scheduled</span></td>
-                            </tr>
-                            <tr class="danger denied-row" rel="3">
-                                <td>Ian</td><td>3/20/14</td><td>Mission Valley</td><td>4:30PM - 10:30PM</td><td class="status" id="3"><span class="label label-danger">Denied</span></td>
-                            </tr>
+                                <?php } ?>
+                            <?php } ?>
                         </tbody>
                     </table>
                     <div class="row">
