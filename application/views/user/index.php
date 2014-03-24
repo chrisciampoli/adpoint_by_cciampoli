@@ -77,8 +77,14 @@
                                     </tr>
                                   <?php } ?>
                                   <?php if($request['status'] == 'accepted') { ?>
+                                    <tr class="warning accepted-row" rel="<?=$request['id'];?>">
+                                        <td><?=$request['requester'];?></td><td><?=$request['date'];?></td><td>Mission Valley</td><td><?= $request['shift'];?></td><td class="status" id="<?=$request['id'];?>"><span class="label label-warning"><?=$request['status'];?></span></td>
+                                    </tr>
                                   <?php } ?>
                                   <?php if($request['status'] == 'denied') { ?>
+                                    <tr class="warning denied-row" rel="<?=$request['id'];?>">
+                                        <td><?=$request['requester'];?></td><td><?=$request['date'];?></td><td>Mission Valley</td><td><?= $request['shift'];?></td><td class="status" id="<?=$request['id'];?>"><span class="label label-warning"><?=$request['status'];?></span></td>
+                                    </tr>
                                   <?php } ?>
                                 <?php } else { continue; } ?>
                             <?php } ?>
