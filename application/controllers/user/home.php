@@ -91,7 +91,7 @@ class Home extends User_Controller {
                 $result = $query->row();
                 echo $result->username . "<br/>";
             }
-            echo $request . "<br/>";
+            echo "<pre>" . print_r($request, true) . "</pre>";
         }
        
     }
