@@ -69,6 +69,11 @@
                         </thead>
                         <tbody>
                             <?php echo "<pre>" . print_r($requests, true) . "</pre>";?>
+                            <?php foreach($requests as $request) { ?>
+                                <?php if($request['target'] == $username) { ?>
+                            <tr><td><?=$request['target'];?></td></tr>
+                                <?php } else { continue; } ?>
+                            <?php } ?>
                         </tbody>
                     </table>
                     <div class="row">
