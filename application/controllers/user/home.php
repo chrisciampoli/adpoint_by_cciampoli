@@ -93,10 +93,10 @@ class Home extends User_Controller {
                 $result = $query->row();
                 
                 echo "ID: " . $request['id'] . "<br/>";
-                $cleaned[$count++] = $request['id'];
+                $cleaned[$count] = $request['id'];
                 
                 echo "Target: " . $result->username . "<br/>";
-                $cleaned[$count++] = $result->username;
+                $cleaned[$count] = $result->username;
                 
                 $this->db->select('username');
                 $this->db->from('users');
@@ -105,19 +105,20 @@ class Home extends User_Controller {
                 $result = $query->row();
                 
                 echo "Requester: " . $result->username . "<br/>";
-                $cleaned[$count++] = $result->username;
+                $cleaned[$count] = $result->username;
                 
                 echo "Date: " . $request['date'] . "<br/>";
-                $cleaned[$count++] = $request['date'];
+                $cleaned[$count] = $request['date'];
                 
                 echo "Shift: " . $request['shift'] . "<br/>";
-                $cleaned[$count++] = $request['shift'];
+                $cleaned[$count] = $request['shift'];
                 
                 echo "Status: " . $request['status'] . "<br/>";
-                $cleaned[$count++] = $request['status'];
+                $cleaned[$count] = $request['status'];
                 
                 echo "<hr>";
             }
+            $count++;
             
         }
         echo "<pre>" . print_r($cleaned, true) . "</pre>";
