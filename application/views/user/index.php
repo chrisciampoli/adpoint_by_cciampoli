@@ -68,13 +68,7 @@
                             <th>Status</th>
                         </thead>
                         <tbody>
-                            <?php foreach($requests as $request) { ?>
-                                <?php if($request['status'] == 'pending') { ?>
-                            <tr class="warning pending-row" rel="1">
-                                <td><?=$request['requester'];?></td><td><?=$request['date'];?></td><td>Mission Valley</td><td><?= $request['shift'];?></td><td class="status" id="<?=$request['id'];?>"><span class="label label-warning"><?=$request['status'];?></span></td>
-                            </tr>
-                                <?php } ?>
-                            <?php } ?>
+                            <?php echo "<pre>" . print_r($requests, true) . "</pre>";?>
                         </tbody>
                     </table>
                     <div class="row">
