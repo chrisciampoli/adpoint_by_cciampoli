@@ -117,9 +117,9 @@ class Home extends User_Controller {
                 $cleaned[$count] = $request['status'];
                 
                 echo "<hr>";
+                $count++;
             }
-            $count++;
-            
+  
         }
         echo "<pre>" . print_r($cleaned, true) . "</pre>";
        
