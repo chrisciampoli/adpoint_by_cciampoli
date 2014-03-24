@@ -90,19 +90,31 @@ class Home extends User_Controller {
                 $this->db->where('id',$var);
                 $query = $this->db->get();
                 $result = $query->row();
-                $cleaned['id'][] = $request['id'];
+                
                 echo "ID: " . $request['id'] . "<br/>";
-                $cleaned['target'][] = $result->username;
+                $cleaned['id'][] = $request['id'];
+                
                 echo "Target: " . $result->username . "<br/>";
+                $cleaned['target'][] = $result->username;
+                
                 $this->db->select('username');
                 $this->db->from('users');
                 $this->db->where('id',$request['requester_id']);
                 $query = $this->db->get();
                 $result = $query->row();
+                
                 echo "Requester: " . $result->username . "<br/>";
+                $cleaned['requester'][] = $result->username;
+                
                 echo "Date: " . $request['date'] . "<br/>";
+                $cleaned['date'][] = $request['date'];
+                
                 echo "Shift: " . $request['shift'] . "<br/>";
+                $cleaned['shift'][] = $request['shift'];
+                
                 echo "Status: " . $request['status'] . "<br/>";
+                $cleaned['status'][] = $request['status'];
+                
                 echo "<hr>";
             }
             
