@@ -92,7 +92,12 @@ class Home extends User_Controller {
                 echo "Target: " . $result->username . "<br/>";
                 echo "<hr>";
             }
-            echo "Requester: " . $request['requester_id'] . "<br/>";
+            $this->db->select('username');
+            $this->db->from('users');
+            $this->db->where('id',$request['requester_id']);
+            $query = $this->db->get();
+            $result = $query->row();
+            echo "Requester: " . $result->username . "<br/>";
         }
        
     }
