@@ -83,7 +83,7 @@ class Home extends User_Controller {
         $this->load->model('mdl_schedule');
         $results = $this->mdl_schedule->getRequests();
         $cleaned = array();
-        $count = 0;
+        
         foreach($results as $request) {
             foreach(explode(',',$request['target_id']) as $var) {
                 $this->db->select('username');
@@ -93,10 +93,10 @@ class Home extends User_Controller {
                 $result = $query->row();
                 
                 echo "ID: " . $request['id'] . "<br/>";
-                $cleaned[$count] = $request['id'];
+                $cleaned['id'][] = $request['id'];
                 
                 echo "Target: " . $result->username . "<br/>";
-                $cleaned[$count] = $result->username;
+                $cleaned['target'][] = $result->username;
                 
                 $this->db->select('username');
                 $this->db->from('users');
@@ -105,23 +105,24 @@ class Home extends User_Controller {
                 $result = $query->row();
                 
                 echo "Requester: " . $result->username . "<br/>";
-                $cleaned[$count] = $result->username;
+                $cleaned['requester'][] = $result->username;
                 
                 echo "Date: " . $request['date'] . "<br/>";
-                $cleaned[$count] = $request['date'];
+                $cleaned['date'][] = $request['date'];
                 
                 echo "Shift: " . $request['shift'] . "<br/>";
-                $cleaned[$count] = $request['shift'];
+                $cleaned['shift'][] = $request['shift'];
                 
                 echo "Status: " . $request['status'] . "<br/>";
-                $cleaned[$count] = $request['status'];
+                $cleaned['status'][] = $request['status'];
                 
                 echo "<hr>";
-                $count++;
             }
-  
+            
         }
-        echo "<pre>" . print_r($cleaned, true) . "</pre>";
+        foreach($cleaned as $record) {
+            echo $record . "<br/>";
+        }
        
     }
     
