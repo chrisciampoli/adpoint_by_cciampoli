@@ -113,7 +113,7 @@ class Home extends User_Controller {
                 $cleaned['shift'] = $request['shift'];
                 
                 echo "Status: " . $request['status'] . "<br/>";
-                $cleaned['status'] = $request['status'];
+                $cleaned[['status']] = $request['status'];
                 
                 echo "<hr>";
             }
