@@ -120,8 +120,8 @@ class Home extends User_Controller {
             }
             
         }
-        foreach($cleaned as $record) {
-            echo $record . "<br/>";
+        foreach($cleaned as $record=>$key) {
+            echo $key . "<br/>";
         }
        
     }
