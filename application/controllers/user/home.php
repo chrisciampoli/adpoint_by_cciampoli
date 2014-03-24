@@ -83,7 +83,7 @@ class Home extends User_Controller {
         $this->load->model('mdl_schedule');
         $results = $this->mdl_schedule->getRequests();
         $cleaned = array();
-        
+        $count = 0;
         foreach($results as $request) {
             foreach(explode(',',$request['target_id']) as $var) {
                 $this->db->select('username');
@@ -93,10 +93,10 @@ class Home extends User_Controller {
                 $result = $query->row();
                 
                 echo "ID: " . $request['id'] . "<br/>";
-                $cleaned['id'][] = $request['id'];
+                $cleaned[$count]['id'] = $request['id'];
                 
                 echo "Target: " . $result->username . "<br/>";
-                $cleaned['target'][] = $result->username;
+                $cleaned[$count]['target'] = $result->username;
                 
                 $this->db->select('username');
                 $this->db->from('users');
@@ -105,24 +105,23 @@ class Home extends User_Controller {
                 $result = $query->row();
                 
                 echo "Requester: " . $result->username . "<br/>";
-                $cleaned['requester'][] = $result->username;
+                $cleaned[$count]['requester'] = $result->username;
                 
                 echo "Date: " . $request['date'] . "<br/>";
-                $cleaned['date'][] = $request['date'];
+                $cleaned[$count]['date'] = $request['date'];
                 
                 echo "Shift: " . $request['shift'] . "<br/>";
-                $cleaned['shift'][] = $request['shift'];
+                $cleaned[$count]['shift'] = $request['shift'];
                 
                 echo "Status: " . $request['status'] . "<br/>";
-                $cleaned['status'][] = $request['status'];
+                $cleaned[$count]['status'] = $request['status'];
                 
                 echo "<hr>";
+                $count++;
             }
             
         }
-        foreach($cleaned as $record=>$key) {
-            echo $key . "<br/>";
-        }
+        echo "<pre>" . print_r($cleaned, true) . "</pre>";
        
     }
     
