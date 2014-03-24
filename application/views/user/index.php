@@ -72,7 +72,7 @@
                             <?php foreach($requests as $request) { ?>
                                 <?php if($request['target'] == $username) { ?>
                                   <?php if($request['status'] == 'pending') { ?>
-                                    <tr class="warning pending-row" rel="1">
+                                    <tr class="warning pending-row" rel="<?=$request['id'];?>">
                                         <td><?=$request['requester'];?></td><td><?=$request['date'];?></td><td>Mission Valley</td><td><?= $request['shift'];?></td><td class="status" id="<?=$request['id'];?>"><span class="label label-warning"><?=$request['status'];?></span></td>
                                     </tr>
                                   <?php } ?>
@@ -80,7 +80,6 @@
                                   <?php } ?>
                                   <?php if($request['status'] == 'denied') { ?>
                                   <?php } ?>
-                            <tr><td><?=$request['target'];?></td></tr>
                                 <?php } else { continue; } ?>
                             <?php } ?>
                         </tbody>
