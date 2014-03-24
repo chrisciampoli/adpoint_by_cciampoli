@@ -82,6 +82,7 @@ class Home extends User_Controller {
     public function getRequests() {
         $this->load->model('mdl_schedule');
         $results = $this->mdl_schedule->getRequests();
+        $cleaned = array();
         foreach($results as $request) {
             foreach(explode(',',$request['target_id']) as $var) {
                 $this->db->select('username');
@@ -89,7 +90,9 @@ class Home extends User_Controller {
                 $this->db->where('id',$var);
                 $query = $this->db->get();
                 $result = $query->row();
+                $cleaned['id'][] = $request['id'];
                 echo "ID: " . $request['id'] . "<br/>";
+                $cleaned['target'][] = $result->username;
                 echo "Target: " . $result->username . "<br/>";
                 $this->db->select('username');
                 $this->db->from('users');
@@ -104,6 +107,7 @@ class Home extends User_Controller {
             }
             
         }
+        echo "<pre>" . print_r($cleaned, true) . "</pre>";
        
     }
     
