@@ -154,19 +154,19 @@ class Home extends User_Controller {
           'user'=>$this->session->userdata('username'),
           'schedule'=>json_encode(array(
               array(
-                  "date"=>"22/3/2014",
+                  "date"=>"25/3/2014",
                   "title"=>"Starbucks: College - Cashier",
                   "color"=>"#333",
                   "content"=>"6:30PM - 10:30PM"
               ),
               array(
-                  "date"=>"23/3/2014",
+                  "date"=>"26/3/2014",
                   "title"=>"Starbucks: College - Barista",
                   "color"=>"#333",
                   "content"=>"2:30PM - 10:30PM"
               ),
               array(
-                  "date"=>"24/3/2014",
+                  "date"=>"27/3/2014",
                   "title"=>"Starbucks: College - Barista",
                   "color"=>"#333",
                   "content"=>"2:30PM - 10:30PM"
