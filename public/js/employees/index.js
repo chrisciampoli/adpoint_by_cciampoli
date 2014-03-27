@@ -162,6 +162,7 @@ $(function() {
     
     $('body').on('click','#giveup_btn', function(e){
        e.preventDefault();
+       var r = confirm('Are you sure you want to give up this shift?');
        var targets = [],
            checked;
        
