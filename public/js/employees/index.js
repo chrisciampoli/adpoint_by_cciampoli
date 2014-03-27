@@ -163,7 +163,8 @@ $(function() {
     $('body').on('click','#giveup_btn', function(e){
        e.preventDefault();
        var r = confirm('Are you sure you want to give up this shift?');
-       var targets = [],
+       if(r == true) {
+           var targets = [],
            checked;
        
        checked = $(':checked');
@@ -201,6 +202,10 @@ $(function() {
       } catch(e) {
           alert('Sorry we could not complete your request');
       }
+       } else {
+            $('#giveup_modal').modal('hide');
+       }
+       
        
     });
 
