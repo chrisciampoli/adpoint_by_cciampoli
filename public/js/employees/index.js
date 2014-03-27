@@ -190,10 +190,10 @@ $(function() {
               dataType: "json",
               success: function(data){
                   console.log(data);
-                  $('.modal-dialog').close();
+                  $('.modal-dialog').hide();
               },
               failure: function(data){
-                  $('.modal-dialog').close();
+                  $('.modal-dialog').hide();
                   alert('Could not post request!');
               }
           });
