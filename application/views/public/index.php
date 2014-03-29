@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Swift Shifts, by SwiftNCo</title>
+        <title>Swift Shifts, by Swift'n'Co</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -38,7 +38,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Swift shifts</a>
+                    <a class="navbar-brand" href="#">Swift Shifts by Swift'n'Co</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <?php $attributes = array('class' => 'navbar-form navbar-right', 'id' => 'signin_form'); ?>
