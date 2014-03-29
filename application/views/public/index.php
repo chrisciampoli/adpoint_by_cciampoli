@@ -61,7 +61,7 @@
         <div class="jumbotron">
             <div class="container">
                 <h1>Manage your time better!</h1>
-                <p>Swift shifts is a software platform that aims to become the industry standard for providing a simple and intuitive application for managing shifts.</p>
+                <p>Swift Shifts is a software platform that aims to become the industry standard for providing a simple and intuitive application for managing shifts.</p>
                 <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
             </div>
         </div>

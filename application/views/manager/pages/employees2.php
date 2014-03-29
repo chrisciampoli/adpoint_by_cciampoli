@@ -1,5 +1,5 @@
 <div class="container-fluid">
-        <div><h2 class="sub-header" style="display: inline">Employees</h2><input type="button" value="Add employee" class="btn btn-success" style="display: inline-block;float: right;padding: 5px;margin-top:5px;"/></div>
+        <div><h2 class="sub-header" style="display: inline">Employees</h2><button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Add Employee</button></div>
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
@@ -71,6 +71,13 @@
         </div>
       </div>
     </div>
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                    ...
+            </div>
+        </div>
+   </div>
     <div id="create_employee_dialig">
         
     </div>
