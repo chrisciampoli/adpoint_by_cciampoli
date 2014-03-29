@@ -1,5 +1,5 @@
 <div class="container-fluid">
-        <div><h2 class="sub-header" style="display: inline">Employees</h2><button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Add Employee</button></div>
+        <div><h2 class="sub-header" style="display: inline">Employees</h2><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Launch demo modal</button></div>
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
@@ -71,13 +71,24 @@
         </div>
       </div>
     </div>
-    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                    <h1>Add Employee</h1>
-            </div>
-        </div>
-   </div>
+    <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
     <div id="create_employee_dialig">
         
     </div>
