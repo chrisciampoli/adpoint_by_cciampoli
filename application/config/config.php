@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://swiftnco.com/swift_schedules/';
+$config['base_url']	= 'http://swiftnco.com/swiftshifts/';
 
 /*
 |--------------------------------------------------------------------------
