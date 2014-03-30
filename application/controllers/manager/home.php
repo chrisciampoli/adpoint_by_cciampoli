@@ -77,14 +77,14 @@ class Home extends Manager_Controller {
         }
         $query->free_result();
 
-        $this->db->select('username');
+        $this->db->select('username, phone, email');
         $this->db->where('company',$company);
         $query = $this->db->get('users');
 
         if ($query->num_rows() > 0)
         {
            foreach ($query->result() as $row) {
-              echo $row->username . "<br/>";
+              echo $row->username . ' ' . $row->email . ' ' . $row->phone "<br/>";
            }
         }
 
