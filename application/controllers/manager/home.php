@@ -60,16 +60,6 @@ class Home extends Manager_Controller {
         $data['name'] = $this->session->userdata('username');
         $this->load->view('manager/settings', $data);
     }
-
-    functon getEmployees() {
-        $this->db->select('company');
-        $this->db->where('username', $this->session->userdata('username'));
-        $query = $this->db->get('users');
-
-        foreach($query->result() as $row) {
-            echo $row->company;
-        }
-    }
     
     /*
      * Ajax Functions
