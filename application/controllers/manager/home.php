@@ -48,8 +48,12 @@ class Home extends Manager_Controller {
         $data['content'] = $this->load->view('manager/pages/employees2',$data,true);
         $data['script_loader'] = $this->load->view('manager/scripts',$data,true);
         
+        $employees = $this->getCompanyEmployees();
+
+        echo "<pre>" . print_r($employees, true) . "</pre>";
+
         $data['name'] = $this->session->userdata('username');
-        $data['employees'] = $this->getCompanyEmployees();
+        $data['employees'] = $employees;
 
 
         $this->load->view('manager/wrapper', $data);
