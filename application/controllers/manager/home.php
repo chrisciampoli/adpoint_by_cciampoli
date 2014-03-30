@@ -43,19 +43,16 @@ class Home extends Manager_Controller {
         $data['styles'][] = 'http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css';
         $data['styles'][] = 'http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css';
        
+        $employees = $this->getCompanyEmployees();
+        
+        $data['name'] = $this->session->userdata('username');
+        $data['employees'] = $employees;
+
         $data['head'] = $this->load->view('manager/head', $data, true);
         $data['nav'] = $this->load->view('manager/navigation/nav','',true);
         $data['content'] = $this->load->view('manager/pages/employees2',$data,true);
         $data['script_loader'] = $this->load->view('manager/scripts',$data,true);
         
-        $employees = $this->getCompanyEmployees();
-
-        echo "<pre>" . print_r($employees, true) . "</pre>";
-
-        $data['name'] = $this->session->userdata('username');
-        $data['employees'] = $employees;
-
-
         $this->load->view('manager/wrapper', $data);
         
         
