@@ -71,12 +71,10 @@ class Home extends Manager_Controller {
 
         if ($query->num_rows() > 0)
         {
-           foreach ($query->result() as $row)
-              $company = $row->company;
+           foreach ($query->result() as $row) {
+              echo $row->company;
            }
         }
-
-        echo $company;
     }
     
     /*
