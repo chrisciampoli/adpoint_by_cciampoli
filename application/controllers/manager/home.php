@@ -85,7 +85,8 @@ class Home extends Manager_Controller {
 
         $result = $query->result_array();
 
-        echo "<pre>" . print_r($result, true) . "</pre>";
+        //echo "<pre>" . print_r($result, true) . "</pre>";
+        return $result;
 
     }
     
