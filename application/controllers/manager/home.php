@@ -72,9 +72,22 @@ class Home extends Manager_Controller {
         if ($query->num_rows() > 0)
         {
            foreach ($query->result() as $row) {
-              echo $row->company;
+              $company = $row->company;
            }
         }
+        $query->free_result();
+
+        $this->db->select('username');
+        $this->db->where('company',$company);
+        $query = $this->db->get('users');
+
+        if ($query->num_rows() > 0)
+        {
+           foreach ($query->result() as $row) {
+              echo $row->username . "<br/>";
+           }
+        }
+
     }
     
     /*
