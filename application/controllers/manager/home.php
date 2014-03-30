@@ -49,7 +49,9 @@ class Home extends Manager_Controller {
         $data['script_loader'] = $this->load->view('manager/scripts',$data,true);
         
         $data['name'] = $this->session->userdata('username');
-        
+        $data['employees'] = $this->getCompanyEmployees();
+
+
         $this->load->view('manager/wrapper', $data);
         
         
@@ -81,12 +83,7 @@ class Home extends Manager_Controller {
         $this->db->where('company',$company);
         $query = $this->db->get('users');
 
-        if ($query->num_rows() > 0)
-        {
-           foreach ($query->result() as $row) {
-              echo $row->username . ' ' . $row->email . ' ' . $row->phone . "<br/>";
-           }
-        }
+        return $query->result_array();
 
     }
     

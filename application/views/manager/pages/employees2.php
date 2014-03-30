@@ -14,6 +14,7 @@
                 </tr>
               </thead>
               <tbody>
+                <?php foreach($employees as $employee) { ?>
                 <tr>
                   <td>Manager</td>
                   <td>Christopher Ciampoli</td>
@@ -65,6 +66,7 @@
                         <div style="text-align: center;"><span class="label label-danger">10AM - 4PM</span></div>
                     </td>  
                 </tr>
+                <?php } ?>
               </tbody>
             </table>
           </div>
