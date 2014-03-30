@@ -84,7 +84,7 @@ class Home extends Manager_Controller {
         if ($query->num_rows() > 0)
         {
            foreach ($query->result() as $row) {
-              echo $row->username . ' ' . $row->email . ' ' . $row->phone "<br/>";
+              echo $row->username . ' ' . $row->email . ' ' . $row->phone . "<br/>";
            }
         }
 
