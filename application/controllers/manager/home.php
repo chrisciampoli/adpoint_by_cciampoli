@@ -83,7 +83,9 @@ class Home extends Manager_Controller {
         $this->db->where('company',$company);
         $query = $this->db->get('users');
 
-        return $query->result_array();
+        $result = $query->result_array();
+
+        echo "<pre>" . print_r($result, true) . "</pre>";
 
     }
     
