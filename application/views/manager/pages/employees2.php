@@ -17,13 +17,13 @@
                 <?php foreach($employees as $employee) { ?>
                 <tr>
                   <td>Manager</td>
-                  <td>Christopher Ciampoli</td>
-                  <td>(619) 403-2134</td>
-                  <td>chrisciampoli@gmail.com</td>
+                  <td><?=ucwords($employee['username']);?></td>
+                  <td><?=$employee['phone'];?></td>
+                  <td><?=$employee['email'];?></td>
                   <td>
                       <button type="button" rel="1" class="check_avail btn btn-primary btn-sm">
                           <div class="datepicker" id="datepicker_1" rel="1"></div>
-                          <span class="glyphicon glyphicon-calendar"></span> Check
+                          <span class="glyphicon glyphicon-calendar"></span> Schedule
                       </button>
                   </td>
                   <td>Floor (Mission Valley)</td>
