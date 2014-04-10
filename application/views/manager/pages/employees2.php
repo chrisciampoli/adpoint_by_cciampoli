@@ -79,10 +79,16 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="myModalLabel">Add Employee</h4>
       </div>
       <div class="modal-body">
-        ...
+        <form>
+          <fieldset>
+            <legend>Add Employee</legend>
+            <label>First Name</label>
+            <input type="text" placeholder="First name">
+          </fieldset>
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
