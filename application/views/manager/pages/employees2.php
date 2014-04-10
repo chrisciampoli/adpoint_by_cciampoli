@@ -36,7 +36,7 @@
                       </button>
                   </td>
                 </tr>
-                <tr id="avail_1" style="display:none; width:100%;" class="alert alert-info">
+                <tr id="<?=$employee['id'];?>" style="display:none; width:100%;" class="alert alert-info">
                     <td style="height: 10%;width: 14%;border:1px solid black;">
                         <div style="text-align:center;"><h4>Monday</h4></div>
                         <div style="text-align: center;"><span class="label label-success">Open</span></div>
