@@ -6,7 +6,7 @@ class Home extends Manager_Controller {
     function __construct() {
         parent::__construct();
         $this->load->library('session');
-        $this->load->database();
+        $this->load->model('mdl_employees');
     }
     
     function index() {
@@ -65,28 +65,9 @@ class Home extends Manager_Controller {
     }
 
     public function getCompanyEmployees() {
-        // using the manager username, pull their company.
-        // using their company pull all employees.
-        $username = $this->session->userdata('username');
-        $this->db->select('company');
-        $this->db->where('username', $username);
-        $query = $this->db->get('users');
+    
+        $result = $this->mdl_employees->getCompanyEmployees();
 
-        if ($query->num_rows() > 0)
-        {
-           foreach ($query->result() as $row) {
-              $company = $row->company;
-           }
-        }
-        $query->free_result();
-
-        $this->db->select('username, phone, email');
-        $this->db->where('company',$company);
-        $query = $this->db->get('users');
-
-        $result = $query->result_array();
-
-        //echo "<pre>" . print_r($result, true) . "</pre>";
         return $result;
 
     }
