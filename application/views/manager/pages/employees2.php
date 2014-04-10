@@ -21,7 +21,7 @@
                   <td><?=$employee['phone'];?></td>
                   <td><?=$employee['email'];?></td>
                   <td>
-                      <button type="button" rel="1" class="check_avail btn btn-primary btn-sm">
+                      <button type="button" rel="<?=$employee['id'];?>" class="check_avail btn btn-primary btn-sm">
                           <div class="datepicker" id="datepicker_1" rel="1"></div>
                           <span class="glyphicon glyphicon-calendar"></span> Schedule
                       </button>

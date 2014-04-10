@@ -1,7 +1,7 @@
 <?php
 
 class Mdl_employees extends CI_Model {
-    
+
     function __construct() {
         parent::__construct();
     }
@@ -33,7 +33,7 @@ class Mdl_employees extends CI_Model {
         // using their company pull all employees.
         $company = $this->getCompany();
 
-        $this->db->select('username, phone, email');
+        $this->db->select('id, username, phone, email');
         
         $this->db->where('company',$company);
         
