@@ -84,8 +84,7 @@
       <div class="modal-body">
         <form>
           <fieldset>
-            <legend>Add Employee</legend>
-            <label>First Name</label>
+            <label>First Name: </label>
             <input type="text" placeholder="First name">
           </fieldset>
         </form>
