@@ -4,19 +4,16 @@
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th>Position</th>
                   <th>Name</th>
                   <th>Phone</th>
                   <th>Email</th>
                   <th>Availability</th>
-                  <th>Current Assignment</th>
                   <th>Controls</th>
                 </tr>
               </thead>
               <tbody>
                 <?php foreach($employees as $employee) { ?>
                 <tr>
-                  <td>Manager</td>
                   <td><?=ucwords($employee['username']);?></td>
                   <td><?=$employee['phone'];?></td>
                   <td><?=$employee['email'];?></td>
@@ -26,7 +23,6 @@
                           <span class="glyphicon glyphicon-calendar"></span> Schedule
                       </button>
                   </td>
-                  <td>Floor (Mission Valley)</td>
                   <td>
                       <button type="button" class="btn btn-primary btn-sm">
                           <span class="glyphicon glyphicon-pencil"></span> Edit
