@@ -1,6 +1,6 @@
 $(function(){ 
     getEmployees(); 
-   
+   /*
     $(".check_avail").on('click', function(e) {
         e.preventDefault();
         /*
@@ -13,10 +13,11 @@ $(function(){
             }
         });
         */
+        /*
         var rel = $(this).attr('rel');
         $('#avail_'+rel).fadeToggle();
     });
-    
+    */
     var add_employee = String()
             + '<section>'
                 + '<div>'
