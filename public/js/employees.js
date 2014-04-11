@@ -1,5 +1,5 @@
 $(function(){ 
-    getEmployees(); 
+//    getEmployees(); 
    /*
     $(".check_avail").on('click', function(e) {
         e.preventDefault();
