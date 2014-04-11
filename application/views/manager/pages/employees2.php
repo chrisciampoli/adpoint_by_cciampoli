@@ -133,47 +133,10 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Add Employee</h4>
+        <h4 class="modal-title" id="myModalLabel">Edit Schedule</h4>
       </div>
       <div class="modal-body">
-        <form class="form-horizontal">
-          <div class="control-group">
-            <label class="control-label" for="inputFirstName">First Name</label>
-            <div class="controls">
-              <input type="text" id="inputFirstName" placeholder="John">
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="inputLastName">Last Name</label>
-            <div class="controls">
-              <input type="text" id="inputLastName" placeholder="Doe">
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="inputEmail">Email</label>
-            <div class="controls">
-              <input type="email" id="inputEmail" placeholder="user@example.com">
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="inputPhone">Phone</label>
-            <div class="controls">
-              <input type="text" id="inputPhone" placeholder="(000) 000-0000">
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="inputPassword">Password</label>
-            <div class="controls">
-              <input type="password" id="inputPassword" placeholder="">
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="inputPasswordConfirmation">Re-enter Password</label>
-            <div class="controls">
-              <input type="password" id="inputPasswordConfirmation" placeholder="">
-            </div>
-          </div>
-        </form>
+        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
