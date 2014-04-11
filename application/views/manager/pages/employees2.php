@@ -86,6 +86,16 @@
           <fieldset>
             <label>First Name: </label>
             <input type="text" placeholder="First name">
+            <label>Last Name: </label>
+            <input type="text" placeholder="Last name">
+            <label>Email: </label>
+            <input type="email" placeholder="name@yourcompany.com">
+            <label>Phone: </label>
+            <input type="text" placeholder="(000)000-0000">
+            <label>Password: </label>
+            <input type="password" placeholder="">
+            <label>Re-enter Password: </label>
+            <input type="password" placeholder="">
           </fieldset>
         </form>
       </div>
