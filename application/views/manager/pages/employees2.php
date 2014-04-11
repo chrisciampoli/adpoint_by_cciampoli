@@ -1,5 +1,5 @@
 <div class="container-fluid">
-        <div><h2 class="sub-header" style="display: inline">Employees</h2><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Launch demo modal</button></div>
+        <div><h2 class="sub-header" style="display: inline">Employees</h2><button style="float:right;margin: 7px;" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Add Employee</button></div>
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
