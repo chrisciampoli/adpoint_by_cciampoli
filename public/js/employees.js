@@ -108,7 +108,7 @@ $(function(){
 
            } catch(err) {
             
-              if(debug === true) console.log('could not save employee');
+              if(debug === true) console.log('could not save employee: Error: ' + err);
            
            }
     }
