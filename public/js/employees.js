@@ -103,14 +103,18 @@ $(function(){
            };
             
            try {
-           
-              ajaxData(postEmployeeUrl, data, saveEmployeeSuccess, saveEmployeeFailure);
+
+              postData(postEmployeeUrl, ,"POST", "json", data, saveEmployeeBeforeSend, saveEmployeeSuccess);
 
            } catch(err) {
             
               if(debug === true) console.log('could not save employee: Error: ' + err);
            
            }
+    }
+
+    function saveEmployeeBeforeSend() {
+        if(debug===true) console.log('Saving employee....');
     }
 
     function saveEmployeeSuccess() {
