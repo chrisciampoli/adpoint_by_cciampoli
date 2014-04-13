@@ -113,13 +113,14 @@
             <label class="control-label" for="inputPasswordConfirmation">Re-enter Password</label>
             <div class="controls">
               <input type="password" id="inputPasswordConfirmation" placeholder="">
+              <input type="hidden" id="hiddenInputCompany" placeholder="" value="Swift Schedules">
             </div>
           </div>
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary" id="employeeSaveBtn">Save changes</button>
       </div>
     </div>
   </div>

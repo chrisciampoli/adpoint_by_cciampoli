@@ -1,23 +1,29 @@
 $(function(){ 
     
-    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        dayNames = ["S", "M", "T", "W", "T", "F", "S"],
+        events = [
+            {
+                date: "28/12/2013",
+                title: 'SPORT & WELLNESS',
+                link: 'http://bic.cat',
+                linkTarget: '_blank',
+                color: '',
+                content: '<\img src="http://gettingcontacts.com/upload/jornadas/sport-wellness_portada.png" ><\br>06-11-2013 - 09:00 <\br> Tecnocampus Mataró Auditori',
+                class: '',
+                displayMonthController: true,
+                displayYearController: true,
+                nMonths: 6
+            }
+        ],
+        getEmployeeUrl = 'user/home/getEmployee',
+        postEmployeeUrl = 'user/home/postEmployee',
+        updateEmployeeUrl = 'user/home/updateEmployee',
+        removeEmployeeUrl = 'user/home/removeEmployee',
+        getScheduleUrl = 'user/home/getSchedule',
+        postScheduleUrl = 'user/home/postSchedule',
+        updateScheduleUrl = 'user/home/updateSchedule';
 
-    var dayNames = ["S", "M", "T", "W", "T", "F", "S"];
-
-    var events = [
-        {
-            date: "28/12/2013",
-            title: 'SPORT & WELLNESS',
-            link: 'http://bic.cat',
-            linkTarget: '_blank',
-            color: '',
-            content: '<\img src="http://gettingcontacts.com/upload/jornadas/sport-wellness_portada.png" ><\br>06-11-2013 - 09:00 <\br> Tecnocampus Mataró Auditori',
-            class: '',
-            displayMonthController: true,
-            displayYearController: true,
-            nMonths: 6
-        }
-    ];            
 
     $('#calendar').bic_calendar({
         events: events,
@@ -42,23 +48,20 @@ $(function(){
         }
     });
 
-    Date.prototype.getWeek = function(start)
-    {
-            //Calcing the starting point
-        start = start || 0;
-        var today = new Date(this.setHours(0, 0, 0, 0));
-        var day = today.getDay() - start;
-        var date = today.getDate() - day;
+   $('body').on('click','#employeeSaveBtn',function(e) {
+       
+       var first_name = $('#inputFirstName').val(),
+           last_name = $('#inputLastName').val(),
+           email = $('#inputEmail').val(),
+           phone = $('#inputPhone').val(),
+           password = $('#inputPassword').val(),
+           pass_conf = $('#inputPasswordConfirmation').val(),
+           //Hidden
+           company = $('#hiddinInputCompany').val();
 
-            // Grabbing Start/End Dates
-        var StartDate = new Date(today.setDate(date));
-        var EndDate = new Date(today.setDate(date + 6));
-        return [StartDate, EndDate];
-    }
+        saveEmployee(first_name, last_name, email, company, phone, password);
 
-    // test code
-    var Dates = new Date().getWeek();
-    //alert(Dates[0].toLocaleDateString() + ' to '+ Dates[1].toLocaleDateString())
+   });
 
 });
 
@@ -89,16 +92,34 @@ function getEmployeesFailure() {
     console.log('Wakka wakka');
 }
 
-function saveEmployee() {
-   // ajaxData(url, data, saveEmployeeSuccess, saveEmployeeFailure);
+function saveEmployee(first_name, last_name, email, company, phone, password) {
+
+       var data = {
+          "first_name":first_name,
+          "last_name":last_name,
+          "email":email,
+          "company":company,
+          "phone":phone,
+          "password"password
+       };
+        
+       try {
+       
+          ajaxData(postEmployeeUrl, data, saveEmployeeSuccess, saveEmployeeFailure);
+
+       } catch(err) {
+        
+          if(debug === true) console.log('could not save employee');
+       
+       }
 }
 
 function saveEmployeeSuccess() {
-    
+    if(debug===true) console.log('Employee saved successfully');
 }
 
 function saveEmployeeFailure() {
-    
+    if(debug===true) console.log('Could not save employee');   
 }
 
 function removeEmployee() {
