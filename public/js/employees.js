@@ -57,7 +57,6 @@ $(function(){
            phone = $('#inputPhone').val(),
            password = $('#inputPassword').val(),
            pass_conf = $('#inputPasswordConfirmation').val(),
-           //Hidden
            company = $('#hiddinInputCompany').val();
 
         saveEmployee(first_name, last_name, email, company, phone, password);
@@ -101,7 +100,7 @@ $(function(){
               "phone":phone,
               "password":password
            };
-            
+           if(debug===true) console.log('Company: ' + company); 
            try {
 
               postData(postEmployeeUrl, "POST", "json", data, saveEmployeeBeforeSend, saveEmployeeSuccess);

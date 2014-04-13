@@ -119,7 +119,7 @@
             <label class="control-label" for="inputPasswordConfirmation">Re-enter Password</label>
             <div class="controls">
               <input type="password" id="inputPasswordConfirmation" placeholder="">
-              <input type="hidden" id="hiddenInputCompany" placeholder="" value="Swift Schedules">
+              <input type="hidden" id="hiddinInputCompany" placeholder="" value="Swift Schedules">
             </div>
           </div>
         </form>
