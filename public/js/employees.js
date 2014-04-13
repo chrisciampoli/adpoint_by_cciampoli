@@ -104,7 +104,7 @@ $(function(){
             
            try {
 
-              postData(postEmployeeUrl, ,"POST", "json", data, saveEmployeeBeforeSend, saveEmployeeSuccess);
+              postData(postEmployeeUrl, "POST", "json", data, saveEmployeeBeforeSend, saveEmployeeSuccess);
 
            } catch(err) {
             
