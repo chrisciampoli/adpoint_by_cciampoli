@@ -126,7 +126,8 @@ class Home extends Manager_Controller {
             //redirect them back to the admin page
             $this->session->set_flashdata('message', $this->ion_auth->messages());
             echo json_encode(array(
-                  'message'=>$this->session->flashdata('message')
+                  'status: '=>'success',
+                  'errors: '=>$this->session->flashdata('message')
                  ));
             return true;
         }
@@ -136,7 +137,8 @@ class Home extends Manager_Controller {
             //set the flash data error message if there is one
             $this->data['message'] = (validation_errors() ? validation_errors() : ($this->ion_auth->errors() ? $this->ion_auth->errors() : $this->session->flashdata('message')));
             echo json_encode(array(
-                  'message'=>$this->data['message']
+                  'status: '=>'failure',
+                  'errors: '=>$this->data['message']
                  ));
             return false;
         }
