@@ -17,7 +17,7 @@ $(function(){
             }
         ],
         getEmployeeUrl = 'user/home/getEmployee',
-        postEmployeeUrl = 'user/home/postEmployee',
+        postEmployeeUrl = 'manager/home/ajaxPostEmployee',
         updateEmployeeUrl = 'user/home/updateEmployee',
         removeEmployeeUrl = 'user/home/removeEmployee',
         getScheduleUrl = 'user/home/getSchedule',
@@ -100,7 +100,7 @@ function saveEmployee(first_name, last_name, email, company, phone, password) {
           "email":email,
           "company":company,
           "phone":phone,
-          "password"password
+          "password":password
        };
         
        try {

@@ -5,6 +5,11 @@ class Home extends Manager_Controller {
     
     function __construct() {
         parent::__construct();
+
+        $this->load->library('ion_auth');
+        $this->load->library('form_validation');
+        $this->load->helper('url');
+
         $this->load->library('session');
         $this->load->model('mdl_employees');
     }
@@ -91,9 +96,49 @@ class Home extends Manager_Controller {
         exit();
     }
     
-    public function ajaxCreateEmployee() {
-        echo json_encode($response);
-        exit();
+    public function ajaxPostEmployee() {
+        
+        $this->form_validation->set_rules('first_name');
+        $this->form_validation->set_rules('last_name');
+        $this->form_validation->set_rules('email');
+        $this->form_validation->set_rules('phone');
+        $this->form_validation->set_rules('company');
+        $this->form_validation->set_rules('password');
+        $this->form_validation->set_rules('password_confirm');
+
+        if ($this->form_validation->run() == true)
+        {
+            $username = strtolower($this->input->post('first_name')) . ' ' . strtolower($this->input->post('last_name'));
+            $email    = strtolower($this->input->post('email'));
+            $password = $this->input->post('password');
+
+            $additional_data = array(
+                'first_name' => $this->input->post('first_name'),
+                'last_name'  => $this->input->post('last_name'),
+                'company'    => $this->input->post('company'),
+                'phone'      => $this->input->post('phone'),
+            );
+        }
+        if ($this->form_validation->run() == true && $this->ion_auth->register($username, $password, $email, $additional_data))
+        {
+            //check to see if we are creating the user
+            //redirect them back to the admin page
+            $this->session->set_flashdata('message', $this->ion_auth->messages());
+            echo json_encode(array(
+                  'message'=>$this->session->flashdata('message')
+                 ));
+            return true;
+        }
+        else
+        {
+            //display the create user form
+            //set the flash data error message if there is one
+            $this->data['message'] = (validation_errors() ? validation_errors() : ($this->ion_auth->errors() ? $this->ion_auth->errors() : $this->session->flashdata('message')));
+            echo json_encode(array(
+                  'message'=>$this->data['message']
+                 ));
+            return false;
+        }
     }
     
     public function ajaxRemoveEmployee() {
