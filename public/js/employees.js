@@ -22,7 +22,8 @@ $(function(){
         removeEmployeeUrl = 'user/home/removeEmployee',
         getScheduleUrl = 'user/home/getSchedule',
         postScheduleUrl = 'user/home/postSchedule',
-        updateScheduleUrl = 'user/home/updateSchedule';
+        updateScheduleUrl = 'user/home/updateSchedule',
+        debug = true;
 
 
     $('#calendar').bic_calendar({
