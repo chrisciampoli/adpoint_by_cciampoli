@@ -56,10 +56,10 @@ $(function(){
            email = $('#inputEmail').val(),
            phone = $('#inputPhone').val(),
            password = $('#inputPassword').val(),
-           pass_conf = $('#inputPasswordConfirmation').val(),
+           password_confirm = $('#inputPasswordConfirmation').val(),
            company = $('#hiddinInputCompany').val();
 
-        saveEmployee(first_name, last_name, email, company, phone, password);
+        saveEmployee(first_name, last_name, email, company, phone, password, password_confirm);
 
    });
 
@@ -90,7 +90,7 @@ $(function(){
         console.log('Wakka wakka');
     }
 
-    function saveEmployee(first_name, last_name, email, company, phone, password) {
+    function saveEmployee(first_name, last_name, email, company, phone, password, password_confirm) {
 
            var data = {
               "first_name":first_name,
@@ -98,7 +98,8 @@ $(function(){
               "email":email,
               "company":company,
               "phone":phone,
-              "password":password
+              "password":password,
+              "password_confirm":password_confirm
            };
            if(debug===true) console.log('Company: ' + company); 
            try {
