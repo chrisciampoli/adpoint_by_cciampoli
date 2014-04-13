@@ -64,110 +64,111 @@ $(function(){
 
    });
 
-});
-
-/*
+   /*
  * Pull list of employees from db and returns json
  */
-function getEmployees() {
-    request = {
-        'ajaxRequest': true
-    };
-    postData('ajaxGetEmployees', 'GET', 'json', request, getEmployeesBeforeSend, getEmployeesSuccess);
-}
+    function getEmployees() {
+        request = {
+            'ajaxRequest': true
+        };
+        postData('ajaxGetEmployees', 'GET', 'json', request, getEmployeesBeforeSend, getEmployeesSuccess);
+    }
 
-function getEmployeesBeforeSend() {
-    console.log('getting em');
-}
+    function getEmployeesBeforeSend() {
+        console.log('getting em');
+    }
 
-function getEmployeesSuccess(data) {
-    var results = data,
-        table = $('#employee_table_body');
-    console.log(results);
-    $.each(results.message, function(){
-        table.append('<tr><td>Static</td><td>'+this.first_name + ' ' + this.last_name +'</td><td>'+this.phone+'</td><td>'+this.email+'</td><td>Coming Soon</td><td>Edit | Remove</td></tr>');
-    });
-}
+    function getEmployeesSuccess(data) {
+        var results = data,
+            table = $('#employee_table_body');
+        console.log(results);
+        $.each(results.message, function(){
+            table.append('<tr><td>Static</td><td>'+this.first_name + ' ' + this.last_name +'</td><td>'+this.phone+'</td><td>'+this.email+'</td><td>Coming Soon</td><td>Edit | Remove</td></tr>');
+        });
+    }
 
-function getEmployeesFailure() {
-    console.log('Wakka wakka');
-}
+    function getEmployeesFailure() {
+        console.log('Wakka wakka');
+    }
 
-function saveEmployee(first_name, last_name, email, company, phone, password) {
+    function saveEmployee(first_name, last_name, email, company, phone, password) {
 
-       var data = {
-          "first_name":first_name,
-          "last_name":last_name,
-          "email":email,
-          "company":company,
-          "phone":phone,
-          "password":password
-       };
+           var data = {
+              "first_name":first_name,
+              "last_name":last_name,
+              "email":email,
+              "company":company,
+              "phone":phone,
+              "password":password
+           };
+            
+           try {
+           
+              ajaxData(postEmployeeUrl, data, saveEmployeeSuccess, saveEmployeeFailure);
+
+           } catch(err) {
+            
+              if(debug === true) console.log('could not save employee');
+           
+           }
+    }
+
+    function saveEmployeeSuccess() {
+        if(debug===true) console.log('Employee saved successfully');
+    }
+
+    function saveEmployeeFailure() {
+        if(debug===true) console.log('Could not save employee');   
+    }
+
+    function removeEmployee() {
+        //ajaxData(url, data, removeEmployeeSuccess, removeEmployeeFailure);
+    }
+
+    function removeEmployeeSuccess() {
         
-       try {
-       
-          ajaxData(postEmployeeUrl, data, saveEmployeeSuccess, saveEmployeeFailure);
+    }
 
-       } catch(err) {
+
+    function removeEmployeeFailure() {
         
-          if(debug === true) console.log('could not save employee');
-       
-       }
-}
+    }
 
-function saveEmployeeSuccess() {
-    if(debug===true) console.log('Employee saved successfully');
-}
+    function updateEmployee() {
+        //ajaxData(url, data, updateEmployeeSuccess, updateEmployeeFailure);
+    }
 
-function saveEmployeeFailure() {
-    if(debug===true) console.log('Could not save employee');   
-}
+    function updateEmployeeSuccess() {
+        
+    }
 
-function removeEmployee() {
-    //ajaxData(url, data, removeEmployeeSuccess, removeEmployeeFailure);
-}
+    function updateEmployeeFailure() {
+        
+    }
 
-function removeEmployeeSuccess() {
-    
-}
+    function renderRows() {
+        
+    }
 
+    function renderDialog() {
+        
+    }
 
-function removeEmployeeFailure() {
-    
-}
+    // Universal Ajax Method
+    function postData(url, type, dataType, data, beforeSend, success) {
+        $.ajax({
+            url: url,
+            type: type,
+            dataType: dataType,
+            data: data,
+            beforeSend: function(data) {
+                beforeSend(data);
+            },
+            success: function(data) {
+                success(data);
+            }
+        });
+    }
 
-function updateEmployee() {
-    //ajaxData(url, data, updateEmployeeSuccess, updateEmployeeFailure);
-}
+});
 
-function updateEmployeeSuccess() {
-    
-}
-
-function updateEmployeeFailure() {
-    
-}
-
-function renderRows() {
-    
-}
-
-function renderDialog() {
-    
-}
-
-// Universal Ajax Method
-function postData(url, type, dataType, data, beforeSend, success) {
-    $.ajax({
-        url: url,
-        type: type,
-        dataType: dataType,
-        data: data,
-        beforeSend: function(data) {
-            beforeSend(data);
-        },
-        success: function(data) {
-            success(data);
-        }
-    });
-}
