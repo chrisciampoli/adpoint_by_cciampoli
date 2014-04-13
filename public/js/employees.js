@@ -17,7 +17,7 @@ $(function(){
             }
         ],
         getEmployeeUrl = 'user/home/getEmployee',
-        postEmployeeUrl = '/manager/home/ajaxPostEmployee',
+        postEmployeeUrl = config.base + 'manager/home/ajaxPostEmployee',
         updateEmployeeUrl = 'user/home/updateEmployee',
         removeEmployeeUrl = 'user/home/removeEmployee',
         getScheduleUrl = 'user/home/getSchedule',

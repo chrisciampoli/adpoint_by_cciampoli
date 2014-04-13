@@ -1,3 +1,9 @@
+<script>
+    var config = {
+        base: "<?php echo base_url(); ?>",
+        notes: 4
+    };
+</script>
 <div class="container-fluid">
         <div><h2 class="sub-header" style="display: inline">Employees</h2><button style="float:right;margin: 7px;" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Add Employee</button></div>
           <div class="table-responsive">
