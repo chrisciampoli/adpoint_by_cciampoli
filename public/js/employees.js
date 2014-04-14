@@ -23,7 +23,14 @@ $(function(){
         getScheduleUrl = 'user/home/getSchedule',
         postScheduleUrl = 'user/home/postSchedule',
         updateScheduleUrl = 'user/home/updateSchedule',
-        debug = true;
+        debug = true,
+        first_name = $('#inputFirstName'),
+        last_name = $('#inputLastName'),
+        email = $('#inputEmail'),
+        phone = $('#inputPhone'),
+        password = $('#inputPassword'),
+        password_confirm = $('#inputPasswordConfirmation'),
+        company = $('#hiddinInputCompany');
 
 
     $('#calendar').bic_calendar({
@@ -50,17 +57,7 @@ $(function(){
     });
 
    $('body').on('click','#employeeSaveBtn',function(e) {
-       
-       var first_name = $('#inputFirstName').val(),
-           last_name = $('#inputLastName').val(),
-           email = $('#inputEmail').val(),
-           phone = $('#inputPhone').val(),
-           password = $('#inputPassword').val(),
-           password_confirm = $('#inputPasswordConfirmation').val(),
-           company = $('#hiddinInputCompany').val();
-
-        saveEmployee(first_name, last_name, email, company, phone, password, password_confirm);
-
+        saveEmployee(first_name.val(), last_name.val(), email.val(), company.val(), phone.val(), password.val(), password_confirm.val());
    });
 
    /*
@@ -128,27 +125,21 @@ $(function(){
             if(debug===true) console.log('Employee saved successfully');
             $('#myModal').modal('toggle');
             $('#employee_table').append('<tr><td>Testing</td></tr>')
+            renderRow(first_name, last_name, email, phone);
         }
 
     }
 
     function saveEmployeeFailure(data) {
-        alert('Could not create employee!');
-        console.log("Errors: " + data.errors);
+
         if(debug===true) console.log('Could not save employee');
-        var first_name = $('#inputFirstName'),
-            first_name_error = data.errors.match(/first_name/i),
-            last_name = $('#inputLastName'),
+        
+        var first_name_error = data.errors.match(/first_name/i),
             last_name_error = data.errors.match(/last_name/i)
-            email = $('#inputEmail'),
             email_error = data.errors.match(/email/i),
-            phone = $('#inputPhone'),
             phone_error = data.errors.match(/phone/i),
-            password = $('#inputPassword'),
             password_error = data.errors.match(/password/i),
-            password_confirm = $('#inputPasswordConfirmation'),
-            password_confirm_error = data.errors.match(/password_confirm/i),
-            company = $('#hiddinInputCompany');
+            password_confirm_error = data.errors.match(/password_confirm/i);
 
 
         if(first_name_error) {
@@ -205,8 +196,8 @@ $(function(){
         
     }
 
-    function renderRows() {
-        
+    function renderRows(first_name, last_name, email, phone) {
+           
     }
 
     function renderDialog() {
