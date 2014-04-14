@@ -209,8 +209,9 @@ $(function(){
     }
 
     function renderRow(first_name, last_name, email, phone) {
-           var row = '<tr><td>'+first_name+' '+last_name+'</td><td>'+phone+'</td><td>'+email+'</td><td><button data-toggle="modal" data-target="#editScheduleModal" type="button" class="check_avail btn btn-primary btn-sm"><div class="datepicker" id="datepicker_1" rel="1"></div><span class="glyphicon glyphicon-calendar"></span> Schedule</button></td><td>edit | remove/td>';
+           var row = '<tr><td>'+ucfirst(first_name)+' '+ucfirst(last_name)+'</td><td>'+phone+'</td><td>'+email+'</td><td><button data-toggle="modal" data-target="#editScheduleModal" type="button" class="check_avail btn btn-primary btn-sm"><div class="datepicker" id="datepicker_1" rel="1"></div><span class="glyphicon glyphicon-calendar"></span> Schedule</button></td><td><button type="button" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-pencil"></span> Edit</button><button type="button" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> Remove</button></td>';
            $('#employee_table').append(row).fadeIn();
+           
 
     }
 
@@ -228,6 +229,20 @@ $(function(){
                 success(data);
             }
         });
+    }
+
+    function ucfirst(str) {
+      //  discuss at: http://phpjs.org/functions/ucfirst/
+      // original by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+      // bugfixed by: Onno Marsman
+      // improved by: Brett Zamir (http://brett-zamir.me)
+      //   example 1: ucfirst('kevin van zonneveld');
+      //   returns 1: 'Kevin van zonneveld'
+
+      str += '';
+      var f = str.charAt(0)
+        .toUpperCase();
+      return f + str.substr(1);
     }
 
 });
