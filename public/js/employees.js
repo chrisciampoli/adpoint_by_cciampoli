@@ -30,8 +30,17 @@ $(function(){
         phone = $('#inputPhone'),
         password = $('#inputPassword'),
         password_confirm = $('#inputPasswordConfirmation'),
-        company = $('#hiddinInputCompany');
+        company = $('#hiddinInputCompany'),
+        form_input = $('.form_input');
 
+    // onBlur handlers for focus/removal of red border
+    form_input.on('blur',function(e){
+        if($(this).val() == '') {
+            $(this).css('border','2px solid red');
+        } else {
+            $(this).css('border','');
+        }
+    });
 
     $('#calendar').bic_calendar({
         events: events,
