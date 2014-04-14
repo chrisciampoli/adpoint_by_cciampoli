@@ -118,7 +118,7 @@ $(function(){
     }
 
     function saveEmployeeSuccess(data) {
-        console.log(data);
+
         if(data.status === 'failure') {
             saveEmployeeFailure(data);
         } else {
@@ -143,9 +143,7 @@ $(function(){
            password = $('#inputPassword').val(),
            password_confirm = $('#inputPasswordConfirmation').val(),
            company = $('#hiddinInputCompany').val();
-        $.each(data.errors, function() {
-            console.log(this);
-        });
+        console.log(typeof(data.errors));
     }
 
     function removeEmployee() {
