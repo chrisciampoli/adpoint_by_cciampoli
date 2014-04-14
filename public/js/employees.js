@@ -211,7 +211,8 @@ $(function(){
     }
 
     function renderRows(first_name, last_name, email, phone) {
-           
+           var row = '<tr><td>'+first_name+' '+last_name+'</td><td>'+phone+'</td><td>'+email+'</td><td>availability</td><td>edit | remove</td>';
+           $('#employee_table').append(row);
     }
 
     function renderDialog() {
