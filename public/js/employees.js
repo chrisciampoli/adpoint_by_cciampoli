@@ -136,14 +136,41 @@ $(function(){
         alert('Could not create employee!');
         console.log("Errors: " + data.errors);
         if(debug===true) console.log('Could not save employee');
-        var first_name = $('#inputFirstName').val(),
-           last_name = $('#inputLastName').val(),
-           email = $('#inputEmail').val(),
-           phone = $('#inputPhone').val(),
-           password = $('#inputPassword').val(),
-           password_confirm = $('#inputPasswordConfirmation').val(),
-           company = $('#hiddinInputCompany').val();
-        window.data = data.errors;
+        var first_name = $('#inputFirstName'),
+           last_name = $('#inputLastName'),
+           email = $('#inputEmail'),
+           phone = $('#inputPhone'),
+           password = $('#inputPassword'),
+           password_confirm = $('#inputPasswordConfirmation'),
+           company = $('#hiddinInputCompany'),
+
+        if(data.errors.match(/first_name/i)) {
+            first_name.css('border','2px solid red');
+        }
+
+        if(data.errors.match(/last_name/i)) {
+            last_name.css('border','2px solid red');
+        }
+
+        if(data.errors.match(/email/i)) {
+            email.css('border','2px solid red');
+        }
+
+        if(data.errors.match(/phone/i)) {
+            phone.css('border','2px solid red');
+        }
+
+        if(data.errors.match(/password/i)) {
+            password.css('border','2px solid red');
+        }
+
+        if(data.errors.match(/password_confirm/i)) {
+            password.css('border','2px solid red');
+        }
+
+
+
+
     }
 
     function removeEmployee() {
