@@ -135,7 +135,17 @@ $(function(){
     function saveEmployeeFailure(data) {
         alert('Could not create employee!');
         console.log("Errors: " + data.errors);
-        if(debug===true) console.log('Could not save employee');   
+        if(debug===true) console.log('Could not save employee');
+        var first_name = $('#inputFirstName').val(),
+           last_name = $('#inputLastName').val(),
+           email = $('#inputEmail').val(),
+           phone = $('#inputPhone').val(),
+           password = $('#inputPassword').val(),
+           password_confirm = $('#inputPasswordConfirmation').val(),
+           company = $('#hiddinInputCompany').val();
+        $.each(data.errors, function() {
+            console.log(this);
+        });
     }
 
     function removeEmployee() {
