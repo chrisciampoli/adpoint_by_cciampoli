@@ -117,11 +117,24 @@ $(function(){
         if(debug===true) console.log('Saving employee....');
     }
 
-    function saveEmployeeSuccess() {
-        if(debug===true) console.log('Employee saved successfully');
+    function saveEmployeeSuccess(data) {
+
+        if(data.message === 'failure') {
+            saveEmployeeFailure(data);
+        } else {
+            // Notify user that user(employee) was added
+            // append a new row to the employee table
+            alert('Employee created successfully!');
+            if(debug===true) console.log('Employee saved successfully');
+            $('#myModal').modal('toggle');
+            $('#employee_table').append('<tr><td>Testing</td></tr>')
+        }
+
     }
 
-    function saveEmployeeFailure() {
+    function saveEmployeeFailure(data) {
+        alert('Could not create employee!');
+        console.log(data);
         if(debug===true) console.log('Could not save employee');   
     }
 
