@@ -69,6 +69,11 @@ $(function(){
         saveEmployee(first_name.val(), last_name.val(), email.val(), company.val(), phone.val(), password.val(), password_confirm.val());
    });
 
+   $('body').on('click','.day',function(e){
+        $('#editDayModal').modal('toggle');
+   });
+
+
    /*
  * Pull list of employees from db and returns json
  */

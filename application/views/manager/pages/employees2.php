@@ -5,7 +5,7 @@
     };
 </script>
 <div class="container-fluid">
-        <div><h2 class="sub-header" style="display: inline">Employees</h2><button style="float:right;margin: 7px;" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Add Employee</button></div>
+        <div><h2 class="sub-header" style="display: inline">Employees</h2><button style="float:right;margin: 7px;" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addEmployeeModal">Add Employee</button></div>
           <div class="table-responsive">
             <table class="table table-striped" id="employee_table">
               <thead>
@@ -24,7 +24,7 @@
                   <td><?=$employee['phone'];?></td>
                   <td><?=$employee['email'];?></td>
                   <td>
-                      <button data-toggle="modal" data-target="#addEmployeeModal" type="button" rel="<?=$employee['id'];?>" class="check_avail btn btn-primary btn-sm">
+                      <button data-toggle="modal" data-target="#editScheduleModal" type="button" rel="<?=$employee['id'];?>" class="check_avail btn btn-primary btn-sm">
                           <div class="datepicker" id="datepicker_1" rel="1"></div>
                           <span class="glyphicon glyphicon-calendar"></span> Schedule
                       </button>
@@ -76,7 +76,7 @@
       </div>
     </div>
     <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="addEmployeeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
@@ -131,7 +131,7 @@
     </div>
   </div>
 </div>
-<div class="modal fade" id="addEmployeeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="editScheduleModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
@@ -140,6 +140,23 @@
       </div>
       <div class="modal-body">
         <div id="calendar"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="editDayModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Edit Day</h4>
+      </div>
+      <div class="modal-body">
+        Edit Day
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
