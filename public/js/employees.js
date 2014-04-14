@@ -118,7 +118,7 @@ $(function(){
     }
 
     function saveEmployeeSuccess(data) {
-
+        console.log(data);
         if(data.status === 'failure') {
             saveEmployeeFailure(data);
         } else {
