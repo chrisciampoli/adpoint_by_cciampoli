@@ -138,8 +138,7 @@ $(function(){
             alert('Employee created successfully!');
             if(debug===true) console.log('Employee saved successfully');
             $('#myModal').modal('toggle');
-            $('#employee_table').append('<tr><td>Testing</td></tr>')
-            renderRow(first_name, last_name, email, phone);
+            renderRow(first_name.val(), last_name.val(), email.val(), phone.val());
         }
 
     }
