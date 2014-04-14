@@ -137,41 +137,41 @@ $(function(){
         console.log("Errors: " + data.errors);
         if(debug===true) console.log('Could not save employee');
         var first_name = $('#inputFirstName'),
-            first_name.status = data.errors.match(/first_name/i),
+            first_name_error = data.errors.match(/first_name/i),
             last_name = $('#inputLastName'),
-            last_name.status = data.errors.match(/last_name/i)
+            last_name_error = data.errors.match(/last_name/i)
             email = $('#inputEmail'),
-            email.status = data.errors.match(/email/i),
+            email_error = data.errors.match(/email/i),
             phone = $('#inputPhone'),
-            phone.status = data.errors.match(/phone/i),
+            phone_error = data.errors.match(/phone/i),
             password = $('#inputPassword'),
-            password.status = data.errors.match(/password/i),
+            password_error = data.errors.match(/password/i),
             password_confirm = $('#inputPasswordConfirmation'),
-            password_confirm.status = data.errors.match(/password_confirm/i),
+            password_confirm_error = data.errors.match(/password_confirm/i),
             company = $('#hiddinInputCompany');
 
 
-        if(first_name.status) {
+        if(first_name_error) {
             first_name.css('border','2px solid red');
         }
 
-        if(last_name.status) {
+        if(last_name_error) {
             last_name.css('border','2px solid red');
         }
 
-        if(email.status) {
+        if(email_error) {
             email.css('border','2px solid red');
         }
 
-        if(phone.status) {
+        if(phone_error) {
             phone.css('border','2px solid red');
         }
 
-        if(password.status) {
+        if(password_error) {
             password.css('border','2px solid red');
         }
 
-        if(password_confirm.status) {
+        if(password_confirm_error) {
             password_confirm.css('border','2px solid red');
         }
 
