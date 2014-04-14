@@ -209,7 +209,7 @@ $(function(){
     }
 
     function renderRow(first_name, last_name, email, phone) {
-           var row = '<tr><td>'+ucfirst(first_name)+' '+ucfirst(last_name)+'</td><td>'+phone+'</td><td>'+email+'</td><td><button data-toggle="modal" data-target="#editScheduleModal" type="button" class="check_avail btn btn-primary btn-sm"><div class="datepicker" id="datepicker_1" rel="1"></div><span class="glyphicon glyphicon-calendar"></span> Schedule</button></td><td><button type="button" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-pencil"></span> Edit</button><button type="button" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> Remove</button></td>';
+           var row = '<tr><td>'+ucfirst(first_name)+' '+ucfirst(last_name)+'</td><td>'+phone+'</td><td>'+email+'</td><td><button data-toggle="modal" data-target="#editScheduleModal" type="button" class="check_avail btn btn-primary btn-sm"><div class="datepicker" id="datepicker_1" rel="1"></div><span class="glyphicon glyphicon-calendar"></span> Schedule</button></td><td><button type="button" style="margin-right:4px;" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-pencil"></span> Edit</button><button type="button" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> Remove</button></td>';
            $('#employee_table').append(row).fadeIn();
            
 
