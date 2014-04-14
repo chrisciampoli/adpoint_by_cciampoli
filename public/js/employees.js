@@ -119,7 +119,7 @@ $(function(){
 
     function saveEmployeeSuccess(data) {
 
-        if(data.message === 'failure') {
+        if(data.status === 'failure') {
             saveEmployeeFailure(data);
         } else {
             // Notify user that user(employee) was added
@@ -134,7 +134,7 @@ $(function(){
 
     function saveEmployeeFailure(data) {
         alert('Could not create employee!');
-        console.log(data);
+        console.log("Errors: " + data.errors);
         if(debug===true) console.log('Could not save employee');   
     }
 
