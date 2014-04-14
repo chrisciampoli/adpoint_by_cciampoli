@@ -135,9 +135,8 @@ $(function(){
         } else {
             // Notify user that user(employee) was added
             // append a new row to the employee table
-            alert('Employee created successfully!');
             if(debug===true) console.log('Employee saved successfully');
-            $('#myModal').modal('toggle');
+            $('#addEmployeeModal').modal('toggle');
             renderRow(first_name.val(), last_name.val(), email.val(), phone.val());
         }
 
@@ -210,12 +209,9 @@ $(function(){
     }
 
     function renderRow(first_name, last_name, email, phone) {
-           var row = '<tr><td>'+first_name+' '+last_name+'</td><td>'+phone+'</td><td>'+email+'</td><td>availability</td><td>edit | remove</td>';
-           $('#employee_table').append(row);
-    }
+           var row = '<tr><td>'+first_name+' '+last_name+'</td><td>'+phone+'</td><td>'+email+'</td><td>availability</td><td><button data-toggle="modal" data-target="#editScheduleModal" type="button" class="check_avail btn btn-primary btn-sm"><div class="datepicker" id="datepicker_1" rel="1"></div><span class="glyphicon glyphicon-calendar"></span> Schedule</button>/td>';
+           $('#employee_table').append(row).fadeIn();
 
-    function renderDialog() {
-        
     }
 
     // Universal Ajax Method
