@@ -137,35 +137,42 @@ $(function(){
         console.log("Errors: " + data.errors);
         if(debug===true) console.log('Could not save employee');
         var first_name = $('#inputFirstName'),
-           last_name = $('#inputLastName'),
-           email = $('#inputEmail'),
-           phone = $('#inputPhone'),
-           password = $('#inputPassword'),
-           password_confirm = $('#inputPasswordConfirmation'),
-           company = $('#hiddinInputCompany'),
+            first_name.status = data.errors.match(/first_name/i),
+            last_name = $('#inputLastName'),
+            last_name.status = data.errors.match(/last_name/i)
+            email = $('#inputEmail'),
+            email.status = data.errors.match(/email/i),
+            phone = $('#inputPhone'),
+            phone.status = data.errors.match(/phone/i),
+            password = $('#inputPassword'),
+            password.status = data.errors.match(/password/i),
+            password_confirm = $('#inputPasswordConfirmation'),
+            password_confirm.status = data.errors.match(/password_confirm/i),
+            company = $('#hiddinInputCompany');
 
-        if(data.errors.match(/first_name/i)) {
+
+        if(first_name.status) {
             first_name.css('border','2px solid red');
         }
 
-        if(data.errors.match(/last_name/i)) {
+        if(last_name.status) {
             last_name.css('border','2px solid red');
         }
 
-        if(data.errors.match(/email/i)) {
+        if(email.status) {
             email.css('border','2px solid red');
         }
 
-        if(data.errors.match(/phone/i)) {
+        if(phone.status) {
             phone.css('border','2px solid red');
         }
 
-        if(data.errors.match(/password/i)) {
+        if(password.status) {
             password.css('border','2px solid red');
         }
 
-        if(data.errors.match(/password_confirm/i)) {
-            password.css('border','2px solid red');
+        if(password_confirm.status) {
+            password_confirm.css('border','2px solid red');
         }
 
 
