@@ -209,7 +209,7 @@ $(function(){
     }
 
     function renderRow(first_name, last_name, email, phone) {
-           var row = '<tr><td>'+first_name+' '+last_name+'</td><td>'+phone+'</td><td>'+email+'</td><td>availability</td><td><button data-toggle="modal" data-target="#editScheduleModal" type="button" class="check_avail btn btn-primary btn-sm"><div class="datepicker" id="datepicker_1" rel="1"></div><span class="glyphicon glyphicon-calendar"></span> Schedule</button>/td>';
+           var row = '<tr><td>'+first_name+' '+last_name+'</td><td>'+phone+'</td><td>'+email+'</td><td><button data-toggle="modal" data-target="#editScheduleModal" type="button" class="check_avail btn btn-primary btn-sm"><div class="datepicker" id="datepicker_1" rel="1"></div><span class="glyphicon glyphicon-calendar"></span> Schedule</button></td><td>edit | remove/td>';
            $('#employee_table').append(row).fadeIn();
 
     }
