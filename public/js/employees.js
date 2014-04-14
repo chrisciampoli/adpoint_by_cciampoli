@@ -143,7 +143,7 @@ $(function(){
            password = $('#inputPassword').val(),
            password_confirm = $('#inputPasswordConfirmation').val(),
            company = $('#hiddinInputCompany').val();
-        console.log($.parseJSON(data.errors));
+        window.data = data.errors;
     }
 
     function removeEmployee() {
