@@ -101,8 +101,11 @@ $(function(){
    }
 
    function saveSchedule(data) {
+    var schedule = {
+        "schedule": data
+    };
        try {
-           postData(postScheduleUrl, "POST", "json", data, saveScheduleBeforeSend, saveScheduleSuccess);
+           postData(postScheduleUrl, "POST", "json", schedule, saveScheduleBeforeSend, saveScheduleSuccess);
        } catch(err) {
            if(debug === true) console.log('could not save schedule: Error: ' + err);
        }
