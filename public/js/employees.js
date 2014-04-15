@@ -2,6 +2,15 @@ $(function(){
     
     var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
         dayNames = ["S", "M", "T", "W", "T", "F", "S"],
+        
+        events = [
+            {
+              date: '28/4/2014',
+              title: 'location',
+              color: "#333",
+              content: "test"
+            }
+        ],
         getEmployeeUrl = 'user/home/getEmployee',
         postEmployeeUrl = config.base + 'manager/home/ajaxPostEmployee',
         updateEmployeeUrl = 'user/home/updateEmployee',
@@ -21,14 +30,6 @@ $(function(){
         presetDays = '',
         currentDay = '';
 
-    window.events = [
-            {
-              date: '28/4/2014',
-              title: 'location',
-              color: "#333",
-              content: "test"
-            }
-        ],
 
 
     // onBlur handlers for focus/removal of red border
@@ -41,7 +42,7 @@ $(function(){
     });
 
     $('#calendar').bic_calendar({
-        events: window.events,
+        events: events,
         //enable select
         enableSelect: true,
         //set day names
@@ -90,13 +91,13 @@ $(function(){
    });
 
    function setDay(date, shift_start, shift_end, location) {
-        window.events.push( 
+        events.push( 
         {
-              date: '23/4/2014',
-              title: 'location',
-              color: "#333",
-              content: "test"
-            });
+            date: date,
+            title: location,
+            color: "#333",
+            content: shift_start + '-' + shift_end
+        });
    }
 
    function setSchedule() {
