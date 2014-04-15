@@ -5,7 +5,6 @@ class Home extends User_Controller {
     function __constructor() {
         parent::_constructor();
         $this->load->library('session');
-        $this->load->model('mdl_employees');
     }
     
     function index() {
@@ -18,8 +17,8 @@ class Home extends User_Controller {
 
     public function getCompanyEmployees() {
     
-        $result = $this->mdl_employees->getCompanyEmployees();
-
+        $this->load->model('mdl_employees','employees');
+        $result = $this->employees->getCompanyEmployees();
         return $result;
 
     }
