@@ -82,7 +82,8 @@ $(function(){
    });
 
    $('body').on('click','#scheduleSaveBtn', function(e){
-       saveSchedule(events);
+       saveSchedule(targetEmployee, events);
+       targetEmployee = '';
    });
 
    $('body').on('click','.check_avail',function(){
@@ -110,8 +111,9 @@ $(function(){
         window.test = events;
    }
 
-   function saveSchedule(data) {
+   function saveSchedule(username, data) {
     var schedule = {
+        "username": username,
         "schedule": data
     };
        try {

@@ -156,6 +156,7 @@ class Home extends Manager_Controller {
     }
 
     public function ajaxPostSchedule() {
+        $username = $this->input->post('username');
         $schedule = $this->input->post('schedule');
         $this->mdl_schedule->postSchedule($this->session->userdata('username'), $schedule);
         return true;
