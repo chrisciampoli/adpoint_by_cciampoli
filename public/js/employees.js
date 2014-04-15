@@ -11,6 +11,7 @@ $(function(){
               content: "test"
             }
         ],
+
         getEmployeeUrl = 'user/home/getEmployee',
         postEmployeeUrl = config.base + 'manager/home/ajaxPostEmployee',
         updateEmployeeUrl = 'user/home/updateEmployee',
@@ -91,6 +92,10 @@ $(function(){
    });
 
    function setDay(date, shift_start, shift_end, location) {
+        
+        var date = date.split('/');
+            date = date[1] + '/' + date[0] + '/' + date[2];    
+
         events.push( 
         {
             date: date,
