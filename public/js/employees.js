@@ -86,7 +86,11 @@ $(function(){
    });
 
    $('body').on('click','.check_avail',function(){
+        
         targetEmployee = $(this).attr('rel');
+        targetEmployee = targetEmployee.split('|');
+        targetEmployee = targetEmployee[1];
+
         console.log('Target Employee: ' + targetEmployee);
    });
 
