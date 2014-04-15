@@ -96,6 +96,8 @@ $(function(){
             color: "#333",
             content: shift_start + '-' + shift_end
         });
+
+        window.test = events;
    }
 
    function setSchedule() {
