@@ -104,8 +104,8 @@ $(function() {
                     displayYearController: true,
                     //change calendar to english format
                     startWeekDay: 1
-                  }
                 });
+                
             } else {
                 $('#working').html('No schedule found!  Please contact your manager.');
                 $('#hours').html('*-*');
