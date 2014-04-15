@@ -2,6 +2,26 @@ $(function(){
     
     var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
         dayNames = ["S", "M", "T", "W", "T", "F", "S"],
+        /*
+        {
+            date: "11/3/2014",
+            title: "Starbucks: College",
+            color: "#333",
+            content: '4:30PM - 10:30PM'
+        },
+        {
+            date: "12/3/2014",
+            title: "Starbucks: College",
+            color: "#333",
+            content: '6:30PM - 10:30PM'
+        },
+        {
+            date: "13/3/2014",
+            title: "Starbucks: College",
+            color: "#333",
+            content: '5:30PM - 10:30PM'
+        }
+        */
         events = [
             {
                 date: "28/12/2013",

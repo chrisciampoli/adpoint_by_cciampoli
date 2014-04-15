@@ -126,7 +126,26 @@
         <h4 class="modal-title" id="myModalLabel">Edit Day</h4>
       </div>
       <div class="modal-body">
-        Edit Day
+        <form class="form-horizontal">
+          <div class="control-group">
+            <label class="control-label" for="inputLastName">Location</label>
+            <div class="controls">
+              <input class="form_input" type="text" id="inputLastName" placeholder="Mission Valley">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="inputEmail">Shift Start</label>
+            <div class="controls">
+              <input class="form_input" type="email" id="inputEmail" placeholder="5:30PM">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="inputPhone">Shift End</label>
+            <div class="controls">
+              <input class="form_input" type="text" id="inputPhone" placeholder="10:30PM">
+            </div>
+          </div>
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
