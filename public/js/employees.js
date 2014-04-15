@@ -3,14 +3,7 @@ $(function(){
     var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
         dayNames = ["S", "M", "T", "W", "T", "F", "S"],
         
-        events = [
-            {
-              date: '28/4/2014',
-              title: 'location',
-              color: "#333",
-              content: "test"
-            }
-        ],
+        events = [],
 
         getEmployeeUrl = 'user/home/getEmployee',
         postEmployeeUrl = config.base + 'manager/home/ajaxPostEmployee',
