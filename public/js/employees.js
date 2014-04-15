@@ -108,6 +108,14 @@ $(function(){
        }
    }
 
+   function saveScheduleBeforeSend() {
+        return true;
+   }
+
+   function saveScheduleSuccess() {
+        return true;
+   }
+
    /*
  * Pull list of employees from db and returns json
  */
