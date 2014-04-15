@@ -29,7 +29,8 @@ $(function(){
         company = $('#hiddinInputCompany'),
         form_input = $('.form_input'),
         presetDays = '',
-        currentDay = '';
+        currentDay = '',
+        targetEmployee = '';
 
 
 
@@ -82,6 +83,11 @@ $(function(){
 
    $('body').on('click','#scheduleSaveBtn', function(e){
        saveSchedule(events);
+   });
+
+   $('body').on('click','.check_avail',function(){
+        targetEmployee = $(this).attr('rel');
+        console.log('Target Employee: ' + targetEmployee);
    });
 
    function setDay(date, shift_start, shift_end, location) {
