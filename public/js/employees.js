@@ -92,7 +92,7 @@ $(function(){
             date: date,
             title: location,
             color: "#333",
-            content: shift_start + '-' shift_end
+            content: shift_start + '-' + shift_end
         });
    }
 
