@@ -2,21 +2,6 @@ $(function(){
     
     var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
         dayNames = ["S", "M", "T", "W", "T", "F", "S"],
-        
-        window.events = [
-            {
-                date: "28/12/2013",
-                title: 'SPORT & WELLNESS',
-                link: 'http://bic.cat',
-                linkTarget: '_blank',
-                color: '',
-                content: '<\img src="http://gettingcontacts.com/upload/jornadas/sport-wellness_portada.png" ><\br>06-11-2013 - 09:00 <\br> Tecnocampus Mataró Auditori',
-                class: '',
-                displayMonthController: true,
-                displayYearController: true,
-                nMonths: 6
-            }
-        ],
         getEmployeeUrl = 'user/home/getEmployee',
         postEmployeeUrl = config.base + 'manager/home/ajaxPostEmployee',
         updateEmployeeUrl = 'user/home/updateEmployee',
@@ -35,6 +20,21 @@ $(function(){
         form_input = $('.form_input'),
         presetDays = '',
         currentDay = '';
+
+    window.events = [
+            {
+                date: "28/12/2013",
+                title: 'SPORT & WELLNESS',
+                link: 'http://bic.cat',
+                linkTarget: '_blank',
+                color: '',
+                content: '<\img src="http://gettingcontacts.com/upload/jornadas/sport-wellness_portada.png" ><\br>06-11-2013 - 09:00 <\br> Tecnocampus Mataró Auditori',
+                class: '',
+                displayMonthController: true,
+                displayYearController: true,
+                nMonths: 6
+            }
+        ];
 
 
 
