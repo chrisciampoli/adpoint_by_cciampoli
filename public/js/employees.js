@@ -17,7 +17,7 @@ $(function(){
         updateEmployeeUrl = 'user/home/updateEmployee',
         removeEmployeeUrl = 'user/home/removeEmployee',
         getScheduleUrl = 'user/home/getSchedule',
-        postScheduleUrl = 'user/home/postSchedule',
+        postScheduleUrl = config.base + 'manager/home/ajaxPostSchedule',
         updateScheduleUrl = 'user/home/updateSchedule',
         debug = true,
         first_name = $('#inputFirstName'),
@@ -81,7 +81,7 @@ $(function(){
    });
 
    $('body').on('click','#scheduleSaveBtn', function(e){
-       setSchedule(presetDays);
+       saveSchedule(events);
    });
 
    function setDay(date, shift_start, shift_end, location) {
@@ -100,8 +100,12 @@ $(function(){
         window.test = events;
    }
 
-   function setSchedule() {
-
+   function saveSchedule(data) {
+       try {
+           postData(postScheduleUrl, "POST", "json", data, saveScheduleBeforeSend, saveScheduleSuccess);
+       } catch(err) {
+           if(debug === true) console.log('could not save schedule: Error: ' + err);
+       }
    }
 
    /*

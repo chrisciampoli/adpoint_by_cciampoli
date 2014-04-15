@@ -12,6 +12,7 @@ class Home extends Manager_Controller {
 
         $this->load->library('session');
         $this->load->model('mdl_employees');
+        $this->load->model('mdl_schedule');
     }
     
     function index() {
@@ -152,6 +153,12 @@ class Home extends Manager_Controller {
     public function ajaxUpdateEmployee() {
         echo json_encode($response);
         exit();
+    }
+
+    public function ajaxPostSchedule() {
+        $schedule = $this->input->post('schedule');
+        $this->mdl_schedule->postSchedule($this->session->userdata('username'), $schedule);
+        return true;
     }
     
 }
