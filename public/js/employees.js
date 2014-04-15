@@ -54,15 +54,8 @@ $(function(){
         showDays: true,
         //show month controller
         displayMonthController: true,
-        //show year controller
-        displayYearController: true,
         //change calendar to english format
-        startWeekDay: 1,
-        //set ajax call
-        reqAjax: {
-            type: 'get',
-            url: 'http://bic.cat/bic_calendar/index.php'
-        }
+        startWeekDay: 1
     });
 
    $('body').on('click','#employeeSaveBtn',function(e) {
