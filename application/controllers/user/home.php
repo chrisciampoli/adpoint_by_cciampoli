@@ -5,14 +5,23 @@ class Home extends User_Controller {
     function __constructor() {
         parent::_constructor();
         $this->load->library('session');
+        $this->load->model('mdl_employees');
     }
     
     function index() {
         $this->load->model('mdl_schedule');
-        $data['employees'] = $this->mdl_schedule->getEmployees();
+        $data['employees'] = $this->getCompanyEmployees();
         $data['requests'] = $this->getRequests();
         $data['username'] = $this->session->userdata('username');
         $this->load->view('user/index.php',$data);
+    }
+
+    public function getCompanyEmployees() {
+    
+        $result = $this->mdl_employees->getCompanyEmployees();
+
+        return $result;
+
     }
     
     function getSchedule($username = null) {
