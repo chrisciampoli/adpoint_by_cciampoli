@@ -57,7 +57,9 @@ $(function() {
                     events = $.parseJSON(parsed[0].schedule),
                     monthNames = [],
                     dayNames = [];
-            
+                
+                window.test = events;
+
                 $.each(events, function(i, e) {
                     if (myDate === e.date) {
                         working = true;
@@ -101,12 +103,8 @@ $(function() {
                     //show year controller
                     displayYearController: true,
                     //change calendar to english format
-                    startWeekDay: 1,
-                    //set ajax call
-                    reqAjax: {
-                        type: 'get',
-                        url: 'http://bic.cat/bic_calendar/index.php'
-                    }
+                    startWeekDay: 1
+                  }
                 });
             } else {
                 $('#working').html('No schedule found!  Please contact your manager.');
