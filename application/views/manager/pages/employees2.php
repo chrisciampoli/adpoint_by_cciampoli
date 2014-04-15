@@ -128,21 +128,21 @@
       <div class="modal-body">
         <form class="form-horizontal">
           <div class="control-group">
-            <label class="control-label" for="inputLastName">Location</label>
+            <label class="control-label" for="inputLocation">Location</label>
             <div class="controls">
-              <input class="form_input" type="text" id="inputLastName" placeholder="Mission Valley">
+              <input class="form_input" type="text" id="inputLocation" placeholder="Mission Valley">
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="inputEmail">Shift Start</label>
+            <label class="control-label" for="inputShiftStart">Shift Start</label>
             <div class="controls">
-              <input class="form_input" type="email" id="inputEmail" placeholder="5:30PM">
+              <input class="form_input" type="email" id="inputShiftStart" placeholder="5:30PM">
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="inputPhone">Shift End</label>
+            <label class="control-label" for="inputShiftEnd">Shift End</label>
             <div class="controls">
-              <input class="form_input" type="text" id="inputPhone" placeholder="10:30PM">
+              <input class="form_input" type="text" id="inputShiftEnd" placeholder="10:30PM">
             </div>
           </div>
         </form>

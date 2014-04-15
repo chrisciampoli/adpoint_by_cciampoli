@@ -33,7 +33,8 @@ $(function(){
         password_confirm = $('#inputPasswordConfirmation'),
         company = $('#hiddinInputCompany'),
         form_input = $('.form_input'),
-        presetDays = '';
+        presetDays = '',
+        currentDay = '';
 
 
 
@@ -74,10 +75,19 @@ $(function(){
    });
 
    $('body').on('click','.day',function(e){
+        currentDay = $(this).attr('data-date');
         $('#editDayModal').modal('toggle');
    });
 
    $('body').on('click','#daySaveBtn', function(e){
+        
+        date = currentDay;
+        currentDay = '';
+
+        var shift_start = $('#inputShiftStart').val(),
+            shift_end = $('#inputShiftEnd').val(),
+            location = $('#inputLocation').val();
+
        setDay(date, shift_start, shift_end, location);
        $('#editDayModal').modal('toggle');
    });
