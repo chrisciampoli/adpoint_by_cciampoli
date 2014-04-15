@@ -21,7 +21,14 @@ $(function(){
         presetDays = '',
         currentDay = '';
 
-    window.events = [];
+    window.events = [
+            {
+              date: '28/4/2014',
+              title: 'location',
+              color: "#333",
+              content: "test"
+            }
+        ],
 
 
     // onBlur handlers for focus/removal of red border
@@ -85,11 +92,11 @@ $(function(){
    function setDay(date, shift_start, shift_end, location) {
         window.events.push( 
         {
-            date: date,
-            title: location,
-            color: "#333",
-            content: shift_start + '-' + shift_end
-        });
+              date: '23/4/2014',
+              title: 'location',
+              color: "#333",
+              content: "test"
+            });
    }
 
    function setSchedule() {
