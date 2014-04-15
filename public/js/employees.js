@@ -3,7 +3,7 @@ $(function(){
     var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
         dayNames = ["S", "M", "T", "W", "T", "F", "S"],
         
-        events = [
+        window.events = [
             {
                 date: "28/12/2013",
                 title: 'SPORT & WELLNESS',
@@ -48,7 +48,7 @@ $(function(){
     });
 
     $('#calendar').bic_calendar({
-        events: events,
+        events: window.events,
         //enable select
         enableSelect: true,
         //set day names
@@ -97,7 +97,7 @@ $(function(){
    });
 
    function setDay(date, shift_start, shift_end, location) {
-        events.push( 
+        window.events.push( 
         {
             date: date,
             title: location,
