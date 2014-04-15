@@ -23,7 +23,7 @@ $(function(){
 
     window.events = [
             {
-                date: "28/12/2013",
+                date: "1/4/2014",
                 title: 'SPORT & WELLNESS',
                 link: 'http://bic.cat',
                 linkTarget: '_blank',
