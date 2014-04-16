@@ -108,7 +108,6 @@ $(function(){
             content: shift_start + '-' + shift_end
         });
 
-        window.test = events;
    }
 
    function getScheduleBeforeSend(data)
@@ -124,7 +123,7 @@ $(function(){
            schedule = this.schedule;
         });
         
-        if(debug === true) console.log('Schedule: ' + events);
+        if(debug === true) console.log('Schedule: ' + schedule);
         
         events = schedule;
 
