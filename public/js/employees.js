@@ -118,10 +118,8 @@ $(function(){
 
    function getScheduleSuccess(data)
    {
-      var parsed = $.parseJSON(data),
-          events = $.parseJSON(parsed[0].schedule);
-
-      return events;
+      console.log('Schedule: ' + data);
+      return true;
    }
 
    function getSchedule() 
