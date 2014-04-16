@@ -118,8 +118,12 @@ $(function(){
 
    function getScheduleSuccess(data)
    {
-     window.test = data;
-     return true;
+        var events = [];
+        $.each(data, function(){
+           events = this.schedule;
+        });
+    
+        return events;
    }
 
    function getSchedule() 
