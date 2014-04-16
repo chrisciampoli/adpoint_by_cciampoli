@@ -118,12 +118,17 @@ $(function(){
 
    function getScheduleSuccess(data)
    {
-        var events = [];
+        var schedule = [];
+
         $.each(data, function(){
-           events = this.schedule;
+           schedule = this.schedule;
         });
+        
         if(debug === true) console.log('Schedule: ' + events);
-        return events;
+        
+        events = schedule;
+
+        return true;
    }
 
    function getSchedule() 
