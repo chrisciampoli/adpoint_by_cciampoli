@@ -1,6 +1,11 @@
 $(function(){ 
-  
-    var getEmployeeUrl = 'user/home/getEmployee',
+    
+    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        dayNames = ["S", "M", "T", "W", "T", "F", "S"],
+        
+        events = [], // Replace with ternary calling getSchedule();
+
+        getEmployeeUrl = 'user/home/getEmployee',
         postEmployeeUrl = config.base + 'manager/home/ajaxPostEmployee',
         updateEmployeeUrl = 'user/home/updateEmployee',
         removeEmployeeUrl = 'user/home/removeEmployee',
@@ -21,6 +26,8 @@ $(function(){
         targetDay,
         targetEmployee = '';
 
+
+
     // onBlur handlers for focus/removal of red border
     form_input.on('blur',function(e){
         if($(this).val() == '') {
@@ -28,6 +35,22 @@ $(function(){
         } else {
             $(this).css('border','');
         }
+    });
+
+    $('#calendar').bic_calendar({
+        events: events,
+        //enable select
+        enableSelect: true,
+        //set day names
+        dayNames: dayNames,
+        //set month names
+        monthNames: monthNames,
+        //show dayNames
+        showDays: true,
+        //show month controller
+        displayMonthController: true,
+        //change calendar to english format
+        startWeekDay: 1
     });
 
    $('body').on('click','#employeeSaveBtn',function(e) {
@@ -67,26 +90,7 @@ $(function(){
         targetEmployee = targetEmployee.split('|');
         targetEmployee = targetEmployee[1];
 
-        var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-            dayNames = ["S", "M", "T", "W", "T", "F", "S"],
-            events = getSchedule() ? getSchedule() : []; // Replace with ternary calling getSchedule();
-
-
-        $('#calendar').bic_calendar({
-          events: events,
-          //enable select
-          enableSelect: true,
-          //set day names
-          dayNames: dayNames,
-          //set month names
-          monthNames: monthNames,
-          //show dayNames
-          showDays: true,
-          //show month controller
-          displayMonthController: true,
-          //change calendar to english format
-          startWeekDay: 1
-        });
+        events = getSchedule() ? getSchedule() : [];
 
         console.log('Target Employee: ' + targetEmployee);
    });
