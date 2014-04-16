@@ -1,6 +1,11 @@
 $(function(){ 
     
-    var getEmployeeUrl = 'user/home/getEmployee',
+    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        dayNames = ["S", "M", "T", "W", "T", "F", "S"],
+        
+        events = [], // Replace with ternary calling getSchedule();
+
+        getEmployeeUrl = 'user/home/getEmployee',
         postEmployeeUrl = config.base + 'manager/home/ajaxPostEmployee',
         updateEmployeeUrl = 'user/home/updateEmployee',
         removeEmployeeUrl = 'user/home/removeEmployee',
@@ -68,7 +73,10 @@ $(function(){
         targetEmployee = $(this).attr('rel');
         targetEmployee = targetEmployee.split('|');
         targetEmployee = targetEmployee[1];
-        getSchedule();
+
+        events = getSchedule() ? getSchedule() : [];
+
+        console.log('Target Employee: ' + targetEmployee);
    });
 
    function setDay(date, shift_start, shift_end, location) {
@@ -93,31 +101,17 @@ $(function(){
 
    function getScheduleSuccess(data)
    {
-        var events = [];
-            monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-            dayNames = ["S", "M", "T", "W", "T", "F", "S"];
-            
+        var schedule = [
+          {"date":"1\/4\/2014","title":"Mission Valley","color":"#333","content":"5:30PM-10:30PM"}
+        ];
+
         $.each(data, function(){
-           events = this.schedule;
+           schedule = this.schedule;
         });
         
-        if(debug === true) console.log('Schedule: ' + events);
-
-        $('#calendar').bic_calendar({
-          events: events,
-          //enable select
-          enableSelect: true,
-          //set day names
-          dayNames: dayNames,
-          //set month names
-          monthNames: monthNames,
-          //show dayNames
-          showDays: true,
-          //show month controller
-          displayMonthController: true,
-          //change calendar to english format
-          startWeekDay: 1
-        });
+        if(debug === true) console.log('Schedule: ' + schedule);
+        
+        events = schedule;
 
         return true;
    }
