@@ -122,7 +122,7 @@ $(function(){
         $.each(data, function(){
            events = this.schedule;
         });
-    
+        if(debug === true) console.log('Schedule: ' + events);
         return events;
    }
 
