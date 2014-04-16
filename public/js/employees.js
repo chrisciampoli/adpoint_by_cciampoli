@@ -35,7 +35,23 @@ $(function(){
         } else {
             $(this).css('border','');
         }
-    }); 
+    });
+
+    $('#calendar').bic_calendar({
+        events: events,
+        //enable select
+        enableSelect: true,
+        //set day names
+        dayNames: dayNames,
+        //set month names
+        monthNames: monthNames,
+        //show dayNames
+        showDays: true,
+        //show month controller
+        displayMonthController: true,
+        //change calendar to english format
+        startWeekDay: 1
+    });
 
    $('body').on('click','#employeeSaveBtn',function(e) {
         saveEmployee(first_name.val(), last_name.val(), email.val(), company.val(), phone.val(), password.val(), password_confirm.val());
@@ -101,9 +117,7 @@ $(function(){
 
    function getScheduleSuccess(data)
    {
-        var schedule = [
-          {"date":"1\/4\/2014","title":"Mission Valley","color":"#333","content":"5:30PM-10:30PM"}
-        ];
+        var schedule = [];
 
         $.each(data, function(){
            schedule = this.schedule;
