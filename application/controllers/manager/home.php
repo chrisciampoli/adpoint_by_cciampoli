@@ -117,7 +117,7 @@ class Home extends Manager_Controller {
             $additional_data = array(
                 'first_name' => $this->input->post('first_name'),
                 'last_name'  => $this->input->post('last_name'),
-                'company'    => $this->mdl_employees->getCompany();
+                'company'    => $this->mdl_employees->getCompany(),
                 'phone'      => $this->input->post('phone'),
             );
         }
