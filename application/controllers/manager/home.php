@@ -161,5 +161,25 @@ class Home extends Manager_Controller {
         $this->mdl_schedule->postSchedule($username, $schedule);
         return true;
     }
+
+    public function ajaxGetSchedule($username = null) {
+        
+        $username = $this->input->post('username');
+
+        if($username == null) {
+            return false;
+        }
+        
+        $schedule = $this->mdl_schedule->getSchedule($username);
+       /* 
+       //echo print_r(json_decode($schedule[0]["schedule"], true), true);
+        foreach(json_decode($schedule[0]["schedule"], true) as $day){
+            echo $day['date'] . "<br/>";
+        }
+        */
+        echo json_encode($schedule);
+        
+        return $schedule;
+    }
     
 }

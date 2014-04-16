@@ -3,13 +3,13 @@ $(function(){
     var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
         dayNames = ["S", "M", "T", "W", "T", "F", "S"],
         
-        events = [],
+        events = getSchedule() ? getSchedule() : [], // Replace with ternary calling getSchedule();
 
         getEmployeeUrl = 'user/home/getEmployee',
         postEmployeeUrl = config.base + 'manager/home/ajaxPostEmployee',
         updateEmployeeUrl = 'user/home/updateEmployee',
         removeEmployeeUrl = 'user/home/removeEmployee',
-        getScheduleUrl = 'user/home/getSchedule',
+        getScheduleUrl = config.base + "manager/home/ajaxGetSchedule",
         postScheduleUrl = config.base + 'manager/home/ajaxPostSchedule',
         updateScheduleUrl = 'user/home/updateSchedule',
         debug = true,
@@ -107,6 +107,31 @@ $(function(){
         });
 
         window.test = events;
+   }
+
+   function getScheduleBeforeSend(data)
+   {
+      return true;
+   }
+
+   function getScheduleSuccess(data)
+   {
+      var parsed = $.parseJSON(data),
+          events = $.parseJSON(parsed[0].schedule);
+
+      return events;
+   }
+
+   function getSchedule() 
+   {
+     var data = {
+      "username": targetEmployee
+     };
+       try {
+          postData(getScheduleUrl, "POST", "json", data, getScheduleBeforeSend, getScheduleSuccess);
+       } catch(err) {
+          if(debug===true) console.log('could not grab schedule: Error: ' + err);
+       }
    }
 
    function saveSchedule(username, data) {
