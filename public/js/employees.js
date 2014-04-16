@@ -118,7 +118,7 @@ $(function(){
 
    function getScheduleSuccess(data)
    {
-      console.log('Schedule: ' + $.parseJSON(data));
+      console.log('Schedule: ' + data.schedule);
       return true;
    }
 
