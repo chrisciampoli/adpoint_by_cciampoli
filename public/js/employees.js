@@ -90,9 +90,7 @@ $(function(){
         targetEmployee = targetEmployee.split('|');
         targetEmployee = targetEmployee[1];
 
-        events = getSchedule() ? getSchedule() : [];
-
-        console.log('Target Employee: ' + targetEmployee);
+        if(debug === true) console.log('Target Employee: ' + targetEmployee);
    });
 
    function setDay(date, shift_start, shift_end, location) {
@@ -124,8 +122,10 @@ $(function(){
         });
         
         if(debug === true) console.log('Schedule: ' + schedule);
-        
+
         events = schedule;
+
+        if(debug === true) console.log('Events is now set to: ' + events);
 
         return true;
    }
