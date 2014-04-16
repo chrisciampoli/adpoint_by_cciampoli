@@ -91,6 +91,9 @@ $(function(){
         targetEmployee = targetEmployee[1];
 
         if(debug === true) console.log('Target Employee: ' + targetEmployee);
+
+        getSchedule();
+
    });
 
    function setDay(date, shift_start, shift_end, location) {
