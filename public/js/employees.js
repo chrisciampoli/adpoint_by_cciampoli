@@ -24,7 +24,7 @@ $(function(){
         presetDays = '',
         currentDay,
         targetDay,
-        targetEmployee = '';
+        targetEmployee = 'pamela anderson';
 
 
 
@@ -86,9 +86,9 @@ $(function(){
 
    $('body').on('click','.check_avail',function(){
         
-        targetEmployee = $(this).attr('rel');
-        targetEmployee = targetEmployee.split('|');
-        targetEmployee = targetEmployee[1];
+       // targetEmployee = $(this).attr('rel');
+        //targetEmployee = targetEmployee.split('|');
+        //targetEmployee = targetEmployee[1];
 
         if(debug === true) console.log('Target Employee: ' + targetEmployee);
 
