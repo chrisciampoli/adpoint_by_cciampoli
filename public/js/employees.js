@@ -126,11 +126,11 @@ $(function(){
         
         if(debug === true) console.log('Schedule: ' + schedule);
 
-        events = schedule;
+        //events = schedule;
 
         if(debug === true) console.log('Events is now set to: ' + events);
 
-        return true;
+        return events;
    }
 
    function getSchedule() 
