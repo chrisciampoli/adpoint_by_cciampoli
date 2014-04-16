@@ -59,6 +59,7 @@ $(function(){
 
    $('body').on('click','.day',function(e){
         currentDay = $(this).attr('data-date');
+        targetDay = $(this);
         $('#editDayModal').modal('toggle');
    });
 
@@ -71,7 +72,8 @@ $(function(){
             shift_end = $('#inputShiftEnd').val(),
             location = $('#inputLocation').val();
        setDay(date, shift_start, shift_end, location);
-       targetDay.css('background-color','yellow');
+       if(debug === true) console.log('Target Day: ' . targetDay);
+       targetDay.css('background-color','red');
        targetDay = '';
        $('#editDayModal').modal('toggle');
    });
