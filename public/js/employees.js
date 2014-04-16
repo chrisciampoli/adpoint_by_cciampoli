@@ -22,7 +22,8 @@ $(function(){
         company = $('#hiddinInputCompany'),
         form_input = $('.form_input'),
         presetDays = '',
-        currentDay = '',
+        currentDay,
+        targetDay,
         targetEmployee = '';
 
 
@@ -69,13 +70,15 @@ $(function(){
         var shift_start = $('#inputShiftStart').val(),
             shift_end = $('#inputShiftEnd').val(),
             location = $('#inputLocation').val();
-
        setDay(date, shift_start, shift_end, location);
+       targetDay.css('background-color','yellow');
+       targetDay = '';
        $('#editDayModal').modal('toggle');
    });
 
    $('body').on('click','#scheduleSaveBtn', function(e){
        saveSchedule(targetEmployee, events);
+       $('#editScheduleModal').modal('toggle');
        targetEmployee = '';
    });
 
