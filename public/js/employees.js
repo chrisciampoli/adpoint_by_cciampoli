@@ -118,8 +118,8 @@ $(function(){
 
    function getScheduleSuccess(data)
    {
-      console.log('Schedule: ' + data.schedule);
-      return true;
+     window.test = data;
+     return true;
    }
 
    function getSchedule() 
