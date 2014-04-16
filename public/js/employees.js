@@ -1,6 +1,6 @@
 $(function(){ 
   
-        getEmployeeUrl = 'user/home/getEmployee',
+    var getEmployeeUrl = 'user/home/getEmployee',
         postEmployeeUrl = config.base + 'manager/home/ajaxPostEmployee',
         updateEmployeeUrl = 'user/home/updateEmployee',
         removeEmployeeUrl = 'user/home/removeEmployee',
