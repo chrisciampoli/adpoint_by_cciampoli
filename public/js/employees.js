@@ -84,6 +84,16 @@ $(function(){
 
    $('body').on('click','.event',function(){
       $('#inputLocation').val(($(this).find('a').attr('data-original-title')));
+      
+      var shiftStart,
+          shiftEnd,
+          splitted = $(this).find('a').attr('data-content').split('-');
+          
+          shiftStart = splitted[0];
+          shiftEnd = splitted[1];
+
+      $('#inputShiftStart').val(shiftStart);
+      $('#inputShiftEnd').val(shiftEnd);
    });
 
    function setDay(date, shift_start, shift_end, location) {
