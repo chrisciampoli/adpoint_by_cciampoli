@@ -1,9 +1,6 @@
 $(function(){ 
     
-    var //monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-        //dayNames = ["S", "M", "T", "W", "T", "F", "S"],
-        //events = [], // Replace with ternary calling getSchedule();
-        getEmployeeUrl = 'user/home/getEmployee',
+    var getEmployeeUrl = 'user/home/getEmployee',
         postEmployeeUrl = config.base + 'manager/home/ajaxPostEmployee',
         updateEmployeeUrl = 'user/home/updateEmployee',
         removeEmployeeUrl = 'user/home/removeEmployee',
@@ -22,10 +19,7 @@ $(function(){
         presetDays = '',
         currentDay,
         targetDay,
-        targetEmployee = '',
-        today = new Date(),
-        month = today.getMonth() + 1,
-        myDate = today.getDate() + '/' + month + '/' + today.getFullYear();
+        targetEmployee = '';
 
 
 
@@ -37,23 +31,7 @@ $(function(){
             $(this).css('border','');
         }
     });
-    /*
-    $('#calendar').bic_calendar({
-        events: events,
-        //enable select
-        enableSelect: true,
-        //set day names
-        dayNames: dayNames,
-        //set month names
-        monthNames: monthNames,
-        //show dayNames
-        showDays: true,
-        //show month controller
-        displayMonthController: true,
-        //change calendar to english format
-        startWeekDay: 1
-    });
-*/
+
    $('body').on('click','#employeeSaveBtn',function(e) {
         saveEmployee(first_name.val(), last_name.val(), email.val(), company.val(), phone.val(), password.val(), password_confirm.val());
    });
@@ -93,77 +71,7 @@ $(function(){
 
         if(debug === true) console.log('Target Employee: ' + targetEmployee);
 
-        $.ajax({
-        url: getScheduleUrl,
-        data: {},
-        success: function(data) {            
-             $('#date').html(today.toDateString());
-                         
-            if (data !== 'false') {
-                var parsed = $.parseJSON(data),
-                    events = $.parseJSON(parsed[0].schedule),
-                    monthNames = [],
-                    dayNames = [];
-                
-                window.test = events;
-
-                $.each(events, function(i, e) {
-                    if (myDate === e.date) {
-                        working = true;
-                        console.log(e);
-                        title = e.title;
-                        hours = e.content;
-                    }
-                });
-
-
-                if (working === true) {
-                    $('#working').html(title);
-                    $('#hours').html(hours);
-                    $('div#week #working').html(title);
-                    $('div#month #working').html(title);
-                } else if (working === false) {
-                    $('#working').html('Not scheduled for today');
-                    $('div#week #working').html('Not scheduled for today');
-                    $('div#month #working').html('Not scheduled for today');
-                    $('#hours').html('*-*');
-                    $('#swift_btn').addClass('disabled');
-                    $('#busy_btn').addClass('disabled');
-                }
-                
-                monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-                dayNames = ["S", "M", "T", "W", "T", "F", "S"];
-
-                $('#calendar').bic_calendar({
-                    events: events,
-                    //enable select
-                    enableSelect: true,
-                    //set day names
-                    dayNames: dayNames,
-                    //set month names
-                    monthNames: monthNames,
-                    //show dayNames
-                    showDays: true,
-                    //show month controller
-                    displayMonthController: true,
-                    //show year controller
-                    displayYearController: true,
-                    //change calendar to english format
-                    startWeekDay: 1
-                });
-                
-            } else {
-                $('#working').html('No schedule found!  Please contact your manager.');
-                $('#hours').html('*-*');
-                $('#calendar').html('No schedule found! Please contact your manager.');
-            }
-
-        },
-        failure: function(data) {
-            alert('Issue with pulling schedule!  Please refresh the page');
-        }
-    });
+        getSchedule();
 
    });
 
@@ -209,8 +117,88 @@ $(function(){
      var data = {
       "username": targetEmployee
      };
+     var logout_url = config.base + "auth/logout",
+        schedule_url = config.base + "user/home/getSchedule",
+        request_url = config.base + "user/home/postRequest",
+        today = new Date(),
+        month = today.getMonth() + 1,
+        myDate = today.getDate() + '/' + month + '/' + today.getFullYear(),
+        working = false,
+        title,
+        hours,
+        selected;
        try {
-          postData(getScheduleUrl, "POST", "json", data, getScheduleBeforeSend, getScheduleSuccess);
+          $.ajax({
+            url: schedule_url,
+            data: {},
+            success: function(data) {            
+                 $('#date').html(today.toDateString());
+                             
+                if (data !== 'false') {
+                    var parsed = $.parseJSON(data),
+                        events = $.parseJSON(parsed[0].schedule),
+                        monthNames = [],
+                        dayNames = [];
+                    
+                    window.test = events;
+
+                    $.each(events, function(i, e) {
+                        if (myDate === e.date) {
+                            working = true;
+                            console.log(e);
+                            title = e.title;
+                            hours = e.content;
+                        }
+                    });
+
+
+                    if (working === true) {
+                        $('#working').html(title);
+                        $('#hours').html(hours);
+                        $('div#week #working').html(title);
+                        $('div#month #working').html(title);
+                    } else if (working === false) {
+                        $('#working').html('Not scheduled for today');
+                        $('div#week #working').html('Not scheduled for today');
+                        $('div#month #working').html('Not scheduled for today');
+                        $('#hours').html('*-*');
+                        $('#swift_btn').addClass('disabled');
+                        $('#busy_btn').addClass('disabled');
+                    }
+                    
+                    monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+                    dayNames = ["S", "M", "T", "W", "T", "F", "S"];
+
+                    $('#calendar').bic_calendar({
+                        events: events,
+                        //enable select
+                        enableSelect: true,
+                        //set day names
+                        dayNames: dayNames,
+                        //set month names
+                        monthNames: monthNames,
+                        //show dayNames
+                        showDays: true,
+                        //show month controller
+                        displayMonthController: true,
+                        //show year controller
+                        displayYearController: true,
+                        //change calendar to english format
+                        startWeekDay: 1
+                    });
+                    
+                } else {
+                    $('#working').html('No schedule found!  Please contact your manager.');
+                    $('#hours').html('*-*');
+                    $('#calendar').html('No schedule found! Please contact your manager.');
+                }
+
+            },
+            failure: function(data) {
+                alert('Issue with pulling schedule!  Please refresh the page');
+            }
+         });
        } catch(err) {
           if(debug===true) console.log('could not grab schedule: Error: ' + err);
        }
