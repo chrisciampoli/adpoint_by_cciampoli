@@ -186,5 +186,16 @@ class Home extends User_Controller {
             echo "Insert successful";
         }
     }
+
+    function ajaxUpdateRequest() 
+    {
+        if($this->mdl_schedule->updateRequest($id, $status)) {
+            echo json_encode('status'=>'success','message'=>'request updated');
+            return true;
+        } else {
+            echo json_encode('status'=>'failure','message'=>'could not update request');
+            return false;
+        }
+    }
     
 }

@@ -53,6 +53,19 @@ class Mdl_schedule extends CI_Model {
             return false;
         }
     }
+
+    function updateRequest($id, $status) {
+        $data = array(
+            'status'=>$status
+        );
+        $this->db->where('id',$id);
+        if($this->db->update('requests',$data)) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
     
     function postSchedule($username, $schedule) {
         

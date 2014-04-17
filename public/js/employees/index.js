@@ -3,6 +3,7 @@ $(function() {
     var logout_url = config.base + "auth/logout",
         schedule_url = config.base + "user/home/getSchedule",
         request_url = config.base + "user/home/postRequest",
+        update_url = config.base + "user/home/updateStatus",
         today = new Date(),
         month = today.getMonth() + 1,
         myDate = today.getDate() + '/' + month + '/' + today.getFullYear(),
@@ -34,6 +35,7 @@ $(function() {
                 .removeClass('label-warning')
                 .addClass('label-success')
                 .html('Accepted');
+        updateStatus(id,'Accepted');
     });
     
     $('body').on('click','#decline_btn',function(){
@@ -44,6 +46,7 @@ $(function() {
                 .removeClass('label-warning')
                 .addClass('label-danger')
                 .html('Denied');
+        updateStatus(id,'Denied');
     });
    
     $.ajax({
@@ -206,5 +209,27 @@ $(function() {
        
        
     });
-
+    function updateStatus(id, status) 
+    {
+      var data = {
+        "id":id
+        "status":status
+      }
+      try {
+        $.ajax({
+              url: update_url,
+              data: data,
+              type: "post",
+              dataType: "json",
+              success: function(data){
+                  console.log(data);
+              },
+              failure: function(data){
+                  alert('Could not post request!');
+              }
+          });
+      } catch(err) {
+        if(debug === true) console.log('could not update status of request: Error: ' + err);
+      }
+    }
 });
