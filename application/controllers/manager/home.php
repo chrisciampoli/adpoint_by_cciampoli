@@ -177,7 +177,7 @@ class Home extends Manager_Controller {
             echo $day['date'] . "<br/>";
         }
         */
-        echo json_encode($schedule);
+        echo json_encode($schedule[0]["schedule"]);
         
         return $schedule;
     }
