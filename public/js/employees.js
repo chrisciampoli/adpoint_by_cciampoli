@@ -103,21 +103,16 @@ $(function(){
 
    function getScheduleSuccess(data)
    {
-        var schedule = [];
+        var events = [];
 
         $.each(data, function(){
-           schedule = this.schedule;
+          console.log('Events in the loop: ' + this.schedule);
+           events = this.schedule;
         });
-        
-        if(debug === true) console.log('Schedule: ' + schedule);
 
-        events = schedule;
+        //events = [{"date":"1\/4\/2014","title":"Mission Valley","color":"#333","content":"5:30PM-10:30PM"}];
 
-        if(debug === true) console.log('Events is now set to: ' + events);
-
-        //return events;
-
-        events = [{"date":"1\/4\/2014","title":"Mission Valley","color":"#333","content":"5:30PM-10:30PM"}];
+        console.log('Events: ' + events);
 
         var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
             dayNames = ["S", "M", "T", "W", "T", "F", "S"];
