@@ -4,26 +4,26 @@ $(function(){
         
         //events = [{"date":"1\/4\/2014","title":"Mission Valley","color":"#333","content":"5:30PM-10:30PM"}], // Replace with ternary calling getSchedule();
 
-    var = getEmployeeUrl = 'user/home/getEmployee',
-          postEmployeeUrl = config.base + 'manager/home/ajaxPostEmployee',
-          updateEmployeeUrl = 'user/home/updateEmployee',
-          removeEmployeeUrl = 'user/home/removeEmployee',
-          getScheduleUrl = config.base + "manager/home/ajaxGetSchedule",
-          postScheduleUrl = config.base + 'manager/home/ajaxPostSchedule',
-          updateScheduleUrl = 'user/home/updateSchedule',
-          debug = true,
-          first_name = $('#inputFirstName'),
-          last_name = $('#inputLastName'),
-          email = $('#inputEmail'),
-          phone = $('#inputPhone'),
-          password = $('#inputPassword'),
-          password_confirm = $('#inputPasswordConfirmation'),
-          company = $('#hiddinInputCompany'),
-          form_input = $('.form_input'),
-          presetDays = '',
-          currentDay,
-          targetDay,
-          targetEmployee = '';
+    var getEmployeeUrl = 'user/home/getEmployee',
+        postEmployeeUrl = config.base + 'manager/home/ajaxPostEmployee',
+        updateEmployeeUrl = 'user/home/updateEmployee',
+        removeEmployeeUrl = 'user/home/removeEmployee',
+        getScheduleUrl = config.base + "manager/home/ajaxGetSchedule",
+        postScheduleUrl = config.base + 'manager/home/ajaxPostSchedule',
+        updateScheduleUrl = 'user/home/updateSchedule',
+        debug = true,
+        first_name = $('#inputFirstName'),
+        last_name = $('#inputLastName'),
+        email = $('#inputEmail'),
+        phone = $('#inputPhone'),
+        password = $('#inputPassword'),
+        password_confirm = $('#inputPasswordConfirmation'),
+        company = $('#hiddinInputCompany'),
+        form_input = $('.form_input'),
+        presetDays = '',
+        currentDay,
+        targetDay,
+        targetEmployee = '';
 
 
 
