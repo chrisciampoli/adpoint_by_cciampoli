@@ -3,7 +3,7 @@ $(function() {
     var logout_url = config.base + "auth/logout",
         schedule_url = config.base + "user/home/getSchedule",
         request_url = config.base + "user/home/postRequest",
-        update_url = config.base + "user/home/updateStatus",
+        update_url = config.base + "user/home/ajaxUpdateRequest",
         today = new Date(),
         month = today.getMonth() + 1,
         myDate = today.getDate() + '/' + month + '/' + today.getFullYear(),
