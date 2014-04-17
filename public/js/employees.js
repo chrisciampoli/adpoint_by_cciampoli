@@ -1,10 +1,8 @@
 $(function(){ 
     
-    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-        dayNames = ["S", "M", "T", "W", "T", "F", "S"],
-        
-        events = [], // Replace with ternary calling getSchedule();
-
+    var //monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        //dayNames = ["S", "M", "T", "W", "T", "F", "S"],
+        //events = [], // Replace with ternary calling getSchedule();
         getEmployeeUrl = 'user/home/getEmployee',
         postEmployeeUrl = config.base + 'manager/home/ajaxPostEmployee',
         updateEmployeeUrl = 'user/home/updateEmployee',
@@ -24,7 +22,10 @@ $(function(){
         presetDays = '',
         currentDay,
         targetDay,
-        targetEmployee = '';
+        targetEmployee = '',
+        today = new Date(),
+        month = today.getMonth() + 1,
+        myDate = today.getDate() + '/' + month + '/' + today.getFullYear();
 
 
 
@@ -36,7 +37,7 @@ $(function(){
             $(this).css('border','');
         }
     });
-
+    /*
     $('#calendar').bic_calendar({
         events: events,
         //enable select
@@ -52,7 +53,7 @@ $(function(){
         //change calendar to english format
         startWeekDay: 1
     });
-
+*/
    $('body').on('click','#employeeSaveBtn',function(e) {
         saveEmployee(first_name.val(), last_name.val(), email.val(), company.val(), phone.val(), password.val(), password_confirm.val());
    });
