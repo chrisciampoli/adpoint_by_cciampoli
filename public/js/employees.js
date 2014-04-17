@@ -104,7 +104,6 @@ $(function(){
    function getScheduleSuccess(data)
    {
         window.test = data;
-        events1 = [{"date":"1\/4\/2014","title":"Mission Valley","color":"#333","content":"5:30PM-10:30PM"}];
         events = $.parseJSON(data);
         console.log('Typeof Events1: ' + typeof(events1));
         console.log('Typeof Events: ' + typeof(events));
