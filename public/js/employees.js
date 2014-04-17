@@ -81,6 +81,10 @@ $(function(){
 
    });
 
+   $('#editScheduleModal').on('hidden.bs.modal', function (e) {
+       $('#calendar').html('');
+   });
+
    function setDay(date, shift_start, shift_end, location) {
         
         var date = date.split('/');
@@ -104,10 +108,11 @@ $(function(){
    function getScheduleSuccess(data)
    {
         window.test = data;
-        events = $.parseJSON(data);
         
+
         var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-            dayNames = ["S", "M", "T", "W", "T", "F", "S"];
+            dayNames = ["S", "M", "T", "W", "T", "F", "S"],
+            events = $.parseJSON(data);
 
         $('#calendar').bic_calendar({
             events: events,
