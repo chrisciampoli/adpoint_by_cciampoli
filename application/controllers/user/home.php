@@ -190,10 +190,10 @@ class Home extends User_Controller {
     function ajaxUpdateRequest() 
     {
         if($this->mdl_schedule->updateRequest($id, $status)) {
-            echo json_encode('status'=>'success','message'=>'request updated');
+            echo json_encode(array('status'=>'success','message'=>'request updated'));
             return true;
         } else {
-            echo json_encode('status'=>'failure','message'=>'could not update request');
+            echo json_encode(array('status'=>'failure','message'=>'could not update request'));
             return false;
         }
     }
