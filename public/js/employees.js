@@ -118,7 +118,7 @@ $(function(){
       "username": targetEmployee
      };
      var logout_url = config.base + "auth/logout",
-        schedule_url = config.base + "user/home/getSchedule",
+        schedule_url = config.base + "manager/home/ajaxGetSchedule",
         request_url = config.base + "user/home/postRequest",
         today = new Date(),
         month = today.getMonth() + 1,
