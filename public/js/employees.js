@@ -109,7 +109,7 @@ $(function(){
           console.log('Events in the loop: ' + this.schedule);
            events = this.schedule;
         });
-
+        window.test = data;
         events1 = [{"date":"1\/4\/2014","title":"Mission Valley","color":"#333","content":"5:30PM-10:30PM"}];
         console.log('Typeof Events1: ' + typeof(events1));
         console.log('Typeof Events: ' + typeof(events));
