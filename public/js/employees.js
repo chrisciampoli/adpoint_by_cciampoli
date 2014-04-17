@@ -61,7 +61,7 @@ $(function(){
    });
 
    $('body').on('click','#scheduleSaveBtn', function(e){
-       saveSchedule(targetEmployee, events);
+       saveSchedule(targetEmployee, targetEvents);
        $('#editScheduleModal').modal('toggle');
        targetEmployee = '';
    });
