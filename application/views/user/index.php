@@ -102,6 +102,7 @@
                                         <td><?=$request['target'];?></td><td><?=$request['date'];?></td><td>Mission Valley</td><td><?= $request['shift'];?></td><td class="status" id="<?=$request['id'];?>"><span class="label label-warning"><?=ucfirst($request['status']);?></span></td>
                                     </tr>
                                 <?php } ?>
+                              <?php } ?>
                             <?php } ?>
                         </tbody>
                     </table>
