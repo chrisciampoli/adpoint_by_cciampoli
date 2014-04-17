@@ -246,6 +246,7 @@ $(function(){
             if(debug===true) console.log('Employee saved successfully');
             $('#addEmployeeModal').modal('toggle');
             renderRow(first_name.val(), last_name.val(), email.val(), phone.val());
+            location.reload();
         }
 
     }
