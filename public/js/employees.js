@@ -125,7 +125,12 @@ $(function(){
             dayNames = ["S", "M", "T", "W", "T", "F", "S"],
             events = $.parseJSON(data);
 
-        targetEvents = events;    
+        if(events) {
+          targetEvents = events;
+        } else {
+          events = [];
+        }
+            
 
         $('#calendar').bic_calendar({
             events: events,
