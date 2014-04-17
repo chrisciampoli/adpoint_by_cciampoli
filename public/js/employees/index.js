@@ -35,7 +35,7 @@ $(function() {
                 .removeClass('label-warning')
                 .addClass('label-success')
                 .html('Accepted');
-        updateStatus(id,'Accepted');
+        updateStatus(id,'accepted');
     });
     
     $('body').on('click','#decline_btn',function(){
@@ -46,7 +46,7 @@ $(function() {
                 .removeClass('label-warning')
                 .addClass('label-danger')
                 .html('Denied');
-        updateStatus(id,'Denied');
+        updateStatus(id,'denied');
     });
    
     $.ajax({
