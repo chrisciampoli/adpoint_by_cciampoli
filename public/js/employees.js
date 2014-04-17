@@ -82,6 +82,10 @@ $(function(){
        $('#calendar').html('');
    });
 
+   $('body').on('click','.event',function(){
+      $('#inputLocation').val(($(this).find('a').attr('data-original-title')));
+   });
+
    function setDay(date, shift_start, shift_end, location) {
         
         var date = date.split('/');
