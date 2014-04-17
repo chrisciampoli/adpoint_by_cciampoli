@@ -1,9 +1,5 @@
 $(function(){ 
     
-    
-        
-        //events = [{"date":"1\/4\/2014","title":"Mission Valley","color":"#333","content":"5:30PM-10:30PM"}], // Replace with ternary calling getSchedule();
-
     var getEmployeeUrl = 'user/home/getEmployee',
         postEmployeeUrl = config.base + 'manager/home/ajaxPostEmployee',
         updateEmployeeUrl = 'user/home/updateEmployee',
@@ -23,7 +19,8 @@ $(function(){
         presetDays = '',
         currentDay,
         targetDay,
-        targetEmployee = '';
+        targetEmployee = '',
+        targetEvents = [];
 
 
 
@@ -90,7 +87,7 @@ $(function(){
         var date = date.split('/');
             date = date[1] + '/' + date[0] + '/' + date[2];    
 
-        events.push( 
+        targetEvents.push( 
         {
             date: date,
             title: location,
@@ -113,6 +110,8 @@ $(function(){
         var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
             dayNames = ["S", "M", "T", "W", "T", "F", "S"],
             events = $.parseJSON(data);
+
+        targetEvents = events;    
 
         $('#calendar').bic_calendar({
             events: events,
