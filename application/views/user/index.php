@@ -73,20 +73,35 @@
                                 <?php if($request['target'] == $username) { ?>
                                   <?php if($request['status'] == 'pending') { ?>
                                     <tr class="warning pending-row" rel="<?=$request['id'];?>">
-                                        <td><?=$request['requester'];?></td><td><?=$request['date'];?></td><td>Mission Valley</td><td><?= $request['shift'];?></td><td class="status" id="<?=$request['id'];?>"><span class="label label-warning"><?=$request['status'];?></span></td>
+                                        <td><?=$request['requester'];?></td><td><?=$request['date'];?></td><td>Mission Valley</td><td><?= $request['shift'];?></td><td class="status" id="<?=$request['id'];?>"><span class="label label-warning"><?=ucfirst($request['status']);?></span></td>
                                     </tr>
                                   <?php } ?>
                                   <?php if($request['status'] == 'accepted') { ?>
-                                    <tr class="warning accepted-row" rel="<?=$request['id'];?>">
-                                        <td><?=$request['requester'];?></td><td><?=$request['date'];?></td><td>Mission Valley</td><td><?= $request['shift'];?></td><td class="status" id="<?=$request['id'];?>"><span class="label label-warning"><?=$request['status'];?></span></td>
+                                    <tr class="success accepted-row" rel="<?=$request['id'];?>">
+                                        <td><?=$request['requester'];?></td><td><?=$request['date'];?></td><td>Mission Valley</td><td><?= $request['shift'];?></td><td class="status" id="<?=$request['id'];?>"><span class="label label-warning"><?=ucfirst($request['status']);?></span></td>
                                     </tr>
                                   <?php } ?>
                                   <?php if($request['status'] == 'denied') { ?>
-                                    <tr class="warning denied-row" rel="<?=$request['id'];?>">
-                                        <td><?=$request['requester'];?></td><td><?=$request['date'];?></td><td>Mission Valley</td><td><?= $request['shift'];?></td><td class="status" id="<?=$request['id'];?>"><span class="label label-warning"><?=$request['status'];?></span></td>
+                                    <tr class="danger denied-row" rel="<?=$request['id'];?>">
+                                        <td><?=$request['requester'];?></td><td><?=$request['date'];?></td><td>Mission Valley</td><td><?= $request['shift'];?></td><td class="status" id="<?=$request['id'];?>"><span class="label label-warning"><?=ucfirst($request['status']);?></span></td>
                                     </tr>
                                   <?php } ?>
-                                <?php } else { continue; } ?>
+                                <?php } else {  ?>
+                                    <?php if($request['status'] == 'pending') { ?>
+                                    <tr class="warning pending-row" rel="<?=$request['id'];?>">
+                                        <td><?=$request['target'];?></td><td><?=$request['date'];?></td><td>Mission Valley</td><td><?= $request['shift'];?></td><td class="status" id="<?=$request['id'];?>"><span class="label label-warning"><?=ucfirst($request['status']);?></span></td>
+                                    </tr>
+                                  <?php } ?>
+                                  <?php if($request['status'] == 'accepted') { ?>
+                                    <tr class="success accepted-row" rel="<?=$request['id'];?>">
+                                        <td><?=$request['target'];?></td><td><?=$request['date'];?></td><td>Mission Valley</td><td><?= $request['shift'];?></td><td class="status" id="<?=$request['id'];?>"><span class="label label-warning"><?=ucfirst($request['status']);?></span></td>
+                                    </tr>
+                                  <?php } ?>
+                                  <?php if($request['status'] == 'denied') { ?>
+                                    <tr class="danger denied-row" rel="<?=$request['id'];?>">
+                                        <td><?=$request['target'];?></td><td><?=$request['date'];?></td><td>Mission Valley</td><td><?= $request['shift'];?></td><td class="status" id="<?=$request['id'];?>"><span class="label label-warning"><?=ucfirst($request['status']);?></span></td>
+                                    </tr>
+                                <?php } ?>
                             <?php } ?>
                         </tbody>
                     </table>
