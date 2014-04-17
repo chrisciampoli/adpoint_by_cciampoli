@@ -103,22 +103,15 @@ $(function(){
 
    function getScheduleSuccess(data)
    {
-        var events = [];
+      
 
         $.each(data, function(){
-          console.log('Events in the loop: ' + this.schedule);
-           events = this.schedule;
-        });
-
-        //events = [{"date":"1\/4\/2014","title":"Mission Valley","color":"#333","content":"5:30PM-10:30PM"}];
-
-        console.log('Events: ' + events);
 
         var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
             dayNames = ["S", "M", "T", "W", "T", "F", "S"];
 
         $('#calendar').bic_calendar({
-            events: events,
+            events: this.schedule,
             //enable select
             enableSelect: true,
             //set day names
@@ -132,6 +125,10 @@ $(function(){
             //change calendar to english format
             startWeekDay: 1
         });
+        });
+
+       
+
 
    }
 
