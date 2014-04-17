@@ -1,30 +1,29 @@
 $(function(){ 
     
-    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-        dayNames = ["S", "M", "T", "W", "T", "F", "S"],
+    
         
-        events = [{"date":"1\/4\/2014","title":"Mission Valley","color":"#333","content":"5:30PM-10:30PM"}], // Replace with ternary calling getSchedule();
+        //events = [{"date":"1\/4\/2014","title":"Mission Valley","color":"#333","content":"5:30PM-10:30PM"}], // Replace with ternary calling getSchedule();
 
-        getEmployeeUrl = 'user/home/getEmployee',
-        postEmployeeUrl = config.base + 'manager/home/ajaxPostEmployee',
-        updateEmployeeUrl = 'user/home/updateEmployee',
-        removeEmployeeUrl = 'user/home/removeEmployee',
-        getScheduleUrl = config.base + "manager/home/ajaxGetSchedule",
-        postScheduleUrl = config.base + 'manager/home/ajaxPostSchedule',
-        updateScheduleUrl = 'user/home/updateSchedule',
-        debug = true,
-        first_name = $('#inputFirstName'),
-        last_name = $('#inputLastName'),
-        email = $('#inputEmail'),
-        phone = $('#inputPhone'),
-        password = $('#inputPassword'),
-        password_confirm = $('#inputPasswordConfirmation'),
-        company = $('#hiddinInputCompany'),
-        form_input = $('.form_input'),
-        presetDays = '',
-        currentDay,
-        targetDay,
-        targetEmployee = '';
+    var = getEmployeeUrl = 'user/home/getEmployee',
+          postEmployeeUrl = config.base + 'manager/home/ajaxPostEmployee',
+          updateEmployeeUrl = 'user/home/updateEmployee',
+          removeEmployeeUrl = 'user/home/removeEmployee',
+          getScheduleUrl = config.base + "manager/home/ajaxGetSchedule",
+          postScheduleUrl = config.base + 'manager/home/ajaxPostSchedule',
+          updateScheduleUrl = 'user/home/updateSchedule',
+          debug = true,
+          first_name = $('#inputFirstName'),
+          last_name = $('#inputLastName'),
+          email = $('#inputEmail'),
+          phone = $('#inputPhone'),
+          password = $('#inputPassword'),
+          password_confirm = $('#inputPasswordConfirmation'),
+          company = $('#hiddinInputCompany'),
+          form_input = $('.form_input'),
+          presetDays = '',
+          currentDay,
+          targetDay,
+          targetEmployee = '';
 
 
 
@@ -37,21 +36,7 @@ $(function(){
         }
     });
 
-    $('#calendar').bic_calendar({
-        events: events,
-        //enable select
-        enableSelect: true,
-        //set day names
-        dayNames: dayNames,
-        //set month names
-        monthNames: monthNames,
-        //show dayNames
-        showDays: true,
-        //show month controller
-        displayMonthController: true,
-        //change calendar to english format
-        startWeekDay: 1
-    });
+    
 
    $('body').on('click','#employeeSaveBtn',function(e) {
         saveEmployee(first_name.val(), last_name.val(), email.val(), company.val(), phone.val(), password.val(), password_confirm.val());
@@ -130,7 +115,29 @@ $(function(){
 
         if(debug === true) console.log('Events is now set to: ' + events);
 
-        return events;
+        //return events;
+
+        events = schedule;
+
+        var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            dayNames = ["S", "M", "T", "W", "T", "F", "S"];
+
+        $('#calendar').bic_calendar({
+            events: events,
+            //enable select
+            enableSelect: true,
+            //set day names
+            dayNames: dayNames,
+            //set month names
+            monthNames: monthNames,
+            //show dayNames
+            showDays: true,
+            //show month controller
+            displayMonthController: true,
+            //change calendar to english format
+            startWeekDay: 1
+        });
+
    }
 
    function getSchedule() 
