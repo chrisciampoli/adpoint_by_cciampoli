@@ -3,7 +3,7 @@ $(function(){
     var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
         dayNames = ["S", "M", "T", "W", "T", "F", "S"],
         
-        events = [], // Replace with ternary calling getSchedule();
+        events = [{"date":"1\/4\/2014","title":"Mission Valley","color":"#333","content":"5:30PM-10:30PM"}], // Replace with ternary calling getSchedule();
 
         getEmployeeUrl = 'user/home/getEmployee',
         postEmployeeUrl = config.base + 'manager/home/ajaxPostEmployee',
