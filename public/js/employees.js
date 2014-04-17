@@ -114,7 +114,7 @@ $(function(){
         console.log('Typeof Events1: ' + typeof(events1));
         console.log('Typeof Events: ' + typeof(events));
         var aretheysame = (events1 === events);
-        console.log('Compare them: ' aretheysame);
+        console.log('Compare them: ' + aretheysame);
         console.log('Events: ' + events);
 
         var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
