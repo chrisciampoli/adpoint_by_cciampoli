@@ -212,7 +212,7 @@ $(function() {
     function updateStatus(id, status) 
     {
       var data = {
-        "id":id
+        "id":id,
         "status":status
       }
       try {
