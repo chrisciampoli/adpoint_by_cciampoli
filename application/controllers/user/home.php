@@ -190,6 +190,8 @@ class Home extends User_Controller {
     function ajaxUpdateRequest() 
     {
         $this->load->model('mdl_schedule');
+        $id = $this->input->post('id');
+        $status = $this->input->post('status');
         if($this->mdl_schedule->updateRequest($id, $status)) {
             echo json_encode(array('status'=>'success','message'=>'request updated'));
             return true;
