@@ -8,7 +8,7 @@
         <meta name="author" content="">
         <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-        <title>Swift Schedules</title>
+        <title>Swift Shifts</title>
 
         <!-- Bootstrap core CSS -->
         <link href="<?php echo base_url('public/css/bootstrap.css'); ?>" rel="stylesheet">
