@@ -49,7 +49,7 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
+$db['default']['username'] = DB_USER;
 $db['default']['password'] = 'cciampoli@123';
 $db['default']['database'] = 'swift_schedules';
 $db['default']['dbdriver'] = 'mysql';
