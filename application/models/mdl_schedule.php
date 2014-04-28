@@ -28,8 +28,10 @@ class Mdl_schedule extends CI_Model {
         }
     }
     
-    function getRequests() {
+    function getRequests($company) {
         // first select all from requests
+        $this->db->select('*');
+        $this->db->where('company',$company);
         $query = $this->db->get('requests');
         $requests = $query->result_array();
         

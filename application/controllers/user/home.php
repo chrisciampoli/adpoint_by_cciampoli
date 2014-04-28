@@ -93,7 +93,9 @@ class Home extends User_Controller {
     
     public function getRequests() {
         $this->load->model('mdl_schedule');
-        $results = $this->mdl_schedule->getRequests();
+        $this->load->model('mdl_employees');
+        $company = $this->mdl_employees->getCompany();
+        $results = $this->mdl_schedule->getRequests($company);
         $cleaned = array();
         $count = 0;
         foreach($results as $request) {
