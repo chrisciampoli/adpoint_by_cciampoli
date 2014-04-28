@@ -83,7 +83,7 @@ class Home extends Manager_Controller {
         $data['styles'][] = base_url('public/css/bootstrap.css');
         $data['styles'][] = 'http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css';
         
-        $data['name'] = $this->session->userdata('username');
+        $data['username'] = $this->session->userdata('username');
 
         $company = $this->mdl_employees->getCompany();
         $data['requests'] = $this->getRequests($company);
