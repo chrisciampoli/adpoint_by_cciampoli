@@ -18,8 +18,8 @@ class Home extends Manager_Controller {
         
         $this->company = $this->mdl_employees->getCompany();
         $this->request_count = $this->mdl_schedule->getRequests($company);
-        &$data['request_count'] = $this->request_count;
-        &$data['company'] = $this->company;
+        $data['company'] = $this->company;
+        $data['request_count'] = $this->request_count;
     }
     
     function index() {
