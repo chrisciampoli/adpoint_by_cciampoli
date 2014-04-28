@@ -1,6 +1,9 @@
 <?php
 
 class Home extends Manager_Controller {
+
+    public $request_count;
+    public $company;
     
     function __construct() {
         parent::__construct();
@@ -12,6 +15,11 @@ class Home extends Manager_Controller {
         $this->load->library('session');
         $this->load->model('mdl_employees');
         $this->load->model('mdl_schedule');
+        
+        $this->company = $this->mdl_employees->getCompany();
+        $this->request_count = $this->mdl_schedule->getRequests($company);
+        &$data['request_count'] = $this->request_count;
+        &$data['company'] = $this->company;
     }
     
     function index() {
@@ -27,7 +35,7 @@ class Home extends Manager_Controller {
         
         $data['title'] = 'Dashboard';
         $data['head'] = $this->load->view('manager/head', $data, true);
-        $data['nav'] = $this->load->view('manager/navigation/nav','',true);
+        $data['nav'] = $this->load->view('manager/navigation/nav',$data,true);
         $data['content'] = $this->load->view('manager/pages/dashboard',$data,true);
         $data['script_loader'] = $this->load->view('manager/scripts',$data,true);
         $data['name'] = $this->session->userdata('username');
