@@ -5,11 +5,10 @@ class Home extends User_Controller {
     function __constructor() {
         parent::_constructor();
         $this->load->library('session');
-        $this->load->model('mdl_employees', 'employees');
-        $this->load->model('mdl_schedule', 'schedule');
     }
     
     function index() {
+        $this->load->model('mdl_schedule');
         $data['employees'] = $this->getCompanyEmployees();
         $data['requests'] = $this->getRequests();
         $data['username'] = $this->session->userdata('username');
@@ -18,6 +17,7 @@ class Home extends User_Controller {
 
     public function getCompanyEmployees() {
     
+        $this->load->model('mdl_employees','employees');
         $result = $this->employees->getCompanyEmployees();
         return $result;
 
@@ -26,12 +26,13 @@ class Home extends User_Controller {
     function getSchedule($username = null) {
         
         $username = $this->session->userdata('username');
+        $this->load->model('mdl_schedule');
         
         if($username == null) {
             return false;
         }
         
-        $schedule = $this->mdl_schedule->schedule($username);
+        $schedule = $this->mdl_schedule->getSchedule($username);
        /* 
        //echo print_r(json_decode($schedule[0]["schedule"], true), true);
         foreach(json_decode($schedule[0]["schedule"], true) as $day){
@@ -62,13 +63,17 @@ class Home extends User_Controller {
         $location = $this->input->post('location');
         $date = $this->input->post('date');
         $shift = $this->input->post('shift');
-        $company = $this->employees->getCompany();
         
         if(is_null($username)){
             return false;
         }
         
-        $message = $this->schedule->postRequest($requester_id, $target_id, $location, $date, $shift, $company);
+        $this->load->model('mdl_schedule');
+        $this->load->model('mdl_employees');
+
+        $company = $this->mdl_employees->getCompany();
+        
+        $message = $this->mdl_schedule->postRequest($requester_id, $target_id, $location, $date, $shift, $company);
         
         if($message){
             echo json_encode(array('status'=>'succes','message'=>'Success'));
@@ -87,7 +92,8 @@ class Home extends User_Controller {
     }
     
     public function getRequests() {
-        $results = $this->schedule->getRequests();
+        $this->load->model('mdl_schedule');
+        $results = $this->mdl_schedule->getRequests();
         $cleaned = array();
         $count = 0;
         foreach($results as $request) {
@@ -186,9 +192,10 @@ class Home extends User_Controller {
 
     function ajaxUpdateRequest() 
     {
+        $this->load->model('mdl_schedule');
         $id = $this->input->post('id');
         $status = $this->input->post('status');
-        if($this->schedule->updateRequest($id, $status)) {
+        if($this->mdl_schedule->updateRequest($id, $status)) {
             echo json_encode(array('status'=>'success','message'=>'request updated'));
             return true;
         } else {
