@@ -7,39 +7,52 @@
 <div class="container-fluid">
         <div><h2 class="sub-header" style="display: inline">Swift Giveup</h2><button style="float:right;margin: 7px;" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addEmployeeModal">Add Employee</button></div>
           <div class="table-responsive">
-            <table class="table table-striped" id="employee_table">
+            <table class="table table-hover table-responsive">
               <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Phone</th>
-                  <th>Email</th>
-                  <th>Availability</th>
-                  <th>Controls</th>
-                </tr>
+                  <th>Employee</th>
+                  <th>Date</th>
+                  <th>Location</th>
+                  <th>Shift</th>
+                  <th>Status</th>
               </thead>
-              <tbody>
-                <?php foreach($employees as $employee) { ?>
-                <tr>
-                  <td><?=ucwords($employee['username']);?></td>
-                  <td><?=$employee['phone'];?></td>
-                  <td><?=$employee['email'];?></td>
-                  <td>
-                      <button data-toggle="modal" data-target="#editScheduleModal" type="button" rel="<?=$employee['id'];?>|<?=$employee['username'];?>" class="check_avail btn btn-primary btn-sm">
-                          <div class="datepicker" id="datepicker_1" rel="1"></div>
-                          <span class="glyphicon glyphicon-calendar"></span> Schedule
-                      </button>
-                  </td>
-                  <td>
-                      <button type="button" class="btn btn-primary btn-sm">
-                          <span class="glyphicon glyphicon-pencil"></span> Edit
-                      </button>
-                      <button type="button" class="btn btn-danger btn-sm">
-                          <span class="glyphicon glyphicon-remove"></span> Remove
-                      </button>
-                  </td>
-                </tr>
-                <?php } ?>
-              </tbody>
+                <tbody>
+                    <?php //echo "<pre>" . print_r($requests, true) . "</pre>";?>
+                    <?php foreach($requests as $request) { ?>
+                        <?php if($request['target'] == $username) { ?>
+                          <?php if($request['status'] == 'pending') { ?>
+                            <tr class="warning pending-row" rel="<?=$request['id'];?>">
+                                <td><?=$request['requester'];?></td><td><?=$request['date'];?></td><td>Mission Valley</td><td><?= $request['shift'];?></td><td class="status" id="<?=$request['id'];?>"><span class="label label-warning"><?=ucfirst($request['status']);?></span></td>
+                            </tr>
+                          <?php } ?>
+                          <?php if($request['status'] == 'accepted') { ?>
+                            <tr class="success accepted-row" rel="<?=$request['id'];?>">
+                                <td><?=$request['requester'];?></td><td><?=$request['date'];?></td><td>Mission Valley</td><td><?= $request['shift'];?></td><td class="status" id="<?=$request['id'];?>"><span class="label label-success"><?=ucfirst($request['status']);?></span></td>
+                            </tr>
+                          <?php } ?>
+                          <?php if($request['status'] == 'denied') { ?>
+                            <tr class="danger denied-row" rel="<?=$request['id'];?>">
+                                <td><?=$request['requester'];?></td><td><?=$request['date'];?></td><td>Mission Valley</td><td><?= $request['shift'];?></td><td class="status" id="<?=$request['id'];?>"><span class="label label-danger"><?=ucfirst($request['status']);?></span></td>
+                            </tr>
+                          <?php } ?>
+                        <?php } else {  ?>
+                            <?php if($request['status'] == 'pending') { ?>
+                            <tr class="warning pending-row" rel="<?=$request['id'];?>">
+                                <td><?=$request['target'];?></td><td><?=$request['date'];?></td><td>Mission Valley</td><td><?= $request['shift'];?></td><td class="status" id="<?=$request['id'];?>"><span class="label label-warning"><?=ucfirst($request['status']);?></span></td>
+                            </tr>
+                          <?php } ?>
+                          <?php if($request['status'] == 'accepted') { ?>
+                            <tr class="success accepted-row" rel="<?=$request['id'];?>">
+                                <td><?=$request['target'];?></td><td><?=$request['date'];?></td><td>Mission Valley</td><td><?= $request['shift'];?></td><td class="status" id="<?=$request['id'];?>"><span class="label label-success"><?=ucfirst($request['status']);?></span></td>
+                            </tr>
+                          <?php } ?>
+                          <?php if($request['status'] == 'denied') { ?>
+                            <tr class="danger denied-row" rel="<?=$request['id'];?>">
+                                <td><?=$request['target'];?></td><td><?=$request['date'];?></td><td>Mission Valley</td><td><?= $request['shift'];?></td><td class="status" id="<?=$request['id'];?>"><span class="label label-danger"><?=ucfirst($request['status']);?></span></td>
+                            </tr>
+                        <?php } ?>
+                      <?php } ?>
+                    <?php } ?>
+                </tbody>
             </table>
           </div>
         </div>
