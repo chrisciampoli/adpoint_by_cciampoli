@@ -12,8 +12,8 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="<?=site_url('manager/home/index');?>">Dashboard</a></li>
-            <li><a href="<?=site_url('manager/home/quick_pickup');?>" class="disabled"><span class="badge">10</span>Swift Giveup</a></li>
-            <li><a href="<?=site_url('manager/home/swift_giveup');?>" class="disabled">Busy or Not</a></li>
+            <li><a href="<?=site_url('manager/home/swift_giveup');?>" class="disabled"><span class="badge">10</span>Swift Giveup</a></li>
+            <li><a href="<?=site_url('manager/home/busy_or_not');?>" class="disabled">Busy or Not</a></li>
             <li><a href="<?=site_url('manager/home/employees');?>">Employees</a></li>
             <li><a href="<?=site_url('manager/home/settings');?>" class="disabled">Settings</a></li>
             <li><a href="<?=site_url('auth/logout');?>">Logout</a></li>
