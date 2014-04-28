@@ -47,8 +47,7 @@ class Home extends Manager_Controller {
         $data['scripts'][] = base_url('public/js/bic_calendar.js');
         
         $data['styles'][] =  base_url('public/css/dashboard.css');
-        $data['styles'][] = 'http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css';
-        //$data['styles'][] = base_url('public/css/bootstrap.css');
+        $data['styles'][] = base_url('public/css/bootstrap.css');
         $data['styles'][] = 'http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css';
        
         $employees = $this->getCompanyEmployees();
