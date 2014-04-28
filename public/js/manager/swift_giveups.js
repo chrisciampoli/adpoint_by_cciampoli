@@ -2,7 +2,7 @@ $(function() {
 
 	var debug = true,
 		selected,
-		update_url = config.base + "user/home/ajaxUpdateRequest";
+		update_url = config.base + "manager/home/ajaxUpdateRequest";
 
     $('body').on('click', '.accepted-row', function(e){
     	e.preventDefault();

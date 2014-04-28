@@ -194,6 +194,19 @@ class Home extends Manager_Controller {
         exit();
     }
 
+    function ajaxUpdateRequest() 
+    {
+        $id = $this->input->post('id');
+        $status = $this->input->post('status');
+        if($this->mdl_schedule->updateRequest($id, $status)) {
+            echo json_encode(array('status'=>'success','message'=>'request updated'));
+            return true;
+        } else {
+            echo json_encode(array('status'=>'failure','message'=>'could not update request'));
+            return false;
+        }
+    }
+
     public function ajaxPostSchedule() {
         $username = $this->input->post('username');
         $schedule = $this->input->post('schedule');
