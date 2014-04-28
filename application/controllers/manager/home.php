@@ -17,9 +17,7 @@ class Home extends Manager_Controller {
         $this->load->model('mdl_schedule');
         //
         $this->company = $this->mdl_employees->getCompany();
-        $this->request_count = $this->mdl_schedule->getRequests($company);
-        $data['company'] = $this->company;
-        $data['request_count'] = $this->request_count;
+        $this->request_count = $this->mdl_schedule->getRequests($this->company);
     }
     
     function index() {
@@ -33,6 +31,9 @@ class Home extends Manager_Controller {
         $data['styles'][] =  base_url('public/css/bootstrap.css');
         $data['styles'][] = 'http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css';
         
+        $data['company'] = $this->company;
+        $data['request_count'] = $this->request_count;
+
         $data['title'] = 'Dashboard';
         $data['head'] = $this->load->view('manager/head', $data, true);
         $data['nav'] = $this->load->view('manager/navigation/nav',$data,true);
@@ -62,6 +63,9 @@ class Home extends Manager_Controller {
         $data['name'] = $this->session->userdata('username');
         $data['employees'] = $employees;
 
+        $data['company'] = $this->company;
+        $data['request_count'] = $this->request_count;
+
         $data['head'] = $this->load->view('manager/head', $data, true);
         $data['nav'] = $this->load->view('manager/navigation/nav','',true);
         $data['content'] = $this->load->view('manager/pages/employees2',$data,true);
@@ -76,6 +80,8 @@ class Home extends Manager_Controller {
     {
         $this->load->view('manager/head');
         $data['name'] = $this->session->userdata('username');
+        $data['company'] = $this->company;
+        $data['request_count'] = $this->request_count;
         $this->load->view('manager/settings', $data);
     }
 
