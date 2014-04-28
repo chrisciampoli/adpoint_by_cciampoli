@@ -17,7 +17,6 @@
               </thead>
                 <tbody>
                     <?php //echo "<pre>" . print_r($requests, true) . "</pre>";?>
-                    <?php echo count($requests);?>
                     <?php foreach($requests as $request) { ?>
                         <?php if($request['target'] == $username) { ?>
                           <?php if($request['status'] == 'pending') { ?>

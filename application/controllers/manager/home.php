@@ -1,7 +1,6 @@
 <?php
 
 class Home extends Manager_Controller {
-  
     
     function __construct() {
         parent::__construct();
@@ -87,9 +86,9 @@ class Home extends Manager_Controller {
 
         $company = $this->mdl_employees->getCompany();
         $data['requests'] = $this->getRequests($company);
-
+        $data['request_count'] = count($data['requests']);
         $data['head'] = $this->load->view('manager/head',$data, true);
-        $data['nav'] = $this->load->view('manager/navigation/nav','',true);
+        $data['nav'] = $this->load->view('manager/navigation/nav',$data,true);
         $data['content'] = $this->load->view('manager/pages/swift_giveup', $data, true);
         $data['script_loader'] = $this->load->view('manager/scripts',$data,true);
 
