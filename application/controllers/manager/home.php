@@ -74,6 +74,7 @@ class Home extends Manager_Controller {
 
     function swift_giveup()
     {
+        $data['title'] = 'Swift Giveup Management';
 
         $data['scripts'][] = 'https://code.jquery.com/jquery-1.10.2.min.js';
         $data['scripts'][] = 'http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js';
@@ -82,10 +83,17 @@ class Home extends Manager_Controller {
         $data['styles'][] = base_url('public/css/bootstrap.css');
         $data['styles'][] = 'http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css';
 
+        $employees = $this->getCompanyEmployees();
+        
+        $data['name'] = $this->session->userdata('username');
+        $data['employees'] = $employees;
+
         $data['head'] = $this->load->view('manager/head',$data, true);
         $data['nav'] = $this->load->view('manager/navigation/nav','',true);
         $data['content'] = $this->load->view('manager/pages/swift_giveup', $data, true);
         $data['script_loader'] = $this->load->view('manager/scripts',$data,true);
+
+        $this->load->view('manager/wrapper',$data);
     }
 
     public function getCompanyEmployees() {
