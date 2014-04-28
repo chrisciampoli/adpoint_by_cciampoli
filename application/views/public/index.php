@@ -7,12 +7,8 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <!-- Le styles -->
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-
         <!-- Optional theme -->
-        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="<?=base_url('public/css/bootstrap.css');?>">
         <style type="text/css">
             body {
                 padding-top: 60px;
