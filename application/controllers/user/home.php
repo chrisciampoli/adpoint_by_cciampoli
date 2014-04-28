@@ -72,6 +72,8 @@ class Home extends User_Controller {
         $this->load->model('mdl_employees');
 
         $company = $this->mdl_employees->getCompany();
+
+        echo $company;die();
         
         $message = $this->mdl_schedule->postRequest($requester_id, $target_id, $location, $date, $shift, $company);
         
