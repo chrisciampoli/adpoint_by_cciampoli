@@ -58,112 +58,21 @@
         </div>
       </div>
     </div>
-    <!-- Modal -->
-<div class="modal fade" id="addEmployeeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Add Employee</h4>
-      </div>
-      <div class="modal-body">
-        <form class="form-horizontal">
-          <div class="control-group">
-            <label class="control-label" for="inputFirstName">First Name</label>
-            <div class="controls">
-              <input class="form_input" type="text" id="inputFirstName" placeholder="John">
+    <!-- Request Modal -->
+        <div class="modal fade" id="confirmation_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">Swift Confirmation</h4>
+                    </div>
+                    <div class="modal-body">
+                        Would you like to approve or deny this shift swap?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" id="accept_btn" data-dismiss="modal">Approve</button>
+                        <button type="button" class="btn btn-danger" id="decline_btn" data-dismiss="modal">Deny</button>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="inputLastName">Last Name</label>
-            <div class="controls">
-              <input class="form_input" type="text" id="inputLastName" placeholder="Doe">
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="inputEmail">Email</label>
-            <div class="controls">
-              <input class="form_input" type="email" id="inputEmail" placeholder="user@example.com">
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="inputPhone">Phone</label>
-            <div class="controls">
-              <input class="form_input" type="text" id="inputPhone" placeholder="(000) 000-0000">
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="inputPassword">Password</label>
-            <div class="controls">
-              <input class="form_input" type="password" id="inputPassword" placeholder="">
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="inputPasswordConfirmation">Re-enter Password</label>
-            <div class="controls">
-              <input class="form_input" type="password" id="inputPasswordConfirmation" placeholder="">
-              <input type="hidden" id="hiddinInputCompany" placeholder="" value="Swift Schedules">
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id="employeeSaveBtn">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="modal fade" id="editScheduleModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Edit Schedule</h4>
-      </div>
-      <div class="modal-body">
-        <div id="calendar"></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id="scheduleSaveBtn">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="modal fade" id="editDayModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Edit Day</h4>
-      </div>
-      <div class="modal-body">
-        <form class="form-horizontal">
-          <div class="control-group">
-            <label class="control-label" for="inputLocation">Location</label>
-            <div class="controls">
-              <input class="form_input" type="text" id="inputLocation" placeholder="Mission Valley">
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="inputShiftStart">Shift Start</label>
-            <div class="controls">
-              <input class="form_input" type="email" id="inputShiftStart" placeholder="5:30PM">
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="inputShiftEnd">Shift End</label>
-            <div class="controls">
-              <input class="form_input" type="text" id="inputShiftEnd" placeholder="10:30PM">
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id="daySaveBtn">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+        </div>

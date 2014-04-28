@@ -4,25 +4,21 @@ $(function() {
 		selected,
 		update_url = config.base + "user/home/ajaxUpdateRequest";
 
-	$('body').on('click','.pending-row', function(e){
-        e.preventDefault();
-        console.log(this.className);
-        console.log($(this).attr('rel'));
-        
-        selected = $(this);
-        
-        $('#confirmation_modal').modal('show');
+    $('body').on('click', '.accepted-row', function(e){
+    	e.preventDefault();
+    	selected = $(this);
+    	$('#confirmation_modal').modal('show');
     });
     
     $('body').on('click','#accept_btn',function(){
-        $(selected).removeClass('warning pending-row').addClass('success accepted-row');
+        $(selected).removeClass('warning accepted-row').addClass('success accepted-row');
         var id = $(selected).attr('rel');
         $('.status#'+id)
                 .children()
                 .removeClass('label-warning')
                 .addClass('label-success')
-                .html('Accepted');
-        updateStatus(id,'accepted');
+                .html('Accepted and Scheduled');
+        updateStatus(id,'scheduled');
     });
     
     $('body').on('click','#decline_btn',function(){
