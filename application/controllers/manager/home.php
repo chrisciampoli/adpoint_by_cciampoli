@@ -206,5 +206,53 @@ class Home extends Manager_Controller {
         
         return $schedule;
     }
+
+    public function getRequests() {
+        $this->load->model('mdl_schedule');
+        $this->load->model('mdl_employees');
+        $company = $this->mdl_employees->getCompany();
+        $results = $this->mdl_schedule->getRequests($company);
+        $cleaned = array();
+        $count = 0;
+        foreach($results as $request) {
+            foreach(explode(',',$request['target_id']) as $var) {
+                $this->db->select('username');
+                $this->db->from('users');
+                $this->db->where('id',$var);
+                $query = $this->db->get();
+                $result = $query->row();
+                
+                //echo "ID: " . $request['id'] . "<br/>";
+                $cleaned[$count]['id'] = $request['id'];
+                
+                //echo "Target: " . $result->username . "<br/>";
+                $cleaned[$count]['target'] = $result->username;
+                
+                $this->db->select('username');
+                $this->db->from('users');
+                $this->db->where('id',$request['requester_id']);
+                $query = $this->db->get();
+                $result = $query->row();
+                
+                //echo "Requester: " . $result->username . "<br/>";
+                $cleaned[$count]['requester'] = $result->username;
+                
+                //echo "Date: " . $request['date'] . "<br/>";
+                $cleaned[$count]['date'] = $request['date'];
+                
+                //echo "Shift: " . $request['shift'] . "<br/>";
+                $cleaned[$count]['shift'] = $request['shift'];
+                
+                //echo "Status: " . $request['status'] . "<br/>";
+                $cleaned[$count]['status'] = $request['status'];
+                
+                //echo "<hr>";
+                $count++;
+            }
+            
+        }
+        
+       return $cleaned;
+    }
     
 }
