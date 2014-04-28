@@ -17,7 +17,7 @@ class Home extends Manager_Controller {
         $this->load->model('mdl_schedule');
         //
         $this->company = $this->mdl_employees->getCompany();
-        $this->request_count = $this->mdl_schedule->getRequests($this->company);
+        $this->request_count = count($this->mdl_schedule->getRequests($this->company));
     }
     
     function index() {
