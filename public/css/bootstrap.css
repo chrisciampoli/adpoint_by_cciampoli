@@ -4022,18 +4022,18 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-color: #1B1726;
 }
 .navbar-inverse .navbar-brand {
-  color: #ffffff;
+  color: #1B1726;
 }
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
-  color: #ffffff;
+  color: #1B1726;
   background-color: transparent;
 }
 .navbar-inverse .navbar-text {
   color: #ffffff;
 }
 .navbar-inverse .navbar-nav > li > a {
-  color: #ffffff;
+  color: #1B1726;
 }
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
