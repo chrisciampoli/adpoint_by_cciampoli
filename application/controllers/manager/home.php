@@ -15,7 +15,7 @@ class Home extends Manager_Controller {
         $this->load->library('session');
         $this->load->model('mdl_employees');
         $this->load->model('mdl_schedule');
-        
+        //
         $this->company = $this->mdl_employees->getCompany();
         $this->request_count = $this->mdl_schedule->getRequests($company);
         $data['company'] = $this->company;
