@@ -44,7 +44,8 @@ class Mdl_schedule extends CI_Model {
             'location'=>$location,
             'date'=>$date,
             'shift'=>$shift,
-            'status'=>'pending'
+            'status'=>'pending',
+            'company'=>$company
         );
         
         if($this->db->insert('requests',$data)) {
