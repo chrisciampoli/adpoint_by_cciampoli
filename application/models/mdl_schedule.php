@@ -37,7 +37,7 @@ class Mdl_schedule extends CI_Model {
         
     }
     
-    function postRequest($requester_id, $target_id, $location, $date, $shift) {
+    function postRequest($requester_id, $target_id, $location, $date, $shift, $company) {
         $data = array(
             'requester_id'=>$requester_id,
             'target_id'=>$target_id,
