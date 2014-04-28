@@ -65,10 +65,27 @@ class Home extends Manager_Controller {
         
     }
     
-    function settings() {
+    function settings() 
+    {
         $this->load->view('manager/head');
         $data['name'] = $this->session->userdata('username');
         $this->load->view('manager/settings', $data);
+    }
+
+    function swift_giveup()
+    {
+
+        $data['scripts'][] = 'https://code.jquery.com/jquery-1.10.2.min.js';
+        $data['scripts'][] = 'http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js';
+        $data['scripts'][] = 'http://code.jquery.com/ui/1.10.4/jquery-ui.js';
+
+        $data['styles'][] = base_url('public/css/bootstrap.css');
+        $data['styles'][] = 'http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css';
+
+        $data['head'] = $this->load->view('manager/head',$data, true);
+        $data['nav'] = $this->load->view('manager/navigation/nav','',true);
+        $data['content'] = $this->load->view('manager/pages/swift_giveup', $data, true);
+        $data['script_loader'] = $this->load->view('manager/scripts',$data,true);
     }
 
     public function getCompanyEmployees() {
