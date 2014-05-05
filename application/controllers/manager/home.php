@@ -129,6 +129,7 @@ class Home extends Manager_Controller {
         $data['requests'] = $this->getRequests($company);
         $data['request_count'] = count($data['requests']);
         $data['head'] = $this->load->view('manager/head',$data, true);
+        $data['display_name'] = $this->display_name;
         $data['nav'] = $this->load->view('manager/navigation/nav',$data,true);
         $data['content'] = $this->load->view('manager/pages/swift_giveup', $data, true);
         $data['script_loader'] = $this->load->view('manager/scripts',$data,true);
