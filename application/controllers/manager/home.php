@@ -97,8 +97,9 @@ class Home extends Manager_Controller {
         $data['request_count'] = $this->request_count;
         $data['settings'] = $this->getSettings($this->company);
 
+        $data['display_name'] = $data['settings'][0]['company_name'];
         $data['head'] = $this->load->view('manager/head', $data, true);
-        $data['nav'] = $this->load->view('manager/navigation/nav','',true);
+        $data['nav'] = $this->load->view('manager/navigation/nav',$data,true);
         $data['content'] = $this->load->view('manager/pages/settings',$data,true);
         $data['script_loader'] = $this->load->view('manager/scripts',$data,true);
         

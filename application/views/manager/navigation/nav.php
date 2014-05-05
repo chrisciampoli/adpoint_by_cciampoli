@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Swift Shifts</a>
+          <a class="navbar-brand" href="#"><?=(isset($display_name) ? $display_name : 'Swift Shifts');?></a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
