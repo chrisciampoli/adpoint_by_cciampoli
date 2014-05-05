@@ -5,6 +5,9 @@
     };
 </script>
 <div class="container-fluid">
+<?php
+    echo "<pre>" . print_r($settings, true) . "</pre>";
+?>
     <form role="form" method="post" action="<?= base_url('manager/home/postSettings');?>">
       <div class="form-group">
         <label for="company_name">Company Name</label>
