@@ -6,8 +6,22 @@
 </script>
 <div class="container-fluid">
     <form role="form">
+      <div class="form-group">
+        <label for="company_name">Company Name</label>
+        <input type="input" class="form-control" id="company_name" placeholder="Company Name">
+      </div>
       <div class="form-inline">
-        <label for="exampleInputEmail1">Locations</label>
+        <label for="shifts">Shifts</label>
+        <select class="form-control" id="locations">
+            <option value="morning_shift">Morning</option>
+            <option value="afternoon_shift">Afternoon</option>
+            <option value="swing_shift">Swing</option>
+        </select>
+        <button type="button" class="btn btn-default" id="add_location">Edit Shift</button>
+        <button type="button" class="btn btn-default" id="add_location">Add New Shift</button>
+      </div>
+      <div class="form-inline">
+        <label for="locations">Locations</label>
         <select class="form-control" id="locations">
             <option value="mission_valley">Mission Valley</option>
             <option value="fashion valley">Fashion Valley</option>
@@ -15,6 +29,10 @@
         </select>
         <button type="button" class="btn btn-default" id="add_location">Edit Location</button>
         <button type="button" class="btn btn-default" id="add_location">Add New Location</button>
+      </div>
+      <div class="form-group">
+        <label for="admin_email">Administrator Contact Email</label>
+        <input type="email" class="form-control" id="admin_email" placeholder="admin@example.com">
       </div>
       <button type="submit" class="btn btn-default">Save</button>
     </form>
