@@ -6,9 +6,14 @@
 </script>
 <div class="container-fluid">
     <form role="form">
-      <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+      <div class="form-inline">
+        <label for="exampleInputEmail1">Locations</label>
+        <select class="form-control" id="locations">
+            <option value="mission_valley">Mission Valley</option>
+            <option value="fashion valley">Fashion Valley</option>
+            <option value="SDSU">SDSU</option>
+        </select>
+        <button type="button" class="btn btn-default" id="add_location">Add Location</button>
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Password</label>

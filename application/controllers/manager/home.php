@@ -92,7 +92,6 @@ class Home extends Manager_Controller {
         $data['styles'][] = 'http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css';
         
         $data['name'] = $this->session->userdata('username');
-        $data['employees'] = $employees;
         $data['company'] = $this->company;
         $data['request_count'] = $this->request_count;
 
