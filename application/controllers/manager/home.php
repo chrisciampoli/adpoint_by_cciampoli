@@ -307,7 +307,7 @@ class Home extends Manager_Controller {
             'company_name'=>$this->input->post('company_name'),
             'shifts'=>json_encode($this->input->post('shifts')),
             'locations'=>json_encode($This->input->post('locations')),
-            'admin_email'=>$this->input->post('admin_email');
+            'admin_email'=>$this->input->post('admin_email')
         );
 
         $this->settings->saveSettings($data);
