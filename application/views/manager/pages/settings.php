@@ -8,7 +8,7 @@
     <form role="form" method="post" action="<?= base_url('manager/home/postSettings');?>">
       <div class="form-group">
         <label for="company_name">Company Name</label>
-        <input type="input" class="form-control" id="company_name" name="company_name" placeholder="Company Name" required>
+        <input value="<?=(isset($settings['company_name']) ? $settings['company_name'] : '');?>" type="input" class="form-control" id="company_name" name="company_name" placeholder="Company Name" required>
       </div>
       <div class="form-group form-inline">
         <label for="shifts">Shifts</label>
@@ -32,7 +32,7 @@
       </div>
       <div class="form-group">
         <label for="admin_email">Administrator Contact Email</label>
-        <input name="admin_email" type="email" class="form-control" id="admin_email" placeholder="admin@example.com" required>
+        <input value="<?=(isset($settings['admin_email']) ? $settings['admin_email'] : '');?>" name="admin_email" type="email" class="form-control" id="admin_email" placeholder="admin@example.com" required>
       </div>
       <button type="submit" class="btn btn-default">Save</button>
     </form>
