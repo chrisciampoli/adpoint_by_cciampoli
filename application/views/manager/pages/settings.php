@@ -5,7 +5,7 @@
     };
 </script>
 <div class="container-fluid">
-    <form role="form">
+    <form role="form" action="<?= base_url('manager/home/postSettings');?>">
       <div class="form-group">
         <label for="company_name">Company Name</label>
         <input type="input" class="form-control" id="company_name" placeholder="Company Name">
