@@ -89,9 +89,7 @@ class Home extends Manager_Controller {
         $data['scripts'][] = 'https://code.jquery.com/jquery-1.10.2.min.js';
         $data['scripts'][] = 'http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js';
         $data['scripts'][] = 'http://code.jquery.com/ui/1.10.4/jquery-ui.js';
-        $data['scripts'][] = base_url('public/js/employees.js');
-        $data['scripts'][] = base_url('public/js/docs.js');
-        $data['scripts'][] = base_url('public/js/bic_calendar.js');
+        $data['scripts'][] = base_url('public/js/manager/settings.js');
         
         $data['styles'][] =  base_url('public/css/dashboard.css');
         $data['styles'][] = base_url('public/css/bootstrap.css');

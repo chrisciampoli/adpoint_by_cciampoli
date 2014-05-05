@@ -3,14 +3,6 @@
         base: "<?php echo base_url(); ?>",
         notes: 4
     };
-    $(function(){
-      $('#display_shifts').on('click',function(e){
-        $('#shifts_tbl').fadeToggle();
-      });
-      $('#display_locations').on('click',function(e){
-        $('#shifts_tbl').fadeToggle();
-      });
-    });
 </script>
 <div class="container-fluid">
     <form role="form" method="post" action="<?= base_url('manager/home/postSettings');?>">
