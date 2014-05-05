@@ -78,11 +78,28 @@ class Home extends Manager_Controller {
     
     function settings() 
     {
-        $this->load->view('manager/head');
+        $data['title'] = 'Settings';
+        
+        $data['scripts'][] = 'https://code.jquery.com/jquery-1.10.2.min.js';
+        $data['scripts'][] = 'http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js';
+        $data['scripts'][] = 'http://code.jquery.com/ui/1.10.4/jquery-ui.js';
+        $data['scripts'][] = base_url('public/js/employees.js');
+        $data['scripts'][] = base_url('public/js/docs.js');
+        $data['scripts'][] = base_url('public/js/bic_calendar.js');
+        
+        $data['styles'][] =  base_url('public/css/dashboard.css');
+        $data['styles'][] = base_url('public/css/bootstrap.css');
+        $data['styles'][] = 'http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css';
+        
         $data['name'] = $this->session->userdata('username');
-        $data['company'] = $this->company;
-        $data['request_count'] = $this->request_count;
-        $this->load->view('manager/pages/settings', $data);
+        $data['employees'] = $employees;
+
+        $data['head'] = $this->load->view('manager/head', $data, true);
+        $data['nav'] = $this->load->view('manager/navigation/nav','',true);
+        $data['content'] = $this->load->view('manager/pages/settings',$data,true);
+        $data['script_loader'] = $this->load->view('manager/scripts',$data,true);
+        
+        $this->load->view('manager/wrapper', $data);
     }
 
     function swift_giveup()
