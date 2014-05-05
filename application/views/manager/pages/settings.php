@@ -13,7 +13,7 @@
       <div class="form-group form-inline">
         <button type="button" class="btn btn-default" id="display_shifts">Display Shifts</button>
         <div id="shifts_tbl" style="display:none;">
-          <table>
+          <table class="table table-hover">
             <thead>
             </thead>
             <tbody>
@@ -27,7 +27,7 @@
       <div class="form-group form-inline">
         <button type="button" class="btn btn-default" id="display_locations">Display Locations</button>
         <div id="locations_tbl" style="display:none;">
-          <table>
+          <table class="table table-hover">
             <thead>
             </thead>
             <tbody>
