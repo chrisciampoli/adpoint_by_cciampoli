@@ -304,6 +304,7 @@ class Home extends Manager_Controller {
     function postSettings()
     {   
         $data = array(
+            'company'=>$this->company,
             'company_name'=>$this->input->post('company_name'),
             'shifts'=>json_encode($this->input->post('shifts')),
             'locations'=>json_encode($this->input->post('locations')),

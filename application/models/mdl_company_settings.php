@@ -3,6 +3,7 @@
 class Mdl_company_settings extends CI_Model {
 
     public $settings = array(
+        'company'=>'',
         'company_name'=>'',
         'shifts'=>'',
         'locations'=>'',
@@ -17,6 +18,7 @@ class Mdl_company_settings extends CI_Model {
 
     function saveSettings($data) {
 
+        $this->settings['company'] = $data['company'];
         $this->settings['company_name'] = $data['company_name'];
         $this->settings['shifts'] = $data['shifts'];
         $this->settings['locations'] = $data['locations'];
