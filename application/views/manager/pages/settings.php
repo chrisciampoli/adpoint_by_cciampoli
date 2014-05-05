@@ -12,23 +12,11 @@
       </div>
       <div class="form-group form-inline">
         <label for="shifts">Shifts</label>
-        <select name="shifts" class="form-control" id="locations">
-            <option value="morning_shift">Morning</option>
-            <option value="afternoon_shift">Afternoon</option>
-            <option value="swing_shift">Swing</option>
-        </select>
-        <button type="button" class="btn btn-default" id="add_location">Edit Shift</button>
-        <button type="button" class="btn btn-default" id="add_location">Add New Shift</button>
+        <button type="button" class="btn btn-default" id="add_location">Show Shifts</button>
       </div>
       <div class="form-group form-inline">
         <label for="locations">Locations</label>
-        <select name="locations" class="form-control" id="locations">
-            <option value="mission_valley">Mission Valley</option>
-            <option value="fashion valley">Fashion Valley</option>
-            <option value="SDSU">SDSU</option>
-        </select>
-        <button type="button" class="btn btn-default" id="add_location">Edit Location</button>
-        <button type="button" class="btn btn-default" id="add_location">Add New Location</button>
+        <button type="button" class="btn btn-default" id="add_location">Show Locations</button>
       </div>
       <div class="form-group">
         <label for="admin_email">Administrator Contact Email</label>
