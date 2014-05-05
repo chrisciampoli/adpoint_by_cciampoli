@@ -5,7 +5,7 @@ $(function(){
 	});
 	
 	$('#display_locations').on('click',function(e){
-		$('#shifts_tbl').fadeToggle();
+		$('#locations_tbl').fadeToggle();
 	});
 
 });
