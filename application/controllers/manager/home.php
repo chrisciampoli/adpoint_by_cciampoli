@@ -82,7 +82,7 @@ class Home extends Manager_Controller {
         $data['name'] = $this->session->userdata('username');
         $data['company'] = $this->company;
         $data['request_count'] = $this->request_count;
-        $this->load->view('manager/settings', $data);
+        $this->load->view('manager/pages/settings', $data);
     }
 
     function swift_giveup()
