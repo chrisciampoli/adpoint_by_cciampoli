@@ -25,6 +25,8 @@ class Mdl_company_settings extends CI_Model {
         $this->settings['admin_email'] = $data['admin_email'];
         echo 'b';
         $exists = $this->getSettings($this->settings['company']);
+        echo "<pre>" . print_r($exists,true) . "</pre>";
+        return;
         echo '1';
         if(!empty($exists)) {
             echo '2';
