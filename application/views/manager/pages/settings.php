@@ -11,12 +11,10 @@
         <input value="<?=(isset($settings[0]['company_name']) ? $settings[0]['company_name'] : '');?>" type="input" class="form-control" id="company_name" name="company_name" placeholder="Company Name" required>
       </div>
       <div class="form-group form-inline">
-        <label for="shifts">Shifts</label>
-        <button type="button" class="btn btn-default" id="add_location">Show Shifts</button>
+        <button type="button" class="btn btn-default" id="add_location">Display Shifts</button>
       </div>
       <div class="form-group form-inline">
-        <label for="locations">Locations</label>
-        <button type="button" class="btn btn-default" id="add_location">Show Locations</button>
+        <button type="button" class="btn btn-default" id="add_location">Display Locations</button>
       </div>
       <div class="form-group">
         <label for="admin_email">Administrator Contact Email</label>
