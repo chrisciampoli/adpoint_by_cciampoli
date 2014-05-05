@@ -8,11 +8,11 @@
     <form role="form" method="post" action="<?= base_url('manager/home/postSettings');?>">
       <div class="form-group">
         <label for="company_name">Company Name</label>
-        <input type="input" class="form-control" id="company_name" placeholder="Company Name">
+        <input type="input" class="form-control" id="company_name" name="company_name" placeholder="Company Name">
       </div>
       <div class="form-group form-inline">
         <label for="shifts">Shifts</label>
-        <select class="form-control" id="locations">
+        <select name="shifts" class="form-control" id="locations">
             <option value="morning_shift">Morning</option>
             <option value="afternoon_shift">Afternoon</option>
             <option value="swing_shift">Swing</option>
@@ -22,7 +22,7 @@
       </div>
       <div class="form-group form-inline">
         <label for="locations">Locations</label>
-        <select class="form-control" id="locations">
+        <select name="locations" class="form-control" id="locations">
             <option value="mission_valley">Mission Valley</option>
             <option value="fashion valley">Fashion Valley</option>
             <option value="SDSU">SDSU</option>
@@ -32,7 +32,7 @@
       </div>
       <div class="form-group">
         <label for="admin_email">Administrator Contact Email</label>
-        <input type="email" class="form-control" id="admin_email" placeholder="admin@example.com">
+        <input name="admin_email" type="email" class="form-control" id="admin_email" placeholder="admin@example.com">
       </div>
       <button type="submit" class="btn btn-default">Save</button>
     </form>
