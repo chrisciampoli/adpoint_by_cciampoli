@@ -24,24 +24,33 @@ class Mdl_company_settings extends CI_Model {
         $this->settings['locations'] = $data['locations'];
         $this->settings['admin_email'] = $data['admin_email'];
 
-        if($this->db->insert($this->table,$this->settings)) {
-            return true;
+        $exists = $this->getSettings($this->company);
+
+        if(!empty($exists)) {
+            if($this->db->insert($this->table,$this->settings)) {
+                return true;
+            } else {
+                return false;
+            }
         } else {
-            return false;
+            return $this->updateSettings($this->settings['company'], $this->settings);
         }
+
+        
     }
 
-    function updateSettings($id = null) {
-        if($this->db->update($id, $this->table,$this->settings)) {
+    function updateSettings($company, $settings) {
+       $this->db->where('company',$company);
+       if($this->db->update($this->table, $settings)) {
             return true;
-        } else {
+       } else {
             return false;
-        }
+       }
     }
 
-    function getSettings($company_name) {
+    function getSettings($company) {
         $this->db->select('*');
-        $this->db->where('company_name',$company_name);
+        $this->db->where('company',$company);
         $query = $this->db->get($this->table);
         return $query->result_array();
     }
