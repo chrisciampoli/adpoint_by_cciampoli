@@ -17,26 +17,30 @@ class Mdl_company_settings extends CI_Model {
     }
 
     function saveSettings($data) {
-
+        echo 'a';
         $this->settings['company'] = $data['company'];
         $this->settings['company_name'] = $data['company_name'];
         $this->settings['shifts'] = $data['shifts'];
         $this->settings['locations'] = $data['locations'];
         $this->settings['admin_email'] = $data['admin_email'];
-
+        echo 'b';
         $exists = $this->getSettings($this->settings['company']);
-
+        echo '1';
         if(!empty($exists)) {
+            echo '2';
             if($this->db->insert($this->table,$this->settings)) {
+                echo '3';
                 return true;
             } else {
+                echo '4';
                 return false;
             }
         } else {
+            echo '5';
             return $this->updateSettings($this->settings['company'], $this->settings);
         }
 
-        
+        return;
     }
 
     function updateSettings($company, $settings) {
