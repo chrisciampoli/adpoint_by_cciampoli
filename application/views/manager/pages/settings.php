@@ -10,7 +10,7 @@
         <label for="company_name">Company Name</label>
         <input type="input" class="form-control" id="company_name" placeholder="Company Name">
       </div>
-      <div class="form-inline">
+      <div class="form-group form-inline">
         <label for="shifts">Shifts</label>
         <select class="form-control" id="locations">
             <option value="morning_shift">Morning</option>
@@ -20,7 +20,7 @@
         <button type="button" class="btn btn-default" id="add_location">Edit Shift</button>
         <button type="button" class="btn btn-default" id="add_location">Add New Shift</button>
       </div>
-      <div class="form-inline">
+      <div class="form-group form-inline">
         <label for="locations">Locations</label>
         <select class="form-control" id="locations">
             <option value="mission_valley">Mission Valley</option>
