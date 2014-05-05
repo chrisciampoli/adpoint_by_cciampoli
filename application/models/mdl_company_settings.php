@@ -24,7 +24,7 @@ class Mdl_company_settings extends CI_Model {
         $this->settings['locations'] = $data['locations'];
         $this->settings['admin_email'] = $data['admin_email'];
 
-        $exists = $this->getSettings($this->company);
+        $exists = $this->getSettings($this->settings['company']);
 
         if(!empty($exists)) {
             if($this->db->insert($this->table,$this->settings)) {
