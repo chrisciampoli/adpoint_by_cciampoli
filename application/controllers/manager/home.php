@@ -93,6 +93,8 @@ class Home extends Manager_Controller {
         
         $data['name'] = $this->session->userdata('username');
         $data['employees'] = $employees;
+        $data['company'] = $this->company;
+        $data['request_count'] = $this->request_count;
 
         $data['head'] = $this->load->view('manager/head', $data, true);
         $data['nav'] = $this->load->view('manager/navigation/nav','',true);
