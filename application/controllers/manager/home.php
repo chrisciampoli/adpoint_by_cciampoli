@@ -17,7 +17,7 @@ class Home extends Manager_Controller {
         $this->load->library('session');
         $this->load->model('mdl_employees');
         $this->load->model('mdl_schedule');
-        $this->load->model('mdl_company_settings','settings');
+        $this->load->model('mdl_company_settings');
         //
         $this->company = $this->mdl_employees->getCompany();
         $this->request_count = count($this->mdl_schedule->getRequests($this->company));
@@ -319,19 +319,19 @@ class Home extends Manager_Controller {
             'admin_email'=>$this->input->post('admin_email')
         );
 
-        $this->settings->saveSettings($data);
+        $this->mdl_company_settings->saveSettings($data);
 
         $this->settings();
     }
 
     function getSettings($company)
     {
-        return $this->settings->getSettings($company);
+        return $this->mdl_company_settings->getSettings($company);
     }
 
     function putSettings()
     {
-        $this->settings->updateSettings($company, $data);
+        $this->mdl_company_settings->updateSettings($company, $data);
     }
     
 }
