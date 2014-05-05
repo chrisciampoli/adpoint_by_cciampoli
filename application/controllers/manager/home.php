@@ -319,7 +319,7 @@ class Home extends Manager_Controller {
 
     function getSettings($company)
     {
-        $this->settings->getSettings($company);
+        return $this->settings->getSettings($company);
     }
 
     function putSettings()
