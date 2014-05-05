@@ -42,7 +42,7 @@
 
         <!-- Wrap all page content here -->
         <div id="container">
-            <h1><well>Swift Shifts</well></h1>
+            <h1><well><?=$display_name;?></well></h1>
             <ul class="nav nav-tabs">
                 <li id="daily_tab" class="active"><a href="#daily" data-toggle="tab">Daily</a></li>
                 <li><a href="#week" data-toggle="tab">Week</a></li>

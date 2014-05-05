@@ -9,6 +9,12 @@ class Home extends User_Controller {
     
     function index() {
         $this->load->model('mdl_schedule');
+        $this->load->model('mdl_company_settings');
+        $this->load->model('mdl_employees');
+
+        $company = $this->mdl_employees->getCompany();
+        $settings = $this->mdl_company_settings->getSettings($company);
+        $data['display_name'] = (isset($settings[0]['company_name']) ? $settings[0]['company_name'] : 'Swift Shifts');
         $data['employees'] = $this->getCompanyEmployees();
         $data['requests'] = $this->getRequests();
         $data['username'] = $this->session->userdata('username');
