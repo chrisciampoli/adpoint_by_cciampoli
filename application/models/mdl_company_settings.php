@@ -25,7 +25,8 @@ class Mdl_company_settings extends CI_Model {
         $this->settings['admin_email'] = $data['admin_email'];
 
         $exists = $this->getSettings($this->settings['company']);
-        if(count($exists) > 0) {
+        echo "Count: " . count($exists);
+        if(count($exists) < 1) {
             $this->db->insert($this->table,$this->settings);
         } else {
             $this->updateSettings($this->settings['company'],$this->settings);
