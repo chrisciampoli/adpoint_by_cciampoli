@@ -4,6 +4,8 @@ class Home extends Manager_Controller {
 
     public $request_count;
     public $company;
+    public $settings;
+    public $display_name;
     
     function __construct() {
         parent::__construct();
@@ -19,6 +21,8 @@ class Home extends Manager_Controller {
         //
         $this->company = $this->mdl_employees->getCompany();
         $this->request_count = count($this->mdl_schedule->getRequests($this->company));
+        $this->settings = $this->getSettings($this->company);
+        $this->display_name = (isset($this->settings[0]['company_name']) ? $this->settings[0]['company_name'] : 'Swift Shifts');
     }
     
     function index() {
@@ -37,6 +41,7 @@ class Home extends Manager_Controller {
 
         $data['title'] = 'Dashboard';
         $data['head'] = $this->load->view('manager/head', $data, true);
+        $data['display_name'] = $this->display_name;
         $data['nav'] = $this->load->view('manager/navigation/nav',$data,true);
         $data['content'] = $this->load->view('manager/pages/dashboard',$data,true);
         $data['script_loader'] = $this->load->view('manager/scripts',$data,true);
@@ -66,9 +71,9 @@ class Home extends Manager_Controller {
 
         $data['company'] = $this->company;
         $data['request_count'] = $this->request_count;
-
+        $data['display_name'] = $this->display_name;
         $data['head'] = $this->load->view('manager/head', $data, true);
-        $data['nav'] = $this->load->view('manager/navigation/nav','',true);
+        $data['nav'] = $this->load->view('manager/navigation/nav',$data,true);
         $data['content'] = $this->load->view('manager/pages/employees2',$data,true);
         $data['script_loader'] = $this->load->view('manager/scripts',$data,true);
         
@@ -97,7 +102,7 @@ class Home extends Manager_Controller {
         $data['request_count'] = $this->request_count;
         $data['settings'] = $this->getSettings($this->company);
 
-        $data['display_name'] = $data['settings'][0]['company_name'];
+        $data['display_name'] = $this->display_name;
         $data['head'] = $this->load->view('manager/head', $data, true);
         $data['nav'] = $this->load->view('manager/navigation/nav',$data,true);
         $data['content'] = $this->load->view('manager/pages/settings',$data,true);
