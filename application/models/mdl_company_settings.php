@@ -5,7 +5,9 @@ class Mdl_company_settings extends CI_Model {
     public $settings = array(
         'company'=>'',
         'company_name'=>'',
-        'admin_email'=>''
+        'admin_email'=>'',
+        'locations'=>'',
+        'shifts'=>''
         );
 
     public $table = 'company_settings';
@@ -19,6 +21,8 @@ class Mdl_company_settings extends CI_Model {
         $this->settings['company'] = $data['company'];
         $this->settings['company_name'] = $data['company_name'];
         $this->settings['admin_email'] = $data['admin_email'];
+        $this->settings['locations'] = $data['locations'];
+        $this->settings['shifts'] = $data['shifts'];
 
         $exists = $this->getSettings($this->settings['company']);
         
