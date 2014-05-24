@@ -2,11 +2,13 @@
 
 class Mdl_company_settings extends CI_Model {
 
-    private $company = '';
-    private $company_name = '';
-    private $admin_email = '';
-    private $locations = '';
-    private $shifts = '';
+    public $settings = array(
+        'company'=>'',
+        'company_name'=>'',
+        'admin_email'=>'',
+        'locations'=>'',
+        'shifts'=>''
+        );
 
     public $table = 'company_settings';
 
@@ -16,20 +18,21 @@ class Mdl_company_settings extends CI_Model {
 
     function saveSettings($data) {
 
-        $this->company = $data['company'];
-        $this->company_name = $data['company_name'];
-        $this->admin_email = $data['admin_email'];
-        $this->locations = $data['locations'];
-        $this->shifts = $data['shifts'];
+        $this->settings['company'] = $data['company'];
+        $this->settings['company_name'] = $data['company_name'];
+        $this->settings['admin_email'] = $data['admin_email'];
+        $this->settings['locations'] = $data['locations'];
+        $this->settings['shifts'] = $data['shifts'];
 
-        $exists = $this->getSettings($this->company);
+        $exists = $this->getSettings($this->settings['company']);
         
         if(count($exists) < 1) {
-            $this->db->insert($this->table, $this);
+            $this->db->insert($this->table,$this->settings);
         } else {
-            $this->updateSettings($this->company, $this);
+            $this->updateSettings($this->settings['company'], $this->settings);
         }
 
+        
         return;
     }
 
