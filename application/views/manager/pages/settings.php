@@ -16,13 +16,18 @@
           <table class="table table-hover">
             <thead>
               <th>Name</th>
-              <th>Address</th>
-              <th>Manager</th>
-              <th>Contact</th>
+              <th>Shift Start</th>
+              <th>Shift End</th>
             </thead>
             <tbody>
               <tr>
-                <td>Mission Valley</td><td>9232 Mission Valley Way, San Diego CA</td><td>Steven</td><td>(619)223-1212</td>
+                <td>Morning</td><td>5:30 AM</td><td>12:30 PM</td>
+              </tr>
+              <tr>
+                <td>Swing</td><td>12:30 PM</td><td>7:30 PM</td>
+              </tr>
+              <tr>
+                <td>Night</td><td>7:30 PM</td><td>2:30 AM</td>
               </tr>
             </tbody>
           </table>
@@ -33,10 +38,14 @@
         <div id="locations_tbl" style="display:none;">
           <table class="table table-hover">
             <thead>
+              <th>Name</th>
+              <th>Address</th>
+              <th>Manager</th>
+              <th>Contact</th>
             </thead>
             <tbody>
               <tr>
-                <td>Testing</td>
+                <td>Mission Valley</td><td>9232 Mission Valley Way, San Diego CA</td><td>Steven</td><td>(619)223-1212</td>
               </tr>
             </tbody>
           </table>
