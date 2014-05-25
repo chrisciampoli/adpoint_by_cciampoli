@@ -6,8 +6,8 @@
     };
 </script>
 <?php
-  $current_locations = json_decode($current_locations);
-  $current_shifts = json_decode($current_shifts,true);
+  $current_locations = json_decode($locations);
+  $current_shifts = json_decode($shifts,true);
 
   echo "<pre>" . print_r($current_shifts, true) . "</pre>";
   echo "<pre>" . print_r($current_locations, true) . "</pre>";
