@@ -1,8 +1,6 @@
 <script>
     var config = {
-        base: "<?= base_url(); ?>",
-        shifts: $.parseJSON("<?=$shifts?>"),
-        locations: "<?=$locations?>"
+        base: "<?php echo base_url(); ?>",
     };
 </script>
 <div class="container-fluid">
@@ -57,4 +55,3 @@
       </div>
       <button class="btn btn-default" id="saveBtn">Save</button>
 </div>
-<?php echo "<pre>" . print_r($settings, true) . "</pre>";?>
