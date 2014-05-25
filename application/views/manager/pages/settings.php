@@ -1,7 +1,7 @@
 <script>
     var config = {
         base: "<?= base_url(); ?>",
-        shifts: "<?=$shifts?>",
+        shifts: $.parseJSON("<?=$shifts?>"),
         locations: "<?=$locations?>"
     };
 </script>
