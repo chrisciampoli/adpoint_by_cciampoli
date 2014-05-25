@@ -28,7 +28,7 @@ $(function(){
 		try {
 
 			$.ajax({
-				url: "manager/home/ajaxPostSettings",
+				url: "/manager/home/ajaxPostSettings",
 				type: "POST",
 				dataType: "json",
 				data: settings,
