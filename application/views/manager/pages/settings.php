@@ -1,6 +1,7 @@
 <script>
     var config = {
         base: "<?php echo base_url(); ?>",
+        locations: "<?php echo $locations; ?>"
     };
 </script>
 <div class="container-fluid">
