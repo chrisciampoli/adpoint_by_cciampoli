@@ -55,3 +55,4 @@
       </div>
       <button class="btn btn-default" id="saveBtn">Save</button>
 </div>
+<?php echo "<pre>" . print_r($settings, true) . "</pre>";?>
