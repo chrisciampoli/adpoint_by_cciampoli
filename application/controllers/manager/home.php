@@ -99,8 +99,8 @@ class Home extends Manager_Controller {
         $data['company'] = $this->company;
         $data['request_count'] = $this->request_count;
         $data['settings'] = $this->getSettings($this->company);
-        $data['shifts'] = $data['settings'][0]['shifts'];
-        $data['locations'] = $data['settings'][0]['locations'];
+        $data['shifts'] = json_encode($data['settings'][0]['shifts']);
+        $data['locations'] = json_encode($data['settings'][0]['locations']);
 
         $data['display_name'] = $this->display_name;
         $data['head'] = $this->load->view('manager/head', $data, true);

@@ -1,7 +1,6 @@
 $(function(){
 
 	var settings_url = config.base + "manager/home/ajaxPostSettings";
-	window.shifts = "<?= $shifts; ?>";
 	
 	$('#display_shifts').on('click',function(e){
 		$('#shifts_tbl').fadeToggle();
