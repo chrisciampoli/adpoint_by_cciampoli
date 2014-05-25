@@ -12,15 +12,23 @@ $(function(){
 		
 		var settings = {
 			company_name: $('#company_name').val(),
-			locations: {},
-			shifts: {},
+			locations: [
+				{name:'', address:'',  manager:'', contact: ''},
+				{name:'',address:'',  manager:'', contact: ''},
+				{name:'',address:'',  manager:'', contact: ''}
+			],
+			shifts: [
+				{name:'',shift_start:'',shift_end:''},
+				{name:'',shift_start:'',shift_end:''},
+				{name:'',shift_start:'',shift_end:''}
+			],
 			admin_email: $('#admin_email').val()
 		};
 		
 		try {
 
 			$.ajax({
-				url: "manager/home/ajax_save_settings"
+				url: "manager/home/ajaxPostSettings",
 				type: "POST",
 				dataType: "json",
 				data: settings,

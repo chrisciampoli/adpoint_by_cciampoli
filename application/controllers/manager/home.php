@@ -307,14 +307,32 @@ class Home extends Manager_Controller {
        return $cleaned;
     }
 
+    public function ajaxPostSettings() {
+         $data = array(
+            'company'=>$this->company,
+            'company_name'=>$this->input->post('company_name'),
+            'admin_email'=>$this->input->post('admin_email'),
+            'locations'=>$this->input->post('locations'),
+            'shifts'=>$this->input->post('shifts')
+        );
+
+        $this->mdl_company_settings->saveSettings($data);
+
+        $settings = $this->getSettings($this->company);
+
+        $this->display_name = $settings[0]['company_name'];
+
+        $this->settings();
+    }
+
     function postSettings()
     {   
         $data = array(
             'company'=>$this->company,
             'company_name'=>$this->input->post('company_name'),
             'admin_email'=>$this->input->post('admin_email'),
-            'locations'=>$this->input->post('locations'),
-            'shifts'=>$this->input->post('shifts')
+            'locations'=>json_encode($this->input->post('locations')),
+            'shifts'=>json_encode($this->input->post('shifts'))
         );
 
         $this->mdl_company_settings->saveSettings($data);
