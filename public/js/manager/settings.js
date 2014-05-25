@@ -1,4 +1,7 @@
 $(function(){
+
+	var settings_url = config.base + "manager/home/ajaxPostSettings";
+
 	
 	$('#display_shifts').on('click',function(e){
 		$('#shifts_tbl').fadeToggle();
@@ -28,7 +31,7 @@ $(function(){
 		try {
 
 			$.ajax({
-				url: "/manager/home/ajaxPostSettings",
+				url: settings_url,
 				type: "POST",
 				dataType: "json",
 				data: settings,
