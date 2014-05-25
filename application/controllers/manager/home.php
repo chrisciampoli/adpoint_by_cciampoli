@@ -321,9 +321,7 @@ class Home extends Manager_Controller {
 
         $settings = $this->getSettings($this->company);
 
-        echo "<pre>" . print_r($settings, true) . "</pre>";
-
-        $this->display_name = $settings['company_name'];
+        $this->display_name = $settings[0]['company_name'];
 
         $this->settings();
     }
