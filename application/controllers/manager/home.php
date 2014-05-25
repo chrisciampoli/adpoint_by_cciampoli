@@ -312,8 +312,8 @@ class Home extends Manager_Controller {
             'company'=>$this->company,
             'company_name'=>$this->input->post('company_name'),
             'admin_email'=>$this->input->post('admin_email'),
-            'locations'=>$this->input->post('locations'),
-            'shifts'=>$this->input->post('shifts')
+            'locations'=>json_encode($this->input->post('locations')),
+            'shifts'=>json_encode($this->input->post('shifts'))
         );
 
         $this->mdl_company_settings->saveSettings($data);
@@ -331,8 +331,8 @@ class Home extends Manager_Controller {
             'company'=>$this->company,
             'company_name'=>$this->input->post('company_name'),
             'admin_email'=>$this->input->post('admin_email'),
-            'locations'=>json_encode($this->input->post('locations')),
-            'shifts'=>json_encode($this->input->post('shifts'))
+            'locations'=>$this->input->post('locations'),
+            'shifts'=>$this->input->post('shifts')
         );
 
         $this->mdl_company_settings->saveSettings($data);
