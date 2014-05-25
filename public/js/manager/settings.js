@@ -1,6 +1,8 @@
 $(function(){
 
-	var settings_url = config.base + "manager/home/ajaxPostSettings";
+	var settings_url = config.base + "manager/home/ajaxPostSettings",
+	    shifts = $.parseJSON(config.shifts),
+	    locations = $.parseJSON(config.locations);
 	
 	$('#display_shifts').on('click',function(e){
 		$('#shifts_tbl').fadeToggle();
@@ -48,4 +50,5 @@ $(function(){
 	
 	});
 
+	
 });

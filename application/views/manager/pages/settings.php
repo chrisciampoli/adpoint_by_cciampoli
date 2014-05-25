@@ -1,9 +1,17 @@
 <script>
     var config = {
         base: "<?php echo base_url(); ?>",
-        locations: '<?=$locations;?>'
+        locations: '<?=$locations;?>',
+        shifts: '<?=$shifts;?>'
     };
 </script>
+<?php
+  $current_locations = json_decode($current_locations);
+  $current_shifts = json_decode($current_shifts,true);
+
+  echo "<pre>" . print_r($current_shifts, true) . "</pre>";
+  echo "<pre>" . print_r($current_locations, true) . "</pre>";
+?>
 <div class="container-fluid">
       <div class="form-group">
         <label for="company_name">Company Name</label>
