@@ -5,13 +5,6 @@
         shifts: '<?=$shifts;?>'
     };
 </script>
-<?php
-  $current_locations = json_decode($locations);
-  $current_shifts = json_decode($shifts,true);
-
-  echo "<pre>" . print_r($current_shifts, true) . "</pre>";
-  echo "<pre>" . print_r($current_locations, true) . "</pre>";
-?>
 <div class="container-fluid">
       <div class="form-group">
         <label for="company_name">Company Name</label>
