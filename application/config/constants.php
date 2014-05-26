@@ -19,7 +19,7 @@ define('DIR_READ_MODE', 0755);
 define('DIR_WRITE_MODE', 0777);
 define('SERVER', 'http://swiftnco.com/');
 define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_PASS', 'cciampoli@123');
 /*
 |--------------------------------------------------------------------------
 | File Stream Modes
