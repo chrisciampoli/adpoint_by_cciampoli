@@ -179,8 +179,8 @@
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-        <script src="<?php echo base_url('public/js/lib/bootstrap.min.js'); ?>"></script>
-        <script src="<?php echo base_url('public/js/modules/employees/index.js'); ?>"></script>
+        <script src="<?php echo base_url('public/js/libs/bootstrap.min.js'); ?>"></script>
+        <script src="<?php echo base_url('public/js/modules/company/employee/index.js'); ?>"></script>
         <script src="<?php echo base_url('public/js/libs/bic_calendar.js'); ?>"></script>
         <script src="https://rawgithub.com/moment/moment/develop/min/moment-with-langs.min.js"></script>
     </body>
