@@ -54,11 +54,11 @@ $(function(){
 	/*
 		Need to be able to add, update, and remove shifts
 	*/
-	assert(addShift(data), "addShift worked!");
+	//assert(addShift(data), "addShift worked!");
 
-	assert(removeShift(id), "removeShift worked!");
+	//assert(removeShift(id), "removeShift worked!");
 	
-	assert(updateShift(id), "updateShift worked!");
+	//assert(updateShift(id), "updateShift worked!");
 
 	var SWIFT = SWIFT || {};
 
