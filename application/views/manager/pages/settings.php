@@ -20,15 +20,11 @@
               <th>Shift End</th>
             </thead>
             <tbody>
+              <?php foreach(json_decode($shifts, true) as $shift): ?>
               <tr>
-                <td>Morning</td><td>5:30 AM</td><td>12:30 PM</td>
+                <td><?=$shift['name']?></td><td><?=$shift['shift_start']?></td><td><?=$shift['shift_end']?></td>
               </tr>
-              <tr>
-                <td>Swing</td><td>12:30 PM</td><td>7:30 PM</td>
-              </tr>
-              <tr>
-                <td>Night</td><td>7:30 PM</td><td>2:30 AM</td>
-              </tr>
+            <?php endforeach;?>
             </tbody>
           </table>
         </div>
