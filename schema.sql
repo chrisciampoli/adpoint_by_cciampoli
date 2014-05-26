@@ -16,6 +16,34 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `company_settings`
+--
+
+DROP TABLE IF EXISTS `company_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `company_settings` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `company` varchar(100) DEFAULT NULL,
+  `company_name` varchar(100) NOT NULL,
+  `admin_email` varchar(100) DEFAULT NULL,
+  `shifts` text,
+  `locations` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `company_settings`
+--
+
+LOCK TABLES `company_settings` WRITE;
+/*!40000 ALTER TABLE `company_settings` DISABLE KEYS */;
+INSERT INTO `company_settings` VALUES (1,'Subway','Subway','bjohnson@subway.com',NULL,NULL),(2,'SwiftnCo','Starbucks','',NULL,NULL),(3,'Swift Schedules','Not farts','admin@gmsil.com','[{\"name\":\"Morning\",\"shift_start\":\"7:30AM\",\"shift_end\":\"3:30PM\"},{\"name\":\"Afternoon\",\"shift_start\":\"12:30PM\",\"shift_end\":\"7:30PM\"},{\"name\":\"Evening\",\"shift_start\":\"2:30PM\",\"shift_end\":\"9:30PM\"}]','[{\"name\":\"Mission Valley\",\"address\":\"321 Mission Gorge, SD\",\"manager\":\"Steve\",\"contact\":\"6192221122\"},{\"name\":\"Fashion Valley\",\"address\":\"123 Fletcher, SD\",\"manager\":\"Jessica\",\"contact\":\"6192221122\"},{\"name\":\"SDSU Campus\",\"address\":\"426 Montazuma, SD\",\"manager\":\"Paul\",\"contact\":\"6192221122\"}]');
+/*!40000 ALTER TABLE `company_settings` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `groups`
 --
 
@@ -38,6 +66,31 @@ LOCK TABLES `groups` WRITE;
 /*!40000 ALTER TABLE `groups` DISABLE KEYS */;
 INSERT INTO `groups` VALUES (1,'admin','Administrator'),(2,'members','General User'),(3,'manager','Manager'),(4,'starbucks','Starbucks ');
 /*!40000 ALTER TABLE `groups` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `locations`
+--
+
+DROP TABLE IF EXISTS `locations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `locations` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `company` varchar(100) NOT NULL,
+  `location_name` varchar(100) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `locations`
+--
+
+LOCK TABLES `locations` WRITE;
+/*!40000 ALTER TABLE `locations` DISABLE KEYS */;
+/*!40000 ALTER TABLE `locations` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -80,8 +133,9 @@ CREATE TABLE `requests` (
   `date` varchar(255) NOT NULL,
   `shift` varchar(255) NOT NULL,
   `status` varchar(255) NOT NULL,
+  `company` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -90,7 +144,7 @@ CREATE TABLE `requests` (
 
 LOCK TABLES `requests` WRITE;
 /*!40000 ALTER TABLE `requests` DISABLE KEYS */;
-INSERT INTO `requests` VALUES (1,2,'5','0','Tue Mar 25 2014','6:30PM - 10:30PM','pending'),(2,2,'8,9','0','Wed Mar 26 2014','2:30PM - 10:30PM','pending'),(3,2,'5','0','Wed Mar 26 2014','2:30PM - 10:30PM','pending'),(4,2,'9','0','Wed Mar 26 2014','2:30PM - 10:30PM','pending'),(5,2,'9','0','Wed Mar 26 2014','2:30PM - 10:30PM','pending'),(6,2,'8','0','Wed Mar 26 2014','2:30PM - 10:30PM','pending'),(7,2,'5,8','0','Wed Mar 26 2014','2:30PM - 10:30PM','pending'),(8,2,'9','0','Wed Mar 26 2014','2:30PM - 10:30PM','pending');
+INSERT INTO `requests` VALUES (1,42,'43','0','Fri May 09 2014','5:30PM-10:30PM','denied','Subway'),(2,45,'44','0','Fri May 16 2014','5:30PM-10:30PM','accepted','Swift Schedules');
 /*!40000 ALTER TABLE `requests` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -107,7 +161,7 @@ CREATE TABLE `schedules` (
   `schedule` text NOT NULL,
   `updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -116,8 +170,34 @@ CREATE TABLE `schedules` (
 
 LOCK TABLES `schedules` WRITE;
 /*!40000 ALTER TABLE `schedules` DISABLE KEYS */;
-INSERT INTO `schedules` VALUES (4,'edward burdeno','[{\"date\":\"22\\/3\\/2014\",\"title\":\"Starbucks: College - Cashier\",\"color\":\"#333\",\"content\":\"6:30PM - 10:30PM\"},{\"date\":\"23\\/3\\/2014\",\"title\":\"Starbucks: College - Barista\",\"color\":\"#333\",\"content\":\"2:30PM - 10:30PM\"},{\"date\":\"24\\/3\\/2014\",\"title\":\"Starbucks: College - Barista\",\"color\":\"#333\",\"content\":\"2:30PM - 10:30PM\"}]','2014-03-24 06:01:26'),(5,'christopher ciampoli','[{\"date\":\"25\\/3\\/2014\",\"title\":\"Starbucks: College - Cashier\",\"color\":\"#333\",\"content\":\"6:30PM - 10:30PM\"},{\"date\":\"26\\/3\\/2014\",\"title\":\"Starbucks: College - Barista\",\"color\":\"#333\",\"content\":\"2:30PM - 10:30PM\"},{\"date\":\"27\\/3\\/2014\",\"title\":\"Starbucks: College - Barista\",\"color\":\"#333\",\"content\":\"2:30PM - 10:30PM\"}]','2014-03-25 16:04:10');
+INSERT INTO `schedules` VALUES (1,'jim bean','[{\"date\":\"16\\/4\\/2014\",\"title\":\"SDSU\",\"color\":\"#333\",\"content\":\"7:30PM-10:30PM\"},{\"date\":\"17\\/4\\/2014\",\"title\":\"SDSU\",\"color\":\"#333\",\"content\":\"7:30PM-10:30PM\"},{\"date\":\"18\\/4\\/2014\",\"title\":\"SDSU\",\"color\":\"#333\",\"content\":\"7:30PM-10:30PM\"}]','2014-04-17 05:44:03'),(2,'jeff saenz','[{\"date\":\"17\\/4\\/2014\",\"title\":\"Mission Valley\",\"color\":\"#333\",\"content\":\"5:15pm-10:45pm\"},{\"date\":\"18\\/4\\/2014\",\"title\":\"Mission Valley\",\"color\":\"#333\",\"content\":\"5:45pm-10:45pm\"},{\"date\":\"16\\/4\\/2014\",\"title\":\"Mission Valley\",\"color\":\"#333\",\"content\":\"11:30pm-5:00am\"},{\"date\":\"24\\/4\\/2014\",\"title\":\"midsion valley\",\"color\":\"#333\",\"content\":\"5:30pm-10:00pm\"},{\"date\":\"25\\/4\\/2014\",\"title\":\"midsion valley\",\"color\":\"#333\",\"content\":\"4:30pm-10:00pm\"}]','2014-04-17 05:55:47'),(3,'ian gearhart','[{\"date\":\"19\\/4\\/2014\",\"title\":\"Mission Valley\",\"color\":\"#333\",\"content\":\"4:00pm-9:30pm\"},{\"date\":\"17\\/4\\/2014\",\"title\":\"SDSU\",\"color\":\"#333\",\"content\":\"10:00am-3:30pm\"}]','2014-04-17 05:58:16'),(4,'eddie burdeno','[{\"date\":\"17\\/4\\/2014\",\"title\":\"SDSU\",\"color\":\"#333\",\"content\":\"5:30PM-10:30PM\"},{\"date\":\"18\\/4\\/2014\",\"title\":\"SDSU\",\"color\":\"#333\",\"content\":\"5:30PM-10:30PM\"},{\"date\":\"19\\/4\\/2014\",\"title\":\"SDSU\",\"color\":\"#333\",\"content\":\"5:30PM-10:30PM\"},{\"date\":\"27\\/4\\/2014\",\"title\":\"Mission Valley\",\"color\":\"#333\",\"content\":\"5:30PM-10:30PM\"},{\"date\":\"29\\/4\\/2014\",\"title\":\"mission vallet\",\"color\":\"#333\",\"content\":\"5:30PM-10:30PM\"},{\"date\":\"2\\/5\\/2014\",\"title\":\"Mission Valley\",\"color\":\"#333\",\"content\":\"5:30PM-10:30PM\"},{\"date\":\"4\\/5\\/2014\",\"title\":\"Mission Valley\",\"color\":\"#333\",\"content\":\"5:30PM-10:30PM\"},{\"date\":\"9\\/5\\/2014\",\"title\":\"Mission Valley\",\"color\":\"#333\",\"content\":\"5:30PM-10:30PM\"},{\"date\":\"11\\/5\\/2014\",\"title\":\"Valley Center\",\"color\":\"#333\",\"content\":\"5:30PM-10:00PM\"}]','2014-04-17 16:09:45'),(5,'ian gearheart','[{\"date\":\"21\\/4\\/2014\",\"title\":\"College\",\"color\":\"#333\",\"content\":\"10:30AM-2:30PM\"}]','2014-04-17 16:10:40'),(6,'edward  burdeno','[{\"date\":\"24\\/4\\/2014\",\"title\":\"midsion valley\",\"color\":\"#333\",\"content\":\"5:30pm-10:00pm\"}]','2014-04-24 08:48:48'),(7,'steve acapela1','[{\"date\":\"9\\/5\\/2014\",\"title\":\"Mission Valley\",\"color\":\"#333\",\"content\":\"5:30PM-10:30PM\"}]','2014-05-09 20:06:43'),(8,'john doe','[{\"date\":\"16\\/5\\/2014\",\"title\":\"Fashion Valley\",\"color\":\"#333\",\"content\":\"5:30PM-10:30PM\"}]','2014-05-17 04:52:13'),(9,'christopher ciampoli','[{\"date\":\"22\\/5\\/2014\",\"title\":\"Mis\",\"color\":\"#333\",\"content\":\"5:30PM-10:30PM\"}]','2014-05-22 04:02:54'),(10,'christopher ciampoli1','[{\"date\":\"23\\/5\\/2014\",\"title\":\"Mission Valley\",\"color\":\"#333\",\"content\":\"5:30PM-10:30PM\"}]','2014-05-23 18:32:17');
 /*!40000 ALTER TABLE `schedules` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `shifts`
+--
+
+DROP TABLE IF EXISTS `shifts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `shifts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `company` varchar(100) NOT NULL,
+  `shift_name` varchar(100) NOT NULL,
+  `shift_start` varchar(100) NOT NULL,
+  `shift_end` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `shifts`
+--
+
+LOCK TABLES `shifts` WRITE;
+/*!40000 ALTER TABLE `shifts` DISABLE KEYS */;
+/*!40000 ALTER TABLE `shifts` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -146,7 +226,7 @@ CREATE TABLE `users` (
   `company` varchar(100) DEFAULT NULL,
   `phone` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -155,7 +235,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'\0\0','administrator','59beecdf7fc966e2f17fd8f65a4a9aeb09d4a3d4','9462e8eee0','admin@admin.com','',NULL,NULL,NULL,1268889823,1268889823,1,'Admin','istrator','ADMIN','0'),(2,'\0\0','christopher ciampoli','a8eb1f0a280b70861a8bbba4cb19b7cd5eadde35',NULL,'chrisciampoli@gmail.com',NULL,'03427d2a4e847b3e1ab601856dff5c83201835cf',1392185472,NULL,1390343473,1397530729,1,'Christopher','Ciampoli','Swift Schedules','6192491738'),(3,'\0\0','steven acapela','3d81e68e1a376f50cdb65f1779fe2af3a4748c62',NULL,'sacapela@test.com',NULL,NULL,NULL,NULL,1390343719,1392343909,1,'steven','acapela','Swift Schedules','6192491738'),(4,'\0\0','jim bean','a368f07ef56e23dd8429fcb2b094ffd061e3c733',NULL,'jbean@starbucks.com',NULL,NULL,NULL,NULL,1390544347,1395103270,1,'Jim','Bean','Starbucks','44444444'),(5,'¿®D','edward burdeno','fc20f2329dd51abe95042bba872af73a5fd8d510',NULL,'eburdeno@swiftschedules.com',NULL,NULL,NULL,NULL,1390768392,1397522592,1,'Edward','Burdeno','Swift Schedules','1231231234'),(6,'x≈$','action jackson','45ca09916f4a4b0ea3134baf078109cb3d526d9b',NULL,'test@test.com',NULL,NULL,NULL,NULL,1391151433,1394432451,1,'Action','Jackson','test@test.com','1234555565'),(7,'¢„…','test employee','43e5ce82f539a9ed92d4ca8e0e42642917fedcc1',NULL,'tester@test.com',NULL,NULL,NULL,NULL,1393979081,1394852887,1,'Test','Employee','test','6191233211'),(8,'¢„…','jeff saenz','46040aa77e516ae118ef912f6f85cd71d95bcd0a',NULL,'jeff.saenz@gmail.com',NULL,NULL,NULL,NULL,1394245543,1397172346,1,'Jeff','Saenz','Swiftnco','1111111111'),(9,'¢„…','ian gearhart','8920d29b8ee54342fa6aee72e113793008e47819',NULL,'gearhartian@gmail.com',NULL,NULL,NULL,NULL,1394245583,1395097339,1,'Ian','Gearhart','Swiftnco','1111111111'),(21,'¢„…','james brown','fea62a3a16c0f86053e1d8999c3db7696e0ee476',NULL,'jbrown@swiftnco.com',NULL,NULL,NULL,NULL,1397455991,1397455991,1,'James','Brown','Swift Schedules','1111111111'),(22,'¢„…','steve jeve','9b38ebb4c2f969617621a32a43c8da8135af43e6',NULL,'sjeve@gmail.com',NULL,NULL,NULL,NULL,1397456063,1397456063,1,'Steve','Jeve','Swift Schedules','1111111111'),(23,'¢„…','john doe','4670a6fe566e95d59f422e59ef605198b079b828',NULL,'jdoe@example.com',NULL,NULL,NULL,NULL,1397456194,1397456260,1,'John','Doe','Swift Schedules','1111111111'),(24,'¢„…','james peach','faeaf5af7fea3a121051db75cce0f8e90dcb2639',NULL,'jpeach@gmail.com',NULL,NULL,NULL,NULL,1397463423,1397463423,1,'james','peach','Swift Schedules','1111111111'),(25,'¢„…','caine ciampoli','27a6e93401c4623adfcd8b6e37da5b5f2564be86',NULL,'caine@ciampoli.com',NULL,NULL,NULL,NULL,1397530752,1397530752,1,'Caine','Ciampoli','Swift Schedules','1111111111');
+INSERT INTO `users` VALUES (1,'\0\0','administrator','59beecdf7fc966e2f17fd8f65a4a9aeb09d4a3d4','9462e8eee0','admin@admin.com','',NULL,NULL,NULL,1268889823,1268889823,1,'Admin','istrator','ADMIN','0'),(2,'\0\0','christopher ciampoli','a8eb1f0a280b70861a8bbba4cb19b7cd5eadde35',NULL,'chrisciampoli@gmail.com',NULL,'03427d2a4e847b3e1ab601856dff5c83201835cf',1392185472,NULL,1390343473,1401073746,1,'Christopher','Ciampoli','Swift Schedules','6192491738'),(33,'¢„…','edward  burdeno','7356cb6808de2a48f63df1b3c6aebfdf9170a11c',NULL,'eburdeno@swiftnco.com',NULL,NULL,NULL,NULL,1397699114,1400913217,1,'Edward ','Burdeno','SwiftnCo','7148528612'),(36,'¢„…','steve acapela','6697ae6210e671d0320c3e14237c49191f9f6094',NULL,'sacapela@starbucks.com',NULL,NULL,NULL,NULL,1397713343,1397713524,1,'Steve','Acapela','Starbucks','1111111111'),(37,'¢„…','jim bean','54651319849b637e6709f4e0748bd67516b058ab',NULL,'jbean@starbucks.com',NULL,NULL,NULL,NULL,1397713419,1397713470,1,'Jim','Bean','Starbucks','1111111111'),(38,'¢„…','frank rizzo','6467a4cc8d3f693efa59a455f41c103af34dd66c',NULL,'frizzo@starbucks.com',NULL,NULL,NULL,NULL,1397713594,1397713594,1,'Frank','Rizzo','Starbucks','1111111111'),(39,'ÆAI','jeff saenz','8d43ac66c11bfc6ecdfbfc46ff921dba2a90bc4b',NULL,'jeff@swiftnco.com',NULL,NULL,NULL,NULL,1397714103,1398795560,1,'Jeff','Saenz','SwiftnCo','714-552-9010'),(40,'ÆAI','ian gearhart','a9a1d766b8899d510c89310e9cb82bf677767aa7',NULL,'gearhart.ian@gmail.com',NULL,NULL,NULL,NULL,1397714253,1397714504,1,'Ian','Gearhart','SwiftnCo','951-237-2262'),(41,'BWC6','bill johnson','8725aecd79323ffdc3a64c347dc69b3745025308',NULL,'bjohnson@subway.com',NULL,NULL,NULL,NULL,1397750114,1399857572,1,'Bill','Johnson','Subway','1233213333'),(42,'¢¿4÷','eddie burdeno','4edb71fefcbf4a2925c21f2bd5cdbbbc547b3335',NULL,'eburdeno@subway.com',NULL,NULL,NULL,NULL,1397750933,1400128774,1,'Eddie','Burdeno','Subway','1111111111'),(43,'¢¿4÷','ian gearheart','321232c00a8c88781fd385dd5c66fae17d00fe32',NULL,'igearheart@subway.com',NULL,NULL,NULL,NULL,1397751016,1399677706,1,'Ian','Gearheart','Subway','1112342321'),(44,'F∑[b','steve acapela1','536f0f7f5dcdb92330f2ca97360bdb030ed9c198',NULL,'sacapela@swiftshifts.com',NULL,NULL,NULL,NULL,1399665987,1399666017,1,'Steve','Acapela','Swift Schedules','6192235656'),(45,'¢„…','john doe','272c434c104cb166f7c8d3047cf3706a6f1f1f98',NULL,'jdoe@swiftshifts.com',NULL,NULL,NULL,NULL,1400302314,1400869384,1,'John','Doe','Swift Schedules','6194322211'),(46,'F∑[b','michael jackson','b7fa141ae9eb4cb82d17277b1e7b788d0b261fa0',NULL,'mjackson@jackson.com',NULL,NULL,NULL,NULL,1400869457,1400869496,1,'Michael','Jackson','Jackson Entertainment','1111111111'),(47,'F∑[b','christopher ciampoli1','c619f3fd9a230236a6e2148d3508aa7f0d71f8b5',NULL,'cciampoli@jackson.com',NULL,NULL,NULL,NULL,1400869911,1400869946,1,'Christopher','Ciampoli','Jackson Entertainment','6192312212');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -176,7 +256,7 @@ CREATE TABLE `users_groups` (
   KEY `fk_users_groups_groups1_idx` (`group_id`),
   CONSTRAINT `fk_users_groups_groups1` FOREIGN KEY (`group_id`) REFERENCES `groups` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   CONSTRAINT `fk_users_groups_users1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=120 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -185,7 +265,7 @@ CREATE TABLE `users_groups` (
 
 LOCK TABLES `users_groups` WRITE;
 /*!40000 ALTER TABLE `users_groups` DISABLE KEYS */;
-INSERT INTO `users_groups` VALUES (34,1,1),(52,2,1),(53,2,3),(35,3,1),(36,4,3),(26,5,2),(17,6,3),(20,7,1),(46,8,2),(28,9,2),(66,21,2),(67,22,2),(68,23,2),(69,24,2),(70,25,2);
+INSERT INTO `users_groups` VALUES (34,1,1),(111,2,1),(112,2,3),(97,33,3),(102,36,3),(103,37,2),(104,38,2),(105,39,2),(106,40,2),(108,41,3),(113,42,2),(114,43,2),(115,44,2),(116,45,2),(118,46,3),(119,47,2);
 /*!40000 ALTER TABLE `users_groups` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -198,4 +278,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-04-15  3:14:16
+-- Dump completed on 2014-05-26 20:40:45
