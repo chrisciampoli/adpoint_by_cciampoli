@@ -29,8 +29,8 @@ class Home extends Manager_Controller {
         $data['scripts'][] = 'https://code.jquery.com/jquery-1.10.2.min.js';
         $data['scripts'][] = 'http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js';
         $data['scripts'][] = 'http://code.jquery.com/ui/1.10.4/jquery-ui.js';
-        $data['scripts'][] = base_url('public/js/main.js');
-        $data['scripts'][] = base_url('public/js/docs.js');
+        $data['scripts'][] = base_url('public/js/view/manager/dashboard.js');
+        $data['scripts'][] = base_url('public/js/libs/docs.js');
         
         $data['styles'][] =  base_url('public/css/dashboard.css');
         $data['styles'][] =  base_url('public/css/bootstrap.css');
@@ -54,11 +54,11 @@ class Home extends Manager_Controller {
         $data['title'] = 'Employees';
         
         $data['scripts'][] = 'https://code.jquery.com/jquery-1.10.2.min.js';
-        $data['scripts'][] = 'http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js';
+        $data['scripts'][] = base_url('public/js/libs/bootstrap.min.js');//'http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js';
         $data['scripts'][] = 'http://code.jquery.com/ui/1.10.4/jquery-ui.js';
-        $data['scripts'][] = base_url('public/js/employees.js');
-        $data['scripts'][] = base_url('public/js/docs.js');
-        $data['scripts'][] = base_url('public/js/bic_calendar.js');
+        $data['scripts'][] = base_url('public/js/view/manager/employees.js');
+        $data['scripts'][] = base_url('public/js/libs/docs.js');
+        $data['scripts'][] = base_url('public/js/libs/bic_calendar.js');
         
         $data['styles'][] =  base_url('public/css/dashboard.css');
         $data['styles'][] = base_url('public/css/bootstrap.css');
@@ -87,9 +87,12 @@ class Home extends Manager_Controller {
         $data['title'] = 'Settings';
         
         $data['scripts'][] = 'https://code.jquery.com/jquery-1.10.2.min.js';
-        $data['scripts'][] = 'http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js';
+        $data['scripts'][] = base_url('public/js/libs/bootstrap.min.js');//'http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js';
         $data['scripts'][] = 'http://code.jquery.com/ui/1.10.4/jquery-ui.js';
-        $data['scripts'][] = base_url('public/js/manager/settings.js');
+        $data['scripts'][] = base_url('public/js/view/manager/settings.js');
+        $data['scripts'][] = base_url('public/js/swift.js');
+        $data['scripts'][] = base_url('public/js/modules/company/settings/locations.js');
+        $data['scripts'][] = base_url('public/js/modules/company/settings/shifts.js');
         
         $data['styles'][] =  base_url('public/css/dashboard.css');
         $data['styles'][] = base_url('public/css/bootstrap.css');
@@ -118,7 +121,7 @@ class Home extends Manager_Controller {
         $data['scripts'][] = 'https://code.jquery.com/jquery-1.10.2.min.js';
         $data['scripts'][] = 'http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js';
         $data['scripts'][] = 'http://code.jquery.com/ui/1.10.4/jquery-ui.js';
-        $data['scripts'][] = base_url('public/js/manager/swift_giveups.js');
+        $data['scripts'][] = base_url('public/js/view/manager/swift_giveup.js');
 
         $data['styles'][] = base_url('public/css/bootstrap.css');
         $data['styles'][] = 'http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css';
