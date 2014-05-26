@@ -17,10 +17,10 @@ define('FILE_READ_MODE', 0644);
 define('FILE_WRITE_MODE', 0666);
 define('DIR_READ_MODE', 0755);
 define('DIR_WRITE_MODE', 0777);
-define('SERVER', 'http://localhost/adpoint/');
+define('SERVER', 'http://swiftnco.com/');
 define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'swiftshifts');
+define('DB_PASS', 'cciampoli@123');
+define('DB_NAME', 'swift_schedules');
 /*
 |--------------------------------------------------------------------------
 | File Stream Modes
