@@ -57,3 +57,6 @@
       </div>
       <button class="btn btn-default" id="saveBtn">Save</button>
 </div>
+<?php 
+  echo "<pre>" . print_r(json_decode($shifts, true)) . "</pre>"; 
+?>
