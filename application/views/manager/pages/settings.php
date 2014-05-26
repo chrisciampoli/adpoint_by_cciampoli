@@ -40,9 +40,14 @@
               <th>Contact</th>
             </thead>
             <tbody>
+            <?php foreach(json_decode($locations, true) as $location): ?>
               <tr>
-                <td>Mission Valley</td><td>9232 Mission Valley Way, San Diego CA</td><td>Steven</td><td>(619)223-1212</td>
+                <td><?=$location['name'];?></td>
+                <td><?=$location['address'];?></td>
+                <td><?=$location['manager'];?></td>
+                <td><?=$location['contact'];?></td>
               </tr>
+            <?php endforeach; ?>
             </tbody>
           </table>
         </div>
