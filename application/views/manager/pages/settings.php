@@ -18,6 +18,7 @@
               <th>Name</th>
               <th>Shift Start</th>
               <th>Shift End</th>
+              <th><button class="btn btn-small" style="float:right;">Add</button></th>
             </thead>
             <tbody>
               <?php foreach(json_decode($shifts, true) as $shift): ?>
