@@ -64,22 +64,71 @@ $(function(){
             
         SWIFT.modules = {};
         
+        SWIFT.modules.utils = (function () {
+            
+            function postData(url, type, dataType, data, beforeSend, success) {
+                $.ajax({
+                    url: url,
+                    type: type,
+                    dataType: dataType,
+                    data: data,
+                    beforeSend: function(data) {
+                        beforeSend(data);
+                    },
+                    success: function(data) {
+                        success(data);
+                    }
+                });
+            }
+            
+            return {
+                postData: postData
+            };
+        
+        }());
+        
 	SWIFT.modules.company_shifts = (function () {
 		
-                var name, shift_start, shift_end;
+                var name,
+                    shift_start,
+                    shift_end,
+                    utils = SWIFT.modules.utils,
+                    addUrl = '',
+                    updateUrl = '',
+                    removeUrl = '';
 		
+                ////////////////////////////////////
 		function addShift(data) {
+                    utils.postData(addUrl, 'POST', 'json', shift, 'addShiftBefore', 'addShiftSuccess');
                     return true;
 		}
+                
+                function addShiftBefore() {}
+                function addShiftSuccess() {}
+                function addShiftFailure() {}
+                /////////////////////////////////////
+                
 
+                ///////////////////////////////////
 		function removeShift (id) {
+                    utils.postData(removeUrl, 'POST', 'json', shift, 'removeShiftBefore', 'addShiftSuccess');
                     return true;
 		}
-
+                function removeShiftBefore() {}
+                function removeShiftSuccess() {}
+                function removeShiftFailure() {}
+                ///////////////////////////////////
+                
+                ////////////////////////////////////
 		function updateShift(id, data) {
+                    utils.postData(updateUrl, 'POST', 'json', shift, 'updateShiftBefore', 'addShiftSuccess');
                     return true;
 		}
-
+                function updateShiftBefore() {}
+                function updateShiftSuccess() {}
+                function updateShiftFailure() {}
+                ////////////////////////////////////
+                
 		return {
 			addShift: addShift,
 			removeshift: removeShift,
@@ -103,25 +152,12 @@ $(function(){
                 return true;
             }
             
-        }());
-        
-        SWIFT.modules.utils = (function () {
+            return {
+                addLocation: addLocation,
+                updateLocation: updateLocation,
+                removeLocation: removeLocation
+            };
             
-            function postData(url, type, dataType, data, beforeSend, success) {
-                $.ajax({
-                    url: url,
-                    type: type,
-                    dataType: dataType,
-                    data: data,
-                    beforeSend: function(data) {
-                        beforeSend(data);
-                    },
-                    success: function(data) {
-                        success(data);
-                    }
-                });
-            }
-        
         }());
         
         window.test = SWIFT.modules.company_shifts;
