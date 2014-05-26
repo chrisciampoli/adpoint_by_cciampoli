@@ -50,7 +50,7 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = DB_USER;
-$db['default']['password'] = 'cciampoli@123';
+$db['default']['password'] = DB_PASS;
 $db['default']['database'] = 'swift_schedules';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';

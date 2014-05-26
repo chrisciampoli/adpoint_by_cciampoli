@@ -160,5 +160,5 @@ $(function(){
             
         }());
         
-        window.test = SWIFT.modules.company_shifts;
+        window.test = SWIFT;
 });
