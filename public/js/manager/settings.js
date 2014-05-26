@@ -60,10 +60,11 @@ $(function(){
 	
 	//assert(updateShift(id), "updateShift worked!");
 
-	var SWIFT = SWIFT || {};
-
-	var shifter;
-
+	var SWIFT = SWIFT || {},
+            shifter;
+            
+        SWIFT.modules = {};
+        
 	SWIFT.modules.company_shifts = (function () {
 		var name, shift_start, shift_end;
 		
