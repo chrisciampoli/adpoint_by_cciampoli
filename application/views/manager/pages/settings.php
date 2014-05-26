@@ -18,7 +18,7 @@
               <th>Name</th>
               <th>Shift Start</th>
               <th>Shift End</th>
-              <th><button class="btn btn-small" style="float:right;">Add</button></th>
+              <th><button class="btn btn-small" style="float:right;">Add Shift</button></th>
             </thead>
             <tbody>
               <?php foreach(json_decode($shifts, true) as $shift): ?>
@@ -39,6 +39,7 @@
               <th>Address</th>
               <th>Manager</th>
               <th>Contact</th>
+              <th><button class="btn btn-small" style="float:right;">Add Location</button></th>
             </thead>
             <tbody>
             <?php foreach(json_decode($locations, true) as $location): ?>
@@ -59,6 +60,3 @@
       </div>
       <button class="btn btn-default" id="saveBtn">Save</button>
 </div>
-<?php 
-  echo "<pre>" . print_r(json_decode($shifts, true)) . "</pre>"; 
-?>

@@ -50,5 +50,40 @@ $(function(){
 	
 	});
 
+	// What needs to be done?
+	/*
+		Need to be able to add, update, and remove shifts
+	*/
+	assert(addShift(data), "addShift worked!");
+
+	assert(removeShift(id), "removeShift worked!");
 	
+	assert(updateShift(id), "updateShift worked!");
+
+	var SWIFT = SWIFT || {};
+
+	var shifter;
+
+	SWIFT.modules.company_shifts = (function () {
+		var name, shift_start, shift_end;
+		
+		function addShift(data) {
+                    return true;
+		}
+
+		function removeShift (id) {
+                    return true;
+		}
+
+		function updateShift(id) {
+                    return true;
+		}
+
+		shifter = {
+			addShift: addShift,
+			removeshift: removeShift,
+			updateShift: updateShift
+		};
+
+        }());
 });
