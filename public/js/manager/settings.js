@@ -61,12 +61,13 @@ $(function(){
 	//assert(updateShift(id), "updateShift worked!");
 
 	var SWIFT = SWIFT || {},
-            shifter;
+            shifter = SWIFT.modules.company_shifts;
             
         SWIFT.modules = {};
         
 	SWIFT.modules.company_shifts = (function () {
-		var name, shift_start, shift_end;
+		
+                var name, shift_start, shift_end;
 		
 		function addShift(data) {
                     return true;
@@ -76,11 +77,11 @@ $(function(){
                     return true;
 		}
 
-		function updateShift(id) {
+		function updateShift(id, data) {
                     return true;
 		}
 
-		shifter = {
+		return {
 			addShift: addShift,
 			removeshift: removeShift,
 			updateShift: updateShift
@@ -88,5 +89,41 @@ $(function(){
 
         }());
 
-	window.test = shifter;
+	SWIFT.modules.company_locations = (function () {
+            var name, address, manager, contact;
+            
+            function addLocation(data) {
+                return true;
+            }
+            
+            function updateLocation(id, data) {
+                return true;
+            }
+            
+            function removeLocation(id) {
+                return true;
+            }
+            
+        }());
+        
+        SWIFT.modules.utils = (function () {
+            
+            function postData(url, type, dataType, data, beforeSend, success) {
+                $.ajax({
+                    url: url,
+                    type: type,
+                    dataType: dataType,
+                    data: data,
+                    beforeSend: function(data) {
+                        beforeSend(data);
+                    },
+                    success: function(data) {
+                        success(data);
+                    }
+                });
+            }
+        
+        }());
+        
+        window.test = shifter;
 });
