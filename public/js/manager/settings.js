@@ -60,8 +60,7 @@ $(function(){
 	
 	//assert(updateShift(id), "updateShift worked!");
 
-	var SWIFT = SWIFT || {},
-            shifter = SWIFT.modules.company_shifts;
+	var SWIFT = SWIFT || {};
             
         SWIFT.modules = {};
         
@@ -125,5 +124,5 @@ $(function(){
         
         }());
         
-        window.test = shifter;
+        window.test = SWIFT.modules.company_shifts;
 });
