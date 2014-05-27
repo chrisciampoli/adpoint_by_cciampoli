@@ -99,7 +99,7 @@ class Home extends Manager_Controller {
         $data['request_count'] = $this->request_count;
         $data['settings'] = $this->getSettings($this->company);
         //$data['shifts'] = (isset($data['settings'][0]['shifts']) ? $data['settings'][0]['shifts'] : '{"result":"empty"}');
-        
+        echo $data['settings'];
         if($data['settings'][0]['shifts'] != "false") {
             $data['shifts'] = $data['settings'][0]['shifts'];
         } else {
