@@ -100,13 +100,15 @@ class Home extends Manager_Controller {
         $data['settings'] = $this->getSettings($this->company);
         //$data['shifts'] = (isset($data['settings'][0]['shifts']) ? $data['settings'][0]['shifts'] : '{"result":"empty"}');
         if(!empty($data['settings'])) {
-            
+
             if($data['settings'][0]['shifts'] != "false") {
                 $data['shifts'] = $data['settings'][0]['shifts'];
             } else {
                 $data['shifts'] = '{"result":"empty"}';
             }     
         
+        } else {
+            $data['shifts'] = '{"result":"empty"}'; 
         }
        
 
