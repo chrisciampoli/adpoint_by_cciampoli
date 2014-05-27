@@ -31,7 +31,6 @@ class Mdl_company_settings extends CI_Model {
         } else {
             $this->updateSettings($this->settings['company'], $this->settings);
         }
-
         
         return;
     }
@@ -50,6 +49,11 @@ class Mdl_company_settings extends CI_Model {
         $this->db->where('company',$company);
         $query = $this->db->get($this->table);
         return $query->result_array();
+    }
+
+    function postShift($shifts) {
+        $this->db->where('company',$company);
+        $this->db->update('shifts', $shifts);
     }
 
 

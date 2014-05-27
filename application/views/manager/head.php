@@ -19,4 +19,8 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="<?=base_url('public/js/swift.js');?>"></script>
+    <script src='https://code.jquery.com/jquery-1.10.2.min.js'></script>
+    <script src="<?=base_url('public/js/libs/bootstrap.min.js');?>"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>;
   </head>

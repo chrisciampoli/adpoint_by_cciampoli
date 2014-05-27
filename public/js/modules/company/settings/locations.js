@@ -1,10 +1,32 @@
-SWIFT.modules.company.locations = (function () {
-            var name, address, manager, contact;
+SWIFT.modules.company.settings.locations = (function () {
             
-            function addLocation(data) {
-                return true;
+            var ajax = SWIFT.modules.utilities.ajax;
+
+            ////////////////////////////////////////////////////////
+            function addLocation(data, url) {
+                ajax.postData(
+                    url, 
+                    'post', 
+                    'json', 
+                    data, 
+                    addLocationBeforeSend, 
+                    addLocationSuccess
+                    );
             }
-            
+
+            function addLocationBeforeSend(data) {
+
+            }
+
+            function addLocationSuccess(data) {
+
+            }
+
+            function addLocationFailure(data) {
+
+            }
+            /////////////////////////////////////////////////////////
+
             function updateLocation(id, data) {
                 return true;
             }
@@ -12,6 +34,14 @@ SWIFT.modules.company.locations = (function () {
             function removeLocation(id) {
                 return true;
             }
+
+            function renderLocation(name, address, manager, contact) {
+                var row = "<tr><td>"+name+"</td><td>"+address+"</td><td>"+manager+"</td><td>"+contact+"</td></tr>",
+                    table = $('#locations_records');
+
+                table.append(row);
+            }
+
             
             return {
                 addLocation: addLocation,

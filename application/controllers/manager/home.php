@@ -26,9 +26,7 @@ class Home extends Manager_Controller {
     }
     
     function index() {
-        $data['scripts'][] = 'https://code.jquery.com/jquery-1.10.2.min.js';
-        $data['scripts'][] = 'http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js';
-        $data['scripts'][] = 'http://code.jquery.com/ui/1.10.4/jquery-ui.js';
+       
         $data['scripts'][] = base_url('public/js/view/manager/dashboard.js');
         $data['scripts'][] = base_url('public/js/libs/docs.js');
         
@@ -53,9 +51,6 @@ class Home extends Manager_Controller {
         
         $data['title'] = 'Employees';
         
-        $data['scripts'][] = 'https://code.jquery.com/jquery-1.10.2.min.js';
-        $data['scripts'][] = base_url('public/js/libs/bootstrap.min.js');//'http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js';
-        $data['scripts'][] = 'http://code.jquery.com/ui/1.10.4/jquery-ui.js';
         $data['scripts'][] = base_url('public/js/view/manager/employees.js');
         $data['scripts'][] = base_url('public/js/libs/docs.js');
         $data['scripts'][] = base_url('public/js/libs/bic_calendar.js');
@@ -86,13 +81,14 @@ class Home extends Manager_Controller {
     {
         $data['title'] = 'Settings';
         
-        $data['scripts'][] = 'https://code.jquery.com/jquery-1.10.2.min.js';
-        $data['scripts'][] = base_url('public/js/libs/bootstrap.min.js');//'http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js';
-        $data['scripts'][] = 'http://code.jquery.com/ui/1.10.4/jquery-ui.js';
+        // View JS
         $data['scripts'][] = base_url('public/js/view/manager/settings.js');
-        $data['scripts'][] = base_url('public/js/swift.js');
+
+        // Modules
+        $data['scripts'][] = base_url('public/js/modules/utilities/ajax.js');
         $data['scripts'][] = base_url('public/js/modules/company/settings/locations.js');
         $data['scripts'][] = base_url('public/js/modules/company/settings/shifts.js');
+        $data['scripts'][] = base_url('public/js/modules/company/settings/settings.js');
         
         $data['styles'][] =  base_url('public/css/dashboard.css');
         $data['styles'][] = base_url('public/css/bootstrap.css');
@@ -102,8 +98,15 @@ class Home extends Manager_Controller {
         $data['company'] = $this->company;
         $data['request_count'] = $this->request_count;
         $data['settings'] = $this->getSettings($this->company);
-        $data['shifts'] = $data['settings'][0]['shifts'];
-        $data['locations'] = $data['settings'][0]['locations'];
+        //$data['shifts'] = (isset($data['settings'][0]['shifts']) ? $data['settings'][0]['shifts'] : '{"result":"empty"}');
+        
+        if($data['settings'][0]['shifts'] != "false") {
+            $data['shifts'] = $data['settings'][0]['shifts'];
+        } else {
+            $data['shifts'] = '{"result":"empty"}';
+        }
+
+        $data['locations'] = (!empty($data['settings'][0]['locations']) ? $data['settings'][0]['locations'] : '{"result":"empty"}');
 
         $data['display_name'] = $this->display_name;
         $data['head'] = $this->load->view('manager/head', $data, true);
@@ -118,9 +121,6 @@ class Home extends Manager_Controller {
     {
         $data['title'] = 'Swift Giveup Management';
 
-        $data['scripts'][] = 'https://code.jquery.com/jquery-1.10.2.min.js';
-        $data['scripts'][] = 'http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js';
-        $data['scripts'][] = 'http://code.jquery.com/ui/1.10.4/jquery-ui.js';
         $data['scripts'][] = base_url('public/js/view/manager/swift_giveup.js');
 
         $data['styles'][] = base_url('public/css/bootstrap.css');
@@ -312,7 +312,7 @@ class Home extends Manager_Controller {
        return $cleaned;
     }
 
-    public function ajaxPostSettings() {
+    function ajaxPostSettings() {
          $data = array(
             'company'=>$this->company,
             'company_name'=>$this->input->post('company_name'),
@@ -327,28 +327,23 @@ class Home extends Manager_Controller {
 
         $this->display_name = $settings[0]['company_name'];
 
-        $this->settings();
+         $response = json_encode(array(
+                'status'=>'success',
+                'message'=>'Settings saved successfully'
+                ));
+            echo $response;
+
+        return;
     }
 
-    function postSettings()
-    {   
-        $data = array(
-            'company'=>$this->company,
-            'company_name'=>$this->input->post('company_name'),
-            'admin_email'=>$this->input->post('admin_email'),
-            'locations'=>$this->input->post('locations'),
-            'shifts'=>$this->input->post('shifts')
-        );
-
-        $this->mdl_company_settings->saveSettings($data);
-
-        $settings = $this->getSettings($this->company);
-
-        $this->display_name = $settings[0]['company_name'];
-
-        $this->settings();
+    function ajaxPostShift() {
+        $company = $this->company;
+        $data = array('shifts'=>json_encode($this->input->post('shifts')));
+        $this->mdl_company_settings->updateSettings($company, $data);
+        echo json_encode(array('status'=>'success','record'=>$this->input->post('new_shift')));
     }
 
+    
     function getSettings($company)
     {
         return $this->mdl_company_settings->getSettings($company);

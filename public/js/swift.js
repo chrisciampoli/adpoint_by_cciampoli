@@ -18,6 +18,7 @@ var SWIFT = SWIFT || {};
         return parent;
     }; 
 
+    SWIFT.namespace('modules.company.settings.settings');
     SWIFT.namespace('modules.company.settings.shifts');     
     SWIFT.namespace('modules.company.settings.locations');
 
@@ -30,33 +31,6 @@ var SWIFT = SWIFT || {};
     SWIFT.namespace('modules.company.manager.employees');
     SWIFT.namespace('modules.company.manager.shifts');
 
-    SWIFT.postData = function(url, type, dataType, data, beforeSend, success) {
-                $.ajax({
-                    url: url,
-                    type: type,
-                    dataType: dataType,
-                    data: data,
-                    beforeSend: function(data) {
-                        beforeSend(data);
-                    },
-                    success: function(data) {
-                        success(data);
-                    }
-                });
-            }
-
-    SWIFT.ucfirst = function(str) {
-      //  discuss at: http://phpjs.org/functions/ucfirst/
-      // original by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
-      // bugfixed by: Onno Marsman
-      // improved by: Brett Zamir (http://brett-zamir.me)
-      //   example 1: ucfirst('kevin van zonneveld');
-      //   returns 1: 'Kevin van zonneveld'
-
-      str += '';
-      var f = str.charAt(0)
-        .toUpperCase();
-      return f + str.substr(1);
-    }
-
-    window.test = SWIFT;
+    SWIFT.namespace('modules.utilities.ajax');
+    SWIFT.namespace('modules.utilities.validation');
+    SWIFT.namespace('modules.utilities.strings');
