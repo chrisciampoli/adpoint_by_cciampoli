@@ -13,7 +13,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="<?=site_url('manager/home/index');?>">Dashboard</a></li>
             <li><a href="<?=site_url('manager/home/swift_giveup');?>" class="disabled"><span class="badge"><?=$request_count;?></span>Swift Giveup</a></li>
-            <li><a href="<?=site_url('manager/home/busy_or_not');?>" class="disabled">Busy or Not</a></li>
+            <!--<li><a href="<?=site_url('manager/home/busy_or_not');?>" class="disabled">Busy or Not</a></li>-->
             <li><a href="<?=site_url('manager/home/employees');?>">Employees</a></li>
             <li><a href="<?=site_url('manager/home/settings');?>" class="disabled">Settings</a></li>
             <li><a href="<?=site_url('auth/logout');?>">Logout</a></li>
