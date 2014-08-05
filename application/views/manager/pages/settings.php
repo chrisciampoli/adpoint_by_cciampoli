@@ -12,7 +12,7 @@
       </div>
       <div class="form-group form-inline">
         <button type="button" class="btn btn-default" id="display_shifts">Display Shifts</button>
-        <div id="shifts_tbl" style="display:none;">
+        <div id="shifts_tbl" class="table-responsive" style="display:none;">
           <table id="shifts_records" class="table table-hover">
           <?php if(array_key_exists('result', json_decode($shifts, true))) {?>
               <tr id="shiftHolder"><td><h2>No shifts added yet. <button class="btn btn-small" style="padding-left: 5px;" id="shiftAddBtn" data-toggle="modal" data-target="#addShiftModal">Add Shift</button></h2></td></tr>
@@ -21,12 +21,12 @@
               <th>Name</th>
               <th>Shift Start</th>
               <th>Shift End</th>
-              <th><button class="btn btn-small" style="float:right;" id="shiftAddBtn" data-toggle="modal" data-target="#addShiftModal">Add Shift</button></th>
             </thead>
+            <button class="btn btn-small" style="float:right;" id="shiftAddBtn" data-toggle="modal" data-target="#addShiftModal">Add Shift</button>
             <tbody>
               <?php foreach(json_decode($shifts, true) as $shift): ?>
               <tr>
-                <td><?=$shift['name']?></td><td><?=$shift['shift_start']?></td><td><?=$shift['shift_end']?></td>
+                <td id="<?=$shift['id']?>"><?=$shift['name']?></td><td><?=$shift['shift_start']?></td><td><?=$shift['shift_end']?></td><td><button class='btn btn-small' id='shiftEditBtn'>Edit</button></td><td><button class="btn btn-small" id="shiftDeleteBtn">Delete</button></td>
               </tr>
             <?php endforeach;?>
             <?php } ?>

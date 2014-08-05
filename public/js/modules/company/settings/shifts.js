@@ -15,10 +15,11 @@ SWIFT.modules.company.settings.shifts = (function () {
 
             var name = data.record.name,
                 start = data.record.shift_start,
-                end = data.record.shift_end;
+                end = data.record.shift_end,
+                id = data.record.id;
             $('#addShiftModal').modal('toggle');
             $('#shiftHolder').hide();
-            renderShift(name, start, end);
+            renderShift(id, name, start, end);
         }
 
         function addShiftFailure() {
@@ -49,8 +50,8 @@ SWIFT.modules.company.settings.shifts = (function () {
 
         //Rendering Functions
         ////////////////////////////////////
-        function renderShift(name, start, end) {
-            var row = "<tr><td>"+name+"</td><td>"+start+"</td><td>"+end+"</td></tr>"
+        function renderShift(id, name, start, end) {
+            var row = "<tr id="+id+"><td>"+name+"</td><td>"+start+"</td><td>"+end+"</td><td><button class='btn btn-small' id='shiftEditBtn'>Edit</button></td><td><button class='btn btn-small' id='shiftDeleteBtn'>Delete</button></td></tr>",
                 table = $('#shifts_records');
 
             table.append(row);
@@ -58,7 +59,7 @@ SWIFT.modules.company.settings.shifts = (function () {
 
         return {
             addShift: addShift,
-            removeshift: removeShift,
+            removeShift: removeShift,
             updateShift: updateShift
         };
 
