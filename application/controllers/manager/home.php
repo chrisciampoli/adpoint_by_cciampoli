@@ -102,8 +102,14 @@ class Home extends Manager_Controller {
         $data['company'] = $this->company;
         $data['request_count'] = $this->request_count;
         $data['settings'] = $this->getSettings($this->company);
-        echo "<pre>" . print_r($data['settings'], true) . "</pre>";
-        if(empty($data['settings'])) echo "No settings found";
+        
+        if(empty($data['settings'])) {
+            $data['shifts'] = '{"result":"empty"}';
+            $data['locations'] = '{"result":"empty"}';
+        } else {
+            //
+        }
+
         //$data['shifts'] = (isset($data['settings'][0]['shifts']) ? $data['settings'][0]['shifts'] : '{"result":"empty"}');
         /*
         if(!empty($data['settings'])) {
