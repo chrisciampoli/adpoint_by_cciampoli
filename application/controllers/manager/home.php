@@ -107,31 +107,16 @@ class Home extends Manager_Controller {
             $data['shifts'] = '{"result":"empty"}';
             $data['locations'] = '{"result":"empty"}';
         } else {
-            //
-        }
-
-        //$data['shifts'] = (isset($data['settings'][0]['shifts']) ? $data['settings'][0]['shifts'] : '{"result":"empty"}');
-        /*
-        if(!empty($data['settings'])) {
-
+            
             if($data['settings'][0]['shifts'] != "false") {
                 $data['shifts'] = $data['settings'][0]['shifts'];
-            } else {
-                $data['shifts'] = '{"result":"empty"}';
-            }     
-        
-        } else {
-            $data['shifts'] = '{"result":"empty"}'; 
-        }
-       
+            }
 
-        $data['locations'] = (!empty($data['settings'][0]['locations']) ? $data['settings'][0]['locations'] : '{"result":"empty"}');
-        if($data['settings'][0]['locations'] === 'false') {
-            $data['locations'] = '{"result":"empty"}';
-        } else {
-            $data['locations'] = $data['settings'][0]['locations'];
+            if($data['settings'][0]['locations'] != 'false') {
+                $data['locations'] = $data['settings'][0]['locations'];
+            }
+
         }
-        */
 
         $data['display_name'] = $this->display_name;
         $data['head'] = $this->load->view('manager/head', $data, true);
