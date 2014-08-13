@@ -5,7 +5,7 @@
     };
 </script>
 <div class="container-fluid">
-        <div><h2 class="sub-header" style="display: inline">Swift Giveup</h2><button style="float:right;margin: 7px;" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addEmployeeModal">Add Employee</button></div>
+        <div><h2 class="header">Swift Giveup</h2></div>
           <div class="table-responsive">
             <table class="table table-hover table-responsive">
               <thead>

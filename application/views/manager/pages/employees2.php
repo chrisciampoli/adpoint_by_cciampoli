@@ -1,8 +1,38 @@
 <script>
     var config = {
         base: "<?php echo base_url(); ?>",
-        notes: 4
+        notes: 4,
+        locations: $.parseJSON('<?php echo $locations; ?>'),
+        shifts: $.parseJSON('<?php echo $shifts; ?>')
     };
+    $(function() {
+        
+        $.each(config.locations, function(k, v) {
+          $('#inputLocation')
+            .append($("<option></option>")
+            .attr("value", v.locationName)
+            .text(v.locationName));
+        });
+
+        $.each(config.shifts, function(k, v) {
+          $('#inputShift')
+            .append($("<option></option>")
+            .attr("value", v.id)
+            .attr('shift_start', v.shift_start)
+            .attr('shift_end', v.shift_end)
+            .text(v.name));
+        });
+
+        $('#inputShift').on('change', function(){
+          var shift_start = $('#inputShift').find(':selected').attr('shift_start'),
+              shift_end = $('#inputShift').find(':selected').attr('shift_end');
+              console.log('Shift Start: ' + shift_start);
+              console.log('Shift End: ' + shift_end);
+              $('#inputShiftStart').val(shift_start);
+              $('#inputShiftEnd').val(shift_end);
+        });
+
+    });
 </script>
 <div class="container-fluid">
         <div><h2 class="sub-header" style="display: inline">Employees</h2><button style="float:right;margin: 7px;" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addEmployeeModal">Add Employee</button></div>
@@ -30,7 +60,7 @@
                       </button>
                   </td>
                   <td>
-                      <button type="button" class="btn btn-primary btn-sm">
+                      <button rel="<?=$employee['id']?>" id="editEmployeeBtn" name="editEmployeeBtn" type="button" class="btn btn-primary btn-sm">
                           <span class="glyphicon glyphicon-pencil"></span> Edit
                       </button>
                       <button type="button" class="btn btn-danger btn-sm">
@@ -58,7 +88,7 @@
           <div class="control-group">
             <label class="control-label" for="inputFirstName">First Name</label>
             <div class="controls">
-              <input class="form_input" type="text" id="inputFirstName" placeholder="John">
+              <input class="form_input" type="text" id="inputFirstName" placeholder="John" value="">
             </div>
           </div>
           <div class="control-group">
@@ -130,19 +160,25 @@
           <div class="control-group">
             <label class="control-label" for="inputLocation">Location</label>
             <div class="controls">
-              <input class="form_input" type="text" id="inputLocation" placeholder="Mission Valley">
+              <!-- TODO: Change this over to a select -->
+              <select id="inputLocation" name="inputLocation">
+              <option></option>
+              </select>
+              <!--<input class="form_input" type="text" id="inputLocation" placeholder="Mission Valley">-->
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="inputShiftStart">Shift Start</label>
+            <label class="control-label" for="inputShiftShift">Shift</label>
+            <select id="inputShift" name="inputShift">
+              <option></option>
+            </select>
             <div class="controls">
-              <input class="form_input" type="email" id="inputShiftStart" placeholder="5:30PM">
+              <input class="form_input" type="hidden" id="inputShiftStart" placeholder="5:30PM">
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label" for="inputShiftEnd">Shift End</label>
             <div class="controls">
-              <input class="form_input" type="text" id="inputShiftEnd" placeholder="10:30PM">
+              <input type="hidden" class="form_input" type="text" id="inputShiftEnd" placeholder="10:30PM">
             </div>
           </div>
         </form>

@@ -29,8 +29,8 @@ SWIFT.modules.company.settings.shifts = (function () {
                 
 
         ///////////////////////////////////
-        function removeShift (id) {
-                    postData(removeUrl, 'POST', 'json', shift, 'removeShiftBefore', 'addShiftSuccess');
+        function removeShift (data, url) {
+                    ajax.postData(url, 'POST', 'json', data, removeShiftBefore, removeShiftSuccess);
                     return true;
         }
         function removeShiftBefore() {}

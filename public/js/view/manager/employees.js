@@ -39,6 +39,17 @@ $(function(){
         saveEmployee(first_name.val(), last_name.val(), email.val(), company.val(), phone.val(), password.val(), password_confirm.val());
    });
 
+   $('body').on('click','#editEmployeeBtn', function(e) {
+      var fullName = $(this).closest('tr').children().first().html(),
+          phone = $(this).closest('tr').children().first().next().html(),
+          email = $(this).closest('tr').children().first().next().next().html();
+          $('#inputFirstName').val(fullName);
+          $('#inputLastName').val(fullName);
+          $('#inputPhone').val(phone);
+          $('#inputEmail').val(email);
+      $('#addEmployeeModal').modal('toggle');
+   });
+
    $('body').on('click','.day',function(e){
         currentDay = $(this).attr('data-date');
         targetDay = $(this);

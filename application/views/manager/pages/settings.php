@@ -41,20 +41,22 @@
             <?php if(array_key_exists('result', json_decode($locations,true))) {?>
                 <tr id="locationHolder"><td><h2>No locations added yet. <button class="btn btn-small" style="padding-left: 5px;" id="locationAddBtn" data-toggle="modal" data-target="#addLocationModal">Add Location</button></h2></td></tr>
             <?php } else { ?>
+            <button class="btn btn-small" style="float:right;" id="locationAddBtn" data-toggle="modal" data-target="#addLocationModal">Add Location</button>
             <thead>
               <th>Name</th>
               <th>Address</th>
               <th>Manager</th>
               <th>Contact</th>
-              <th><button class="btn btn-small" style="float:right;" id="locationAddBtn" data-toggle="modal" data-target="#addLocationModal">Add Location</button></th>
             </thead>
             <tbody>
             <?php foreach(json_decode($locations, true) as $location): ?>
-              <tr>
-                <td><?=$location['name'];?></td>
-                <td><?=$location['address'];?></td>
+              <tr id="<?=$location['id'];?>">
+                <td><?=$location['locationName'];?></td>
+                <td><?=$location['locationAddress'];?></td>
                 <td><?=$location['manager'];?></td>
                 <td><?=$location['contact'];?></td>
+                <td><button class='btn btn-small' id='locationEditBtn'>Edit</button></td>
+                <td><button class='btn btn-small' id='locationDeleteBtn'>Delete</button></td>
               </tr>
             <?php endforeach; ?>
             <?php } ?>

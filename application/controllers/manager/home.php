@@ -63,6 +63,10 @@ class Home extends Manager_Controller {
         
         $data['name'] = $this->session->userdata('username');
         $data['employees'] = $employees;
+        $settings = $this->getSettings($this->company);
+        $data['shifts'] = $settings[0]['shifts'];
+        $data['locations'] = $settings[0]['locations'];
+        
 
         $data['company'] = $this->company;
         $data['request_count'] = $this->request_count;
@@ -113,7 +117,11 @@ class Home extends Manager_Controller {
        
 
         $data['locations'] = (!empty($data['settings'][0]['locations']) ? $data['settings'][0]['locations'] : '{"result":"empty"}');
-
+        if($data['settings'][0]['locations'] === 'false') {
+            $data['locations'] = '{"result":"empty"}';
+        } else {
+            $data['locations'] = $data['settings'][0]['locations'];
+        }
         $data['display_name'] = $this->display_name;
         $data['head'] = $this->load->view('manager/head', $data, true);
         $data['nav'] = $this->load->view('manager/navigation/nav',$data,true);
@@ -349,7 +357,27 @@ class Home extends Manager_Controller {
         echo json_encode(array('status'=>'success','record'=>$this->input->post('new_shift')));
     }
 
-    
+    function ajaxDeleteShift() {
+        $company = $this->company;
+        $data = array('shifts'=>json_encode($this->input->post('shifts')));
+        $this->mdl_company_settings->updateSettings($company, $data);
+        echo json_encode(array('status'=>'success','message'=>'Shift Deleted'));
+    }
+
+    function ajaxPostLocation() {
+        $company = $this->company;
+        $data = array('locations'=>json_encode($this->input->post('locations')));
+        $this->mdl_company_settings->updateSettings($company, $data);
+        echo json_encode(array('status'=>'success','record'=>$this->input->post('new_location')));
+    }
+
+    function ajaxDeleteLocation() {
+        $company = $this->company;
+        $data = array('locations'=>json_encode($this->input->post('locations')));
+        $this->mdl_company_settings->updateSettings($company, $data);
+        echo json_encode(array('status'=>'success','message'=>'Locations Deleted')); 
+    }
+
     function getSettings($company)
     {
         return $this->mdl_company_settings->getSettings($company);

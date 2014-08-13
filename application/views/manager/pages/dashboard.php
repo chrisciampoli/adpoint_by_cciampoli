@@ -10,7 +10,7 @@
               <span class="text-muted">Manage time off requests</span>
             </div>-->
             <div class="col-xs-6 col-sm-3 placeholder">
-                <a href='<?php echo site_url('manager/home/busy_or_not');?>'><img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+                <a href='<?php echo site_url('manager/home/swift_giveup');?>'><img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail"></a>
               <h4>Swift Give Ups/Pickups</h4>
               <span class="text-muted">Manage Swift Pickups/Giveup requests</span>
             </div>
@@ -25,7 +25,7 @@
               <span class="text-muted">Manage Employees</span>
             </div>
             <div class="col-xs-6 col-sm-3 placeholder">
-                <a href='<?php echo site_url('manager/home/busy_or_not');?>'><img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+                <a href='<?php echo site_url('manager/home/settings');?>'><img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail"></a>
               <h4>Settings</h4>
               <span class="text-muted">Manage Company Settings</span>
             </div>

@@ -11,7 +11,7 @@ SWIFT.modules.utilities.ajax = (function () {
                     },
                     success: function(data) {
                         success(data);
-                        console.log(data);
+                        //console.log(data);
                     }
                 });
             }

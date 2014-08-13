@@ -89,7 +89,8 @@ $(function(){
 			var row = $(this).closest('tr'),
 			    id = $(row).children().first().attr('id');
 			    $(row).fadeToggle();
-			    shift_data.splice(0,1);
+			    var theId = id - 1;
+			    shift_data.splice(theId,1);
 
 			    var data = {
 				    company_name: $('#company_name').val(),
@@ -98,7 +99,7 @@ $(function(){
 				    locations: locations_data		
 			    };
 
-			    settings.addSettings(data, settings_url);
+			    shifts.removeShift(data, deleteShift_url);
 
 		} catch (e) {
 			alert("Could not delete shift, please contact your administrator " + e.toString());
@@ -109,12 +110,31 @@ $(function(){
 
     ////////////////////////////////////////////////////////////////
 	$('#locationSaveBtn').on('click', function(e) {
-		var data = {
-
+		
+		if(locations_data.result) {
+			locations_data = [];
 		}
-	
+		
+		var id = locations_data.length + 1;
+		
+		var data = {
+			id: id,
+			locationName: $('#locationName').val(),
+			locationAddress: $('#locationAddress').val(),
+			manager: $('#manager').val(),
+			contact: $('#contact').val()
+		};
+
+		locations_data.push(data);
+
+		var new_record = {
+			locations: locations_data,
+			new_location: data
+		};
+
 		try {
-			locations.addLocation(data, addLocation_url);
+			locations.addLocation(new_record, addLocation_url);
+			$('#locationHolder').hide();
 		} catch (e) {
 			alert("Could not save location, please contact your administrator");
 		}
@@ -125,8 +145,28 @@ $(function(){
 
 	});
 
-	$('#locationDeleteBtn').on('click', function(e) {
+	$('body').on('click', '#locationDeleteBtn', function(e) {
+		e.preventDefault();
+		//TODO confirm
+		try {
+			var row = $(this).closest('tr'),
+			    id = $(row).children().first().attr('id');
+			    $(row).fadeToggle();
+			    var theId = id - 1;
+			    locations_data.splice(theId,1);
 
+			    var data = {
+				    company_name: $('#company_name').val(),
+				    admin_email: $('#admin_email').val(),
+				    shifts: shift_data,
+				    locations: locations_data		
+			    };
+
+			    locations.removeLocation(data, deleteLocation_url);
+
+		} catch (e) {
+			alert("Could not delete location, please contact your administrator " + e.toString());
+		}
 	});
 	///////////////////////////////////////////////////////////////
 	

@@ -19,7 +19,9 @@ SWIFT.modules.company.settings.locations = (function () {
             }
 
             function addLocationSuccess(data) {
-
+                var location = data.record;
+                $('#addLocationModal').modal('toggle');
+                renderLocation(location.id, location.locationName, location.locationAddress, location.manager, location.contact);
             }
 
             function addLocationFailure(data) {
@@ -31,12 +33,17 @@ SWIFT.modules.company.settings.locations = (function () {
                 return true;
             }
             
-            function removeLocation(id) {
-                return true;
+            function removeLocation(data, url) {
+                 ajax.postData(url, 'POST', 'json', data, removeLocationBefore, removeLocationSuccess);
+                 return true;
             }
 
-            function renderLocation(name, address, manager, contact) {
-                var row = "<tr><td>"+name+"</td><td>"+address+"</td><td>"+manager+"</td><td>"+contact+"</td></tr>",
+            function removeLocationBefore(){}
+            function removeLocationSuccess(){}
+
+
+            function renderLocation(id, name, address, manager, contact) {
+                var row = "<tr id="+id+"><td>"+name+"</td><td>"+address+"</td><td>"+manager+"</td><td>"+contact+"</td><td><button class='btn btn-small' id='locationEditBtn'>Edit</button></td><td><button class='btn btn-small' id='locationDeleteBtn'>Delete</button></td></tr>",
                     table = $('#locations_records');
 
                 table.append(row);
