@@ -56,7 +56,7 @@ class Home extends Manager_Controller {
         $data['scripts'][] = base_url('public/js/libs/bic_calendar.js');
         
         $data['styles'][] =  base_url('public/css/dashboard.css');
-        $data['styles'][] = base_url('public/css/bootstrap.css');
+        $data['styles'][] = base_url('public/css/yeti.css');
         $data['styles'][] = 'http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css';
        
         $employees = $this->getCompanyEmployees();
@@ -107,7 +107,7 @@ class Home extends Manager_Controller {
         $data['scripts'][] = base_url('public/js/modules/company/settings/settings.js');
         
         $data['styles'][] =  base_url('public/css/dashboard.css');
-        $data['styles'][] = base_url('public/css/bootstrap.css');
+        $data['styles'][] = base_url('public/css/yeti.css');
         $data['styles'][] = 'http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css';
         
         $data['name'] = $this->session->userdata('username');
@@ -145,7 +145,7 @@ class Home extends Manager_Controller {
 
         $data['scripts'][] = base_url('public/js/view/manager/swift_giveup.js');
 
-        $data['styles'][] = base_url('public/css/bootstrap.css');
+        $data['styles'][] = base_url('public/css/yeti.css');
         $data['styles'][] = 'http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css';
         
         $data['username'] = $this->session->userdata('username');
