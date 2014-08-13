@@ -67,6 +67,20 @@ class Home extends Manager_Controller {
         $data['shifts'] = $settings[0]['shifts'];
         $data['locations'] = $settings[0]['locations'];
         
+        if(empty($settings)) {
+            $data['shifts'] = '{"result":"empty"}';
+            $data['locations'] = '{"result":"empty"}';
+        } else {
+            
+            if($data['settings'][0]['shifts'] != "false") {
+                $data['shifts'] = $settings[0]['shifts'];
+            }
+
+            if($data['settings'][0]['locations'] != 'false') {
+                $data['locations'] = $settings[0]['locations'];
+            }
+
+        }
 
         $data['company'] = $this->company;
         $data['request_count'] = $this->request_count;
