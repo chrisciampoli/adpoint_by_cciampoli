@@ -11,7 +11,7 @@
         <title>Swift Shifts</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="<?php echo base_url('public/css/bootstrap.css'); ?>" rel="stylesheet">
+        <link href="<?php echo base_url('public/css/yeti.css'); ?>" rel="stylesheet">
 
         <!-- Custom styles for this template -->
         <link href="sticky-footer-navbar.css" rel="stylesheet">
