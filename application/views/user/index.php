@@ -11,7 +11,7 @@
         <title>Swift Schedules</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="<?php echo base_url('public/css/bootstrap.css'); ?>" rel="stylesheet">
+        <link href="<?php echo base_url('public/css/yeti.css'); ?>" rel="stylesheet">
 
         <!-- Calendar CSS -->
         <link href="<?php echo base_url('public/css/bic_calendar.css'); ?>" rel="stylesheet">
