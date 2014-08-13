@@ -8,7 +8,7 @@
         <meta name="author" content="">
 
         <!-- Optional theme -->
-        <link rel="stylesheet" href="<?=base_url('public/css/bootstrap.css');?>">
+        <link rel="stylesheet" href="<?=base_url('public/css/yeti.css');?>">
         <style type="text/css">
             body {
                 padding-top: 60px;
