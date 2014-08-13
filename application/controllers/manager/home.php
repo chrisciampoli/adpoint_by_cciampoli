@@ -64,8 +64,6 @@ class Home extends Manager_Controller {
         $data['name'] = $this->session->userdata('username');
         $data['employees'] = $employees;
         $settings = $this->getSettings($this->company);
-        $data['shifts'] = $settings[0]['shifts'];
-        $data['locations'] = $settings[0]['locations'];
         
         if(empty($settings)) {
             $data['shifts'] = '{"result":"empty"}';
