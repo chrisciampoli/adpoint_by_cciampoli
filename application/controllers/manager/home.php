@@ -74,7 +74,7 @@ class Home extends Manager_Controller {
                 $data['shifts'] = $settings[0]['shifts'];
             }
 
-            if($settings['locations'] != 'false') {
+            if($settings[0]['locations'] != 'false') {
                 $data['locations'] = $settings[0]['locations'];
             }
 
