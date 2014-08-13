@@ -103,6 +103,7 @@ class Home extends Manager_Controller {
         $data['request_count'] = $this->request_count;
         $data['settings'] = $this->getSettings($this->company);
         //$data['shifts'] = (isset($data['settings'][0]['shifts']) ? $data['settings'][0]['shifts'] : '{"result":"empty"}');
+        /*
         if(!empty($data['settings'])) {
 
             if($data['settings'][0]['shifts'] != "false") {
@@ -122,6 +123,8 @@ class Home extends Manager_Controller {
         } else {
             $data['locations'] = $data['settings'][0]['locations'];
         }
+        */
+
         $data['display_name'] = $this->display_name;
         $data['head'] = $this->load->view('manager/head', $data, true);
         $data['nav'] = $this->load->view('manager/navigation/nav',$data,true);
