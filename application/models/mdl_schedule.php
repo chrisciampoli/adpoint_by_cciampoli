@@ -119,7 +119,7 @@ class Mdl_schedule extends CI_Model {
         $this->db->select('username');
         $this->db->where('id',$request[0]['requester_id']);
         $query = $this->db->get('users');
-        $target = $query->result_row();
+        $target = $query->row('username');
 
         echo $target;die();
 
