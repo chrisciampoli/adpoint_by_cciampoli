@@ -157,7 +157,7 @@ class Home extends User_Controller {
             }
             
         }
-        
+       echo "<pre>" . print_r($cleaned, true) . "</pre>";die(); 
        return $cleaned;
     }
     
