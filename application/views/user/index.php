@@ -72,6 +72,7 @@
                         <tbody>
                             <?php //echo "<pre>" . print_r($requests, true) . "</pre>";?>
                             <?php foreach($requests as $request) { ?>
+                                <?php if($request['requester'] == $username) continue; ?>
                                 <?php if($request['target'] == $username) { ?>
                                   <?php if($request['status'] == 'pending') { ?>
                                     <tr class="warning pending-row" rel="<?=$request['id'];?>">
