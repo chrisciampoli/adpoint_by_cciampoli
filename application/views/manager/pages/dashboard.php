@@ -10,7 +10,7 @@
               <span class="text-muted">Manage time off requests</span>
             </div>-->
             <div class="col-xs-6 col-sm-3 placeholder">
-                <a href='<?php echo site_url('manager/home/swift_giveup');?>'><img data-src="public/images/settings38.png" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+                <a href='<?php echo site_url('manager/home/swift_giveup');?>'><img src="public/images/settings38.png" class="img-responsive" alt="Generic placeholder thumbnail"></a>
               <h4>Swift Give Ups/Pickups</h4>
               <span class="text-muted">Manage Swift Pickups/Giveup requests</span>
             </div>
