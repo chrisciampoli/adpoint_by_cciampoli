@@ -138,7 +138,7 @@ class Mdl_schedule extends CI_Model {
 
         echo "<pre>" . print_r($target_schedule, true) . "</pre>";
         echo "<pre>" . print_r($requestor_schedule, true) . "</pre>";
-
+        echo "<pre>" . print_r($request, true) . "</pre>";
         die();
 
 
