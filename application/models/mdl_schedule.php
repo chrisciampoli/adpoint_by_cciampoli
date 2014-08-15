@@ -131,9 +131,7 @@ class Mdl_schedule extends CI_Model {
         $requestor_schedule = json_decode($requestor_schedule[0]['schedule']);
 
         $target_schedule = $this->getSchedule($target);
-        $target_schedule = json_decode($target_schedule[0]['schedule']);
-
-        
+        $target_schedule = json_decode($target_schedule[0]['schedule']) ? json_decode($target_schedule[0]['schedule']) : array();
 
         // Grab request date
         $date = strtotime($request[0]['date']);
