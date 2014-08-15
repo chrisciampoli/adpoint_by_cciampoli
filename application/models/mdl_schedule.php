@@ -150,13 +150,17 @@ class Mdl_schedule extends CI_Model {
         // pop it from the array.  Then using that poped element, insert it into the 
         // targets schedule.
         $match = array();
+        $remaining = array();
         foreach($requestor_schedule as $schedule) {
             if($schedule->date == $request_date) {
                 $match = $schedule;
+            } else {
+                $remaining[] = $schedule;
             }
+
         }
-        unset($requestor_schedule[$match]);
-        $this->postSchedule($requestor, $requestor_schedule);
+
+        $this->postSchedule($requestor, $remaining);
         $this->postSchedule($target, array($match));
 
         echo "<pre>Found match: " . print_r($match, true) . "</pre>";
