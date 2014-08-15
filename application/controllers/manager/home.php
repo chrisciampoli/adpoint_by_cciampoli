@@ -245,7 +245,21 @@ class Home extends Manager_Controller {
     }
     
     public function ajaxRemoveEmployee() {
+        
+        $id = $this->input->post('id');
+        
+        if($this->mdl_employees->deleteEmployee($id)) {
+            $response = json_encode(array());
+            return $response;
+        }
+
+
+        $response = json_encode(array(
+                'status'=>'Failure',
+                'message'=>'Could not delete record'
+            ));
         echo json_encode($response);
+        
         exit();
     }
     

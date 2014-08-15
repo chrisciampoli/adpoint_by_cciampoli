@@ -303,12 +303,12 @@ $(function(){
 
     }
 
-    function removeEmployee() {
-        //ajaxData(url, data, removeEmployeeSuccess, removeEmployeeFailure);
+    function removeEmployee(id) {
+        postData(url, type, dataType, data, beforeSend, success);
     }
 
     function removeEmployeeSuccess() {
-        
+        console.log(response);
     }
 
 

@@ -6,6 +6,9 @@ class Mdl_schedule extends CI_Model {
         parent::__construct();
     }
     
+    /**
+     * TODO: Move this to employees model
+     */
     function getEmployees() {
         $this->db->select('users.id, users.username, groups.name');
         $this->db->from('users');
@@ -32,9 +35,13 @@ class Mdl_schedule extends CI_Model {
         // first select all from requests
         $this->db->select('*');
         $this->db->where('company',$company);
+        $this->db->where('status !=', 'denied');
+        $this->db->where('status !=', 'scheduled');
         $query = $this->db->get('requests');
         $requests = $query->result_array();
         
+        //echo "<pre>" . print_r($requests, true) . "</pre>";die();
+
         return $requests;
         
     }

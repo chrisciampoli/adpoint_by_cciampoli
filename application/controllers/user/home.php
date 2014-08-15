@@ -15,7 +15,9 @@ class Home extends User_Controller {
         $company = $this->mdl_employees->getCompany();
         $settings = $this->mdl_company_settings->getSettings($company);
         $data['display_name'] = (isset($settings[0]['company_name']) ? $settings[0]['company_name'] : 'Swift Shifts');
-        $data['employees'] = $this->getCompanyEmployees();
+        $data['employees'] = '';//$this->getCompanyEmployees();
+        // Need to do something else here in order to not
+        // show the managers, and not show employees who work the same shift
         $data['requests'] = $this->getRequests();
         $data['username'] = $this->session->userdata('username');
         $this->load->view('user/index.php',$data);
@@ -24,7 +26,21 @@ class Home extends User_Controller {
     public function getCompanyEmployees() {
     
         $this->load->model('mdl_employees','employees');
-        $result = $this->employees->getCompanyEmployees();
+        $employees = $this->employees->getCompanyEmployees();
+        $schedules = array();
+        foreach($employees as $employee) {
+            $schedules[$employee['id']] = $this->getSchedule($employee['username']);
+        }
+
+        foreach($schedules as $schedule) {
+            foreach($schedule as $record) {
+                foreach($record as $tab) {
+                    $schedule = json_decode($tab);
+                    date_default_timezone_set('US/PACIFIC');
+                    echo date('l');
+                }
+            }
+        }
         return $result;
 
     }

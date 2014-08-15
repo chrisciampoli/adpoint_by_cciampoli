@@ -48,6 +48,7 @@
                 <li><a href="#week" data-toggle="tab">Week</a></li>
                 <li><a href="#month" data-toggle="tab">Month</a></li>
                 <li><a href="#requests" data-toggle="tab">Requests</a></li>
+                <li><a href="#settings" data-toggle="tab">Settings</a></li>
             </ul>
             <div class="tab-content">
                 <div class="tab-pane active" id="daily">
@@ -110,6 +111,9 @@
                     <div class="row">
                         <button class="btn btn-primary btn-lg" id="logout_btn">Logout</button>
                     </div>
+                </div>
+                <div class="tab-pane" id="settings">
+                    <?php $this->load->view('user/settings'); ?>
                 </div>
             </div>
         </div>

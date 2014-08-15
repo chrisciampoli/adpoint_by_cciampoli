@@ -32,6 +32,35 @@
               $('#inputShiftEnd').val(shift_end);
         });
 
+        $('body').on('click', '#removeEmployeeBtn' ,function(e) {
+            e.preventDefault();
+            var confirmation = confirm("Are you sure?");
+            if(confirmation) {
+              var employee = {
+                id: $(this).attr('rel')
+              };
+              $(this).closest('tr').toggle();
+              try {
+                  $.ajax({
+                    url: config.base + 'manager/home/ajaxRemoveEmployee',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: employee,
+                    success: function(data) {
+                      console.log(data);
+                    },
+                    fail: function(e) {
+                      console.log(e);
+                    }
+                });
+              } catch(e) {
+                console.log(e.toString());
+              }
+              
+            }
+            return;
+        });
+
     });
 </script>
 <div class="container-fluid">
@@ -60,10 +89,10 @@
                       </button>
                   </td>
                   <td>
-                      <button rel="<?=$employee['id']?>" id="editEmployeeBtn" name="editEmployeeBtn" type="button" class="btn btn-primary btn-sm">
+                      <!--<button rel="<?=$employee['id']?>" id="editEmployeeBtn" name="editEmployeeBtn" type="button" class="btn btn-primary btn-sm">
                           <span class="glyphicon glyphicon-pencil"></span> Edit
-                      </button>
-                      <button type="button" class="btn btn-danger btn-sm">
+                      </button>-->
+                      <button rel="<?=$employee['id']?>" name="removeEmployeeBtn" id="removeEmployeeBtn" type="button" class="btn btn-danger btn-sm">
                           <span class="glyphicon glyphicon-remove"></span> Remove
                       </button>
                   </td>
