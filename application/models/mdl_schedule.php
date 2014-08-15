@@ -115,7 +115,7 @@ class Mdl_schedule extends CI_Model {
         $this->db->where('id',$id);
         $query = $this->db->get('requests');
         $request = $query->result_array();
-        // Grab schedules
+        // Grab users
         $this->db->select('username');
         $this->db->where('id',$request[0]['requester_id']);
         $query = $this->db->get('users');
@@ -130,26 +130,8 @@ class Mdl_schedule extends CI_Model {
         echo $target . "<br/>";
         echo $requestor . "<br/>";
 
-        $tSchedule = $this->getSchedule($target) ? $this->getSchedule($target) : array('message'=>'No schedule found for target');
-        $rSchedule = $this->getSchedule($requestor) ? $this->getSchedule($requestor) : array('message'=>'No schedule found for requestor');
-
-        $target_schedule = json_decode($tSchedule[0]['schedule']);
-        $requestor_schedule = json_decode($rSchedule[0]['schedule']);
-
-        echo "<pre>" . print_r($target_schedule, true) . "</pre>";
-        echo "<pre>" . print_r($requestor_schedule, true) . "</pre>";
-        $this->postSchedule($target, $rSchedule[0]['schedule']);
-
-        echo "<pre>" . print_r($request, true) . "</pre>";
 
         die();
-
-
-        // Update requester by removing it from the array
-
-        // Update target by removing it from the array
-
-        // Submit both back to the db
     }
     
 }
