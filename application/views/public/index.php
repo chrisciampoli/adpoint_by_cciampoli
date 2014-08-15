@@ -70,7 +70,7 @@
                     <ul>
                         <li>Providing 24/7 online access to their shifts via computer or smartphone</li>
                         <li>Empowering employees to pick up a shift if they do not work that day (Swift Pick-Up)</li>
-                        <li>Introducing 'Busy or Not'.  Employees press 'Busy or Not' and if not, do not have to work that shift.</li>
+                        <!--<li>Introducing 'Busy or Not'.  Employees press 'Busy or Not' and if not, do not have to work that shift.</li>-->
                     </ul>
                     <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
                 </div>
@@ -79,7 +79,7 @@
                     <ul>
                         <li>Saving managers' time and pay from creating, adjusting, managing all employee shifts</li>
                         <li>Keeping managers on the sales floor with customers instead of on the phone or computer for scheduling</li>
-                        <li>Allowing same chain storefronts to communicate and analyze daily, weekly, and monthly labor figures</li>
+                        <!--<li>Allowing same chain storefronts to communicate and analyze daily, weekly, and monthly labor figures</li>-->
                     </ul>
                     <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
                 </div>
