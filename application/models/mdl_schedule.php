@@ -139,11 +139,6 @@ class Mdl_schedule extends CI_Model {
         echo "<pre>" . print_r($target_schedule, true) . "</pre>";
         echo "<pre>" . print_r($requestor_schedule, true) . "</pre>";
         echo "<pre>" . print_r($request, true) . "</pre>";
-        
-        array_pop($requestor_schedule);
-        array_pop($requestor_schedule);
-
-        $this->postSchedule($requestor, json_encode($requestor_schedule));
 
         die();
 
