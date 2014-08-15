@@ -157,7 +157,7 @@ class Mdl_schedule extends CI_Model {
         }
         unset($requestor_schedule[$match]);
         $this->postSchedule($requestor, $requestor_schedule);
-        $this->postSchedule($target, array(array($match)));
+        $this->postSchedule($target, array($match));
 
         echo "<pre>Found match: " . print_r($match, true) . "</pre>";
 
