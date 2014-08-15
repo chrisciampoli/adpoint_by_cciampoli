@@ -130,8 +130,11 @@ class Mdl_schedule extends CI_Model {
         echo $target . "<br/>";
         echo $requestor . "<br/>";
 
-        $target_schedule = $this->getSchedule($target) ? $this->getSchedule($target) : 'No schedule found for target';
-        $requestor_schedule = $this->getSchedule($requestor) ? $this->getSchedule($requestor) : 'No schedule found for requestor';
+        $tSchedule = $this->getSchedule($target) ? $this->getSchedule($target) : array('message'=>'No schedule found for target');
+        $rSchedule = $this->getSchedule($requestor) ? $this->getSchedule($requestor) : array('message'=>'No schedule found for requestor');
+
+        $target_schedule = json_decode($tSchedule[0]['schedule']);
+        $requestor_schedule = json_decode($rSchedule[0]['schedule']);
 
         echo "<pre>" . print_r($target_schedule, true) . "</pre>";
         echo "<pre>" . print_r($requestor_schedule, true) . "</pre>";
