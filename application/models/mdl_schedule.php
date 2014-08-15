@@ -127,21 +127,13 @@ class Mdl_schedule extends CI_Model {
         $query = $this->db->get('users');
         $target = $query->row('username');
 
-        echo $target . "<br/>";
-        echo $requestor . "<br/>";
-
         $requestor_schedule = $this->getSchedule($requestor);
         $requestor_schedule = json_decode($requestor_schedule[0]['schedule']);
 
         $target_schedule = $this->getSchedule($target);
         $target_schedule = json_decode($target_schedule[0]['schedule']);
 
-        //$this->postSchedule($target, json_decode($requestor_schedule[0]['schedule']));
-        echo "<pre>" . print_r($requestor_schedule, true) . "</pre>";
-        echo "<pre>" . print_r($target_schedule, true) . "</pre>";
-
-        echo "++++++++++++++++++++++++++++++";
-        echo "<pre>" . print_r($request, true) . "</pre>";
+        
 
         // Grab request date
         $date = strtotime($request[0]['date']);
@@ -162,10 +154,7 @@ class Mdl_schedule extends CI_Model {
 
         $this->postSchedule($requestor, $remaining);
         $this->postSchedule($target, array($match));
-
-        echo "<pre>Found match: " . print_r($match, true) . "</pre>";
-
-        die();
+        return;
     }
     
 }
