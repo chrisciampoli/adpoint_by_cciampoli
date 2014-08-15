@@ -144,7 +144,7 @@ class Mdl_schedule extends CI_Model {
         echo "<pre>" . print_r($request, true) . "</pre>";
 
         // Grab request date
-        $request_date = $request['date'];
+        $request_date = $request[0]['date'];
         echo $request_date;
         // Loop through requestor schedule, and if and days date matches request date
         // pop it from the array.  Then using that poped element, insert it into the 
