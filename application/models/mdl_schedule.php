@@ -151,7 +151,7 @@ class Mdl_schedule extends CI_Model {
             }
 
         }
-        array_push($target_schedule, $match);
+        //array_push($target_schedule, $match);
         $this->postSchedule($requestor, $remaining);
         $this->postSchedule($target, array($target_schedule));
         return;
