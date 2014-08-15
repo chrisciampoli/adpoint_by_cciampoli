@@ -26,7 +26,7 @@
             <tbody>
               <?php foreach(json_decode($shifts, true) as $shift): ?>
               <tr>
-                <td id="<?=$shift['id']?>"><?=$shift['name']?></td><td><?=$shift['shift_start']?></td><td><?=$shift['shift_end']?></td><td><button class='btn btn-small' id='shiftEditBtn'>Edit</button></td><td><button class="btn btn-small" id="shiftDeleteBtn">Delete</button></td>
+                <td id="<?=$shift['id']?>"><?=$shift['name']?></td><td><?=$shift['shift_start']?></td><td><?=$shift['shift_end']?></td><td><button class="btn btn-small" id="shiftDeleteBtn">Delete</button></td>
               </tr>
             <?php endforeach;?>
             <?php } ?>
@@ -55,7 +55,6 @@
                 <td><?=$location['locationAddress'];?></td>
                 <td><?=$location['manager'];?></td>
                 <td><?=$location['contact'];?></td>
-                <td><button class='btn btn-small' id='locationEditBtn'>Edit</button></td>
                 <td><button class='btn btn-small' id='locationDeleteBtn'>Delete</button></td>
               </tr>
             <?php endforeach; ?>
