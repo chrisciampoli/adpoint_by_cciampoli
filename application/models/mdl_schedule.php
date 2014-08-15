@@ -131,6 +131,7 @@ class Mdl_schedule extends CI_Model {
         echo $requestor . "<br/>";
 
         echo "<pre>Target Schedule: " . print_r($this->getSchedule($target), true) . "</pre>";
+        echo "<pre>Requestor Schedule: " . print_r($this->getSchedule($requestor), true) . "</pre>";
 
         die();
     }
