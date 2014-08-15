@@ -272,6 +272,11 @@ class Home extends Manager_Controller {
     {
         $id = $this->input->post('id');
         $status = $this->input->post('status');
+
+        if($status == 'scheduled') {
+            $this->mdl_schedule->swapSchedules($id);
+        }
+
         if($this->mdl_schedule->updateRequest($id, $status)) {
             echo json_encode(array('status'=>'success','message'=>'request updated'));
             return true;

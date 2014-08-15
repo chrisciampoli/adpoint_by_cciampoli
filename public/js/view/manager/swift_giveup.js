@@ -37,7 +37,7 @@ $(function() {
       var data = {
         "id":id,
         "status":status
-      }
+      };
       try {
         $.ajax({
               url: update_url,

@@ -108,5 +108,21 @@ class Mdl_schedule extends CI_Model {
 
         }
     }
+
+    function swapSchedules($id) {
+        // Grab schedules for both
+        $this->db->select('*');
+        $this->db->where('id',$id);
+        $query = $this->db->get('requests');
+        $request = $query->result_array();
+        // Grab requested day to schedule
+        echo "<pre>" . print_r($request, true) . "</pre>";
+
+        // Update requester by removing it from the array
+
+        // Update target by removing it from the array
+
+        // Submit both back to the db
+    }
     
 }
