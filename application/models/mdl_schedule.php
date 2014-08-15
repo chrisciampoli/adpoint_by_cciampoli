@@ -119,9 +119,16 @@ class Mdl_schedule extends CI_Model {
         $this->db->select('username');
         $this->db->where('id',$request[0]['requester_id']);
         $query = $this->db->get('users');
+        $requestor = $query->row('username');
+        $query->free_result();
+
+        $this->db->select('username');
+        $this->db->where('id',$request[0]['target_id']);
+        $query = $this->db->get('users');
         $target = $query->row('username');
 
-        echo $target;die();
+        echo $target . "<br/>";
+        echo $requestor . "<br/>";die();
 
 
         // Update requester by removing it from the array
