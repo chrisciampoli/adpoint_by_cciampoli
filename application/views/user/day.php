@@ -15,6 +15,6 @@
 
     <div class="row">
         <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#giveup_modal" id="swift_btn">Swift Give up</button>
-        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#busy_modal" id="busy_btn">Busy or Not</button>
+        <!--<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#busy_modal" id="busy_btn">Busy or Not</button>-->
         <button class="btn btn-primary btn-lg" id="logout_btn">Logout</button>
     </div>
