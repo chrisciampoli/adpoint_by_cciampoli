@@ -149,9 +149,14 @@ class Mdl_schedule extends CI_Model {
         // Loop through requestor schedule, and if and days date matches request date
         // pop it from the array.  Then using that poped element, insert it into the 
         // targets schedule.
+        $match = array();
         foreach($requestor_schedule as $schedule) {
-            echo "<pre>" . print_r($schedule, true) . "<pre>";
+            if($schedule->date == $request_date) {
+                $match = $schedule;
+            }
         }
+
+        echo "<pre>Found match: " . print_r($match, true) . "</pre>";
 
         die();
     }
