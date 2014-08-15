@@ -58,7 +58,7 @@
             <div class="container">
                 <h1>Manage your time better!</h1>
                 <p>Swift Shifts is a software platform that aims to become the industry standard for providing a simple and intuitive application for managing shifts.</p>
-                <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+                <!--<p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>-->
             </div>
         </div>
 
@@ -72,7 +72,7 @@
                         <li>Empowering employees to pick up a shift if they do not work that day (Swift Pick-Up)</li>
                         <li>Introducing 'Busy or Not'.  Employees press 'Busy or Not' and if not, do not have to work that shift.</li>
                     </ul>
-                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                    <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
                 </div>
                 <div class="col-md-4">
                     <h2>Saves Employers Money</h2>
@@ -81,7 +81,7 @@
                         <li>Keeping managers on the sales floor with customers instead of on the phone or computer for scheduling</li>
                         <li>Allowing same chain storefronts to communicate and analyze daily, weekly, and monthly labor figures</li>
                     </ul>
-                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                    <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
                 </div>
                 <div class="col-md-4">
                     <h2>Why Us?</h2>
@@ -89,7 +89,7 @@
                         <li>Priced lower then the standard competition</li>
                         <li>Our system allows for access anywhere, at anytime</li>
                     </ul>
-                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                    <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
                 </div>
             </div>
 
