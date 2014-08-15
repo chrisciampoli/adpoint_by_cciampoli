@@ -15,7 +15,7 @@ class Home extends User_Controller {
         $company = $this->mdl_employees->getCompany();
         $settings = $this->mdl_company_settings->getSettings($company);
         $data['display_name'] = (isset($settings[0]['company_name']) ? $settings[0]['company_name'] : 'Swift Shifts');
-        $data['employees'] = '';//$this->getCompanyEmployees();
+        $data['employees'] = $this->mdl_employees->getCompanyEmployees();//$this->getCompanyEmployees();
         // Need to do something else here in order to not
         // show the managers, and not show employees who work the same shift
         $data['requests'] = $this->getRequests();
