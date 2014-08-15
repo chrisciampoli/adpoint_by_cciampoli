@@ -51,7 +51,7 @@ SWIFT.modules.company.settings.shifts = (function () {
         //Rendering Functions
         ////////////////////////////////////
         function renderShift(id, name, start, end) {
-            var row = "<tr id="+id+"><td>"+name+"</td><td>"+start+"</td><td>"+end+"</td><td><button class='btn btn-small' id='shiftEditBtn'>Edit</button></td><td><button class='btn btn-small' id='shiftDeleteBtn'>Delete</button></td></tr>",
+            var row = "<tr id="+id+"><td>"+name+"</td><td>"+start+"</td><td>"+end+"</td><td><button class='btn btn-small' id='shiftDeleteBtn'>Delete</button></td></tr>",
                 table = $('#shifts_records');
 
             table.append(row);

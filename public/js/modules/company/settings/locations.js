@@ -43,7 +43,7 @@ SWIFT.modules.company.settings.locations = (function () {
 
 
             function renderLocation(id, name, address, manager, contact) {
-                var row = "<tr id="+id+"><td>"+name+"</td><td>"+address+"</td><td>"+manager+"</td><td>"+contact+"</td><td><button class='btn btn-small' id='locationEditBtn'>Edit</button></td><td><button class='btn btn-small' id='locationDeleteBtn'>Delete</button></td></tr>",
+                var row = "<tr id="+id+"><td>"+name+"</td><td>"+address+"</td><td>"+manager+"</td><td>"+contact+"</td><td><button class='btn btn-small' id='locationDeleteBtn'>Delete</button></td></tr>",
                     table = $('#locations_records');
 
                 table.append(row);
