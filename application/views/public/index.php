@@ -34,7 +34,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Swift Shifts by Swift'n'Co</a>
+                    <a class="navbar-brand" href="#">Swift Shifts by Swift'n'Co<span style="color:red;"> - BETA</span></a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <?php $attributes = array('class' => 'navbar-form navbar-right', 'id' => 'signin_form'); ?>
