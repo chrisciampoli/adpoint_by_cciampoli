@@ -150,7 +150,7 @@ class Mdl_schedule extends CI_Model {
         $request_month = date('m', strtotime($request_month));
         echo $request_day . "<br/>";
         echo $request_month . "<br/>";
-        
+        echo "<pre>" . print_r($request_date, true) . "</pre>";
         // Loop through requestor schedule, and if and days date matches request date
         // pop it from the array.  Then using that poped element, insert it into the 
         // targets schedule.
