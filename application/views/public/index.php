@@ -86,7 +86,7 @@
                 <div class="col-md-4">
                     <h2>Why Us?</h2>
                     <ul>
-                        <li>Priced lower then the standard competition</li>
+                        <li>Priced lower than the standard competition</li>
                         <li>Our system allows for access anywhere, at anytime</li>
                     </ul>
                     <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
