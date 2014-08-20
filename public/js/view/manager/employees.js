@@ -65,6 +65,9 @@ $(function(){
             shift_end = $('#inputShiftEnd').val(),
             location = $('#inputLocation').val();
        setDay(date, shift_start, shift_end, location);
+       $(shift_start).val('');
+       $(shift_end).val('');
+       $(location).val('');
        if(debug === true) console.log('Target Day: ' . targetDay);
        targetDay.css('background-color','red');
        targetDay = '';
