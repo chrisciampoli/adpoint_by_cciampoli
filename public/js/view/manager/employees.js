@@ -78,6 +78,7 @@ $(function(){
        saveSchedule(targetEmployee, targetEvents);
        $('#editScheduleModal').modal('toggle');
        targetEmployee = '';
+       targetEvents = [];
    });
 
    $('body').on('click','.check_avail',function(){
