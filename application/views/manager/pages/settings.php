@@ -6,6 +6,7 @@
     };
 </script>
 <div class="container-fluid">
+      <div><h2 class="sub-header" style="display: inline">Company Settings</h2></div>
       <div class="form-group">
         <label for="company_name">Company Name</label>
         <input value="<?=(isset($settings[0]['company_name']) ? $settings[0]['company_name'] : '');?>" type="input" class="form-control" id="company_name" name="company_name" placeholder="Company Name" required>
