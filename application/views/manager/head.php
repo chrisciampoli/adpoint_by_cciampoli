@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
     <title><?php 
-        if(!empty($title)) {
+        if(!empty($title) || $title == "") {
             echo $title;
         } else {
             echo "Swift Shifts";
