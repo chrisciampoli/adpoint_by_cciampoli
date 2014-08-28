@@ -19,6 +19,7 @@ SWIFT.modules.company.settings.shifts = (function () {
                 id = data.record.id;
             $('#addShiftModal').modal('toggle');
             $('#shiftHolder').hide();
+            $('#shiftAddBtn').show();
             renderShift(id, name, start, end);
         }
 
