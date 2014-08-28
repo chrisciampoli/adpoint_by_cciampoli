@@ -1,7 +1,5 @@
-<?=$head;?>
+
 <body>
-<?=$nav;?>
-<?=$content;?>
-<?=$script_loader;?>
+<p>My Test</p>
 </body>
 </html>
