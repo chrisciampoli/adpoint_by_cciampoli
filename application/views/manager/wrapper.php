@@ -1,5 +1,6 @@
-<?=$head;?>
 <body>
-<p>Testing</p>
+<?=$nav;?>
+<?=$content;?>
+<?=$script_loader;?>
 </body>
 </html>
