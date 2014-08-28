@@ -14,7 +14,7 @@
         <button type="button" class="btn btn-default" id="display_shifts">Display Shifts</button>
         <div id="shifts_tbl" class="table-responsive" style="display:none;">
           <table id="shifts_records" class="table table-hover">
-          <button class="btn btn-small" style="float:right;" id="shiftAddBtn" data-toggle="modal" data-target="#addShiftModal" style="display:none;">Add Shift</button>
+          <button class="btn btn-small" style="float:right;display:none;" id="shiftAddBtn" data-toggle="modal" data-target="#addShiftModal">Add Shift</button>
           <?php if(array_key_exists('result', json_decode($shifts, true))) {?>
               <tr id="shiftHolder"><td><h2>No shifts added yet. <button class="btn btn-small" style="padding-left: 5px;" id="shiftAddBtn" data-toggle="modal" data-target="#addShiftModal">Add Shift</button></h2></td></tr>
           <?php } else { ?>
