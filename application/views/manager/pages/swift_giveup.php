@@ -6,7 +6,7 @@
 </script>
 <div class="container-fluid">
           <div class="table-responsive">
-            <div><h2 class="sub-header" style="display:inline;">Swift Giveup</h2></div>
+            <div><h2 class="header" style="margin-top:55px !important;">Swift Giveup</h2></div>
             <table class="table table-hover table-responsive">
               <thead>
                   <th>Employee</th>
