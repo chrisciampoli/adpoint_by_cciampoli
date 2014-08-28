@@ -1,6 +1,7 @@
 <?=$head;?>
 <body>
-<?=$content;?>
-<?=$script_loader;?>
+<?=$nav;?>
+<!--<?=$content;?>
+<?=$script_loader;?>-->
 </body>
 </html>
