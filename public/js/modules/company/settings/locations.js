@@ -21,6 +21,7 @@ SWIFT.modules.company.settings.locations = (function () {
             function addLocationSuccess(data) {
                 var location = data.record;
                 $('#addLocationModal').modal('toggle');
+                $('#locationAddBtn').show();
                 renderLocation(location.id, location.locationName, location.locationAddress, location.manager, location.contact);
             }
 

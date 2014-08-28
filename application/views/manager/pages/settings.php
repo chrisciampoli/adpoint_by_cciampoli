@@ -39,6 +39,7 @@
         <button type="button" class="btn btn-default" id="display_locations">Display Locations</button>
         <div id="locations_tbl" style="display:none;">
           <table id="locations_records" class="table table-hover">
+            <button class="btn btn-small" style="float:right;display:none;" id="locationAddBtn" data-toggle="modal" data-target="#addLocationModal">Add Location</button>
             <?php if(array_key_exists('result', json_decode($locations,true))) {?>
                 <tr id="locationHolder"><td><h2>No locations added yet. <button class="btn btn-small" style="padding-left: 5px;" id="locationAddBtn" data-toggle="modal" data-target="#addLocationModal">Add Location</button></h2></td></tr>
             <?php } else { ?>
