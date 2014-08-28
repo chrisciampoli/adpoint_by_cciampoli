@@ -1,5 +1,5 @@
-
+<?=$head;?>
 <body>
-<p>My Test</p>
+<p>Testing</p>
 </body>
 </html>
