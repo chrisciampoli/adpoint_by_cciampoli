@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title><img src="" /></title>
+    <title></title>
     <?php $this->load->view('manager/styles', $styles);?>
    
     <!-- Just for debugging purposes. Don't actually copy this line! -->
