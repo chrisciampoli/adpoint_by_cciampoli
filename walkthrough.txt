@@ -1,0 +1,36 @@
+SETTINGS
+
+1) First lets direct your browser over to http://swiftnco.com, and login with
+	the credentials provided in this email.  The login controls are in the top
+	right of the page.
+
+2) After logging in you will land at our Managers Dashboard.  Here you will see
+   three icons
+
+   	* Swift Giveup/Pickup
+   	* Employees
+   	* Settings
+
+3) To start off we want to setup our company, so we will head over to the settings page.
+   We get there by either clicking on the settings icon, or clicking on the navigation link in the top bar.
+
+ 4) Once on the settings page, we will first need to setup your company name.  The first input box is where we will do this.  Enter your company name, then click on the 
+ "Display Shifts" button.  You will currently have no shifts, so click on the "Add Shift" button to create one.  Here enter a name used internally for the shift, the 
+ start time and the end time.  These can be unique times, or phases such as 9AM, or
+ CLOSE.  Save your shift, by clicking the "Save Changes" button.
+
+ 5) Lets now setup a location by clicking on the "Display Locations" button.  Again you
+ will not have had any locations setup yet, so click on the "Add location" button. Enter
+ the location name, address, manager(POC), and contact number.  Save your changes.
+
+ 6) For support issues related to your companies time management, please provide an adminstrator email address.
+
+ 7) Click the button at the bottom of the pages to submit all of your changes.
+
+
+Employees
+
+ Now that we have setup your companies locations and shifts, lets add some employees and schedules!
+
+ 1) Click on the Employees navigation link in the tab navigation bar.
+ 2) Once on the Employees page, click on the add employ

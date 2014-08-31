@@ -8,13 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title><?php 
-        if(!empty($title) || $title == "" || $title == " ") {
-            echo $title;
-        } else {
-            echo "Swift Shifts";
-        }
-    ?></title>
+    <title><img src="public/images/smakesmart.png"</title>
     <?php $this->load->view('manager/styles', $styles);?>
    
     <!-- Just for debugging purposes. Don't actually copy this line! -->
