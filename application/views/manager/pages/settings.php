@@ -5,11 +5,9 @@
         shifts: '<?=$shifts;?>'
     };
 </script>
-<div><h2 class="sub-header" style="display: inline">Company Settings</h2></div>
-<br>
 <div class="container-fluid">
       <div class="form-group">
-        <label for="company_name">asdfasdfsadfasdfasdfasadffd</label>
+        <label for="company_name">Company Name</label>
         <input value="<?=(isset($settings[0]['company_name']) ? $settings[0]['company_name'] : '');?>" type="input" class="form-control" id="company_name" name="company_name" placeholder="Company Name" required>
       </div>
       <div class="form-group form-inline">
