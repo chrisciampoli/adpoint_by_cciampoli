@@ -46,6 +46,8 @@ class Mdl_employees extends CI_Model {
         
         $result = $query->result_array();
 
+        // Now we need to get all the employees that have schedules for today
+
         //echo "<pre>" . print_r($result, true) . "</pre>";
         return $result;
 

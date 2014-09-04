@@ -22,5 +22,5 @@
     <script src="<?=base_url('public/js/swift.js');?>"></script>
     <script src='https://code.jquery.com/jquery-1.10.2.min.js'></script>
     <script src="<?=base_url('public/js/libs/bootstrap.min.js');?>"></script>
-    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>;
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
   </head>
