@@ -18,9 +18,6 @@
             <li><a href="<?=site_url('manager/home/settings');?>" class="disabled">Settings</a></li>
             <li><a href="<?=site_url('auth/logout');?>">Logout</a></li>
           </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
         </div>
       </div>
     </div>
